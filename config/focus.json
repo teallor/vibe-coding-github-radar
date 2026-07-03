@@ -224,7 +224,19 @@
     "casino",
     "gambling",
     "malware",
-    "scraper for illegal use"
+    "scraper for illegal use",
+    "email automation",
+    "gmail automation",
+    "automated email",
+    "cold email",
+    "email marketing",
+    "newsletter automation",
+    "mail merge",
+    "outreach automation",
+    "邮件自动化",
+    "自动发邮件",
+    "群发邮件",
+    "邮件营销"
   ],
   "whitelistKeywords": [
     "office",
@@ -241,7 +253,9 @@
     "learning",
     "pwa"
   ],
-  "blockedRepos": [],
+  "blockedRepos": [
+    "enescingoz/awesome-n8n-templates"
+  ],
   "priorityOwners": [],
   "priorityTopics": [],
   "priorityLanguages": [

@@ -31,7 +31,7 @@ function promptFor(candidate, radarType, userProfile, config) {
       ? 'For a podcast episode, inspect supplied shownotes, outline, duration, guest and transcript evidence. Judge practical depth, whether it truly teaches Codex/AI coding/agent workflows, and whether listening is worth the user time. Never infer content from the title alone.'
       : 'For an ecosystem update, verify that it is released, consumer-usable, actionable and supported by the supplied official or primary-source evidence.';
   return `You are a strict evidence-based reviewer for ${radarType}. Return JSON only.\n` +
-    `User profile: ${JSON.stringify(userProfile)}\nThreshold: ${config.minScore}.\n` +
+    `User profile: ${JSON.stringify(userProfile)}\nTreat excludedFocus as a hard user-preference rejection even if the candidate is otherwise high quality.\nThreshold: ${config.minScore}.\n` +
     `Score dimensions: Rafael match 0-25; consumer usability 0-20; Codex/Agent/Skills/MCP/plugin relevance 0-20; actionable value 0-15; source reliability 0-10; freshness/scarcity 0-10.\n` +
     `${radarGuidance}\nReject rumors, marketing copy, funding, generic AI news, missing source links, or claims not supported by supplied evidence. Never invent facts.\n` +
     `Candidate: ${JSON.stringify(candidate)}\n` +

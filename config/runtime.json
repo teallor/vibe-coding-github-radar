@@ -40,6 +40,7 @@
   },
   "profile": {
     "name": "Rafael_Huang",
-    "focus": ["Codex", "Vibe Coding", "GitHub", "Skills", "MCP", "插件", "Agent", "Office 自动化", "PPT", "Word", "Excel", "课程制作", "副业项目"]
+    "focus": ["Codex", "Vibe Coding", "GitHub", "Skills", "MCP", "插件", "Agent", "Office 自动化", "PPT", "Word", "Excel", "课程制作", "副业项目"],
+    "excludedFocus": ["自动化邮件", "邮件营销", "邮件群发", "Gmail 自动化", "cold email", "newsletter automation"]
   }
 }

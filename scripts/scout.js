@@ -181,6 +181,7 @@ function assessHardGate(project) {
   const updatedAt = new Date(project.updatedAt);
   const ageDays = (Date.now() - updatedAt.getTime()) / 86400000;
   if (!Number.isFinite(ageDays) || ageDays > 365) failures.push('超过一年未更新');
+  if ((project.penalties || []).some(item => item.includes('命中黑名单'))) failures.push('命中用户明确排除方向');
 
   // 至少一个核心价值维度达到其权重的 60%，避免只靠语言、Star 或关键词加分入选。
   const coreDimensions = ['vibeCodingLearning', 'officeAutomation', 'monetizationPotential', 'codexFriendly'];
@@ -202,6 +203,17 @@ function assessHardGate(project) {
   if (relevanceSignals.length === 0) failures.push('名称和描述未命中强相关主题');
 
   return { passed: failures.length === 0, relevanceSignals, failures };
+}
+
+const EMAIL_AUTOMATION_TERMS = [
+  'email automation', 'gmail automation', 'automated email', 'cold email',
+  'email marketing', 'newsletter automation', 'mail merge', 'outreach automation',
+  '邮件自动化', '自动发邮件', '群发邮件', '邮件营销'
+];
+
+function hasExcludedEmailAutomation(project, readme = '') {
+  const text = `${project.name || ''} ${project.description || ''} ${readme}`.toLowerCase();
+  return EMAIL_AUTOMATION_TERMS.some(term => text.includes(term));
 }
 
 async function fetchGithubReadme(fullName, token) {
@@ -226,6 +238,10 @@ async function selectGithubRecommendations(candidates, radarConfig, profile, tok
   let geminiSucceeded = 0;
   for (const project of hardEligible.slice(0, reviewLimit)) {
     const readmeEvidence = await readmeFetcher(project.fullName, token);
+    if (hasExcludedEmailAutomation(project, readmeEvidence)) {
+      project.qualityGate = { passed: false, relevanceSignals: [], failures: ['属于用户暂不感兴趣的自动化邮件类'] };
+      continue;
+    }
     const result = radarConfig.useGeminiReview
       ? await reviewer({ ...project, readmeEvidence: readmeEvidence || 'README unavailable' }, 'Vibe Coding / GitHub Radar', profile, radarConfig)
       : { status: 'unavailable', provider: null };
@@ -516,4 +532,4 @@ if (require.main === module) {
   });
 }
 
-module.exports = { main, assessQuality, assessHardGate, searchGitHub, generateSummary, selectGithubRecommendations, fetchGithubReadme };
+module.exports = { main, assessQuality, assessHardGate, searchGitHub, generateSummary, selectGithubRecommendations, fetchGithubReadme, hasExcludedEmailAutomation };

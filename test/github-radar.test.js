@@ -3,7 +3,7 @@ const assert = require('node:assert/strict');
 const { loadConfig } = require('../scripts/loadConfig');
 const { generateSearchTasks } = require('../scripts/keywords');
 const { calibrateScore } = require('../scripts/scoring');
-const { searchGitHub, generateSummary, selectGithubRecommendations } = require('../scripts/scout');
+const { searchGitHub, generateSummary, selectGithubRecommendations, hasExcludedEmailAutomation } = require('../scripts/scout');
 const { loadRuntimeConfig } = require('../scripts/runtime-config');
 
 function response(status, body, headers = {}) {
@@ -20,6 +20,8 @@ test('GitHub search tasks stay within one search-rate window', () => {
   const tasks = generateSearchTasks(config);
   assert.equal(tasks.length, 30);
   assert.ok(tasks.every(task => !/\blanguage:/.test(task.query)));
+  assert.ok(config.blockedRepos.includes('enescingoz/awesome-n8n-templates'));
+  assert.ok(config.blacklistKeywords.includes('email automation'));
 });
 
 test('old strict score 70 maps to the unified 85-point threshold', () => {
@@ -68,4 +70,22 @@ test('GitHub final recommendation is decided by Gemini review with README eviden
   assert.equal(result.geminiSucceeded, 1);
   assert.equal(result.qualified[0].recommendScore, 93);
   assert.equal(result.qualified[0].reviewProvider, 'vertex');
+});
+
+test('email automation projects are excluded before Gemini final review', async () => {
+  const config = loadRuntimeConfig();
+  const project = {
+    name: 'n8n-email-workflows', fullName: 'example/n8n-email-workflows', url: 'https://github.com/example/n8n-email-workflows',
+    description: 'Workflow automation templates with AI agents and office tools.', archived: false, license: 'MIT',
+    updatedAt: new Date().toISOString().slice(0, 10), recommendScore: 92, penalties: [],
+    scores: { vibeCodingLearning: 15, officeAutomation: 16, monetizationPotential: 10, codexFriendly: 12 }
+  };
+  assert.equal(hasExcludedEmailAutomation(project, '# Gmail automation and cold email outreach automation'), true);
+  let reviewerCalls = 0;
+  const result = await selectGithubRecommendations([project], config.radars.github, config.profile, '', {
+    readmeFetcher: async () => '# Gmail automation and cold email outreach automation',
+    reviewer: async () => { reviewerCalls += 1; return { status: 'success', provider: 'vertex', review: { shouldRecommend: true, score: 99 } }; }
+  });
+  assert.equal(reviewerCalls, 0);
+  assert.equal(result.qualified.length, 0);
 });

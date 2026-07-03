@@ -112,7 +112,10 @@ const FALLBACK_CONFIG = {
   },
   blacklistKeywords: [
     'crypto', 'nft', 'trading bot', 'adult', 'casino',
-    'gambling', 'malware', 'scraper for illegal use'
+    'gambling', 'malware', 'scraper for illegal use',
+    'email automation', 'gmail automation', 'automated email', 'cold email',
+    'email marketing', 'newsletter automation', 'mail merge', 'outreach automation',
+    '邮件自动化', '自动发邮件', '群发邮件', '邮件营销'
   ],
   whitelistKeywords: [
     'office', 'excel', 'word', 'pptx', 'pdf', 'automation',

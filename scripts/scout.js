@@ -113,33 +113,65 @@ async function main() {
     return;
   }
 
-  // 4. 排序并分类
+  // 4. 先通过严格质量门槛，再排序。宁缺毋滥，不为凑数量降标准。
   allCandidates.sort((a, b) => b.recommendScore - a.recommendScore);
 
-  // Top Pick（最高分）
-  const topPick = allCandidates[0];
-
-  // 精选项目（第 2-4 名）
-  const selectedProjects = allCandidates.slice(1, 4);
-
-  // 观察项目（第 5-9 名）
-  const watchProjects = allCandidates.slice(4, 9);
+  const qualifiedCandidates = allCandidates.filter(project => {
+    const assessment = assessQuality(project);
+    project.qualityGate = assessment;
+    return assessment.passed;
+  });
+  const recommendations = qualifiedCandidates.slice(0, 3);
+  const topPick = recommendations[0] || null;
+  const selectedProjects = recommendations.slice(1);
+  const watchProjects = [];
+  console.log(`严格筛选：${allCandidates.length} 个候选，${qualifiedCandidates.length} 个达标，输出 ${recommendations.length} 个（最多 3 个）`);
 
   // 不推荐项目（分数最低的，但需要有理由）
-  const notRecommended = allCandidates
-    .filter(p => p.recommendScore < 40 || p.archived || !p.license || p.license === '未知')
-    .slice(-3)
-    .map(p => ({
-      name: p.name,
-      fullName: p.fullName,
-      url: p.url,
-      reason: p.riskPoints || '推荐分过低'
-    }));
+  // 日报只输出通过门槛的推荐项目，不展示候选或淘汰项目。
+  const notRecommended = [];
 
   // 5. 生成输出文件
   await generateAndSaveOutputs(config, source, selectedProjects, watchProjects, notRecommended, allCandidates, topPick);
 
   console.log('\n✅ 每日搜索完成！');
+}
+
+function assessQuality(project) {
+  const failures = [];
+  if (project.recommendScore < 70) failures.push('综合分低于 70');
+  if (project.archived) failures.push('仓库已归档');
+  if (!project.license || project.license === '未知') failures.push('License 不明确');
+  if (!project.description || project.description.trim().length < 30) failures.push('项目描述信息不足');
+  const updatedAt = new Date(project.updatedAt);
+  const ageDays = (Date.now() - updatedAt.getTime()) / 86400000;
+  if (!Number.isFinite(ageDays) || ageDays > 365) failures.push('超过一年未更新');
+
+  // 至少一个核心价值维度达到其权重的 60%，避免只靠语言、Star 或关键词加分入选。
+  const coreDimensions = ['vibeCodingLearning', 'officeAutomation', 'monetizationPotential', 'codexFriendly'];
+  const weights = { vibeCodingLearning: 20, officeAutomation: 20, monetizationPotential: 15, codexFriendly: 15 };
+  if (!coreDimensions.some(key => (project.scores[key] || 0) >= weights[key] * 0.6)) {
+    failures.push('核心价值维度不足');
+  }
+
+  const text = `${project.name} ${project.description}`.toLowerCase();
+  const strongSignals = [
+    'ai agent', 'agentic', 'tool calling', 'codex', 'claude code', 'developer tool', 'repo analyzer',
+    'office automation', 'word automation', 'excel automation', 'powerpoint automation', 'pdf automation',
+    'docx', 'xlsx', 'pptx', 'document workflow', 'batch document', 'report generator',
+    'workflow automation', 'task automation', 'automation tool', 'productivity app', 'local first',
+    'knowledge management', 'reading assistant', 'personal crm', 'micro saas', 'invoice generator',
+    'resume generator', 'proposal generator', 'form automation', 'data cleaning tool'
+  ];
+  const relevanceSignals = strongSignals.filter(signal => text.includes(signal));
+  if (relevanceSignals.length === 0) failures.push('名称和描述未命中强相关主题');
+
+  return {
+    passed: failures.length === 0,
+    threshold: 70,
+    relevanceSignals,
+    failures
+  };
 }
 
 /**
@@ -191,6 +223,7 @@ function normalizeRepo(repo, scoreResult, area) {
     openIssues: repo.open_issues_count || 0,
     recommendScore: scoreResult.recommendScore,
     scores: scoreResult.scores,
+    scoreBasis: scoreResult.scoreBasis,
     vibeCodingValue: scoreResult.vibeCodingValue,
     officeAutomationValue: scoreResult.officeAutomationValue,
     monetizationPotential: scoreResult.monetizationPotential,

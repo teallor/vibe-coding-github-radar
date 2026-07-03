@@ -22,11 +22,18 @@ function compact(text, maxLength = 180) {
 }
 
 function projectBlock(project, label) {
+  const dimensions = (project.scoreBasis && project.scoreBasis.dimensions) || [];
+  const scoring = dimensions.map(d => `${d.label} ${d.score}/${d.max}`).join(' · ');
+  const adjustments = [
+    ...(project.bonuses || []).map(item => `加分：${item}`),
+    ...(project.penalties || []).map(item => `扣分：${item}`)
+  ].join('；') || '无额外加扣分';
+  const signals = (project.qualityGate && project.qualityGate.relevanceSignals || []).join('、');
   return {
     tag: 'div',
     text: {
       tag: 'lark_md',
-      content: `**${label}：[${project.name}](${project.url})**\n${project.language || '未知语言'} · ⭐ ${project.stars || 0} · 推荐分 ${project.recommendScore || 0}\n${compact(project.description, 120)}`
+      content: `**${label}：[${project.name}](${project.url}) · ${project.recommendScore || 0}/100**\n${compact(project.description, 120)}\n**评分依据：** ${scoring}\n**强相关信号：** ${signals}\n**调整项：** ${adjustments}\n**入选理由：** ${compact(project.vibeCodingValue, 100)}\n**风险：** ${project.riskPoints}`
     }
   };
 }
@@ -42,7 +49,7 @@ function buildCard(data) {
   ];
 
   if (data.topPick) elements.push(projectBlock(data.topPick, '今日最值得精读'));
-  for (const project of (data.selectedProjects || []).slice(0, 5)) {
+  for (const project of (data.selectedProjects || []).slice(0, 2)) {
     elements.push({ tag: 'hr' }, projectBlock(project, '精选项目'));
   }
   elements.push(

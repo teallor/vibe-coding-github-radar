@@ -55,7 +55,7 @@ function generateReport(data) {
   md += `## 三、今日精选项目表\n\n`;
   const allSelected = [];
   if (topPick) allSelected.push({ ...topPick, _label: '精读' });
-  if (selectedProjects) selectedProjects.forEach(p => allSelected.push({ ...p, _label: '精选' }));
+  if (selectedProjects) selectedProjects.slice(0, 2).forEach(p => allSelected.push({ ...p, _label: '精选' }));
 
   if (allSelected.length > 0) {
     md += `| 项目名 | GitHub 链接 | 作者 | 语言 | Star | Fork | License | 最近更新 | 归档 | Issues | 推荐分 | Vibe Coding | Office | 变现 | Codex | 风险点 |\n`;
@@ -64,6 +64,17 @@ function generateReport(data) {
       md += `| ${p.name} | [链接](${p.url}) | ${p.author || '-'} | ${p.language || '-'} | ${p.stars || 0} | ${p.forks || 0} | ${p.license || '未知'} | ${p.updatedAt || '-'} | ${p.archived ? '是' : '否'} | ${p.openIssues || 0} | ${p.recommendScore || 0} | ${(p.vibeCodingValue || '-').substring(0, 20)} | ${(p.officeAutomationValue || '-').substring(0, 20)} | ${(p.monetizationPotential || '-').substring(0, 20)} | ${(p.codexFriendly || '-').substring(0, 20)} | ${(p.riskPoints || '-').substring(0, 30)} |\n`;
     }
     md += `\n`;
+    md += `### 严格评分依据\n\n`;
+    for (const p of allSelected) {
+      md += `#### ${p.name}：${p.recommendScore || 0}/100\n\n`;
+      const dimensions = (p.scoreBasis && p.scoreBasis.dimensions) || [];
+      md += dimensions.map(d => `- ${d.label}：${d.score}/${d.max}`).join('\n') + '\n';
+      if (p.bonuses && p.bonuses.length) md += `- 加分：${p.bonuses.join('；')}\n`;
+      if (p.penalties && p.penalties.length) md += `- 扣分：${p.penalties.join('；')}\n`;
+      if (p.qualityGate && p.qualityGate.relevanceSignals.length) md += `- 强相关信号：${p.qualityGate.relevanceSignals.join('、')}\n`;
+      md += `- 入选理由：${p.vibeCodingValue}；${p.codexFriendly}\n`;
+      md += `- 风险检查：${p.riskPoints}\n\n`;
+    }
   } else {
     md += `*今日无精选项目。*\n\n`;
   }

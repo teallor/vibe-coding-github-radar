@@ -35,6 +35,12 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Push generated report to Feishu
+        run: node scripts/send-feishu.js
+        env:
+          FEISHU_WEBHOOK: ${{ secrets.FEISHU_WEBHOOK }}
+          FEISHU_SECRET: ${{ secrets.FEISHU_SECRET }}
+
       - name: Commit generated reports
         run: |
           git config user.name "github-actions[bot]"

@@ -2,8 +2,9 @@ name: Daily GitHub Scout
 
 on:
   schedule:
-    # GitHub Actions uses UTC; 01:00 UTC is 09:00 Beijing time.
-    - cron: "0 1 * * *"
+    # GitHub Actions uses UTC. 23:42 UTC = 07:42 Beijing time next day.
+    # The verified three-radar run takes about 14 minutes, so Feishu normally arrives around 07:56-08:01.
+    - cron: "42 23 * * *"
   workflow_dispatch:
 
 permissions:

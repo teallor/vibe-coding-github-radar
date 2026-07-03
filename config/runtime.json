@@ -1,6 +1,8 @@
 {
   "timezone": "Asia/Shanghai",
-  "runTime": "09:00",
+  "runTime": "07:42",
+  "targetDeliveryTime": "08:00",
+  "expectedDurationMinutes": 14,
   "preferredLanguages": ["zh", "en"],
   "radars": {
     "github": {

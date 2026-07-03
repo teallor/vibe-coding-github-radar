@@ -107,9 +107,8 @@ async function main() {
   console.log(`\n📊 共收集 ${allCandidates.length} 个候选项目\n`);
 
   if (allCandidates.length === 0) {
-    console.error('❌ 未找到任何项目，请检查配置或网络');
-    // 仍然生成一个空的日报
-    await generateAndSaveOutputs(config, source, [], [], [], [], null);
+    console.error('❌ 未找到任何项目，请检查配置、网络或 GitHub API 限额');
+    console.warn('⚠️ 保留上一份 GitHub Radar 数据，不用空结果覆盖现有日报。');
     return;
   }
 

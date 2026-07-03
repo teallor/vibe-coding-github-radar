@@ -121,7 +121,7 @@ function buildCombinedCard(githubData, podcastData) {
     config: { wide_screen_mode: true },
     header: {
       template: 'blue',
-      title: { tag: 'plain_text', content: `${githubData.date} Vibe Coding GitHub + Codex 播客雷达` }
+      title: { tag: 'plain_text', content: `${podcastData.date} Vibe Coding GitHub + Codex 播客雷达` }
     },
     elements: [
       { tag: 'div', text: { tag: 'lark_md', content: '**第一部分｜Vibe Coding GitHub 雷达**' } },

@@ -1,0 +1,252 @@
+{
+  "profileName": "默认综合模式",
+  "updatedAt": "2026-07-03",
+  "author": "Rafael_Huang",
+  "enabledFocusAreas": [
+    {
+      "id": "office_automation",
+      "name": "Office 文档自动化",
+      "description": "关注 Word、Excel、PPT、PDF、报告、模板、批量处理等办公自动化项目",
+      "enabled": true,
+      "weight": 35,
+      "keywords": [
+        "office automation",
+        "word automation",
+        "excel automation",
+        "powerpoint automation",
+        "pdf automation",
+        "docx generator",
+        "xlsx generator",
+        "pptx generator",
+        "python-docx",
+        "python-pptx",
+        "openpyxl",
+        "report generator",
+        "document workflow",
+        "template filling",
+        "batch document processing"
+      ],
+      "excludeKeywords": [
+        "paid api only",
+        "enterprise only"
+      ],
+      "minStars": 30,
+      "updatedWithinMonths": 18
+    },
+    {
+      "id": "vibe_monetization",
+      "name": "个人 Vibe Coding 变现",
+      "description": "关注可包装成小工具、服务、模板、课程、数字产品的开源项目",
+      "enabled": true,
+      "weight": 25,
+      "keywords": [
+        "micro SaaS",
+        "indie hacker tools",
+        "productivity app",
+        "automation tool",
+        "local app",
+        "desktop automation",
+        "small business automation",
+        "freelancer tools",
+        "invoice generator",
+        "resume generator",
+        "proposal generator",
+        "form automation",
+        "data cleaning tool"
+      ],
+      "excludeKeywords": [
+        "requires payment",
+        "subscription only"
+      ],
+      "minStars": 20,
+      "updatedWithinMonths": 18
+    },
+    {
+      "id": "codex_friendly",
+      "name": "Codex 可改造项目",
+      "description": "关注结构清晰、适合小白只读学习和 Codex 拆解改造的入门级项目",
+      "enabled": true,
+      "weight": 25,
+      "keywords": [
+        "starter project",
+        "simple python app",
+        "streamlit app",
+        "flask starter",
+        "fastapi starter",
+        "cli tool",
+        "local first app",
+        "automation script",
+        "developer tools",
+        "repo analyzer",
+        "code reading tool"
+      ],
+      "excludeKeywords": [
+        "enterprise framework",
+        "distributed system"
+      ],
+      "minStars": 10,
+      "updatedWithinMonths": 24
+    },
+    {
+      "id": "fun_interesting",
+      "name": "新鲜有趣项目",
+      "description": "关注有趣、新颖、有启发性的创意编程和工具项目",
+      "enabled": true,
+      "weight": 15,
+      "keywords": [
+        "fun python projects",
+        "creative coding",
+        "data visualization",
+        "personal dashboard",
+        "knowledge base",
+        "local AI app",
+        "ollama app",
+        "RAG app",
+        "web scraper",
+        "habit tracker",
+        "bookmark manager",
+        "personal CRM"
+      ],
+      "excludeKeywords": [
+        "requires gpu",
+        "large model only"
+      ],
+      "minStars": 15,
+      "updatedWithinMonths": 18
+    },
+    {
+      "id": "personal_efficiency",
+      "name": "个人效率工具",
+      "description": "关注笔记、知识管理、自动化、任务管理等个人效率工具",
+      "enabled": true,
+      "weight": 10,
+      "keywords": [
+        "learning tool",
+        "note taking app",
+        "markdown tool",
+        "anki generator",
+        "flashcard generator",
+        "reading assistant",
+        "knowledge management",
+        "personal automation",
+        "workflow automation",
+        "task automation"
+      ],
+      "excludeKeywords": [
+        "team only",
+        "enterprise plan"
+      ],
+      "minStars": 10,
+      "updatedWithinMonths": 24
+    },
+    {
+      "id": "local_first",
+      "name": "本地优先工具",
+      "description": "关注不依赖服务器、不依赖付费 API、本地可运行的小工具",
+      "enabled": false,
+      "weight": 10,
+      "keywords": [
+        "local first",
+        "offline app",
+        "local storage",
+        "desktop app",
+        "standalone tool",
+        "no backend",
+        "static site tool"
+      ],
+      "excludeKeywords": [
+        "requires server",
+        "cloud only"
+      ],
+      "minStars": 10,
+      "updatedWithinMonths": 24
+    },
+    {
+      "id": "pwa_webapp",
+      "name": "PWA / Web App",
+      "description": "关注移动端 Web App、PWA、静态网站、浏览器可用工具",
+      "enabled": false,
+      "weight": 10,
+      "keywords": [
+        "PWA",
+        "progressive web app",
+        "static website",
+        "browser tool",
+        "web app",
+        "offline web app",
+        "service worker"
+      ],
+      "excludeKeywords": [
+        "requires login",
+        "paid hosting"
+      ],
+      "minStars": 10,
+      "updatedWithinMonths": 24
+    },
+    {
+      "id": "beginner_friendly",
+      "name": "小白可学习项目",
+      "description": "关注对新手友好、文档清晰、适合学习的入门级项目",
+      "enabled": false,
+      "weight": 10,
+      "keywords": [
+        "beginner friendly",
+        "tutorial project",
+        "learning resource",
+        "easy to understand",
+        "simple example",
+        "starter kit",
+        "boilerplate"
+      ],
+      "excludeKeywords": [
+        "advanced only",
+        "expert level"
+      ],
+      "minStars": 5,
+      "updatedWithinMonths": 36
+    }
+  ],
+  "scoringWeights": {
+    "vibeCodingLearning": 20,
+    "officeAutomation": 20,
+    "monetizationPotential": 15,
+    "codexFriendly": 15,
+    "beginnerFriendly": 10,
+    "localFirst": 10,
+    "activity": 5,
+    "license": 5
+  },
+  "blacklistKeywords": [
+    "crypto",
+    "nft",
+    "trading bot",
+    "adult",
+    "casino",
+    "gambling",
+    "malware",
+    "scraper for illegal use"
+  ],
+  "whitelistKeywords": [
+    "office",
+    "excel",
+    "word",
+    "pptx",
+    "pdf",
+    "automation",
+    "local",
+    "template",
+    "generator",
+    "codex",
+    "github",
+    "learning",
+    "pwa"
+  ],
+  "blockedRepos": [],
+  "priorityOwners": [],
+  "priorityTopics": [],
+  "priorityLanguages": [
+    "Python",
+    "JavaScript",
+    "TypeScript"
+  ]
+}

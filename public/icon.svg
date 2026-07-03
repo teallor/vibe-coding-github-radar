@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#1a1d2e"/>
+      <stop offset="100%" stop-color="#0f1117"/>
+    </radialGradient>
+    <linearGradient id="radar" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34d399"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="96" fill="url(#bg)"/>
+  <!-- radar rings -->
+  <circle cx="256" cy="256" r="160" fill="none" stroke="url(#radar)" stroke-width="3" opacity="0.5"/>
+  <circle cx="256" cy="256" r="110" fill="none" stroke="url(#radar)" stroke-width="3" opacity="0.7"/>
+  <circle cx="256" cy="256" r="60" fill="none" stroke="url(#radar)" stroke-width="3" opacity="0.9"/>
+  <!-- radar sweep -->
+  <path d="M256 256 L256 96 A160 160 0 0 1 369 143 Z" fill="url(#radar)" opacity="0.25"/>
+  <!-- cross lines -->
+  <line x1="96" y1="256" x2="416" y2="256" stroke="url(#radar)" stroke-width="2" opacity="0.4"/>
+  <line x1="256" y1="96" x2="256" y2="416" stroke="url(#radar)" stroke-width="2" opacity="0.4"/>
+  <!-- blips -->
+  <circle cx="310" cy="180" r="8" fill="#34d399"/>
+  <circle cx="200" cy="300" r="6" fill="#3b82f6"/>
+  <circle cx="330" cy="320" r="5" fill="#f59e0b"/>
+  <!-- center -->
+  <circle cx="256" cy="256" r="10" fill="#34d399"/>
+</svg>

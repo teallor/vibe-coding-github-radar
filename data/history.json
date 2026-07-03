@@ -1,0 +1,37 @@
+{
+  "history": [
+    {
+      "date": "2026-07-03",
+      "topPick": {
+        "name": "python-docx",
+        "fullName": "python-docx/python-docx",
+        "url": "https://github.com/python-docx/python-docx",
+        "recommendScore": 92
+      },
+      "selectedProjects": [
+        {
+          "name": "openpyxl",
+          "fullName": "openpyxl/openpyxl",
+          "url": "https://github.com/openpyxl/openpyxl",
+          "recommendScore": 88
+        },
+        {
+          "name": "pdfkit",
+          "fullName": "pdfkit/pdfkit",
+          "url": "https://github.com/pdfkit/pdfkit",
+          "recommendScore": 85
+        }
+      ],
+      "profileName": "默认综合模式",
+      "focusAreas": [
+        "Office 文档自动化",
+        "个人 Vibe Coding 变现",
+        "Codex 可改造项目",
+        "新鲜有趣项目",
+        "个人效率工具"
+      ],
+      "summary": "这是首次运行的示例数据。请在 GitHub 中手动运行 daily-scout workflow，运行后此文件将被真实搜索结果替换。"
+    }
+  ],
+  "updatedAt": "2026-07-03T00:00:00Z"
+}

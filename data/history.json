@@ -2,8 +2,20 @@
   "history": [
     {
       "date": "2026-07-03",
-      "topPick": null,
-      "selectedProjects": [],
+      "topPick": {
+        "name": "lark-coding-agent-bridge",
+        "fullName": "zarazhangrui/lark-coding-agent-bridge",
+        "url": "https://github.com/zarazhangrui/lark-coding-agent-bridge",
+        "recommendScore": 87
+      },
+      "selectedProjects": [
+        {
+          "name": "claude-code-local",
+          "fullName": "nicedreamzapp/claude-code-local",
+          "url": "https://github.com/nicedreamzapp/claude-code-local",
+          "recommendScore": 85
+        }
+      ],
       "profileName": "默认综合模式",
       "focusAreas": [
         "Office 文档自动化",
@@ -12,8 +24,8 @@
         "新鲜有趣项目",
         "个人效率工具"
       ],
-      "summary": "今日暂无推荐项目。请检查 GitHub Actions 是否正常运行，或调整需求画像配置。"
+      "summary": "今天最值得精读的项目是 **lark-coding-agent-bridge**（推荐分 87）。高 - TypeScript 项目，1658 Star，属于「个人效率工具」方向，适合阅读学习核心机制。可以接触新鲜有趣的技术和项目组织方式。建议用 30-45 分钟只读学习，不要安装运行，先理解核心机制和可迁移经验。"
     }
   ],
-  "updatedAt": "2026-07-03T11:13:20.905Z"
+  "updatedAt": "2026-07-03T11:33:38.681Z"
 }

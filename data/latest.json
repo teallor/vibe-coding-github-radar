@@ -1,6 +1,6 @@
 {
   "date": "2026-07-03",
-  "summary": "今日暂无推荐项目。请检查 GitHub Actions 是否正常运行，或调整需求画像配置。",
+  "summary": "今天最值得精读的项目是 **lark-coding-agent-bridge**（推荐分 87）。高 - TypeScript 项目，1658 Star，属于「个人效率工具」方向，适合阅读学习核心机制。可以接触新鲜有趣的技术和项目组织方式。建议用 30-45 分钟只读学习，不要安装运行，先理解核心机制和可迁移经验。",
   "activeProfile": "默认综合模式",
   "activeFocusAreas": [
     "Office 文档自动化",
@@ -19,17 +19,231 @@
     "activity": 5,
     "license": 5
   },
-  "topPick": null,
-  "selectedProjects": [],
+  "screening": {
+    "taskCount": 30,
+    "succeeded": 30,
+    "failed": 0,
+    "rateLimitRetries": 0,
+    "complete": true,
+    "candidateCount": 318,
+    "qualifiedCount": 4
+  },
+  "topPick": {
+    "name": "lark-coding-agent-bridge",
+    "fullName": "zarazhangrui/lark-coding-agent-bridge",
+    "url": "https://github.com/zarazhangrui/lark-coding-agent-bridge",
+    "description": "Bot that bridges Feishu/Lark messenger with a local Claude Code or Codex CLI. Streaming cards, per-chat sessions, multiple workspaces",
+    "author": "zarazhangrui",
+    "language": "TypeScript",
+    "stars": 1658,
+    "forks": 252,
+    "license": "MIT",
+    "updatedAt": "2026-07-03",
+    "archived": false,
+    "openIssues": 127,
+    "recommendScore": 87,
+    "rawRecommendScore": 73,
+    "scores": {
+      "vibeCodingLearning": 19,
+      "officeAutomation": 3,
+      "monetizationPotential": 5,
+      "codexFriendly": 12,
+      "beginnerFriendly": 9,
+      "localFirst": 7,
+      "activity": 5,
+      "license": 5
+    },
+    "scoreBasis": {
+      "dimensions": [
+        {
+          "key": "vibeCodingLearning",
+          "label": "Vibe Coding 学习价值",
+          "score": 19,
+          "max": 20
+        },
+        {
+          "key": "officeAutomation",
+          "label": "办公自动化价值",
+          "score": 3,
+          "max": 20
+        },
+        {
+          "key": "monetizationPotential",
+          "label": "个人变现潜力",
+          "score": 5,
+          "max": 15
+        },
+        {
+          "key": "codexFriendly",
+          "label": "Codex 改造友好度",
+          "score": 12,
+          "max": 15
+        },
+        {
+          "key": "beginnerFriendly",
+          "label": "新手学习友好度",
+          "score": 9,
+          "max": 10
+        },
+        {
+          "key": "localFirst",
+          "label": "本地/免费优先",
+          "score": 7,
+          "max": 10
+        },
+        {
+          "key": "activity",
+          "label": "近期活跃度",
+          "score": 5,
+          "max": 5
+        },
+        {
+          "key": "license",
+          "label": "License 清晰度",
+          "score": 5,
+          "max": 5
+        }
+      ],
+      "penalties": [],
+      "bonuses": [
+        "命中白名单 2 个，加 4 分",
+        "优先语言 TypeScript，加 5 分"
+      ]
+    },
+    "vibeCodingValue": "高 - TypeScript 项目，1658 Star，属于「个人效率工具」方向，适合阅读学习核心机制",
+    "officeAutomationValue": "低 - 与办公自动化关系不大，但有通用学习价值",
+    "monetizationPotential": "低 - 暂不适合直接变现，可学习技术",
+    "codexFriendly": "中 - 有入门特征，可尝试 Codex 改造",
+    "riskPoints": "未发现明显风险",
+    "matchedArea": "个人效率工具",
+    "penalties": [],
+    "bonuses": [
+      "命中白名单 2 个，加 4 分",
+      "优先语言 TypeScript，加 5 分"
+    ],
+    "qualityGate": {
+      "passed": true,
+      "threshold": 85,
+      "relevanceSignals": [
+        "codex",
+        "claude code"
+      ],
+      "failures": []
+    }
+  },
+  "selectedProjects": [
+    {
+      "name": "claude-code-local",
+      "fullName": "nicedreamzapp/claude-code-local",
+      "url": "https://github.com/nicedreamzapp/claude-code-local",
+      "description": "Run Claude Code 100% on-device with local AI on Apple Silicon. MLX-native Anthropic-API server, 65 tok/s Qwen 3.5 122B, Llama 3.3 70B, Gemma 4 31B. Private, offline, airgap-ready. Built for NDA / legal / healthcare workflows.",
+      "author": "nicedreamzapp",
+      "language": "Python",
+      "stars": 2910,
+      "forks": 556,
+      "license": "MIT",
+      "updatedAt": "2026-06-18",
+      "archived": false,
+      "openIssues": 0,
+      "recommendScore": 85,
+      "rawRecommendScore": 69,
+      "scores": {
+        "vibeCodingLearning": 20,
+        "officeAutomation": 3,
+        "monetizationPotential": 5,
+        "codexFriendly": 10,
+        "beginnerFriendly": 9,
+        "localFirst": 6,
+        "activity": 5,
+        "license": 5
+      },
+      "scoreBasis": {
+        "dimensions": [
+          {
+            "key": "vibeCodingLearning",
+            "label": "Vibe Coding 学习价值",
+            "score": 20,
+            "max": 20
+          },
+          {
+            "key": "officeAutomation",
+            "label": "办公自动化价值",
+            "score": 3,
+            "max": 20
+          },
+          {
+            "key": "monetizationPotential",
+            "label": "个人变现潜力",
+            "score": 5,
+            "max": 15
+          },
+          {
+            "key": "codexFriendly",
+            "label": "Codex 改造友好度",
+            "score": 10,
+            "max": 15
+          },
+          {
+            "key": "beginnerFriendly",
+            "label": "新手学习友好度",
+            "score": 9,
+            "max": 10
+          },
+          {
+            "key": "localFirst",
+            "label": "本地/免费优先",
+            "score": 6,
+            "max": 10
+          },
+          {
+            "key": "activity",
+            "label": "近期活跃度",
+            "score": 5,
+            "max": 5
+          },
+          {
+            "key": "license",
+            "label": "License 清晰度",
+            "score": 5,
+            "max": 5
+          }
+        ],
+        "penalties": [],
+        "bonuses": [
+          "命中白名单 1 个，加 2 分",
+          "优先语言 Python，加 5 分"
+        ]
+      },
+      "vibeCodingValue": "高 - Python 项目，2910 Star，属于「Office 文档自动化」方向，适合阅读学习核心机制",
+      "officeAutomationValue": "低 - 与办公自动化关系不大，但有通用学习价值",
+      "monetizationPotential": "低 - 暂不适合直接变现，可学习技术",
+      "codexFriendly": "中 - 可阅读学习，改造难度需评估",
+      "riskPoints": "未发现明显风险",
+      "matchedArea": "Office 文档自动化",
+      "penalties": [],
+      "bonuses": [
+        "命中白名单 1 个，加 2 分",
+        "优先语言 Python，加 5 分"
+      ],
+      "qualityGate": {
+        "passed": true,
+        "threshold": 85,
+        "relevanceSignals": [
+          "claude code"
+        ],
+        "failures": []
+      }
+    }
+  ],
   "watchProjects": [],
   "notRecommendedProjects": [],
-  "codexPrompt": "今日暂无推荐项目，请调整配置后重试。",
-  "markdownTemplate": "",
+  "codexPrompt": "请帮我只读分析以下 GitHub 项目，不要运行、不要安装、不要 clone、不要改代码。请分析项目结构、核心机制、可学习点、可迁移点、变现启发点。每个新名词先用小白能懂的话解释。最后沉淀成 Markdown 文件。\n\n项目地址：https://github.com/zarazhangrui/lark-coding-agent-bridge\n项目名：lark-coding-agent-bridge\n日期：2026-07-03\n\n分析要求：\n1. 用一句话解释它是什么\n2. 为什么值得我今天读\n3. 今天只读哪些文件（30-45 分钟）\n4. 仓库结构拆解\n5. 可迁移经验\n6. 个人变现判断\n7. 沉淀成 Markdown 模板\n\n安全要求：\n- 不运行任何代码\n- 不安装任何依赖\n- 不 clone 陌生项目\n- 不执行第三方脚本\n- 只做只读分析",
+  "markdownTemplate": "# 2026-07-03 Vibe Coding GitHub 学习沉淀\n\n## 项目基本信息\n- 项目名：lark-coding-agent-bridge\n- GitHub 链接：https://github.com/zarazhangrui/lark-coding-agent-bridge\n- 作者：zarazhangrui\n- 语言：TypeScript\n- Star：1658\n- License：MIT\n\n## 为什么选它\n\n## 它属于哪类机会\n- [ ] 办公自动化\n- [ ] 变现工具\n- [ ] 新鲜有趣\n- [ ] 学习技术\n- [ ] Codex 改造\n\n## 我读了哪些文件\n\n## 我学到的 3 个机制\n1. \n2. \n3. \n\n## 我没懂的地方\n\n## 可迁移到我的 Vibe Coding 实践的点\n\n## 可能的变现方式\n\n## 是否值得让 Codex 深挖\n\n## 我的主观评分（1-10）",
   "tomorrowDirections": [
     "办公自动化：继续深挖 Word/Excel/PDF 生成库，关注模板填充和批量处理",
     "变现工具：关注可包装成模板服务或 SaaS 的小工具",
     "Codex 改造：寻找结构更清晰、更适合拆解的入门项目"
   ],
   "configSource": "config/focus.json",
-  "updatedAt": "2026-07-03T11:13:20.905Z"
+  "updatedAt": "2026-07-03T11:33:38.680Z"
 }

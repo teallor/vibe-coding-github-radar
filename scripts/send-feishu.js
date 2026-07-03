@@ -2,6 +2,7 @@
 const crypto = require('crypto');
 const fs = require('fs');
 const https = require('https');
+const { dailyReportFilename, writeDailyReport } = require('./daily-report');
 
 const REPOSITORY = process.env.GITHUB_REPOSITORY || 'teallor/vibe-coding-github-radar';
 
@@ -146,6 +147,8 @@ function aiAppBlock(item, index) {
 }
 
 function buildDailyCard(githubData, podcastData, aiAppData) {
+  const date = aiAppData.date || podcastData.date || githubData.date;
+  const combinedReportUrl = `https://github.com/${REPOSITORY}/blob/main/reports/${encodeURIComponent(dailyReportFilename(date))}`;
   const githubCard = buildCard(githubData);
   const podcastCard = buildPodcastCard(podcastData);
   const aiItems = aiAppData.recommendations || [];
@@ -158,7 +161,7 @@ function buildDailyCard(githubData, podcastData, aiAppData) {
   const podcastScreening = podcastData.screening || {};
   return {
     config: { wide_screen_mode: true },
-    header: { template: 'blue', title: { tag: 'plain_text', content: `每日 AI / Codex / Vibe Coding 雷达｜${aiAppData.date || podcastData.date || githubData.date}` } },
+    header: { template: 'blue', title: { tag: 'plain_text', content: `每日 AI / Codex / Vibe Coding 雷达｜${date}` } },
     elements: [
       { tag: 'div', text: { tag: 'lark_md', content: '**一、Vibe Coding / GitHub Radar**' } }, ...githubCard.elements,
       { tag: 'hr' }, { tag: 'div', text: { tag: 'lark_md', content: '**二、Codex / AI Coding 播客雷达**' } }, ...podcastCard.elements,
@@ -167,7 +170,8 @@ function buildDailyCard(githubData, podcastData, aiAppData) {
         `**四、今日总评**\n- 今日最终入选：${total} 条\n- 三类分别入选：GitHub ${(githubData.topPick ? 1 : 0) + (githubData.selectedProjects || []).length}；播客 ${(podcastData.recommendations || []).length}；AI 应用生态 ${aiItems.length}\n` +
         `- GitHub 候选：${githubScreening.candidateCount || 0}/${githubScreening.candidateTarget || 300}；硬门槛通过：${githubScreening.hardGatePassed || 0}；Gemini 成功：${githubScreening.geminiSucceeded || 0}\n` +
         `- 播客候选：${podcastScreening.candidateCount || 0}/${podcastScreening.candidateTarget || 100}；硬门槛通过：${podcastScreening.hardGatePassed || 0}；Gemini 成功：${podcastScreening.geminiSucceeded || 0}\n` +
-        `- AI 应用生态候选：${screening.candidateCount || 0}；达标：${screening.qualifiedCount || 0}；Gemini 成功：${screening.geminiSuccessCount || 0}\n- 被筛掉的主要原因：${(screening.excludedReasons || []).join('；') || '低于质量门槛或证据不足'}\n- 原则：真实来源建池、规则守硬门槛、Gemini 3.1 Pro 最终语义评审；宁缺毋滥。` } }
+        `- AI 应用生态候选：${screening.candidateCount || 0}；达标：${screening.qualifiedCount || 0}；Gemini 成功：${screening.geminiSuccessCount || 0}\n- 被筛掉的主要原因：${(screening.excludedReasons || []).join('；') || '低于质量门槛或证据不足'}\n- 原则：真实来源建池、规则守硬门槛、Gemini 3.1 Pro 最终语义评审；宁缺毋滥。` } },
+      { tag: 'action', actions: [{ tag: 'button', text: { tag: 'plain_text', content: '查看 GitHub 三合一完整日报' }, url: combinedReportUrl, type: 'primary' }] }
     ]
   };
 }
@@ -212,6 +216,10 @@ async function main() {
     ? JSON.parse(fs.readFileSync('data/codex-podcasts-latest.json', 'utf8'))
     : null;
   const aiAppData = dailyMode ? JSON.parse(fs.readFileSync('data/ai-app-radar-latest.json', 'utf8')) : null;
+  if (dailyMode) {
+    const reportPath = writeDailyReport(githubData, podcastData, aiAppData);
+    console.log(`Combined daily report written to ${reportPath}.`);
+  }
   const data = podcastMode ? podcastData : githubData;
   const card = dailyMode ? buildDailyCard(githubData, podcastData, aiAppData) : combinedMode ? buildCombinedCard(githubData, podcastData) : podcastMode ? buildPodcastCard(podcastData) : buildCard(githubData);
   if (process.env.FEISHU_DRY_RUN === '1') {

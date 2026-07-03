@@ -89,6 +89,8 @@ npm run full-run       # 完整生成三类内容并只发送一条合并消息
 
 - Actions 成功：仓库 `Actions → Daily GitHub Scout` 中所有步骤为绿色。
 - 飞书成功：日志出现 `sent successfully`，并且飞书只收到标题为“每日 AI / Codex / Vibe Coding 雷达”的一张卡片。
+- GitHub 完整日报：每天飞书发送前会同步生成 `reports/YYYY-MM-DD_每日AI_Codex_VibeCoding雷达.md`；它与飞书使用同一份三类数据，并由 Actions 自动提交到仓库。
+- 飞书卡片底部的“查看 GitHub 三合一完整日报”按钮可直接打开上述文件。Actions 尚未完成提交时，链接可能短暂等待数秒后才可访问。
 - 候选不足：日志和飞书总评会显示候选数、达标数、来源失败和主要淘汰原因。
 - 详细证据：Actions artifacts 中查看播客与第三类筛选 JSON。
 - 本地日志：PowerShell 直接显示每类候选、达标、Gemini 成功次数和降级原因；不会打印 Key。

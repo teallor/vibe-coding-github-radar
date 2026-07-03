@@ -8,6 +8,11 @@
     "scout": "node scripts/scout.js",
     "scout:local": "node scripts/scout.js",
     "podcast-radar": "node scripts/find-codex-podcasts.js",
+    "ai-app-radar": "node scripts/ai-app-radar.js",
+    "dry-run": "node scripts/radar-cli.js dry-run",
+    "preview": "node scripts/radar-cli.js preview",
+    "send-test": "node scripts/radar-cli.js send-test",
+    "full-run": "node scripts/radar-cli.js full-run",
     "test": "node --test"
   },
   "dependencies": {

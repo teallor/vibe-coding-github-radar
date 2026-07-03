@@ -6,9 +6,9 @@
 const fs = require('fs');
 const path = require('path');
 const { XMLParser } = require('fast-xml-parser');
+const { loadRuntimeConfig } = require('./runtime-config');
 
 const OUTPUT = path.join(process.cwd(), 'data', 'codex-podcasts-latest.json');
-const MAX_RECOMMENDATIONS = 3;
 const MAX_FEEDS = 60;
 const NETWORK_CONCURRENCY = 6;
 const SEARCH_TERMS = [
@@ -104,7 +104,7 @@ function scoreEpisode(episode, now = new Date()) {
   return { scores, total, outline, codexHits, practicalHits };
 }
 
-function classifyEpisode(episode, now = new Date()) {
+function classifyEpisode(episode, now = new Date(), minScore = 85) {
   const description = cleanText(episode.description);
   const combined = `${episode.title} ${description}`;
   const result = scoreEpisode({ ...episode, description }, now);
@@ -117,9 +117,9 @@ function classifyEpisode(episode, now = new Date()) {
   if (chineseRatio(combined) < 0.12) failures.push('中文内容不足');
   if (!episode.link || !/^https?:\/\//.test(episode.link)) failures.push('缺少可验证的单集链接');
 
-  let conclusion = failures.length ? '不推荐' : result.total >= 75 ? '推荐' : '不推荐';
+  let conclusion = failures.length ? '不推荐' : result.total >= minScore ? '推荐' : '不推荐';
   if (description.length < 80 && /codex/i.test(episode.title)) conclusion = '待人工确认';
-  if (!failures.length && result.total < 75) failures.push(`总分 ${result.total}，低于正式推荐阈值 75`);
+  if (!failures.length && result.total < minScore) failures.push(`总分 ${result.total}，低于正式推荐阈值 ${minScore}`);
   return { ...episode, description, ...result, failures, conclusion };
 }
 
@@ -229,7 +229,7 @@ async function scanFeeds(feeds, sourceFailures) {
         const searchable = `${episode.title} ${cleanText(episode.description)}`;
         if (!/codex/i.test(searchable)) continue;
         matching += 1;
-        candidates.push(classifyEpisode({ ...episode, feedUrl }));
+        candidates.push({ ...episode, feedUrl });
       }
       log(`RSS [${index + 1}/${feedEntries.length}] ${podcastName || indexedName}: ${items.length} 集，Codex 候选 ${matching} 集`);
     } catch (error) {
@@ -264,10 +264,18 @@ function valueReason(item) {
 }
 
 async function main() {
+  const runtime = loadRuntimeConfig();
+  const radarConfig = runtime.radars.podcast;
+  if (!radarConfig.enabled) {
+    log('播客雷达已在 config/runtime.json 中关闭。');
+    return;
+  }
   log('开始搜索；正式推荐必须同时通过时长、中文、正文证据、链接和评分检查。');
   const { feeds, failures: discoveryFailures } = await discoverFeeds();
   log(`去重后共 ${feeds.size} 个公开 RSS 源；本次按检索顺序最多核验 ${MAX_FEEDS} 个。`);
-  const { candidates, failures } = await scanFeeds(feeds, discoveryFailures);
+  const scanned = await scanFeeds(feeds, discoveryFailures);
+  const candidates = scanned.candidates.map(item => classifyEpisode(item, new Date(), radarConfig.minScore));
+  const failures = scanned.failures;
   for (const candidate of candidates) {
     if (candidate.conclusion === '推荐' && !(await verifyLink(candidate.link))) {
       candidate.conclusion = '不推荐';
@@ -279,7 +287,7 @@ async function main() {
   const recommendations = candidates
     .filter(item => item.conclusion === '推荐')
     .sort((a, b) => b.total - a.total)
-    .slice(0, MAX_RECOMMENDATIONS)
+    .slice(0, radarConfig.maxItems)
     .map(item => ({
       podcastName: item.podcastName, title: item.title, link: item.link,
       publishedAt: item.publishedAt ? new Date(item.publishedAt).toISOString().slice(0, 10) : '无法识别',

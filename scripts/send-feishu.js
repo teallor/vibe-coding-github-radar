@@ -133,6 +133,41 @@ function buildCombinedCard(githubData, podcastData) {
   };
 }
 
+function aiAppBlock(item, index) {
+  const extra = ['Codex', 'Skill', 'MCP', '插件'].includes(item.type)
+    ? `\n**适合解决的问题：** ${compact(item.suitableProblem, 260)}\n**使用门槛：** ${compact(item.usageBarrier, 200)}\n**是否需要 API Key / Token：** ${compact(item.requiresApiKey, 100)}\n**是否适合小白：** ${compact(item.beginnerFriendly, 120)}\n**是否值得保存到工具库：** ${compact(item.saveToToolkit, 120)}`
+    : '';
+  return { tag: 'div', text: { tag: 'lark_md', content:
+    `**【${index + 1}】[${compact(item.title, 120)}](${item.link})**\n` +
+    `**类型：** ${item.type}\n**来源：** ${compact(item.source, 100)}\n**发生了什么：** ${compact(item.whatHappened, 420)}\n` +
+    `**C端用户能怎么用：** ${compact(item.consumerUseCase, 300)}\n**对 Rafael_Huang 的价值：** ${compact(item.valueForRafael, 300)}\n` +
+    `**是否适合 Codex 集成或复现：** ${compact(item.codexIntegrationPotential, 260)}\n**行动建议：** ${compact(item.actionSuggestion, 220)}\n` +
+    `**质量评分：${item.score}/100**（${item.reviewProvider === 'rules' ? '规则降级评分' : 'Gemini 二次评审'}）${extra}` } };
+}
+
+function buildDailyCard(githubData, podcastData, aiAppData) {
+  const githubCard = buildCard(githubData);
+  const podcastCard = buildPodcastCard(podcastData);
+  const aiItems = aiAppData.recommendations || [];
+  const aiElements = aiItems.length
+    ? aiItems.flatMap((item, index) => index ? [{ tag: 'hr' }, aiAppBlock(item, index)] : [aiAppBlock(item, index)])
+    : [{ tag: 'div', text: { tag: 'lark_md', content: aiAppData.conclusion || '今日未发现足够高质量的 AI C端应用与 Codex 生态更新，已跳过，不硬凑。' } }];
+  const total = (githubData.topPick ? 1 : 0) + (githubData.selectedProjects || []).length + (podcastData.recommendations || []).length + aiItems.length;
+  const screening = aiAppData.screening || {};
+  return {
+    config: { wide_screen_mode: true },
+    header: { template: 'blue', title: { tag: 'plain_text', content: `每日 AI / Codex / Vibe Coding 雷达｜${aiAppData.date || podcastData.date || githubData.date}` } },
+    elements: [
+      { tag: 'div', text: { tag: 'lark_md', content: '**一、Vibe Coding / GitHub Radar**' } }, ...githubCard.elements,
+      { tag: 'hr' }, { tag: 'div', text: { tag: 'lark_md', content: '**二、Codex / AI Coding 播客雷达**' } }, ...podcastCard.elements,
+      { tag: 'hr' }, { tag: 'div', text: { tag: 'lark_md', content: '**三、AI C端应用与 Codex 生态更新雷达**' } }, ...aiElements,
+      { tag: 'hr' }, { tag: 'div', text: { tag: 'lark_md', content:
+        `**四、今日总评**\n- 今日最终入选：${total} 条\n- 三类分别入选：GitHub ${(githubData.topPick ? 1 : 0) + (githubData.selectedProjects || []).length}；播客 ${(podcastData.recommendations || []).length}；AI 应用生态 ${aiItems.length}\n` +
+        `- 第三类候选：${screening.candidateCount || 0}；达标：${screening.qualifiedCount || 0}；Gemini 成功评审：${screening.geminiSuccessCount || 0}\n- 被筛掉的主要原因：${(screening.excludedReasons || []).join('；') || '低于质量门槛或证据不足'}\n- 原则：宁缺毋滥，不为数量降低标准。` } }
+    ]
+  };
+}
+
 function postJson(url, payload) {
   const body = JSON.stringify(payload);
   return new Promise((resolve, reject) => {
@@ -159,29 +194,34 @@ function postJson(url, payload) {
   });
 }
 
+async function sendCardOnce(card, credentials, poster = postJson) {
+  const timestamp = Math.floor(Date.now() / 1000).toString();
+  return poster(credentials.webhook, { timestamp, sign: sign(timestamp, credentials.secret), msg_type: 'interactive', card });
+}
+
 async function main() {
   const podcastMode = process.argv.includes('--codex-podcasts');
   const combinedMode = process.argv.includes('--combined');
+  const dailyMode = process.argv.includes('--daily');
   const githubData = JSON.parse(fs.readFileSync('data/latest.json', 'utf8'));
-  const podcastData = (podcastMode || combinedMode)
+  const podcastData = (podcastMode || combinedMode || dailyMode)
     ? JSON.parse(fs.readFileSync('data/codex-podcasts-latest.json', 'utf8'))
     : null;
+  const aiAppData = dailyMode ? JSON.parse(fs.readFileSync('data/ai-app-radar-latest.json', 'utf8')) : null;
   const data = podcastMode ? podcastData : githubData;
-  const card = combinedMode ? buildCombinedCard(githubData, podcastData) : podcastMode ? buildPodcastCard(podcastData) : buildCard(githubData);
+  const card = dailyMode ? buildDailyCard(githubData, podcastData, aiAppData) : combinedMode ? buildCombinedCard(githubData, podcastData) : podcastMode ? buildPodcastCard(podcastData) : buildCard(githubData);
   if (process.env.FEISHU_DRY_RUN === '1') {
+    if (process.env.FEISHU_PREVIEW_FILE) {
+      fs.writeFileSync(process.env.FEISHU_PREVIEW_FILE, JSON.stringify(card, null, 2));
+      console.log(`Feishu preview written to ${process.env.FEISHU_PREVIEW_FILE}.`);
+    }
     console.log(JSON.stringify(card, null, 2));
     console.log(`Feishu dry run completed for ${data.date}; no request was sent.`);
     return;
   }
   const webhook = requiredEnv('FEISHU_WEBHOOK');
   const secret = requiredEnv('FEISHU_SECRET');
-  const timestamp = Math.floor(Date.now() / 1000).toString();
-  await postJson(webhook, {
-    timestamp,
-    sign: sign(timestamp, secret),
-    msg_type: 'interactive',
-    card
-  });
+  await sendCardOnce(card, { webhook, secret });
   console.log(`Feishu ${combinedMode ? 'combined GitHub and Codex podcast radar' : podcastMode ? 'Codex podcast radar' : 'digest'} sent successfully for ${data.date}.`);
 }
 
@@ -192,4 +232,4 @@ if (require.main === module) {
   });
 }
 
-module.exports = { sign, buildCard, buildPodcastCard, buildCombinedCard, postJson };
+module.exports = { sign, buildCard, buildPodcastCard, buildCombinedCard, buildDailyCard, aiAppBlock, postJson, sendCardOnce, main };

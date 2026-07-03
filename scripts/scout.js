@@ -27,6 +27,7 @@ const { loadConfig } = require('./loadConfig');
 const { generateSearchTasks } = require('./keywords');
 const { scoreProject } = require('./scoring');
 const { generateReport, generateCodexPrompt, generateMarkdownTemplate } = require('./report');
+const { loadRuntimeConfig } = require('./runtime-config');
 
 // GitHub API 配置
 const GITHUB_API = 'https://api.github.com';
@@ -43,6 +44,12 @@ async function main() {
 
   // 1. 加载配置
   const { config, source } = loadConfig();
+  const runtime = loadRuntimeConfig();
+  const radarConfig = runtime.radars.github;
+  if (!radarConfig.enabled) {
+    console.log('GitHub Radar 已在 config/runtime.json 中关闭。');
+    return;
+  }
   console.log(`📋 配置来源：${source}`);
   console.log(`📋 需求画像：${config.profileName}`);
   const enabledAreas = (config.enabledFocusAreas || []).filter(a => a.enabled);
@@ -116,15 +123,15 @@ async function main() {
   allCandidates.sort((a, b) => b.recommendScore - a.recommendScore);
 
   const qualifiedCandidates = allCandidates.filter(project => {
-    const assessment = assessQuality(project);
+    const assessment = assessQuality(project, radarConfig.minScore);
     project.qualityGate = assessment;
     return assessment.passed;
   });
-  const recommendations = qualifiedCandidates.slice(0, 3);
+  const recommendations = qualifiedCandidates.slice(0, radarConfig.maxItems);
   const topPick = recommendations[0] || null;
   const selectedProjects = recommendations.slice(1);
   const watchProjects = [];
-  console.log(`严格筛选：${allCandidates.length} 个候选，${qualifiedCandidates.length} 个达标，输出 ${recommendations.length} 个（最多 3 个）`);
+  console.log(`严格筛选：${allCandidates.length} 个候选，${qualifiedCandidates.length} 个达标，输出 ${recommendations.length} 个（最多 ${radarConfig.maxItems} 个）`);
 
   // 不推荐项目（分数最低的，但需要有理由）
   // 日报只输出通过门槛的推荐项目，不展示候选或淘汰项目。
@@ -136,9 +143,9 @@ async function main() {
   console.log('\n✅ 每日搜索完成！');
 }
 
-function assessQuality(project) {
+function assessQuality(project, minScore = 85) {
   const failures = [];
-  if (project.recommendScore < 70) failures.push('综合分低于 70');
+  if (project.recommendScore < minScore) failures.push(`综合分低于 ${minScore}`);
   if (project.archived) failures.push('仓库已归档');
   if (!project.license || project.license === '未知') failures.push('License 不明确');
   if (!project.description || project.description.trim().length < 30) failures.push('项目描述信息不足');
@@ -167,7 +174,7 @@ function assessQuality(project) {
 
   return {
     passed: failures.length === 0,
-    threshold: 70,
+    threshold: minScore,
     relevanceSignals,
     failures
   };
@@ -422,8 +429,11 @@ function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-// 运行主函数
-main().catch(err => {
-  console.error('❌ 运行失败:', err);
-  process.exit(1);
-});
+if (require.main === module) {
+  main().catch(err => {
+    console.error('❌ 运行失败:', err);
+    process.exit(1);
+  });
+}
+
+module.exports = { main, assessQuality };

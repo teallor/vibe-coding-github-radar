@@ -4,6 +4,89 @@
 
 **Original Author: Rafael_Huang**
 
+## 每日三合一雷达（当前版本）
+
+项目每天只向飞书发送**一条消息**，其中包含：
+
+1. **Vibe Coding / GitHub Radar**：最多 2 条，最低 85 分。
+2. **Codex / AI Coding 播客雷达**：最多 2 条，最低 85 分且时长不少于 20 分钟。
+3. **AI C端应用与 Codex 生态更新雷达**：最多 3 条，最低 85 分，优先 Codex、Skills、MCP、插件和 Agent 工具。
+
+数量是上限，不是任务指标。没有达到门槛的内容会显示“已跳过，不硬凑”。第三类不是泛 AI 新闻；融资、股价、传闻、营销软文和没有原始链接的内容默认淘汰。
+
+### Gemini 在项目中做什么
+
+公开网页、GitHub API、RSS 和官方更新页负责获取候选；Gemini 只做二次质量评审、结构化摘要和是否推荐判断。Gemini 不可用、超时或返回非法 JSON 时，程序自动使用本地规则评分，不会令整个 workflow 失败。
+
+默认模型在 `config/runtime.json` 的 `radars.aiApp.geminiModel` 中配置。当前默认是 `gemini-3.1-flash-lite`，适合每日批量评审；可随 Google 模型生命周期调整。
+
+#### 确保使用 Google Cloud 赠金
+
+程序按以下顺序调用：
+
+1. **Vertex AI + Application Default Credentials（优先）**：费用进入 `GOOGLE_CLOUD_PROJECT` 对应的 Google Cloud 结算账户，适合使用 GCP 赠金。
+2. **`GEMINI_API_KEY`（后备）**：仅当 Vertex 未配置时使用。它的实际扣费取决于该 Key 所属项目和 AI Studio / Cloud Billing 设置。
+3. 两者都不可用：规则评分。
+
+本地 Windows PowerShell：
+
+```powershell
+gcloud auth application-default login
+$env:GOOGLE_CLOUD_PROJECT="你的项目 ID"
+$env:GOOGLE_CLOUD_LOCATION="global"
+npm run dry-run
+```
+
+如果只使用 Gemini API Key：
+
+```powershell
+$env:GEMINI_API_KEY="粘贴你自己的 Key"
+npm run dry-run
+```
+
+关闭 PowerShell 窗口后临时环境变量即失效。不要把真实 Key 写入 `.env.example`、README、代码或提交记录。
+
+### GitHub Secrets 与 Variables
+
+进入仓库 `Settings → Secrets and variables → Actions`：
+
+- Secrets：`FEISHU_WEBHOOK`、`FEISHU_SECRET`、`GEMINI_API_KEY`。
+- 为保证 Actions 优先消耗 Vertex / GCP 赠金，可额外添加 `GCP_CREDENTIALS`，内容为仅具 Vertex AI 调用权限的服务账号 JSON。
+- Variables：`GOOGLE_CLOUD_PROJECT`（GCP 项目 ID）、`GOOGLE_CLOUD_LOCATION`（建议 `global`）。
+
+如果不配置 `GCP_CREDENTIALS`，Actions 会尝试 `GEMINI_API_KEY`；如果 Key 也不存在，则自动降级规则评分。
+
+### 本地命令
+
+```powershell
+npm ci                 # 安装依赖
+npm test               # 运行自动测试
+npm run dry-run        # 获取三类候选、评分并生成文件，不发送飞书
+npm run preview        # 输出最终三合一飞书卡片 JSON，不发送
+npm run send-test      # 环境变量齐全时发送一条测试消息，否则安全跳过
+npm run full-run       # 完整生成三类内容并只发送一条合并消息
+```
+
+`preview` 需要先执行一次 `dry-run`，确保三类 JSON 已生成。
+
+### 调整数量、门槛和关键词
+
+编辑 `config/runtime.json`：
+
+- `radars.github.maxItems`、`radars.podcast.maxItems`、`radars.aiApp.maxItems`：每类最大条数。
+- 每类的 `minScore`：质量门槛。
+- `radars.aiApp.keywords`：第三类关键词及权重，可直接增删。
+- `radars.aiApp.useGeminiReview`：是否启用 Gemini 二次评审。
+- `radars.aiApp.geminiModel`：模型 ID。
+
+### 如何检查运行结果
+
+- Actions 成功：仓库 `Actions → Daily GitHub Scout` 中所有步骤为绿色。
+- 飞书成功：日志出现 `sent successfully`，并且飞书只收到标题为“每日 AI / Codex / Vibe Coding 雷达”的一张卡片。
+- 候选不足：日志和飞书总评会显示候选数、达标数、来源失败和主要淘汰原因。
+- 详细证据：Actions artifacts 中查看播客与第三类筛选 JSON。
+- 本地日志：PowerShell 直接显示每类候选、达标、Gemini 成功次数和降级原因；不会打印 Key。
+
 ---
 
 ## 📖 项目简介

@@ -1,0 +1,37 @@
+{
+  "timezone": "Asia/Shanghai",
+  "runTime": "09:00",
+  "preferredLanguages": ["zh", "en"],
+  "radars": {
+    "github": { "enabled": true, "maxItems": 2, "minScore": 85, "candidateTarget": 20 },
+    "podcast": { "enabled": true, "maxItems": 2, "minScore": 85, "candidateTarget": 10 },
+    "aiApp": {
+      "enabled": true,
+      "maxItems": 3,
+      "minScore": 85,
+      "preferScore": 90,
+      "candidateTarget": 30,
+      "languages": ["zh", "en"],
+      "useGeminiReview": true,
+      "geminiModel": "gemini-3.1-flash-lite",
+      "geminiProvider": "vertex-first",
+      "keywords": {
+        "OpenAI Codex": 25, "Codex CLI": 25, "Codex App": 25, "Codex workflow": 24,
+        "ChatGPT Skills": 22, "Skills": 18, "MCP": 22, "Model Context Protocol": 22,
+        "MCP Server": 22, "agent": 14, "coding agent": 20, "AI coding": 18,
+        "vibe coding": 20, "GitHub Actions": 18, "GitHub Copilot": 16,
+        "Claude Code": 18, "Gemini CLI": 18, "Cursor": 15, "Windsurf": 15,
+        "Continue": 14, "Aider": 14, "VS Code plugin": 14, "browser agent": 17,
+        "Office automation": 20, "PowerPoint": 18, "PPT": 16, "Word": 16, "Excel": 16,
+        "document automation": 20, "Manus": 13, "Genspark": 13, "NotebookLM": 14,
+        "Gamma": 13, "扣子": 14, "腾讯元器": 14, "豆包": 13, "Kimi": 13,
+        "通义": 13, "DeepSeek": 14
+      },
+      "excludedKeywords": ["funding", "融资", "stock price", "股价", "rumor", "传闻", "celebrity", "八卦", "acquire", "acquisition", "收购", "merger", "并购"]
+    }
+  },
+  "profile": {
+    "name": "Rafael_Huang",
+    "focus": ["Codex", "Vibe Coding", "GitHub", "Skills", "MCP", "插件", "Agent", "Office 自动化", "PPT", "Word", "Excel", "课程制作", "副业项目"]
+  }
+}

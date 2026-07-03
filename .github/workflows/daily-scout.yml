@@ -12,6 +12,8 @@ permissions:
 jobs:
   scout:
     runs-on: ubuntu-latest
+    env:
+      GCP_CREDENTIALS: ${{ secrets.GCP_CREDENTIALS }}
 
     steps:
       - name: Checkout repository
@@ -30,6 +32,13 @@ jobs:
             npm install
           fi
 
+      - name: Authenticate to Google Cloud for Vertex AI credits
+        if: env.GCP_CREDENTIALS != ''
+        uses: google-github-actions/auth@v3
+        with:
+          credentials_json: ${{ env.GCP_CREDENTIALS }}
+          project_id: ${{ vars.GOOGLE_CLOUD_PROJECT }}
+
       - name: Run daily scout
         run: node scripts/scout.js
         env:
@@ -38,11 +47,19 @@ jobs:
       - name: Find and verify Codex podcasts
         run: node scripts/find-codex-podcasts.js
 
-      - name: Push combined GitHub and podcast radar to Feishu
-        run: node scripts/send-feishu.js --combined
+      - name: Build Gemini-reviewed AI app and Codex ecosystem radar
+        run: node scripts/ai-app-radar.js
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GOOGLE_CLOUD_LOCATION: ${{ vars.GOOGLE_CLOUD_LOCATION }}
+
+      - name: Push one combined three-part radar to Feishu
+        run: node scripts/send-feishu.js --daily
         env:
           FEISHU_WEBHOOK: ${{ secrets.FEISHU_WEBHOOK }}
           FEISHU_SECRET: ${{ secrets.FEISHU_SECRET }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
 
       - name: Upload podcast screening evidence
         if: always()
@@ -50,6 +67,15 @@ jobs:
         with:
           name: codex-podcast-radar-${{ github.run_id }}
           path: data/codex-podcasts-latest.json
+          if-no-files-found: warn
+          retention-days: 30
+
+      - name: Upload AI app radar screening evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ai-app-codex-ecosystem-radar-${{ github.run_id }}
+          path: data/ai-app-radar-latest.json
           if-no-files-found: warn
           retention-days: 30
 

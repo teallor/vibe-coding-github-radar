@@ -27,9 +27,55 @@
 | 项目名 | GitHub 链接 | 作者 | 语言 | Star | Fork | License | 最近更新 | 归档 | Issues | 推荐分 | Vibe Coding | Office | 变现 | Codex | 风险点 |
 |--------|------------|------|------|------|------|---------|----------|------|--------|--------|-------------|--------|------|-------|--------|
 | agent-starter | [链接](https://github.com/thorchh/agent-starter) | thorchh | TypeScript | 119 | 32 | MIT | 2026-01-01 | 否 | 0 | 75 | 中 - TypeScript 项目，11 | 高 - 涉及 template 相关功能 | 中 - 可包装成工具或模板服务 | 中 - 有入门特征，可尝试 Codex  | 未发现明显风险 |
-| slackcli | [链接](https://github.com/shaharia-lab/slackcli) | shaharia-lab | TypeScript | 91 | 27 | MIT | 2026-06-27 | 否 | 2 | 73 | 中 - TypeScript 项目，91 | 低 - 与办公自动化关系不大，但有通用学 | 中 - 可包装成工具或模板服务 | 中 - 有入门特征，可尝试 Codex  | 未发现明显风险 |
-| nodejs-typescript-modern-starter | [链接](https://github.com/xddq/nodejs-typescript-modern-starter) | xddq | TypeScript | 150 | 23 | MIT | 2026-06-22 | 否 | 5 | 72 | 中 - TypeScript 项目，15 | 高 - 涉及 template 相关功能 | 低中 - 有一定变现潜力，需要加工 | 中 - 有入门特征，可尝试 Codex  | 未发现明显风险 |
 | claude-skills | [链接](https://github.com/inbharatai/claude-skills) | inbharatai | Python | 16 | 6 | MIT | 2026-03-14 | 否 | 1 | 72 | 低 - Python 项目，16 Sta | 低 - 与办公自动化关系不大，但有通用学 | 中 - 可包装成工具或模板服务 | 中 - 可阅读学习，改造难度需评估 | 未发现明显风险 |
+| second-brain | [链接](https://github.com/henrydaum/second-brain) | henrydaum | Python | 567 | 66 | MIT | 2026-06-25 | 否 | 0 | 70 | 高 - Python 项目，567 St | 低 - 与办公自动化关系不大，但有通用学 | 低中 - 有一定变现潜力，需要加工 | 中 - 可阅读学习，改造难度需评估 | 未发现明显风险 |
+
+### 严格评分依据
+
+#### agent-starter：75/100
+
+- Vibe Coding 学习价值：18/20
+- 办公自动化价值：7/20
+- 个人变现潜力：10/15
+- Codex 改造友好度：11/15
+- 新手学习友好度：9/10
+- 本地/免费优先：5/10
+- 近期活跃度：3/5
+- License 清晰度：5/5
+- 加分：命中白名单 1 个，加 2 分；优先语言 TypeScript，加 5 分
+- 强相关信号：tool calling
+- 入选理由：中 - TypeScript 项目，119 Star，属于「Codex 可改造项目」方向，适合阅读学习核心机制；中 - 有入门特征，可尝试 Codex 改造
+- 风险检查：未发现明显风险
+
+#### claude-skills：72/100
+
+- Vibe Coding 学习价值：18/20
+- 办公自动化价值：3/20
+- 个人变现潜力：8/15
+- Codex 改造友好度：10/15
+- 新手学习友好度：8/10
+- 本地/免费优先：6/10
+- 近期活跃度：4/5
+- License 清晰度：5/5
+- 加分：命中白名单 3 个，加 6 分；优先语言 Python，加 5 分
+- 强相关信号：codex
+- 入选理由：低 - Python 项目，16 Star，属于「Codex 可改造项目」方向，适合阅读学习核心机制；中 - 可阅读学习，改造难度需评估
+- 风险检查：未发现明显风险
+
+#### second-brain：70/100
+
+- Vibe Coding 学习价值：20/20
+- 办公自动化价值：3/20
+- 个人变现潜力：6/15
+- Codex 改造友好度：8/15
+- 新手学习友好度：9/10
+- 本地/免费优先：6/10
+- 近期活跃度：5/5
+- License 清晰度：5/5
+- 加分：命中白名单 2 个，加 4 分；优先语言 Python，加 5 分
+- 强相关信号：agentic、workflow automation
+- 入选理由：高 - Python 项目，567 Star，属于「Office 文档自动化」方向，适合阅读学习核心机制；中 - 可阅读学习，改造难度需评估
+- 风险检查：未发现明显风险
 
 ## 四、今日最值得精读项目
 
@@ -301,19 +347,11 @@ Production-ready AI chat interface starter template with tool calling, streaming
 
 ## 五、备选观察项目
 
-| 项目名 | GitHub 链接 | 语言 | Star | 推荐分 | 风险点 |
-|--------|------------|------|------|--------|--------|
-| second-brain | [链接](https://github.com/henrydaum/second-brain) | Python | 567 | 70 | 未发现明显风险 |
-| claude-code-local | [链接](https://github.com/nicedreamzapp/claude-code-local) | Python | 2910 | 69 | 未发现明显风险 |
-| row-bot | [链接](https://github.com/siddsachar/row-bot) | Python | 1326 | 69 | 未发现明显风险 |
-| restai | [链接](https://github.com/apocas/restai) | Python | 511 | 69 | 未发现明显风险 |
-| rekono | [链接](https://github.com/pablosnt/rekono) | Python | 525 | 69 | 未发现明显风险 |
+*今日无备选观察项目。*
 
 ## 六、不推荐项目
 
-- **bane** ([链接](https://github.com/AlaBouali/bane))：未发现明显风险
-- **pinecone-vercel-starter** ([链接](https://github.com/pinecone-io/pinecone-vercel-starter))：已归档停更；License 不明确，商用需谨慎；长期未更新（18 个月）
-- **malware-and-monsters** ([链接](https://github.com/klausagnoletti/malware-and-monsters))：未发现明显风险
+*今日无不推荐项目。*
 
 ## 七、明天建议关注方向
 

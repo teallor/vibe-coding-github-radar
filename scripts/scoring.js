@@ -140,6 +140,7 @@ function scoreProject(repo, config, area) {
   return {
     recommendScore,
     scores: roundScores(scores),
+    scoreBasis: buildScoreBasis(scores, weights, penalties, bonuses),
     penalties,
     bonuses,
     vibeCodingValue: describeVibeCoding(repo, area),
@@ -148,6 +149,26 @@ function scoreProject(repo, config, area) {
     codexFriendly: describeCodex(repo),
     riskPoints: describeRisks(repo, penalties)
   };
+}
+
+function buildScoreBasis(scores, weights, penalties, bonuses) {
+  const labels = {
+    vibeCodingLearning: 'Vibe Coding 学习价值',
+    officeAutomation: '办公自动化价值',
+    monetizationPotential: '个人变现潜力',
+    codexFriendly: 'Codex 改造友好度',
+    beginnerFriendly: '新手学习友好度',
+    localFirst: '本地/免费优先',
+    activity: '近期活跃度',
+    license: 'License 清晰度'
+  };
+  const dimensions = Object.keys(weights).map(key => ({
+    key,
+    label: labels[key] || key,
+    score: Math.round(scores[key] || 0),
+    max: weights[key]
+  }));
+  return { dimensions, penalties: [...penalties], bonuses: [...bonuses] };
 }
 
 // ===== 各维度评分逻辑（返回 0-100 百分比）=====

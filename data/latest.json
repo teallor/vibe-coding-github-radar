@@ -43,6 +43,63 @@
       "activity": 3,
       "license": 5
     },
+    "scoreBasis": {
+      "dimensions": [
+        {
+          "key": "vibeCodingLearning",
+          "label": "Vibe Coding 学习价值",
+          "score": 18,
+          "max": 20
+        },
+        {
+          "key": "officeAutomation",
+          "label": "办公自动化价值",
+          "score": 7,
+          "max": 20
+        },
+        {
+          "key": "monetizationPotential",
+          "label": "个人变现潜力",
+          "score": 10,
+          "max": 15
+        },
+        {
+          "key": "codexFriendly",
+          "label": "Codex 改造友好度",
+          "score": 11,
+          "max": 15
+        },
+        {
+          "key": "beginnerFriendly",
+          "label": "新手学习友好度",
+          "score": 9,
+          "max": 10
+        },
+        {
+          "key": "localFirst",
+          "label": "本地/免费优先",
+          "score": 5,
+          "max": 10
+        },
+        {
+          "key": "activity",
+          "label": "近期活跃度",
+          "score": 3,
+          "max": 5
+        },
+        {
+          "key": "license",
+          "label": "License 清晰度",
+          "score": 5,
+          "max": 5
+        }
+      ],
+      "penalties": [],
+      "bonuses": [
+        "命中白名单 1 个，加 2 分",
+        "优先语言 TypeScript，加 5 分"
+      ]
+    },
     "vibeCodingValue": "中 - TypeScript 项目，119 Star，属于「Codex 可改造项目」方向，适合阅读学习核心机制",
     "officeAutomationValue": "高 - 涉及 template 相关功能",
     "monetizationPotential": "中 - 可包装成工具或模板服务",
@@ -53,81 +110,17 @@
     "bonuses": [
       "命中白名单 1 个，加 2 分",
       "优先语言 TypeScript，加 5 分"
-    ]
+    ],
+    "qualityGate": {
+      "passed": true,
+      "threshold": 70,
+      "relevanceSignals": [
+        "tool calling"
+      ],
+      "failures": []
+    }
   },
   "selectedProjects": [
-    {
-      "name": "slackcli",
-      "fullName": "shaharia-lab/slackcli",
-      "url": "https://github.com/shaharia-lab/slackcli",
-      "description": "Slack CLI - Command-line tool for interacting with Slack workspaces and channels. AI-friendly with structured output formats (JSON, table, text) designed for easy integration with AI tools and automation workflows.",
-      "author": "shaharia-lab",
-      "language": "TypeScript",
-      "stars": 91,
-      "forks": 27,
-      "license": "MIT",
-      "updatedAt": "2026-06-27",
-      "archived": false,
-      "openIssues": 2,
-      "recommendScore": 73,
-      "scores": {
-        "vibeCodingLearning": 18,
-        "officeAutomation": 3,
-        "monetizationPotential": 8,
-        "codexFriendly": 12,
-        "beginnerFriendly": 10,
-        "localFirst": 6,
-        "activity": 5,
-        "license": 5
-      },
-      "vibeCodingValue": "中 - TypeScript 项目，91 Star，属于「Office 文档自动化」方向，适合阅读学习核心机制",
-      "officeAutomationValue": "低 - 与办公自动化关系不大，但有通用学习价值",
-      "monetizationPotential": "中 - 可包装成工具或模板服务",
-      "codexFriendly": "中 - 有入门特征，可尝试 Codex 改造",
-      "riskPoints": "未发现明显风险",
-      "matchedArea": "Office 文档自动化",
-      "penalties": [],
-      "bonuses": [
-        "命中白名单 1 个，加 2 分",
-        "优先语言 TypeScript，加 5 分"
-      ]
-    },
-    {
-      "name": "nodejs-typescript-modern-starter",
-      "fullName": "xddq/nodejs-typescript-modern-starter",
-      "url": "https://github.com/xddq/nodejs-typescript-modern-starter",
-      "description": "Minimal and modern starter template to develop a Node.js project leveraging Typescript",
-      "author": "xddq",
-      "language": "TypeScript",
-      "stars": 150,
-      "forks": 23,
-      "license": "MIT",
-      "updatedAt": "2026-06-22",
-      "archived": false,
-      "openIssues": 5,
-      "recommendScore": 72,
-      "scores": {
-        "vibeCodingLearning": 18,
-        "officeAutomation": 7,
-        "monetizationPotential": 6,
-        "codexFriendly": 11,
-        "beginnerFriendly": 8,
-        "localFirst": 5,
-        "activity": 5,
-        "license": 5
-      },
-      "vibeCodingValue": "中 - TypeScript 项目，150 Star，属于「Codex 可改造项目」方向，适合阅读学习核心机制",
-      "officeAutomationValue": "高 - 涉及 template 相关功能",
-      "monetizationPotential": "低中 - 有一定变现潜力，需要加工",
-      "codexFriendly": "中 - 有入门特征，可尝试 Codex 改造",
-      "riskPoints": "未发现明显风险",
-      "matchedArea": "Codex 可改造项目",
-      "penalties": [],
-      "bonuses": [
-        "命中白名单 1 个，加 2 分",
-        "优先语言 TypeScript，加 5 分"
-      ]
-    },
     {
       "name": "claude-skills",
       "fullName": "inbharatai/claude-skills",
@@ -152,6 +145,63 @@
         "activity": 4,
         "license": 5
       },
+      "scoreBasis": {
+        "dimensions": [
+          {
+            "key": "vibeCodingLearning",
+            "label": "Vibe Coding 学习价值",
+            "score": 18,
+            "max": 20
+          },
+          {
+            "key": "officeAutomation",
+            "label": "办公自动化价值",
+            "score": 3,
+            "max": 20
+          },
+          {
+            "key": "monetizationPotential",
+            "label": "个人变现潜力",
+            "score": 8,
+            "max": 15
+          },
+          {
+            "key": "codexFriendly",
+            "label": "Codex 改造友好度",
+            "score": 10,
+            "max": 15
+          },
+          {
+            "key": "beginnerFriendly",
+            "label": "新手学习友好度",
+            "score": 8,
+            "max": 10
+          },
+          {
+            "key": "localFirst",
+            "label": "本地/免费优先",
+            "score": 6,
+            "max": 10
+          },
+          {
+            "key": "activity",
+            "label": "近期活跃度",
+            "score": 4,
+            "max": 5
+          },
+          {
+            "key": "license",
+            "label": "License 清晰度",
+            "score": 5,
+            "max": 5
+          }
+        ],
+        "penalties": [],
+        "bonuses": [
+          "命中白名单 3 个，加 6 分",
+          "优先语言 Python，加 5 分"
+        ]
+      },
       "vibeCodingValue": "低 - Python 项目，16 Star，属于「Codex 可改造项目」方向，适合阅读学习核心机制",
       "officeAutomationValue": "低 - 与办公自动化关系不大，但有通用学习价值",
       "monetizationPotential": "中 - 可包装成工具或模板服务",
@@ -162,10 +212,16 @@
       "bonuses": [
         "命中白名单 3 个，加 6 分",
         "优先语言 Python，加 5 分"
-      ]
-    }
-  ],
-  "watchProjects": [
+      ],
+      "qualityGate": {
+        "passed": true,
+        "threshold": 70,
+        "relevanceSignals": [
+          "codex"
+        ],
+        "failures": []
+      }
+    },
     {
       "name": "second-brain",
       "fullName": "henrydaum/second-brain",
@@ -190,6 +246,63 @@
         "activity": 5,
         "license": 5
       },
+      "scoreBasis": {
+        "dimensions": [
+          {
+            "key": "vibeCodingLearning",
+            "label": "Vibe Coding 学习价值",
+            "score": 20,
+            "max": 20
+          },
+          {
+            "key": "officeAutomation",
+            "label": "办公自动化价值",
+            "score": 3,
+            "max": 20
+          },
+          {
+            "key": "monetizationPotential",
+            "label": "个人变现潜力",
+            "score": 6,
+            "max": 15
+          },
+          {
+            "key": "codexFriendly",
+            "label": "Codex 改造友好度",
+            "score": 8,
+            "max": 15
+          },
+          {
+            "key": "beginnerFriendly",
+            "label": "新手学习友好度",
+            "score": 9,
+            "max": 10
+          },
+          {
+            "key": "localFirst",
+            "label": "本地/免费优先",
+            "score": 6,
+            "max": 10
+          },
+          {
+            "key": "activity",
+            "label": "近期活跃度",
+            "score": 5,
+            "max": 5
+          },
+          {
+            "key": "license",
+            "label": "License 清晰度",
+            "score": 5,
+            "max": 5
+          }
+        ],
+        "penalties": [],
+        "bonuses": [
+          "命中白名单 2 个，加 4 分",
+          "优先语言 Python，加 5 分"
+        ]
+      },
       "vibeCodingValue": "高 - Python 项目，567 Star，属于「Office 文档自动化」方向，适合阅读学习核心机制",
       "officeAutomationValue": "低 - 与办公自动化关系不大，但有通用学习价值",
       "monetizationPotential": "低中 - 有一定变现潜力，需要加工",
@@ -200,173 +313,20 @@
       "bonuses": [
         "命中白名单 2 个，加 4 分",
         "优先语言 Python，加 5 分"
-      ]
-    },
-    {
-      "name": "claude-code-local",
-      "fullName": "nicedreamzapp/claude-code-local",
-      "url": "https://github.com/nicedreamzapp/claude-code-local",
-      "description": "Run Claude Code 100% on-device with local AI on Apple Silicon. MLX-native Anthropic-API server, 65 tok/s Qwen 3.5 122B, Llama 3.3 70B, Gemma 4 31B. Private, offline, airgap-ready. Built for NDA / legal / healthcare workflows.",
-      "author": "nicedreamzapp",
-      "language": "Python",
-      "stars": 2910,
-      "forks": 556,
-      "license": "MIT",
-      "updatedAt": "2026-06-18",
-      "archived": false,
-      "openIssues": 0,
-      "recommendScore": 69,
-      "scores": {
-        "vibeCodingLearning": 20,
-        "officeAutomation": 3,
-        "monetizationPotential": 5,
-        "codexFriendly": 10,
-        "beginnerFriendly": 9,
-        "localFirst": 6,
-        "activity": 5,
-        "license": 5
-      },
-      "vibeCodingValue": "高 - Python 项目，2910 Star，属于「Office 文档自动化」方向，适合阅读学习核心机制",
-      "officeAutomationValue": "低 - 与办公自动化关系不大，但有通用学习价值",
-      "monetizationPotential": "低 - 暂不适合直接变现，可学习技术",
-      "codexFriendly": "中 - 可阅读学习，改造难度需评估",
-      "riskPoints": "未发现明显风险",
-      "matchedArea": "Office 文档自动化",
-      "penalties": [],
-      "bonuses": [
-        "命中白名单 1 个，加 2 分",
-        "优先语言 Python，加 5 分"
-      ]
-    },
-    {
-      "name": "row-bot",
-      "fullName": "siddsachar/row-bot",
-      "url": "https://github.com/siddsachar/row-bot",
-      "description": "Row-Bot - Personal AI Sovereignty. A local-first AI assistant with integrated tools, a personal knowledge graph, voice, vision, shell, browser automation, scheduled tasks, health tracking, and messaging channels. Run locally via Ollama or add opt-in cloud models. Your data stays on your machine.",
-      "author": "siddsachar",
-      "language": "Python",
-      "stars": 1326,
-      "forks": 157,
-      "license": "Apache-2.0",
-      "updatedAt": "2026-07-02",
-      "archived": false,
-      "openIssues": 23,
-      "recommendScore": 69,
-      "scores": {
-        "vibeCodingLearning": 19,
-        "officeAutomation": 3,
-        "monetizationPotential": 8,
-        "codexFriendly": 8,
-        "beginnerFriendly": 8,
-        "localFirst": 5,
-        "activity": 5,
-        "license": 5
-      },
-      "vibeCodingValue": "高 - Python 项目，1326 Star，属于「Office 文档自动化」方向，适合阅读学习核心机制",
-      "officeAutomationValue": "低 - 与办公自动化关系不大，但有通用学习价值",
-      "monetizationPotential": "中 - 可包装成工具或模板服务",
-      "codexFriendly": "低 - 项目较大，建议只学习部分模块",
-      "riskPoints": "未发现明显风险",
-      "matchedArea": "Office 文档自动化",
-      "penalties": [],
-      "bonuses": [
-        "命中白名单 2 个，加 4 分",
-        "优先语言 Python，加 5 分"
-      ]
-    },
-    {
-      "name": "restai",
-      "fullName": "apocas/restai",
-      "url": "https://github.com/apocas/restai",
-      "description": "RESTai is an AIaaS (AI as a Service) open-source platform. Supports many public and local LLM suported by Ollama/vLLM/etc. Precise embeddings usage, tuning, analytics etc. Built-in image/audio generation with dynamic loading generators. Live chat deployment. Built-in block based graphical language. Prompt versioning and much more...",
-      "author": "apocas",
-      "language": "Python",
-      "stars": 511,
-      "forks": 104,
-      "license": "Apache-2.0",
-      "updatedAt": "2026-07-01",
-      "archived": false,
-      "openIssues": 5,
-      "recommendScore": 69,
-      "scores": {
-        "vibeCodingLearning": 19,
-        "officeAutomation": 3,
-        "monetizationPotential": 8,
-        "codexFriendly": 8,
-        "beginnerFriendly": 8,
-        "localFirst": 5,
-        "activity": 5,
-        "license": 5
-      },
-      "vibeCodingValue": "高 - Python 项目，511 Star，属于「Office 文档自动化」方向，适合阅读学习核心机制",
-      "officeAutomationValue": "低 - 与办公自动化关系不大，但有通用学习价值",
-      "monetizationPotential": "中 - 可包装成工具或模板服务",
-      "codexFriendly": "低 - 项目较大，建议只学习部分模块",
-      "riskPoints": "未发现明显风险",
-      "matchedArea": "Office 文档自动化",
-      "penalties": [],
-      "bonuses": [
-        "命中白名单 2 个，加 4 分",
-        "优先语言 Python，加 5 分"
-      ]
-    },
-    {
-      "name": "rekono",
-      "fullName": "pablosnt/rekono",
-      "url": "https://github.com/pablosnt/rekono",
-      "description": "Pentesting automation platform that combines hacking tools to complete assessments",
-      "author": "pablosnt",
-      "language": "Python",
-      "stars": 525,
-      "forks": 80,
-      "license": "GPL-3.0",
-      "updatedAt": "2026-07-02",
-      "archived": false,
-      "openIssues": 1,
-      "recommendScore": 69,
-      "scores": {
-        "vibeCodingLearning": 19,
-        "officeAutomation": 3,
-        "monetizationPotential": 11,
-        "codexFriendly": 8,
-        "beginnerFriendly": 8,
-        "localFirst": 5,
-        "activity": 5,
-        "license": 4
-      },
-      "vibeCodingValue": "高 - Python 项目，525 Star，属于「个人 Vibe Coding 变现」方向，适合阅读学习核心机制",
-      "officeAutomationValue": "低 - 与办公自动化关系不大，但有通用学习价值",
-      "monetizationPotential": "中高 - 属于变现方向，可包装成小工具或服务",
-      "codexFriendly": "低 - 项目较大，建议只学习部分模块",
-      "riskPoints": "未发现明显风险",
-      "matchedArea": "个人 Vibe Coding 变现",
-      "penalties": [],
-      "bonuses": [
-        "命中白名单 1 个，加 2 分",
-        "优先语言 Python，加 5 分"
-      ]
+      ],
+      "qualityGate": {
+        "passed": true,
+        "threshold": 70,
+        "relevanceSignals": [
+          "agentic",
+          "workflow automation"
+        ],
+        "failures": []
+      }
     }
   ],
-  "notRecommendedProjects": [
-    {
-      "name": "bane",
-      "fullName": "AlaBouali/bane",
-      "url": "https://github.com/AlaBouali/bane",
-      "reason": "未发现明显风险"
-    },
-    {
-      "name": "pinecone-vercel-starter",
-      "fullName": "pinecone-io/pinecone-vercel-starter",
-      "url": "https://github.com/pinecone-io/pinecone-vercel-starter",
-      "reason": "已归档停更；License 不明确，商用需谨慎；长期未更新（18 个月）"
-    },
-    {
-      "name": "malware-and-monsters",
-      "fullName": "klausagnoletti/malware-and-monsters",
-      "url": "https://github.com/klausagnoletti/malware-and-monsters",
-      "reason": "未发现明显风险"
-    }
-  ],
+  "watchProjects": [],
+  "notRecommendedProjects": [],
   "codexPrompt": "请帮我只读分析以下 GitHub 项目，不要运行、不要安装、不要 clone、不要改代码。请分析项目结构、核心机制、可学习点、可迁移点、变现启发点。每个新名词先用小白能懂的话解释。最后沉淀成 Markdown 文件。\n\n项目地址：https://github.com/thorchh/agent-starter\n项目名：agent-starter\n日期：2026-07-03\n\n分析要求：\n1. 用一句话解释它是什么\n2. 为什么值得我今天读\n3. 今天只读哪些文件（30-45 分钟）\n4. 仓库结构拆解\n5. 可迁移经验\n6. 个人变现判断\n7. 沉淀成 Markdown 模板\n\n安全要求：\n- 不运行任何代码\n- 不安装任何依赖\n- 不 clone 陌生项目\n- 不执行第三方脚本\n- 只做只读分析",
   "markdownTemplate": "# 2026-07-03 Vibe Coding GitHub 学习沉淀\n\n## 项目基本信息\n- 项目名：agent-starter\n- GitHub 链接：https://github.com/thorchh/agent-starter\n- 作者：thorchh\n- 语言：TypeScript\n- Star：119\n- License：MIT\n\n## 为什么选它\n\n## 它属于哪类机会\n- [ ] 办公自动化\n- [ ] 变现工具\n- [ ] 新鲜有趣\n- [ ] 学习技术\n- [ ] Codex 改造\n\n## 我读了哪些文件\n\n## 我学到的 3 个机制\n1. \n2. \n3. \n\n## 我没懂的地方\n\n## 可迁移到我的 Vibe Coding 实践的点\n\n## 可能的变现方式\n\n## 是否值得让 Codex 深挖\n\n## 我的主观评分（1-10）",
   "tomorrowDirections": [
@@ -375,5 +335,5 @@
     "Codex 改造：寻找结构更清晰、更适合拆解的入门项目"
   ],
   "configSource": "config/focus.json",
-  "updatedAt": "2026-07-03T08:04:24.337Z"
+  "updatedAt": "2026-07-03T07:53:52.215Z"
 }

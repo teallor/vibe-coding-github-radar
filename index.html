@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="一个可调整需求画像的 GitHub 机会雷达，用于个人 Vibe Coding 学习、办公自动化、个人变现和新鲜有趣项目发现">
+  <meta name="theme-color" content="#0f1117">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="GitHub Radar">
+  <link rel="manifest" href="public/manifest.json">
+  <link rel="icon" type="image/svg+xml" href="public/icon.svg">
+  <link rel="apple-touch-icon" href="public/icon.svg">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="src/styles.css">
+  <title>Vibe Coding GitHub Radar · GitHub 机会雷达</title>
+</head>
+<body>
+  <!-- App Header -->
+  <header class="app-header" id="app-header">
+    <div class="header-inner">
+      <div class="brand" onclick="App.showPage('dashboard')">
+        <div class="brand-icon">
+          <i class="fas fa-satellite-dish"></i>
+        </div>
+        <div class="brand-text">
+          <h1>Vibe Coding GitHub Radar</h1>
+          <p>可调整需求画像的 GitHub 机会雷达</p>
+        </div>
+      </div>
+      <button class="menu-toggle" id="menu-toggle" aria-label="切换菜单">
+        <i class="fas fa-bars"></i>
+      </button>
+      <nav class="main-nav" id="main-nav">
+        <a href="#" data-page="dashboard" class="nav-link active" onclick="App.showPage('dashboard');return false;">
+          <i class="fas fa-gauge-high"></i><span>首页</span>
+        </a>
+        <a href="#" data-page="today" class="nav-link" onclick="App.showPage('today');return false;">
+          <i class="fas fa-star"></i><span>今日项目</span>
+        </a>
+        <a href="#" data-page="deepread" class="nav-link" onclick="App.showPage('deepread');return false;">
+          <i class="fas fa-book-open-reader"></i><span>今日精读</span>
+        </a>
+        <a href="#" data-page="library" class="nav-link" onclick="App.showPage('library');return false;">
+          <i class="fas fa-box-archive"></i><span>项目库</span>
+        </a>
+        <a href="#" data-page="reports" class="nav-link" onclick="App.showPage('reports');return false;">
+          <i class="fas fa-file-lines"></i><span>报告归档</span>
+        </a>
+        <a href="#" data-page="settings" class="nav-link" onclick="App.showPage('settings');return false;">
+          <i class="fas fa-sliders"></i><span>需求设置</span>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="app-main" id="app-main">
+    <!-- Loading -->
+    <div class="loading-screen" id="loading-screen">
+      <div class="loading-radar">
+        <div class="loading-ring"></div>
+        <div class="loading-ring"></div>
+        <div class="loading-ring"></div>
+        <i class="fas fa-satellite-dish loading-icon"></i>
+      </div>
+      <p>正在扫描 GitHub 机会雷达...</p>
+    </div>
+
+    <!-- ========== Page: Dashboard ========== -->
+    <section class="page" id="page-dashboard" style="display:none;">
+      <div class="page-container">
+        <div class="page-title-bar">
+          <h2><i class="fas fa-gauge-high"></i> 首页 Dashboard</h2>
+          <span class="data-update-time" id="dashboard-update-time"></span>
+        </div>
+
+        <!-- Profile Summary -->
+        <div class="card profile-card">
+          <div class="card-header">
+            <h3><i class="fas fa-id-card"></i> 当前需求画像</h3>
+            <span class="badge badge-profile" id="dashboard-profile-name">默认综合模式</span>
+          </div>
+          <div class="profile-grid">
+            <div class="profile-stat">
+              <span class="stat-label">启用的关注方向</span>
+              <span class="stat-value" id="dashboard-focus-count">0</span>
+            </div>
+            <div class="profile-stat">
+              <span class="stat-label">关键词总数</span>
+              <span class="stat-value" id="dashboard-keyword-count">0</span>
+            </div>
+            <div class="profile-stat">
+              <span class="stat-label">配置更新时间</span>
+              <span class="stat-value small" id="dashboard-config-time">-</span>
+            </div>
+            <div class="profile-stat">
+              <span class="stat-label">配置来源</span>
+              <span class="stat-value small" id="dashboard-config-source">config/focus.json</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Active Focus Areas -->
+        <div class="card">
+          <div class="card-header">
+            <h3><i class="fas fa-compass"></i> 当前启用的关注方向</h3>
+          </div>
+          <div class="focus-tags" id="dashboard-focus-areas"></div>
+        </div>
+
+        <!-- Scoring Weights -->
+        <div class="card">
+          <div class="card-header">
+            <h3><i class="fas fa-scale-balanced"></i> 当前评分权重摘要</h3>
+          </div>
+          <div class="scoring-bars" id="dashboard-scoring-weights"></div>
+        </div>
+
+        <!-- Top Pick -->
+        <div class="card top-pick-card">
+          <div class="card-header">
+            <h3><i class="fas fa-trophy"></i> 今日最值得精读项目</h3>
+            <span class="badge badge-score" id="dashboard-topscore">0</span>
+          </div>
+          <div id="dashboard-toppick-content"></div>
+        </div>
+
+        <!-- Today Summary -->
+        <div class="card">
+          <div class="card-header">
+            <h3><i class="fas fa-lightbulb"></i> 今日结论</h3>
+          </div>
+          <p class="summary-text" id="dashboard-summary"></p>
+        </div>
+
+        <!-- Today Directions -->
+        <div class="card">
+          <div class="card-header">
+            <h3><i class="fas fa-route"></i> 今日方向</h3>
+          </div>
+          <div class="direction-grid" id="dashboard-directions"></div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="card">
+          <div class="card-header">
+            <h3><i class="fas fa-bolt"></i> 今日行动</h3>
+          </div>
+          <div class="action-buttons">
+            <button class="btn btn-primary" onclick="App.copyCodexPrompt()">
+              <i class="fas fa-copy"></i> 复制 Codex 提示词
+            </button>
+            <button class="btn btn-secondary" onclick="App.showPage('deepread')">
+              <i class="fas fa-book-open-reader"></i> 查看今日精读
+            </button>
+            <button class="btn btn-secondary" onclick="App.showPage('reports')">
+              <i class="fas fa-file-lines"></i> 今日报告入口
+            </button>
+          </div>
+        </div>
+
+        <!-- Last 7 days -->
+        <div class="card">
+          <div class="card-header">
+            <h3><i class="fas fa-clock-rotate-left"></i> 最近 7 天学习记录</h3>
+          </div>
+          <div id="dashboard-history"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Page: Today Projects ========== -->
+    <section class="page" id="page-today" style="display:none;">
+      <div class="page-container">
+        <div class="page-title-bar">
+          <h2><i class="fas fa-star"></i> 今日项目</h2>
+          <span class="data-update-time" id="today-update-time"></span>
+        </div>
+        <p class="page-desc">今日精选项目（最多 3 个），每个项目包含完整的评估字段。</p>
+        <div id="today-projects-container"></div>
+      </div>
+    </section>
+
+    <!-- ========== Page: Deep Read ========== -->
+    <section class="page" id="page-deepread" style="display:none;">
+      <div class="page-container">
+        <div class="page-title-bar">
+          <h2><i class="fas fa-book-open-reader"></i> 今日精读</h2>
+        </div>
+        <div id="deepread-container"></div>
+      </div>
+    </section>
+
+    <!-- ========== Page: Library ========== -->
+    <section class="page" id="page-library" style="display:none;">
+      <div class="page-container">
+        <div class="page-title-bar">
+          <h2><i class="fas fa-box-archive"></i> 项目库</h2>
+        </div>
+
+        <div class="card filter-card">
+          <div class="card-header">
+            <h3><i class="fas fa-filter"></i> 筛选与搜索</h3>
+            <button class="btn btn-sm btn-ghost" onclick="Filters.resetFilters()"><i class="fas fa-rotate-left"></i> 重置</button>
+          </div>
+          <div class="filter-grid">
+            <div class="filter-field">
+              <label>搜索</label>
+              <input type="text" id="filter-search" placeholder="搜索项目名 / 描述..." oninput="Filters.applyFilters()">
+            </div>
+            <div class="filter-field">
+              <label>分类</label>
+              <select id="filter-category" onchange="Filters.applyFilters()">
+                <option value="">全部</option>
+                <option value="office">Office 自动化</option>
+                <option value="monetization">变现潜力</option>
+                <option value="codex">Codex 可改造</option>
+                <option value="fun">新鲜有趣</option>
+                <option value="learning">学习技术</option>
+              </select>
+            </div>
+            <div class="filter-field">
+              <label>语言</label>
+              <select id="filter-language" onchange="Filters.applyFilters()">
+                <option value="">全部</option>
+              </select>
+            </div>
+            <div class="filter-field">
+              <label>排序</label>
+              <select id="filter-sort" onchange="Filters.applyFilters()">
+                <option value="score">推荐分（高→低）</option>
+                <option value="stars">Star（高→低）</option>
+                <option value="updated">最近更新</option>
+                <option value="name">项目名（A-Z）</option>
+              </select>
+            </div>
+            <div class="filter-field">
+              <label>仅看 Office 自动化</label>
+              <select id="filter-office" onchange="Filters.applyFilters()">
+                <option value="">全部</option>
+                <option value="yes">是</option>
+                <option value="no">否</option>
+              </select>
+            </div>
+            <div class="filter-field">
+              <label>仅看有变现潜力</label>
+              <select id="filter-monetization" onchange="Filters.applyFilters()">
+                <option value="">全部</option>
+                <option value="yes">是</option>
+                <option value="no">否</option>
+              </select>
+            </div>
+            <div class="filter-field">
+              <label>仅看适合 Codex 改造</label>
+              <select id="filter-codex" onchange="Filters.applyFilters()">
+                <option value="">全部</option>
+                <option value="yes">是</option>
+                <option value="no">否</option>
+              </select>
+            </div>
+            <div class="filter-field">
+              <label>仅看新鲜有趣</label>
+              <select id="filter-fun" onchange="Filters.applyFilters()">
+                <option value="">全部</option>
+                <option value="yes">是</option>
+                <option value="no">否</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h3><i class="fas fa-list"></i> 历史推荐项目</h3>
+            <span class="badge badge-count" id="library-count">0</span>
+          </div>
+          <div id="library-container"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Page: Reports ========== -->
+    <section class="page" id="page-reports" style="display:none;">
+      <div class="page-container">
+        <div class="page-title-bar">
+          <h2><i class="fas fa-file-lines"></i> 报告归档</h2>
+        </div>
+        <p class="page-desc">查看 reports 文件夹中的历史日报。支持查看 Markdown 内容、复制日报、下载日报、复制当日 Codex 提示词。</p>
+
+        <div class="card">
+          <div class="card-header">
+            <h3><i class="fas fa-folder-open"></i> 历史日报列表</h3>
+            <button class="btn btn-sm btn-secondary" onclick="Reports.refresh()"><i class="fas fa-rotate"></i> 刷新</button>
+          </div>
+          <div id="reports-list"></div>
+        </div>
+
+        <div class="card report-viewer-card" id="report-viewer-card" style="display:none;">
+          <div class="card-header">
+            <h3 id="report-viewer-title">日报内容</h3>
+            <div class="header-actions">
+              <button class="btn btn-sm btn-secondary" onclick="Reports.copyCurrent()"><i class="fas fa-copy"></i> 复制日报</button>
+              <button class="btn btn-sm btn-secondary" onclick="Reports.downloadCurrent()"><i class="fas fa-download"></i> 下载日报</button>
+              <button class="btn btn-sm btn-primary" onclick="Reports.copyCodexPrompt()"><i class="fas fa-copy"></i> 复制 Codex 提示词</button>
+            </div>
+          </div>
+          <div class="report-content" id="report-viewer-content"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Page: Settings ========== -->
+    <section class="page" id="page-settings" style="display:none;">
+      <div class="page-container">
+        <div class="page-title-bar">
+          <h2><i class="fas fa-sliders"></i> 需求设置 / Focus Settings</h2>
+        </div>
+        <p class="page-desc">这是核心页面，用于修改 GitHub 项目筛选重点。所有修改可导出为 config/focus.json，交给 Codex 更新到 GitHub 仓库。</p>
+
+        <!-- Profile Templates -->
+        <div class="card">
+          <div class="card-header">
+            <h3><i class="fas fa-layer-group"></i> 需求画像模板</h3>
+          </div>
+          <div class="template-grid" id="settings-templates"></div>
+        </div>
+
+        <!-- Current Config Display -->
+        <div class="card">
+          <div class="card-header">
+            <h3><i class="fas fa-circle-info"></i> 当前配置概览</h3>
+          </div>
+          <div class="config-overview" id="settings-overview"></div>
+        </div>
+
+        <!-- Profile Name Editor -->
+        <div class="card">
+          <div class="card-header"><h3><i class="fas fa-tag"></i> 需求画像名称</h3></div>
+          <div class="card-body">
+            <input type="text" class="text-input" id="settings-profile-name" placeholder="例如：Office 自动化优先" oninput="ConfigEditor.markDirty()">
+          </div>
+        </div>
+
+        <!-- Focus Areas Management -->
+        <div class="card">
+          <div class="card-header">
+            <h3><i class="fas fa-compass"></i> 关注方向管理</h3>
+            <button class="btn btn-sm btn-primary" onclick="ConfigEditor.addFocusArea()"><i class="fas fa-plus"></i> 新增方向</button>
+          </div>
+          <div id="settings-focus-areas"></div>
+        </div>
+
+        <!-- Scoring Weights -->
+        <div class="card">
+          <div class="card-header">
+            <h3><i class="fas fa-scale-balanced"></i> 评分权重管理</h3>
+            <span class="badge badge-total" id="settings-weight-total">总分：100</span>
+          </div>
+          <div id="settings-scoring-weights"></div>
+        </div>
+
+        <!-- Blacklist / Whitelist -->
+        <div class="card">
+          <div class="card-header"><h3><i class="fas fa-ban"></i> 黑名单关键词</h3></div>
+          <div class="card-body">
+            <textarea class="textarea-input" id="settings-blacklist" rows="4" placeholder="每行一个关键词，如 crypto, nft..." oninput="ConfigEditor.markDirty()"></textarea>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header"><h3><i class="fas fa-check-circle"></i> 白名单关键词</h3></div>
+          <div class="card-body">
+            <textarea class="textarea-input" id="settings-whitelist" rows="4" placeholder="每行一个关键词，如 office, automation..." oninput="ConfigEditor.markDirty()"></textarea>
+          </div>
+        </div>
+
+        <!-- Blocked Repos -->
+        <div class="card">
+          <div class="card-header"><h3><i class="fas fa-shield-halved"></i> 屏蔽项目 (repo full name)</h3></div>
+          <div class="card-body">
+            <textarea class="textarea-input" id="settings-blocked-repos" rows="3" placeholder="每行一个，如 owner/repo" oninput="ConfigEditor.markDirty()"></textarea>
+          </div>
+        </div>
+
+        <!-- Priority Settings -->
+        <div class="card">
+          <div class="card-header"><h3><i class="fas fa-star"></i> 优先关注设置</h3></div>
+          <div class="card-body">
+            <div class="priority-grid">
+              <div>
+                <label>优先关注 owner（每行一个）</label>
+                <textarea class="textarea-input" id="settings-priority-owners" rows="3" placeholder="如 microsoft" oninput="ConfigEditor.markDirty()"></textarea>
+              </div>
+              <div>
+                <label>优先关注 topic（每行一个）</label>
+                <textarea class="textarea-input" id="settings-priority-topics" rows="3" placeholder="如 automation" oninput="ConfigEditor.markDirty()"></textarea>
+              </div>
+              <div>
+                <label>优先关注语言（每行一个）</label>
+                <textarea class="textarea-input" id="settings-priority-languages" rows="3" placeholder="如 Python" oninput="ConfigEditor.markDirty()"></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Export Section -->
+        <div class="card export-card">
+          <div class="card-header"><h3><i class="fas fa-file-export"></i> 配置导出</h3></div>
+          <div class="card-body">
+            <p class="export-warning">
+              <i class="fas fa-triangle-exclamation"></i>
+              由于这是 GitHub Pages 静态网站，不能把 GitHub Token 暴露在浏览器里，所以网页<strong>不能直接写 GitHub 仓库</strong>。
+              请使用以下方式导出配置，然后交给 Codex 更新。
+            </p>
+            <div class="export-buttons">
+              <button class="btn btn-primary" onclick="ConfigEditor.downloadConfig()"><i class="fas fa-download"></i> 下载 config/focus.json</button>
+              <button class="btn btn-secondary" onclick="ConfigEditor.copyConfig()"><i class="fas fa-copy"></i> 复制 config/focus.json</button>
+              <button class="btn btn-secondary" onclick="ConfigEditor.copyCodexUpdatePrompt()"><i class="fas fa-robot"></i> 复制给 Codex 的更新提示词</button>
+              <button class="btn btn-secondary" onclick="ConfigEditor.copyCommitMessage()"><i class="fas fa-code-commit"></i> 复制 GitHub 提交说明</button>
+            </div>
+            <div class="export-preview" id="settings-export-preview"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="app-footer">
+    <div class="footer-inner">
+      <p><i class="fas fa-satellite-dish"></i> Vibe Coding GitHub Radar — 可调整需求画像的 GitHub 机会雷达</p>
+      <p>Original Author: Rafael_Huang</p>
+    </div>
+  </footer>
+
+  <!-- Toast -->
+  <div class="toast" id="toast"></div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="src/api.js"></script>
+  <script src="src/profileTemplates.js"></script>
+  <script src="src/filters.js"></script>
+  <script src="src/render.js"></script>
+  <script src="src/configEditor.js"></script>
+  <script src="src/settings.js"></script>
+  <script src="src/main.js"></script>
+</body>
+</html>

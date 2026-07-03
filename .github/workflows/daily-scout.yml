@@ -2,8 +2,8 @@ name: Daily GitHub Scout
 
 on:
   schedule:
-    # GitHub Actions uses UTC; 00:00 UTC is 08:00 Beijing time.
-    - cron: "0 0 * * *"
+    # GitHub Actions uses UTC; 01:00 UTC is 09:00 Beijing time.
+    - cron: "0 1 * * *"
   workflow_dispatch:
 
 permissions:
@@ -35,11 +35,23 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Push generated report to Feishu
-        run: node scripts/send-feishu.js
+      - name: Find and verify Codex podcasts
+        run: node scripts/find-codex-podcasts.js
+
+      - name: Push combined GitHub and podcast radar to Feishu
+        run: node scripts/send-feishu.js --combined
         env:
           FEISHU_WEBHOOK: ${{ secrets.FEISHU_WEBHOOK }}
           FEISHU_SECRET: ${{ secrets.FEISHU_SECRET }}
+
+      - name: Upload podcast screening evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: codex-podcast-radar-${{ github.run_id }}
+          path: data/codex-podcasts-latest.json
+          if-no-files-found: warn
+          retention-days: 30
 
       - name: Commit generated reports
         run: |

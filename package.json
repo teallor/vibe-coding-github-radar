@@ -6,7 +6,12 @@
   "license": "MIT",
   "scripts": {
     "scout": "node scripts/scout.js",
-    "scout:local": "node scripts/scout.js"
+    "scout:local": "node scripts/scout.js",
+    "podcast-radar": "node scripts/find-codex-podcasts.js",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "fast-xml-parser": "^5.2.5"
   },
   "keywords": [
     "vibe-coding",

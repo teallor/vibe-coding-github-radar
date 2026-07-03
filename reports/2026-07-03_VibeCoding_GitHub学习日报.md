@@ -27,7 +27,6 @@
 | 项目名 | GitHub 链接 | 作者 | 语言 | Star | Fork | License | 最近更新 | 归档 | Issues | 推荐分 | Vibe Coding | Office | 变现 | Codex | 风险点 |
 |--------|------------|------|------|------|------|---------|----------|------|--------|--------|-------------|--------|------|-------|--------|
 | agent-starter | [链接](https://github.com/thorchh/agent-starter) | thorchh | TypeScript | 119 | 32 | MIT | 2026-01-01 | 否 | 0 | 75 | 中 - TypeScript 项目，11 | 高 - 涉及 template 相关功能 | 中 - 可包装成工具或模板服务 | 中 - 有入门特征，可尝试 Codex  | 未发现明显风险 |
-| claude-skills | [链接](https://github.com/inbharatai/claude-skills) | inbharatai | Python | 16 | 6 | MIT | 2026-03-14 | 否 | 1 | 72 | 低 - Python 项目，16 Sta | 低 - 与办公自动化关系不大，但有通用学 | 中 - 可包装成工具或模板服务 | 中 - 可阅读学习，改造难度需评估 | 未发现明显风险 |
 | second-brain | [链接](https://github.com/henrydaum/second-brain) | henrydaum | Python | 567 | 66 | MIT | 2026-06-25 | 否 | 0 | 70 | 高 - Python 项目，567 St | 低 - 与办公自动化关系不大，但有通用学 | 低中 - 有一定变现潜力，需要加工 | 中 - 可阅读学习，改造难度需评估 | 未发现明显风险 |
 
 ### 严格评分依据
@@ -45,21 +44,6 @@
 - 加分：命中白名单 1 个，加 2 分；优先语言 TypeScript，加 5 分
 - 强相关信号：tool calling
 - 入选理由：中 - TypeScript 项目，119 Star，属于「Codex 可改造项目」方向，适合阅读学习核心机制；中 - 有入门特征，可尝试 Codex 改造
-- 风险检查：未发现明显风险
-
-#### claude-skills：72/100
-
-- Vibe Coding 学习价值：18/20
-- 办公自动化价值：3/20
-- 个人变现潜力：8/15
-- Codex 改造友好度：10/15
-- 新手学习友好度：8/10
-- 本地/免费优先：6/10
-- 近期活跃度：4/5
-- License 清晰度：5/5
-- 加分：命中白名单 3 个，加 6 分；优先语言 Python，加 5 分
-- 强相关信号：codex
-- 入选理由：低 - Python 项目，16 Star，属于「Codex 可改造项目」方向，适合阅读学习核心机制；中 - 可阅读学习，改造难度需评估
 - 风险检查：未发现明显风险
 
 #### second-brain：70/100

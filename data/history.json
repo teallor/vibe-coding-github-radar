@@ -10,12 +10,6 @@
       },
       "selectedProjects": [
         {
-          "name": "claude-skills",
-          "fullName": "inbharatai/claude-skills",
-          "url": "https://github.com/inbharatai/claude-skills",
-          "recommendScore": 72
-        },
-        {
           "name": "second-brain",
           "fullName": "henrydaum/second-brain",
           "url": "https://github.com/henrydaum/second-brain",
@@ -33,5 +27,5 @@
       "summary": "今天最值得精读的项目是 **agent-starter**（推荐分 75）。中 - TypeScript 项目，119 Star，属于「Codex 可改造项目」方向，适合阅读学习核心机制。对办公自动化有直接价值。建议用 30-45 分钟只读学习，不要安装运行，先理解核心机制和可迁移经验。"
     }
   ],
-  "updatedAt": "2026-07-03T07:53:52.215Z"
+  "updatedAt": "2026-07-03T08:19:54.076Z"
 }

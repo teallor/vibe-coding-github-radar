@@ -122,107 +122,6 @@
   },
   "selectedProjects": [
     {
-      "name": "claude-skills",
-      "fullName": "inbharatai/claude-skills",
-      "url": "https://github.com/inbharatai/claude-skills",
-      "description": "Curated Claude and Codex skill collection for local AI workflows, automation, research, and product-building.",
-      "author": "inbharatai",
-      "language": "Python",
-      "stars": 16,
-      "forks": 6,
-      "license": "MIT",
-      "updatedAt": "2026-03-14",
-      "archived": false,
-      "openIssues": 1,
-      "recommendScore": 72,
-      "scores": {
-        "vibeCodingLearning": 18,
-        "officeAutomation": 3,
-        "monetizationPotential": 8,
-        "codexFriendly": 10,
-        "beginnerFriendly": 8,
-        "localFirst": 6,
-        "activity": 4,
-        "license": 5
-      },
-      "scoreBasis": {
-        "dimensions": [
-          {
-            "key": "vibeCodingLearning",
-            "label": "Vibe Coding 学习价值",
-            "score": 18,
-            "max": 20
-          },
-          {
-            "key": "officeAutomation",
-            "label": "办公自动化价值",
-            "score": 3,
-            "max": 20
-          },
-          {
-            "key": "monetizationPotential",
-            "label": "个人变现潜力",
-            "score": 8,
-            "max": 15
-          },
-          {
-            "key": "codexFriendly",
-            "label": "Codex 改造友好度",
-            "score": 10,
-            "max": 15
-          },
-          {
-            "key": "beginnerFriendly",
-            "label": "新手学习友好度",
-            "score": 8,
-            "max": 10
-          },
-          {
-            "key": "localFirst",
-            "label": "本地/免费优先",
-            "score": 6,
-            "max": 10
-          },
-          {
-            "key": "activity",
-            "label": "近期活跃度",
-            "score": 4,
-            "max": 5
-          },
-          {
-            "key": "license",
-            "label": "License 清晰度",
-            "score": 5,
-            "max": 5
-          }
-        ],
-        "penalties": [],
-        "bonuses": [
-          "命中白名单 3 个，加 6 分",
-          "优先语言 Python，加 5 分"
-        ]
-      },
-      "vibeCodingValue": "低 - Python 项目，16 Star，属于「Codex 可改造项目」方向，适合阅读学习核心机制",
-      "officeAutomationValue": "低 - 与办公自动化关系不大，但有通用学习价值",
-      "monetizationPotential": "中 - 可包装成工具或模板服务",
-      "codexFriendly": "中 - 可阅读学习，改造难度需评估",
-      "riskPoints": "未发现明显风险",
-      "matchedArea": "Codex 可改造项目",
-      "penalties": [],
-      "bonuses": [
-        "命中白名单 3 个，加 6 分",
-        "优先语言 Python，加 5 分"
-      ],
-      "qualityGate": {
-        "passed": true,
-        "threshold": 70,
-        "relevanceSignals": [
-          "codex"
-        ],
-        "failures": []
-      }
-    },
-    {
       "name": "second-brain",
       "fullName": "henrydaum/second-brain",
       "url": "https://github.com/henrydaum/second-brain",
@@ -335,5 +234,5 @@
     "Codex 改造：寻找结构更清晰、更适合拆解的入门项目"
   ],
   "configSource": "config/focus.json",
-  "updatedAt": "2026-07-03T07:53:52.215Z"
+  "updatedAt": "2026-07-03T08:19:54.076Z"
 }

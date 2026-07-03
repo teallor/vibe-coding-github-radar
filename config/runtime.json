@@ -1,7 +1,7 @@
 {
   "timezone": "Asia/Shanghai",
-  "runTime": "07:42",
-  "targetDeliveryTime": "08:00",
+  "runTime": "06:28",
+  "targetDeliveryTime": "06:45",
   "expectedDurationMinutes": 14,
   "preferredLanguages": ["zh", "en"],
   "radars": {

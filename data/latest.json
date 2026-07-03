@@ -1,6 +1,6 @@
 {
   "date": "2026-07-03",
-  "summary": "今天最值得精读的项目是 **slackcli**（推荐分 73）。中 - TypeScript 项目，91 Star，属于「Office 文档自动化」方向，适合阅读学习核心机制。可以接触新鲜有趣的技术和项目组织方式。建议用 30-45 分钟只读学习，不要安装运行，先理解核心机制和可迁移经验。",
+  "summary": "今天最值得精读的项目是 **agent-starter**（推荐分 75）。中 - TypeScript 项目，119 Star，属于「Codex 可改造项目」方向，适合阅读学习核心机制。对办公自动化有直接价值。建议用 30-45 分钟只读学习，不要安装运行，先理解核心机制和可迁移经验。",
   "activeProfile": "默认综合模式",
   "activeFocusAreas": [
     "Office 文档自动化",
@@ -20,35 +20,35 @@
     "license": 5
   },
   "topPick": {
-    "name": "slackcli",
-    "fullName": "shaharia-lab/slackcli",
-    "url": "https://github.com/shaharia-lab/slackcli",
-    "description": "Slack CLI - Command-line tool for interacting with Slack workspaces and channels. AI-friendly with structured output formats (JSON, table, text) designed for easy integration with AI tools and automation workflows.",
-    "author": "shaharia-lab",
+    "name": "agent-starter",
+    "fullName": "thorchh/agent-starter",
+    "url": "https://github.com/thorchh/agent-starter",
+    "description": "Production-ready AI chat interface starter template with tool calling, streaming, and multi-provider support",
+    "author": "thorchh",
     "language": "TypeScript",
-    "stars": 91,
-    "forks": 27,
+    "stars": 119,
+    "forks": 32,
     "license": "MIT",
-    "updatedAt": "2026-06-27",
+    "updatedAt": "2026-01-01",
     "archived": false,
-    "openIssues": 2,
-    "recommendScore": 73,
+    "openIssues": 0,
+    "recommendScore": 75,
     "scores": {
       "vibeCodingLearning": 18,
-      "officeAutomation": 3,
-      "monetizationPotential": 8,
-      "codexFriendly": 12,
-      "beginnerFriendly": 10,
-      "localFirst": 6,
-      "activity": 5,
+      "officeAutomation": 7,
+      "monetizationPotential": 10,
+      "codexFriendly": 11,
+      "beginnerFriendly": 9,
+      "localFirst": 5,
+      "activity": 3,
       "license": 5
     },
-    "vibeCodingValue": "中 - TypeScript 项目，91 Star，属于「Office 文档自动化」方向，适合阅读学习核心机制",
-    "officeAutomationValue": "低 - 与办公自动化关系不大，但有通用学习价值",
+    "vibeCodingValue": "中 - TypeScript 项目，119 Star，属于「Codex 可改造项目」方向，适合阅读学习核心机制",
+    "officeAutomationValue": "高 - 涉及 template 相关功能",
     "monetizationPotential": "中 - 可包装成工具或模板服务",
     "codexFriendly": "中 - 有入门特征，可尝试 Codex 改造",
     "riskPoints": "未发现明显风险",
-    "matchedArea": "Office 文档自动化",
+    "matchedArea": "Codex 可改造项目",
     "penalties": [],
     "bonuses": [
       "命中白名单 1 个，加 2 分",
@@ -56,6 +56,116 @@
     ]
   },
   "selectedProjects": [
+    {
+      "name": "slackcli",
+      "fullName": "shaharia-lab/slackcli",
+      "url": "https://github.com/shaharia-lab/slackcli",
+      "description": "Slack CLI - Command-line tool for interacting with Slack workspaces and channels. AI-friendly with structured output formats (JSON, table, text) designed for easy integration with AI tools and automation workflows.",
+      "author": "shaharia-lab",
+      "language": "TypeScript",
+      "stars": 91,
+      "forks": 27,
+      "license": "MIT",
+      "updatedAt": "2026-06-27",
+      "archived": false,
+      "openIssues": 2,
+      "recommendScore": 73,
+      "scores": {
+        "vibeCodingLearning": 18,
+        "officeAutomation": 3,
+        "monetizationPotential": 8,
+        "codexFriendly": 12,
+        "beginnerFriendly": 10,
+        "localFirst": 6,
+        "activity": 5,
+        "license": 5
+      },
+      "vibeCodingValue": "中 - TypeScript 项目，91 Star，属于「Office 文档自动化」方向，适合阅读学习核心机制",
+      "officeAutomationValue": "低 - 与办公自动化关系不大，但有通用学习价值",
+      "monetizationPotential": "中 - 可包装成工具或模板服务",
+      "codexFriendly": "中 - 有入门特征，可尝试 Codex 改造",
+      "riskPoints": "未发现明显风险",
+      "matchedArea": "Office 文档自动化",
+      "penalties": [],
+      "bonuses": [
+        "命中白名单 1 个，加 2 分",
+        "优先语言 TypeScript，加 5 分"
+      ]
+    },
+    {
+      "name": "nodejs-typescript-modern-starter",
+      "fullName": "xddq/nodejs-typescript-modern-starter",
+      "url": "https://github.com/xddq/nodejs-typescript-modern-starter",
+      "description": "Minimal and modern starter template to develop a Node.js project leveraging Typescript",
+      "author": "xddq",
+      "language": "TypeScript",
+      "stars": 150,
+      "forks": 23,
+      "license": "MIT",
+      "updatedAt": "2026-06-22",
+      "archived": false,
+      "openIssues": 5,
+      "recommendScore": 72,
+      "scores": {
+        "vibeCodingLearning": 18,
+        "officeAutomation": 7,
+        "monetizationPotential": 6,
+        "codexFriendly": 11,
+        "beginnerFriendly": 8,
+        "localFirst": 5,
+        "activity": 5,
+        "license": 5
+      },
+      "vibeCodingValue": "中 - TypeScript 项目，150 Star，属于「Codex 可改造项目」方向，适合阅读学习核心机制",
+      "officeAutomationValue": "高 - 涉及 template 相关功能",
+      "monetizationPotential": "低中 - 有一定变现潜力，需要加工",
+      "codexFriendly": "中 - 有入门特征，可尝试 Codex 改造",
+      "riskPoints": "未发现明显风险",
+      "matchedArea": "Codex 可改造项目",
+      "penalties": [],
+      "bonuses": [
+        "命中白名单 1 个，加 2 分",
+        "优先语言 TypeScript，加 5 分"
+      ]
+    },
+    {
+      "name": "claude-skills",
+      "fullName": "inbharatai/claude-skills",
+      "url": "https://github.com/inbharatai/claude-skills",
+      "description": "Curated Claude and Codex skill collection for local AI workflows, automation, research, and product-building.",
+      "author": "inbharatai",
+      "language": "Python",
+      "stars": 16,
+      "forks": 6,
+      "license": "MIT",
+      "updatedAt": "2026-03-14",
+      "archived": false,
+      "openIssues": 1,
+      "recommendScore": 72,
+      "scores": {
+        "vibeCodingLearning": 18,
+        "officeAutomation": 3,
+        "monetizationPotential": 8,
+        "codexFriendly": 10,
+        "beginnerFriendly": 8,
+        "localFirst": 6,
+        "activity": 4,
+        "license": 5
+      },
+      "vibeCodingValue": "低 - Python 项目，16 Star，属于「Codex 可改造项目」方向，适合阅读学习核心机制",
+      "officeAutomationValue": "低 - 与办公自动化关系不大，但有通用学习价值",
+      "monetizationPotential": "中 - 可包装成工具或模板服务",
+      "codexFriendly": "中 - 可阅读学习，改造难度需评估",
+      "riskPoints": "未发现明显风险",
+      "matchedArea": "Codex 可改造项目",
+      "penalties": [],
+      "bonuses": [
+        "命中白名单 3 个，加 6 分",
+        "优先语言 Python，加 5 分"
+      ]
+    }
+  ],
+  "watchProjects": [
     {
       "name": "second-brain",
       "fullName": "henrydaum/second-brain",
@@ -163,9 +273,7 @@
         "命中白名单 2 个，加 4 分",
         "优先语言 Python，加 5 分"
       ]
-    }
-  ],
-  "watchProjects": [
+    },
     {
       "name": "restai",
       "fullName": "apocas/restai",
@@ -203,143 +311,35 @@
       ]
     },
     {
-      "name": "bagidea-office",
-      "fullName": "bagidea/bagidea-office",
-      "url": "https://github.com/bagidea/bagidea-office",
-      "description": "A living AI-agent office on your desktop wallpaper — Claude Code agents that walk, work, delegate, learn & hold meetings. Per-agent swappable models (Claude/GLM/DeepSeek/Qwen/Kimi/OpenAI/Gemini/Groq/Ollama…), workflows, plugins, voice & Telegram/Discord/LINE. Open source.",
-      "author": "bagidea",
-      "language": "JavaScript",
-      "stars": 131,
-      "forks": 45,
-      "license": "MIT",
-      "updatedAt": "2026-07-03",
-      "archived": false,
-      "openIssues": 0,
-      "recommendScore": 68,
-      "scores": {
-        "vibeCodingLearning": 18,
-        "officeAutomation": 7,
-        "monetizationPotential": 5,
-        "codexFriendly": 8,
-        "beginnerFriendly": 8,
-        "localFirst": 6,
-        "activity": 5,
-        "license": 5
-      },
-      "vibeCodingValue": "中 - JavaScript 项目，131 Star，属于「Office 文档自动化」方向，适合阅读学习核心机制",
-      "officeAutomationValue": "高 - 涉及 office 相关功能",
-      "monetizationPotential": "低 - 暂不适合直接变现，可学习技术",
-      "codexFriendly": "低 - 项目较大，建议只学习部分模块",
-      "riskPoints": "未发现明显风险",
-      "matchedArea": "Office 文档自动化",
-      "penalties": [],
-      "bonuses": [
-        "命中白名单 1 个，加 2 分",
-        "优先语言 JavaScript，加 5 分"
-      ]
-    },
-    {
-      "name": "tutorials",
-      "fullName": "luuquangvu/tutorials",
-      "url": "https://github.com/luuquangvu/tutorials",
-      "description": "Exclusive Home Assistant Blueprints: Voice & Smart Automations",
-      "author": "luuquangvu",
+      "name": "rekono",
+      "fullName": "pablosnt/rekono",
+      "url": "https://github.com/pablosnt/rekono",
+      "description": "Pentesting automation platform that combines hacking tools to complete assessments",
+      "author": "pablosnt",
       "language": "Python",
-      "stars": 122,
-      "forks": 5,
-      "license": "MIT",
-      "updatedAt": "2026-06-19",
-      "archived": false,
-      "openIssues": 0,
-      "recommendScore": 68,
-      "scores": {
-        "vibeCodingLearning": 20,
-        "officeAutomation": 3,
-        "monetizationPotential": 6,
-        "codexFriendly": 8,
-        "beginnerFriendly": 10,
-        "localFirst": 5,
-        "activity": 5,
-        "license": 5
-      },
-      "vibeCodingValue": "中 - Python 项目，122 Star，属于「Office 文档自动化」方向，适合阅读学习核心机制",
-      "officeAutomationValue": "低 - 与办公自动化关系不大，但有通用学习价值",
-      "monetizationPotential": "低中 - 有一定变现潜力，需要加工",
-      "codexFriendly": "中 - 可阅读学习，改造难度需评估",
-      "riskPoints": "未发现明显风险",
-      "matchedArea": "Office 文档自动化",
-      "penalties": [],
-      "bonuses": [
-        "命中白名单 1 个，加 2 分",
-        "优先语言 Python，加 5 分"
-      ]
-    },
-    {
-      "name": "bridgic-browser",
-      "fullName": "bitsky-tech/bridgic-browser",
-      "url": "https://github.com/bitsky-tech/bridgic-browser",
-      "description": "LLM-driven browser automation library built on Playwright with 67 CLI/SDK tools, stable snapshot refs, and stealth mode.基于 Playwright 的 LLM 驱动浏览器自动化库，提供 67 个 CLI/SDK 工具、稳定快照引用（ref）与默认隐身模式，适用于 AI Agent 端到端网页操作。",
-      "author": "bitsky-tech",
-      "language": "Python",
-      "stars": 75,
-      "forks": 6,
-      "license": "MIT",
-      "updatedAt": "2026-05-19",
+      "stars": 525,
+      "forks": 80,
+      "license": "GPL-3.0",
+      "updatedAt": "2026-07-02",
       "archived": false,
       "openIssues": 1,
-      "recommendScore": 68,
+      "recommendScore": 69,
       "scores": {
-        "vibeCodingLearning": 18,
+        "vibeCodingLearning": 19,
         "officeAutomation": 3,
-        "monetizationPotential": 8,
-        "codexFriendly": 9,
-        "beginnerFriendly": 7,
-        "localFirst": 6,
-        "activity": 5,
-        "license": 5
-      },
-      "vibeCodingValue": "中 - Python 项目，75 Star，属于「Office 文档自动化」方向，适合阅读学习核心机制",
-      "officeAutomationValue": "低 - 与办公自动化关系不大，但有通用学习价值",
-      "monetizationPotential": "中 - 可包装成工具或模板服务",
-      "codexFriendly": "中 - 有入门特征，可尝试 Codex 改造",
-      "riskPoints": "未发现明显风险",
-      "matchedArea": "Office 文档自动化",
-      "penalties": [],
-      "bonuses": [
-        "命中白名单 1 个，加 2 分",
-        "优先语言 Python，加 5 分"
-      ]
-    },
-    {
-      "name": "hecat",
-      "fullName": "nodiscc/hecat",
-      "url": "https://github.com/nodiscc/hecat",
-      "description": "Generic automation tool around data stored as plaintext YAML files",
-      "author": "nodiscc",
-      "language": "Python",
-      "stars": 38,
-      "forks": 8,
-      "license": "GPL-3.0",
-      "updatedAt": "2026-06-28",
-      "archived": false,
-      "openIssues": 23,
-      "recommendScore": 67,
-      "scores": {
-        "vibeCodingLearning": 18,
-        "officeAutomation": 3,
-        "monetizationPotential": 8,
-        "codexFriendly": 10,
+        "monetizationPotential": 11,
+        "codexFriendly": 8,
         "beginnerFriendly": 8,
         "localFirst": 5,
         "activity": 5,
         "license": 4
       },
-      "vibeCodingValue": "低 - Python 项目，38 Star，属于「Office 文档自动化」方向，适合阅读学习核心机制",
+      "vibeCodingValue": "高 - Python 项目，525 Star，属于「个人 Vibe Coding 变现」方向，适合阅读学习核心机制",
       "officeAutomationValue": "低 - 与办公自动化关系不大，但有通用学习价值",
-      "monetizationPotential": "中 - 可包装成工具或模板服务",
-      "codexFriendly": "中 - 可阅读学习，改造难度需评估",
+      "monetizationPotential": "中高 - 属于变现方向，可包装成小工具或服务",
+      "codexFriendly": "低 - 项目较大，建议只学习部分模块",
       "riskPoints": "未发现明显风险",
-      "matchedArea": "Office 文档自动化",
+      "matchedArea": "个人 Vibe Coding 变现",
       "penalties": [],
       "bonuses": [
         "命中白名单 1 个，加 2 分",
@@ -349,31 +349,31 @@
   ],
   "notRecommendedProjects": [
     {
-      "name": "natural-db",
-      "fullName": "supabase-community/natural-db",
-      "url": "https://github.com/supabase-community/natural-db",
-      "reason": "License 不明确，商用需谨慎"
-    },
-    {
-      "name": "poe-api-wrapper",
-      "fullName": "snowby666/poe-api-wrapper",
-      "url": "https://github.com/snowby666/poe-api-wrapper",
-      "reason": "已归档停更"
-    },
-    {
       "name": "bane",
       "fullName": "AlaBouali/bane",
       "url": "https://github.com/AlaBouali/bane",
       "reason": "未发现明显风险"
+    },
+    {
+      "name": "pinecone-vercel-starter",
+      "fullName": "pinecone-io/pinecone-vercel-starter",
+      "url": "https://github.com/pinecone-io/pinecone-vercel-starter",
+      "reason": "已归档停更；License 不明确，商用需谨慎；长期未更新（18 个月）"
+    },
+    {
+      "name": "malware-and-monsters",
+      "fullName": "klausagnoletti/malware-and-monsters",
+      "url": "https://github.com/klausagnoletti/malware-and-monsters",
+      "reason": "未发现明显风险"
     }
   ],
-  "codexPrompt": "请帮我只读分析以下 GitHub 项目，不要运行、不要安装、不要 clone、不要改代码。请分析项目结构、核心机制、可学习点、可迁移点、变现启发点。每个新名词先用小白能懂的话解释。最后沉淀成 Markdown 文件。\n\n项目地址：https://github.com/shaharia-lab/slackcli\n项目名：slackcli\n日期：2026-07-03\n\n分析要求：\n1. 用一句话解释它是什么\n2. 为什么值得我今天读\n3. 今天只读哪些文件（30-45 分钟）\n4. 仓库结构拆解\n5. 可迁移经验\n6. 个人变现判断\n7. 沉淀成 Markdown 模板\n\n安全要求：\n- 不运行任何代码\n- 不安装任何依赖\n- 不 clone 陌生项目\n- 不执行第三方脚本\n- 只做只读分析",
-  "markdownTemplate": "# 2026-07-03 Vibe Coding GitHub 学习沉淀\n\n## 项目基本信息\n- 项目名：slackcli\n- GitHub 链接：https://github.com/shaharia-lab/slackcli\n- 作者：shaharia-lab\n- 语言：TypeScript\n- Star：91\n- License：MIT\n\n## 为什么选它\n\n## 它属于哪类机会\n- [ ] 办公自动化\n- [ ] 变现工具\n- [ ] 新鲜有趣\n- [ ] 学习技术\n- [ ] Codex 改造\n\n## 我读了哪些文件\n\n## 我学到的 3 个机制\n1. \n2. \n3. \n\n## 我没懂的地方\n\n## 可迁移到我的 Vibe Coding 实践的点\n\n## 可能的变现方式\n\n## 是否值得让 Codex 深挖\n\n## 我的主观评分（1-10）",
+  "codexPrompt": "请帮我只读分析以下 GitHub 项目，不要运行、不要安装、不要 clone、不要改代码。请分析项目结构、核心机制、可学习点、可迁移点、变现启发点。每个新名词先用小白能懂的话解释。最后沉淀成 Markdown 文件。\n\n项目地址：https://github.com/thorchh/agent-starter\n项目名：agent-starter\n日期：2026-07-03\n\n分析要求：\n1. 用一句话解释它是什么\n2. 为什么值得我今天读\n3. 今天只读哪些文件（30-45 分钟）\n4. 仓库结构拆解\n5. 可迁移经验\n6. 个人变现判断\n7. 沉淀成 Markdown 模板\n\n安全要求：\n- 不运行任何代码\n- 不安装任何依赖\n- 不 clone 陌生项目\n- 不执行第三方脚本\n- 只做只读分析",
+  "markdownTemplate": "# 2026-07-03 Vibe Coding GitHub 学习沉淀\n\n## 项目基本信息\n- 项目名：agent-starter\n- GitHub 链接：https://github.com/thorchh/agent-starter\n- 作者：thorchh\n- 语言：TypeScript\n- Star：119\n- License：MIT\n\n## 为什么选它\n\n## 它属于哪类机会\n- [ ] 办公自动化\n- [ ] 变现工具\n- [ ] 新鲜有趣\n- [ ] 学习技术\n- [ ] Codex 改造\n\n## 我读了哪些文件\n\n## 我学到的 3 个机制\n1. \n2. \n3. \n\n## 我没懂的地方\n\n## 可迁移到我的 Vibe Coding 实践的点\n\n## 可能的变现方式\n\n## 是否值得让 Codex 深挖\n\n## 我的主观评分（1-10）",
   "tomorrowDirections": [
     "办公自动化：继续深挖 Word/Excel/PDF 生成库，关注模板填充和批量处理",
     "变现工具：关注可包装成模板服务或 SaaS 的小工具",
     "Codex 改造：寻找结构更清晰、更适合拆解的入门项目"
   ],
   "configSource": "config/focus.json",
-  "updatedAt": "2026-07-03T07:33:12.531Z"
+  "updatedAt": "2026-07-03T08:04:24.337Z"
 }

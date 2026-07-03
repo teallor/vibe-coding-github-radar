@@ -412,12 +412,21 @@ vibe-coding-github-radar/
 
 ### GitHub Actions
 
-- 每天定时运行（北京时间 9:17）
+- GitHub 项目雷达与 Codex 中文播客雷达每天北京时间 09:00 在同一个 workflow 中运行
 - 支持 workflow_dispatch 手动触发
 - Node.js 20 环境
 - 调用 GitHub Search API 搜索公开仓库
 - 自动提交生成的数据文件
 - 使用默认 GITHUB_TOKEN（无需额外配置）
+
+### Codex 中文播客雷达
+
+- 复用 `.github/workflows/daily-scout.yml`：先生成原 GitHub Radar，再筛选播客，最后合并为一张飞书卡片；不会删除或替换原日报内容
+- 通过 Apple Podcasts 中国大陆、香港、台湾公开索引发现节目，再读取公开 RSS 的逐集简介/Shownotes 与时长
+- 时长不足 20 分钟、时长未知、无正文证据、中文不足、链接不可访问或评分低于 75 的单集不会正式推荐
+- 标题含 Codex 但没有可读正文的单集只列为“待人工确认”，不会进入正式推荐
+- 播客筛选证据写入 Actions 运行产物 `codex-podcast-radar-<run id>`；GitHub Radar 仍照常更新仓库中的日报与历史数据
+- 沿用 GitHub Secrets：`FEISHU_WEBHOOK`（机器人 Webhook）与 `FEISHU_SECRET`（机器人签名密钥），均不可写入代码
 
 ### 数据流
 

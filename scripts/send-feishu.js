@@ -64,6 +64,68 @@ function buildCard(data) {
   };
 }
 
+function podcastBlock(item, index) {
+  const outline = (item.outline || []).slice(0, 5).map(point => `- ${compact(point, 220)}`).join('\n');
+  return {
+    tag: 'div',
+    text: {
+      tag: 'lark_md',
+      content: `**【第 ${index + 1} 条】${compact(item.podcastName, 80)}｜${compact(item.title, 120)}**\n` +
+        `链接：[打开单集](${item.link})\n时长：${item.duration}\n发布日期：${item.publishedAt}\n` +
+        `质量评分：**${item.qualityScore}/100**\nCodex 相关性：${compact(item.codexRelevance, 240)}\n` +
+        `**内容大纲：**\n${outline}\n**为什么值得听：**\n${compact(item.whyWorthListening, 500)}\n` +
+        `**自检结论：${item.conclusion}**`
+    }
+  };
+}
+
+function buildPodcastCard(data) {
+  const recommendations = data.recommendations || [];
+  const screening = data.screening || {};
+  const elements = [{ tag: 'div', text: { tag: 'lark_md', content: `**今日结论：**\n- ${data.conclusion}` } }];
+  recommendations.forEach((item, index) => elements.push({ tag: 'hr' }, podcastBlock(item, index)));
+  const failureSummary = (screening.sourceFailures || []).length
+    ? `存在 ${(screening.sourceFailures || []).length} 个无法访问或解析的来源，详情见 Actions 日志与运行产物。`
+    : '本次没有来源访问或解析失败。';
+  elements.push(
+    { tag: 'hr' },
+    {
+      tag: 'div',
+      text: {
+        tag: 'lark_md',
+        content: `**今日筛选说明：**\n- 搜索来源：${(screening.sources || []).join('；')}\n` +
+          `- 候选单集：${screening.candidateCount || 0} 条；待人工确认：${(data.pending || []).length} 条；淘汰：${(data.rejected || []).length} 条\n` +
+          `- 排除类型：${(screening.excluded || []).join('；')}\n- ${failureSummary}`
+      }
+    },
+    { tag: 'note', elements: [{ tag: 'plain_text', content: `严格按 RSS 正文证据筛选；宁缺毋滥。由 ${REPOSITORY} 自动生成。` }] }
+  );
+  return {
+    config: { wide_screen_mode: true },
+    header: { template: recommendations.length ? 'green' : 'grey', title: { tag: 'plain_text', content: `【Codex 中文播客雷达】${data.date}` } },
+    elements
+  };
+}
+
+function buildCombinedCard(githubData, podcastData) {
+  const githubCard = buildCard(githubData);
+  const podcastCard = buildPodcastCard(podcastData);
+  return {
+    config: { wide_screen_mode: true },
+    header: {
+      template: 'blue',
+      title: { tag: 'plain_text', content: `${githubData.date} Vibe Coding GitHub + Codex 播客雷达` }
+    },
+    elements: [
+      { tag: 'div', text: { tag: 'lark_md', content: '**第一部分｜Vibe Coding GitHub 雷达**' } },
+      ...githubCard.elements,
+      { tag: 'hr' },
+      { tag: 'div', text: { tag: 'lark_md', content: '**第二部分｜OpenAI Codex 高质量中文播客雷达**' } },
+      ...podcastCard.elements
+    ]
+  };
+}
+
 function postJson(url, payload) {
   const body = JSON.stringify(payload);
   return new Promise((resolve, reject) => {
@@ -91,20 +153,36 @@ function postJson(url, payload) {
 }
 
 async function main() {
+  const podcastMode = process.argv.includes('--codex-podcasts');
+  const combinedMode = process.argv.includes('--combined');
+  const githubData = JSON.parse(fs.readFileSync('data/latest.json', 'utf8'));
+  const podcastData = (podcastMode || combinedMode)
+    ? JSON.parse(fs.readFileSync('data/codex-podcasts-latest.json', 'utf8'))
+    : null;
+  const data = podcastMode ? podcastData : githubData;
+  const card = combinedMode ? buildCombinedCard(githubData, podcastData) : podcastMode ? buildPodcastCard(podcastData) : buildCard(githubData);
+  if (process.env.FEISHU_DRY_RUN === '1') {
+    console.log(JSON.stringify(card, null, 2));
+    console.log(`Feishu dry run completed for ${data.date}; no request was sent.`);
+    return;
+  }
   const webhook = requiredEnv('FEISHU_WEBHOOK');
   const secret = requiredEnv('FEISHU_SECRET');
-  const data = JSON.parse(fs.readFileSync('data/latest.json', 'utf8'));
   const timestamp = Math.floor(Date.now() / 1000).toString();
   await postJson(webhook, {
     timestamp,
     sign: sign(timestamp, secret),
     msg_type: 'interactive',
-    card: buildCard(data)
+    card
   });
-  console.log(`Feishu digest sent successfully for ${data.date}.`);
+  console.log(`Feishu ${combinedMode ? 'combined GitHub and Codex podcast radar' : podcastMode ? 'Codex podcast radar' : 'digest'} sent successfully for ${data.date}.`);
 }
 
-main().catch(error => {
-  console.error(error.message);
-  process.exit(1);
-});
+if (require.main === module) {
+  main().catch(error => {
+    console.error(error.message);
+    process.exit(1);
+  });
+}
+
+module.exports = { sign, buildCard, buildPodcastCard, buildCombinedCard, postJson };

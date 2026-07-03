@@ -3,23 +3,29 @@
     {
       "date": "2026-07-03",
       "topPick": {
-        "name": "python-docx",
-        "fullName": "python-docx/python-docx",
-        "url": "https://github.com/python-docx/python-docx",
-        "recommendScore": 92
+        "name": "agent-starter",
+        "fullName": "thorchh/agent-starter",
+        "url": "https://github.com/thorchh/agent-starter",
+        "recommendScore": 75
       },
       "selectedProjects": [
         {
-          "name": "openpyxl",
-          "fullName": "openpyxl/openpyxl",
-          "url": "https://github.com/openpyxl/openpyxl",
-          "recommendScore": 88
+          "name": "slackcli",
+          "fullName": "shaharia-lab/slackcli",
+          "url": "https://github.com/shaharia-lab/slackcli",
+          "recommendScore": 73
         },
         {
-          "name": "pdfkit",
-          "fullName": "pdfkit/pdfkit",
-          "url": "https://github.com/pdfkit/pdfkit",
-          "recommendScore": 85
+          "name": "nodejs-typescript-modern-starter",
+          "fullName": "xddq/nodejs-typescript-modern-starter",
+          "url": "https://github.com/xddq/nodejs-typescript-modern-starter",
+          "recommendScore": 72
+        },
+        {
+          "name": "claude-skills",
+          "fullName": "inbharatai/claude-skills",
+          "url": "https://github.com/inbharatai/claude-skills",
+          "recommendScore": 72
         }
       ],
       "profileName": "默认综合模式",
@@ -30,8 +36,8 @@
         "新鲜有趣项目",
         "个人效率工具"
       ],
-      "summary": "这是首次运行的示例数据。请在 GitHub 中手动运行 daily-scout workflow，运行后此文件将被真实搜索结果替换。"
+      "summary": "今天最值得精读的项目是 **agent-starter**（推荐分 75）。中 - TypeScript 项目，119 Star，属于「Codex 可改造项目」方向，适合阅读学习核心机制。对办公自动化有直接价值。建议用 30-45 分钟只读学习，不要安装运行，先理解核心机制和可迁移经验。"
     }
   ],
-  "updatedAt": "2026-07-03T00:00:00Z"
+  "updatedAt": "2026-07-03T03:27:42.473Z"
 }

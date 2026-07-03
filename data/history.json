@@ -3,17 +3,17 @@
     {
       "date": "2026-07-03",
       "topPick": {
-        "name": "bagidea-office",
-        "fullName": "bagidea/bagidea-office",
-        "url": "https://github.com/bagidea/bagidea-office",
-        "recommendScore": 91
+        "name": "obsidian-second-brain",
+        "fullName": "eugeniughelbur/obsidian-second-brain",
+        "url": "https://github.com/eugeniughelbur/obsidian-second-brain",
+        "recommendScore": 92
       },
       "selectedProjects": [
         {
-          "name": "awesome-n8n-templates",
-          "fullName": "enescingoz/awesome-n8n-templates",
-          "url": "https://github.com/enescingoz/awesome-n8n-templates",
-          "recommendScore": 90
+          "name": "bagidea-office",
+          "fullName": "bagidea/bagidea-office",
+          "url": "https://github.com/bagidea/bagidea-office",
+          "recommendScore": 92
         }
       ],
       "profileName": "默认综合模式",
@@ -24,8 +24,8 @@
         "新鲜有趣项目",
         "个人效率工具"
       ],
-      "summary": "今天最值得精读的项目是 **bagidea-office**（推荐分 91）。完美契合 Vibe Coding、Agent、MCP 和插件方向。其 2.5D 像素风视觉效果极佳，非常适合作为自媒体内容素材或课程案例。同时，可深入研究其基于 Claude Code 的底层机制、多模型上下文自动压缩技术以及 MCP 接入方案，为副业项目提供灵感。。对办公自动化有直接价值。建议用 30-45 分钟只读学习，不要安装运行，先理解核心机制和可迁移经验。"
+      "summary": "今天最值得精读的项目是 **obsidian-second-brain**（推荐分 92）。完美契合 Codex、Skill 和 Agent 关注点。该项目展示了如何为 Codex/Claude Code 编写复杂的本地化 Skill，其『自我重写』和『后台 Agent 维护』的架构设计非常适合作为 Vibe Coding 的学习案例，甚至可以转化为一门关于『AI 自动化知识库构建』的课程或副业项目。。可以接触新鲜有趣的技术和项目组织方式。建议用 30-45 分钟只读学习，不要安装运行，先理解核心机制和可迁移经验。"
     }
   ],
-  "updatedAt": "2026-07-03T13:00:05.570Z"
+  "updatedAt": "2026-07-03T23:39:12.161Z"
 }

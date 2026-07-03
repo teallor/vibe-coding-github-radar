@@ -1,6 +1,6 @@
 {
   "date": "2026-07-03",
-  "summary": "今天最值得精读的项目是 **bagidea-office**（推荐分 91）。完美契合 Vibe Coding、Agent、MCP 和插件方向。其 2.5D 像素风视觉效果极佳，非常适合作为自媒体内容素材或课程案例。同时，可深入研究其基于 Claude Code 的底层机制、多模型上下文自动压缩技术以及 MCP 接入方案，为副业项目提供灵感。。对办公自动化有直接价值。建议用 30-45 分钟只读学习，不要安装运行，先理解核心机制和可迁移经验。",
+  "summary": "今天最值得精读的项目是 **obsidian-second-brain**（推荐分 92）。完美契合 Codex、Skill 和 Agent 关注点。该项目展示了如何为 Codex/Claude Code 编写复杂的本地化 Skill，其『自我重写』和『后台 Agent 维护』的架构设计非常适合作为 Vibe Coding 的学习案例，甚至可以转化为一门关于『AI 自动化知识库构建』的课程或副业项目。。可以接触新鲜有趣的技术和项目组织方式。建议用 30-45 分钟只读学习，不要安装运行，先理解核心机制和可迁移经验。",
   "activeProfile": "默认综合模式",
   "activeFocusAreas": [
     "Office 文档自动化",
@@ -27,34 +27,34 @@
     "complete": true,
     "candidateTarget": 300,
     "candidateTargetMet": true,
-    "hardGatePassed": 43,
+    "hardGatePassed": 42,
     "geminiReviewed": 10,
-    "geminiSucceeded": 9,
-    "candidateCount": 318,
-    "qualifiedCount": 8
+    "geminiSucceeded": 8,
+    "candidateCount": 317,
+    "qualifiedCount": 7
   },
   "topPick": {
-    "name": "bagidea-office",
-    "fullName": "bagidea/bagidea-office",
-    "url": "https://github.com/bagidea/bagidea-office",
-    "description": "A living AI-agent office on your desktop wallpaper — Claude Code agents that walk, work, delegate, learn & hold meetings. Per-agent swappable models (Claude/GLM/DeepSeek/Qwen/Kimi/OpenAI/Gemini/Groq/Ollama…), workflows, plugins, voice & Telegram/Discord/LINE. Open source.",
-    "author": "bagidea",
-    "language": "JavaScript",
-    "stars": 131,
-    "forks": 45,
+    "name": "obsidian-second-brain",
+    "fullName": "eugeniughelbur/obsidian-second-brain",
+    "url": "https://github.com/eugeniughelbur/obsidian-second-brain",
+    "description": "Cross-CLI skill for Obsidian: turn your vault into a living AI-first second brain across Claude Code, Codex, Gemini, OpenCode, Hermes, and Pi. 44 commands - self-rewriting notes, local+hybrid semantic search, key-less web research, /obsidian-architect codebase docs, and scheduled agents that maintain the vault while you sleep.",
+    "author": "eugeniughelbur",
+    "language": "Python",
+    "stars": 2937,
+    "forks": 351,
     "license": "MIT",
     "updatedAt": "2026-07-03",
     "archived": false,
     "openIssues": 0,
-    "recommendScore": 91,
-    "rawRecommendScore": 68,
+    "recommendScore": 92,
+    "rawRecommendScore": 69,
     "scores": {
-      "vibeCodingLearning": 18,
-      "officeAutomation": 7,
+      "vibeCodingLearning": 19,
+      "officeAutomation": 3,
       "monetizationPotential": 5,
-      "codexFriendly": 8,
+      "codexFriendly": 9,
       "beginnerFriendly": 8,
-      "localFirst": 6,
+      "localFirst": 7,
       "activity": 5,
       "license": 5
     },
@@ -63,13 +63,13 @@
         {
           "key": "vibeCodingLearning",
           "label": "Vibe Coding 学习价值",
-          "score": 18,
+          "score": 19,
           "max": 20
         },
         {
           "key": "officeAutomation",
           "label": "办公自动化价值",
-          "score": 7,
+          "score": 3,
           "max": 20
         },
         {
@@ -81,7 +81,7 @@
         {
           "key": "codexFriendly",
           "label": "Codex 改造友好度",
-          "score": 8,
+          "score": 9,
           "max": 15
         },
         {
@@ -93,7 +93,7 @@
         {
           "key": "localFirst",
           "label": "本地/免费优先",
-          "score": 6,
+          "score": 7,
           "max": 10
         },
         {
@@ -111,53 +111,53 @@
       ],
       "penalties": [],
       "bonuses": [
-        "命中白名单 1 个，加 2 分",
-        "优先语言 JavaScript，加 5 分"
+        "命中白名单 2 个，加 4 分",
+        "优先语言 Python，加 5 分"
       ]
     },
-    "vibeCodingValue": "完美契合 Vibe Coding、Agent、MCP 和插件方向。其 2.5D 像素风视觉效果极佳，非常适合作为自媒体内容素材或课程案例。同时，可深入研究其基于 Claude Code 的底层机制、多模型上下文自动压缩技术以及 MCP 接入方案，为副业项目提供灵感。",
-    "officeAutomationValue": "高 - 涉及 office 相关功能",
+    "vibeCodingValue": "完美契合 Codex、Skill 和 Agent 关注点。该项目展示了如何为 Codex/Claude Code 编写复杂的本地化 Skill，其『自我重写』和『后台 Agent 维护』的架构设计非常适合作为 Vibe Coding 的学习案例，甚至可以转化为一门关于『AI 自动化知识库构建』的课程或副业项目。",
+    "officeAutomationValue": "低 - 与办公自动化关系不大，但有通用学习价值",
     "monetizationPotential": "低 - 暂不适合直接变现，可学习技术",
-    "codexFriendly": "项目本身即是基于 Claude Code 构建的（'Built with Claude Code'），并在此基础上扩展了多模型支持（Swappable Brains）、自动上下文压缩和 MCP 工具集，是 Codex 深度改造、Agent 协同和二次开发的绝佳开源范例。",
+    "codexFriendly": "极高。项目原生支持 Codex CLI，包含 44 个现成的指令（Commands），其 Prompt 设计、本地文件读写逻辑和 Agent 调度机制可以直接被提取并复用到其他 Codex 插件或 MCP 服务的开发中。",
     "riskPoints": "未发现明显风险",
-    "matchedArea": "Office 文档自动化",
+    "matchedArea": "个人效率工具",
     "penalties": [],
     "bonuses": [
-      "命中白名单 1 个，加 2 分",
-      "优先语言 JavaScript，加 5 分"
+      "命中白名单 2 个，加 4 分",
+      "优先语言 Python，加 5 分"
     ],
     "qualityGate": {
       "passed": true,
       "relevanceSignals": [
+        "codex",
         "claude code"
       ],
       "failures": []
     },
-    "ruleScore": 84,
+    "ruleScore": 85,
     "semanticReview": {
       "shouldRecommend": true,
-      "score": 91,
-      "type": "Agent 工具",
-      "oneLineConclusion": "一款基于 Claude Code 构建的 2.5D 桌面壁纸级 AI 虚拟办公室，支持多模型、MCP 工具、插件与工作流，极具 Vibe Coding 演示与学习价值。",
-      "whatHappened": "BagIdea Office 开源了一个运行在桌面壁纸上的 2.5D 虚拟办公室项目。AI 代理（底层基于 Claude Code）可以在其中走动、开会、学习技能并执行真实任务。项目支持接入多种大模型（包括本地 Ollama）、MCP 服务器（如 Notion、Postgres）、自定义插件，并内置了可视化工作流构建器。",
-      "consumerUseCase": "用户可以通过 `npx bagidea` 一键安装，将其作为动态桌面壁纸运行。在日常办公中，用户可以将任务委派给虚拟办公室中的 AI 员工，它们会调用 MCP 工具或插件自动完成任务，甚至主动发起项目提案供用户审批，实现高度可视化的办公自动化。",
-      "valueForRafael": "完美契合 Vibe Coding、Agent、MCP 和插件方向。其 2.5D 像素风视觉效果极佳，非常适合作为自媒体内容素材或课程案例。同时，可深入研究其基于 Claude Code 的底层机制、多模型上下文自动压缩技术以及 MCP 接入方案，为副业项目提供灵感。",
-      "codexIntegrationPotential": "项目本身即是基于 Claude Code 构建的（'Built with Claude Code'），并在此基础上扩展了多模型支持（Swappable Brains）、自动上下文压缩和 MCP 工具集，是 Codex 深度改造、Agent 协同和二次开发的绝佳开源范例。",
-      "actionSuggestion": "1. 运行 `npx bagidea` 在本地体验其视觉效果与交互；2. 重点阅读其 `Swappable Brains`（多模型代理路由）和 MCP 工具集接入的源码；3. 录制一期关于 '桌面级 AI 虚拟办公室' 的演示视频，展示 Vibe Coding 的前沿玩法。",
+      "score": 92,
+      "type": "其他",
+      "oneLineConclusion": "一个支持 Codex 和 Claude Code 的 Obsidian 跨平台 Skill，通过 44 个指令和自动化 Agent 实现知识库的自我重写与进化。",
+      "whatHappened": "开发者 eugeniughelbur 开源了 obsidian-second-brain，这是对 Karpathy LLM Wiki 模式的升级。它提供 44 个跨 CLI（包括 Codex、Claude Code 等）指令，支持笔记自我重写、矛盾自动调和、代码库文档化（/obsidian-architect）以及后台定时 Agent 维护。",
+      "consumerUseCase": "用户可以通过命令行（如 Codex CLI）直接与 Obsidian 交互，执行会议记录提取、语音/图片解析、X/YouTube 内容深度研究，并让 Agent 在后台自动整理、合并和重写笔记，保持知识库常新。",
+      "valueForRafael": "完美契合 Codex、Skill 和 Agent 关注点。该项目展示了如何为 Codex/Claude Code 编写复杂的本地化 Skill，其『自我重写』和『后台 Agent 维护』的架构设计非常适合作为 Vibe Coding 的学习案例，甚至可以转化为一门关于『AI 自动化知识库构建』的课程或副业项目。",
+      "codexIntegrationPotential": "极高。项目原生支持 Codex CLI，包含 44 个现成的指令（Commands），其 Prompt 设计、本地文件读写逻辑和 Agent 调度机制可以直接被提取并复用到其他 Codex 插件或 MCP 服务的开发中。",
+      "actionSuggestion": "1. Clone 该项目并使用 Codex CLI 在本地 Obsidian 库中运行测试；2. 深入研究其 `/obsidian-architect` 和后台 Agent 的源码实现；3. 考虑将其核心逻辑（如矛盾调和、自我重写）提炼为 Vibe Coding 或 Agent 开发的教学内容。",
       "reasons": [
-        "高度契合 Agent、MCP、插件和 Vibe Coding 标签，技术栈（JavaScript）友好。",
-        "视觉呈现极具新意（2.5D 像素风桌面壁纸），非常适合作为视频课程或自媒体吸睛素材。",
-        "内置零依赖的 Anthropic ↔ OpenAI 代理，支持多模型和本地模型（Ollama/LM Studio），降低了使用成本。",
-        "原生支持 MCP 服务器（浏览器自动化、Notion 等）和可视化工作流构建，具备真实的办公自动化潜力。"
+        "原生支持 Codex CLI 和 Claude Code，完美契合 Skill/Agent 方向",
+        "提出『自我重写』而非『仅追加』的知识库维护新模式，架构设计极具启发性",
+        "包含 44 个实用指令，涵盖代码库文档化、多媒体解析和深度研究，实用价值极高",
+        "近 3000 Star 的高活跃开源项目，代码和文档质量高，适合作为课程素材"
       ],
       "risksOrMissingInfo": [
-        "Linux/macOS 版本仍处于 Beta 阶段，可能存在桌面壁纸层级的兼容性问题。",
-        "重度依赖 Node.js 环境和 Claude Code，对非技术背景的纯小白用户有一定安装门槛。",
-        "多 Agent 协同和高频 API 调用可能产生较高费用（尽管项目提供了便宜模型和平替方案）。"
+        "依赖多个外部 CLI 工具（如 Claude Code, Codex CLI）和 API（Perplexity, Grok），配置门槛较高",
+        "后台 Agent 自动重写笔记可能存在误删或覆盖重要信息的风险，需做好版本控制（如 Git）"
       ],
       "evidenceRequired": true,
       "dimensions": {
-        "rafaelMatch": 23,
+        "rafaelMatch": 24,
         "consumerUsability": 16,
         "ecosystemRelevance": 20,
         "actionableValue": 14,
@@ -169,48 +169,48 @@
   },
   "selectedProjects": [
     {
-      "name": "awesome-n8n-templates",
-      "fullName": "enescingoz/awesome-n8n-templates",
-      "url": "https://github.com/enescingoz/awesome-n8n-templates",
-      "description": "280+ free n8n automation templates — ready-to-use workflows for Gmail, Telegram, Slack, Discord, WhatsApp, Google Drive, Notion, OpenAI, and more. AI agents, RAG   chatbots, email automation, social media, DevOps, and document processing. The largest open-source n8n template collection.",
-      "author": "enescingoz",
-      "language": "未知",
-      "stars": 23604,
-      "forks": 6207,
-      "license": "NOASSERTION",
-      "updatedAt": "2026-06-20",
+      "name": "bagidea-office",
+      "fullName": "bagidea/bagidea-office",
+      "url": "https://github.com/bagidea/bagidea-office",
+      "description": "A living AI-agent office on your desktop wallpaper — Claude Code agents that walk, work, delegate, learn & hold meetings. Per-agent swappable models (Claude/GLM/DeepSeek/Qwen/Kimi/OpenAI/Gemini/Groq/Ollama…), workflows, plugins, voice & Telegram/Discord/LINE. Open source.",
+      "author": "bagidea",
+      "language": "JavaScript",
+      "stars": 134,
+      "forks": 46,
+      "license": "MIT",
+      "updatedAt": "2026-07-03",
       "archived": false,
-      "openIssues": 23,
-      "recommendScore": 90,
+      "openIssues": 1,
+      "recommendScore": 92,
       "rawRecommendScore": 68,
       "scores": {
-        "vibeCodingLearning": 19,
-        "officeAutomation": 10,
-        "monetizationPotential": 8,
+        "vibeCodingLearning": 18,
+        "officeAutomation": 7,
+        "monetizationPotential": 5,
         "codexFriendly": 8,
         "beginnerFriendly": 8,
-        "localFirst": 5,
+        "localFirst": 6,
         "activity": 5,
-        "license": 2
+        "license": 5
       },
       "scoreBasis": {
         "dimensions": [
           {
             "key": "vibeCodingLearning",
             "label": "Vibe Coding 学习价值",
-            "score": 19,
+            "score": 18,
             "max": 20
           },
           {
             "key": "officeAutomation",
             "label": "办公自动化价值",
-            "score": 10,
+            "score": 7,
             "max": 20
           },
           {
             "key": "monetizationPotential",
             "label": "个人变现潜力",
-            "score": 8,
+            "score": 5,
             "max": 15
           },
           {
@@ -228,7 +228,7 @@
           {
             "key": "localFirst",
             "label": "本地/免费优先",
-            "score": 5,
+            "score": 6,
             "max": 10
           },
           {
@@ -240,60 +240,63 @@
           {
             "key": "license",
             "label": "License 清晰度",
-            "score": 2,
+            "score": 5,
             "max": 5
           }
         ],
         "penalties": [],
         "bonuses": [
-          "命中白名单 2 个，加 4 分"
+          "命中白名单 1 个，加 2 分",
+          "优先语言 JavaScript，加 5 分"
         ]
       },
-      "vibeCodingValue": "1. 办公自动化：直接复用邮件、文档处理模板提升效率；2. 课程制作：可作为 n8n 自动化实战课程的绝佳素材库；3. 副业项目：利用这些模板为客户提供定制化的自动化解决方案（如客服机器人、线索收集）进行变现。",
-      "officeAutomationValue": "高 - 涉及 document, template 相关功能",
-      "monetizationPotential": "中 - 可包装成工具或模板服务",
-      "codexFriendly": "可将这些 n8n 模板的 JSON 结构作为参考，通过 Vibe Coding 快速生成定制化的 n8n 工作流配置，或者将 n8n 的 Webhook 封装为 MCP 工具供大模型直接调用执行复杂任务。",
+      "vibeCodingValue": "完美契合你的核心关注点：1. 底层基于 Claude Code，是极佳的 Vibe Coding 学习案例；2. 原生集成 MCP 和插件系统，可研究其架构；3. 包含可视化 Workflow 和 Skills 机制；4. 探索多模型（Swappable Brains）在复杂 Agent 协同中的降本增效实践。",
+      "officeAutomationValue": "高 - 涉及 office 相关功能",
+      "monetizationPotential": "低 - 暂不适合直接变现，可学习技术",
+      "codexFriendly": "极高。项目本身就是 Claude Code 的图形化和多 Agent 扩展套件，展示了如何将 Claude Code 的 CLI 能力封装为带有状态管理、多模型代理（Proxy）和 GUI 的桌面级应用。",
       "riskPoints": "未发现明显风险",
       "matchedArea": "Office 文档自动化",
       "penalties": [],
       "bonuses": [
-        "命中白名单 2 个，加 4 分"
+        "命中白名单 1 个，加 2 分",
+        "优先语言 JavaScript，加 5 分"
       ],
       "qualityGate": {
         "passed": true,
         "relevanceSignals": [
-          "ai agent"
+          "claude code"
         ],
         "failures": []
       },
       "ruleScore": 84,
       "semanticReview": {
         "shouldRecommend": true,
-        "score": 90,
+        "score": 92,
         "type": "Agent 工具",
-        "oneLineConclusion": "包含 280+ 个开箱即用的 n8n 自动化工作流模板库，完美契合 AI Agent 搭建、办公自动化与副业变现需求。",
-        "whatHappened": "该 GitHub 项目收集了超过 280 个免费的 n8n 自动化模板，涵盖 Gmail、Telegram、OpenAI、Google Drive 等主流平台，支持一键导入，实现邮件处理、文档自动化、AI 智能体和 RAG 聊天机器人等场景。",
-        "consumerUseCase": "用户可以通过下载 JSON 模板并导入 n8n，快速搭建自动化工作流，例如 AI 自动分类与回复邮件、社交媒体内容分发、PDF 文档处理及数据抓取，无需从零配置节点。",
-        "valueForRafael": "1. 办公自动化：直接复用邮件、文档处理模板提升效率；2. 课程制作：可作为 n8n 自动化实战课程的绝佳素材库；3. 副业项目：利用这些模板为客户提供定制化的自动化解决方案（如客服机器人、线索收集）进行变现。",
-        "codexIntegrationPotential": "可将这些 n8n 模板的 JSON 结构作为参考，通过 Vibe Coding 快速生成定制化的 n8n 工作流配置，或者将 n8n 的 Webhook 封装为 MCP 工具供大模型直接调用执行复杂任务。",
-        "actionSuggestion": "1. 挑选 3-5 个高频办公场景（如邮件分类、文档解析）进行本地测试；2. 录制一期“如何用 n8n 模板零代码搭建 AI 办公助手”的实战教程；3. 探索将 n8n 工作流打包为企业自动化服务的副业模式。",
+        "oneLineConclusion": "一款将 Claude Code 具象化为 2.5D 桌面壁纸的开源虚拟办公环境，原生支持 MCP、插件、多模型切换与 Agent 工作流。",
+        "whatHappened": "BagIdea 开源了 bagidea-office，这是一个运行在桌面壁纸上的 AI Agent 虚拟办公室。它以 Claude Code 为底层引擎，支持为不同 Agent 切换不同的大模型（如 DeepSeek、Gemini、本地 Ollama 等），内置 MCP 服务器支持、插件系统、可视化工作流构建器，并具备自动上下文压缩功能。",
+        "consumerUseCase": "作为极客或开发者的桌面常驻 AI 团队，通过语音或文字分配任务，Agent 会在后台（壁纸上）走动、开会、调用 MCP 工具（如浏览器、Notion、数据库）完成实际项目，并提交提案供用户审批。",
+        "valueForRafael": "完美契合你的核心关注点：1. 底层基于 Claude Code，是极佳的 Vibe Coding 学习案例；2. 原生集成 MCP 和插件系统，可研究其架构；3. 包含可视化 Workflow 和 Skills 机制；4. 探索多模型（Swappable Brains）在复杂 Agent 协同中的降本增效实践。",
+        "codexIntegrationPotential": "极高。项目本身就是 Claude Code 的图形化和多 Agent 扩展套件，展示了如何将 Claude Code 的 CLI 能力封装为带有状态管理、多模型代理（Proxy）和 GUI 的桌面级应用。",
+        "actionSuggestion": "运行 `npx bagidea` 在本地安装体验；重点阅读其源码中关于 Claude Code 会话管理、MCP 工具调用以及多模型无缝切换（Auto-Compact）的实现逻辑，可为你的课程制作或副业项目提供灵感。",
         "reasons": [
-          "强匹配用户画像：涵盖办公自动化、Agent、副业项目和课程制作等核心关注点。",
-          "极高的可操作性：提供现成的 JSON 文件，支持 n8n 一键导入，大幅降低了学习和使用门槛。",
-          "丰富的生态整合：集成了 OpenAI、Google Workspace 等多种工具，展现了强大的 Agent 编排能力。"
+          "高度匹配 Codex、Agent、MCP 和插件等核心关注点",
+          "创新的 2.5D 桌面壁纸交互形态，将不可见的 Agent 运行过程可视化",
+          "内置零依赖的 API Proxy，支持多模型（包括本地 Ollama）无缝接入 Claude Code",
+          "支持 MCP 服务器和可视化工作流，具备极高的扩展性和实用价值"
         ],
         "risksOrMissingInfo": [
-          "模板由社区收集，部分 API 接口或节点可能因第三方平台更新而失效，需自行调试。",
-          "依赖 n8n 环境（需本地部署或使用云服务），且部分高级 AI 模型节点需自备 API Key。"
+          "重度依赖 Claude Code 和 Node.js 环境，可能存在跨平台兼容性问题（Linux 仍在实验阶段）",
+          "大量 Agent 协同和长上下文可能导致较高的 API 成本（尽管有模型切换和压缩机制）"
         ],
         "evidenceRequired": true,
         "dimensions": {
-          "rafaelMatch": 23,
-          "consumerUsability": 18,
-          "ecosystemRelevance": 18,
+          "rafaelMatch": 24,
+          "consumerUsability": 16,
+          "ecosystemRelevance": 20,
           "actionableValue": 14,
           "sourceReliability": 9,
-          "freshness": 8
+          "freshness": 9
         }
       },
       "reviewProvider": "vertex"
@@ -301,13 +304,13 @@
   ],
   "watchProjects": [],
   "notRecommendedProjects": [],
-  "codexPrompt": "请帮我只读分析以下 GitHub 项目，不要运行、不要安装、不要 clone、不要改代码。请分析项目结构、核心机制、可学习点、可迁移点、变现启发点。每个新名词先用小白能懂的话解释。最后沉淀成 Markdown 文件。\n\n项目地址：https://github.com/bagidea/bagidea-office\n项目名：bagidea-office\n日期：2026-07-03\n\n分析要求：\n1. 用一句话解释它是什么\n2. 为什么值得我今天读\n3. 今天只读哪些文件（30-45 分钟）\n4. 仓库结构拆解\n5. 可迁移经验\n6. 个人变现判断\n7. 沉淀成 Markdown 模板\n\n安全要求：\n- 不运行任何代码\n- 不安装任何依赖\n- 不 clone 陌生项目\n- 不执行第三方脚本\n- 只做只读分析",
-  "markdownTemplate": "# 2026-07-03 Vibe Coding GitHub 学习沉淀\n\n## 项目基本信息\n- 项目名：bagidea-office\n- GitHub 链接：https://github.com/bagidea/bagidea-office\n- 作者：bagidea\n- 语言：JavaScript\n- Star：131\n- License：MIT\n\n## 为什么选它\n\n## 它属于哪类机会\n- [ ] 办公自动化\n- [ ] 变现工具\n- [ ] 新鲜有趣\n- [ ] 学习技术\n- [ ] Codex 改造\n\n## 我读了哪些文件\n\n## 我学到的 3 个机制\n1. \n2. \n3. \n\n## 我没懂的地方\n\n## 可迁移到我的 Vibe Coding 实践的点\n\n## 可能的变现方式\n\n## 是否值得让 Codex 深挖\n\n## 我的主观评分（1-10）",
+  "codexPrompt": "请帮我只读分析以下 GitHub 项目，不要运行、不要安装、不要 clone、不要改代码。请分析项目结构、核心机制、可学习点、可迁移点、变现启发点。每个新名词先用小白能懂的话解释。最后沉淀成 Markdown 文件。\n\n项目地址：https://github.com/eugeniughelbur/obsidian-second-brain\n项目名：obsidian-second-brain\n日期：2026-07-03\n\n分析要求：\n1. 用一句话解释它是什么\n2. 为什么值得我今天读\n3. 今天只读哪些文件（30-45 分钟）\n4. 仓库结构拆解\n5. 可迁移经验\n6. 个人变现判断\n7. 沉淀成 Markdown 模板\n\n安全要求：\n- 不运行任何代码\n- 不安装任何依赖\n- 不 clone 陌生项目\n- 不执行第三方脚本\n- 只做只读分析",
+  "markdownTemplate": "# 2026-07-03 Vibe Coding GitHub 学习沉淀\n\n## 项目基本信息\n- 项目名：obsidian-second-brain\n- GitHub 链接：https://github.com/eugeniughelbur/obsidian-second-brain\n- 作者：eugeniughelbur\n- 语言：Python\n- Star：2937\n- License：MIT\n\n## 为什么选它\n\n## 它属于哪类机会\n- [ ] 办公自动化\n- [ ] 变现工具\n- [ ] 新鲜有趣\n- [ ] 学习技术\n- [ ] Codex 改造\n\n## 我读了哪些文件\n\n## 我学到的 3 个机制\n1. \n2. \n3. \n\n## 我没懂的地方\n\n## 可迁移到我的 Vibe Coding 实践的点\n\n## 可能的变现方式\n\n## 是否值得让 Codex 深挖\n\n## 我的主观评分（1-10）",
   "tomorrowDirections": [
     "办公自动化：继续深挖 Word/Excel/PDF 生成库，关注模板填充和批量处理",
     "变现工具：关注可包装成模板服务或 SaaS 的小工具",
     "Codex 改造：寻找结构更清晰、更适合拆解的入门项目"
   ],
   "configSource": "config/focus.json",
-  "updatedAt": "2026-07-03T13:00:05.570Z"
+  "updatedAt": "2026-07-03T23:39:12.160Z"
 }

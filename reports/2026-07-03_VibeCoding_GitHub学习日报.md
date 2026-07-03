@@ -4,7 +4,7 @@
 
 ## 一、今日结论
 
-今天最值得精读的项目是 **agent-starter**（推荐分 75）。中 - TypeScript 项目，119 Star，属于「Codex 可改造项目」方向，适合阅读学习核心机制。对办公自动化有直接价值。建议用 30-45 分钟只读学习，不要安装运行，先理解核心机制和可迁移经验。
+今天最值得精读的项目是 **slackcli**（推荐分 73）。中 - TypeScript 项目，91 Star，属于「Office 文档自动化」方向，适合阅读学习核心机制。可以接触新鲜有趣的技术和项目组织方式。建议用 30-45 分钟只读学习，不要安装运行，先理解核心机制和可迁移经验。
 
 ## 二、当前需求画像
 
@@ -26,23 +26,23 @@
 
 | 项目名 | GitHub 链接 | 作者 | 语言 | Star | Fork | License | 最近更新 | 归档 | Issues | 推荐分 | Vibe Coding | Office | 变现 | Codex | 风险点 |
 |--------|------------|------|------|------|------|---------|----------|------|--------|--------|-------------|--------|------|-------|--------|
-| agent-starter | [链接](https://github.com/thorchh/agent-starter) | thorchh | TypeScript | 119 | 32 | MIT | 2026-01-01 | 否 | 0 | 75 | 中 - TypeScript 项目，11 | 高 - 涉及 template 相关功能 | 中 - 可包装成工具或模板服务 | 中 - 有入门特征，可尝试 Codex  | 未发现明显风险 |
 | slackcli | [链接](https://github.com/shaharia-lab/slackcli) | shaharia-lab | TypeScript | 91 | 27 | MIT | 2026-06-27 | 否 | 2 | 73 | 中 - TypeScript 项目，91 | 低 - 与办公自动化关系不大，但有通用学 | 中 - 可包装成工具或模板服务 | 中 - 有入门特征，可尝试 Codex  | 未发现明显风险 |
-| nodejs-typescript-modern-starter | [链接](https://github.com/xddq/nodejs-typescript-modern-starter) | xddq | TypeScript | 150 | 23 | MIT | 2026-06-22 | 否 | 5 | 72 | 中 - TypeScript 项目，15 | 高 - 涉及 template 相关功能 | 低中 - 有一定变现潜力，需要加工 | 中 - 有入门特征，可尝试 Codex  | 未发现明显风险 |
-| claude-skills | [链接](https://github.com/inbharatai/claude-skills) | inbharatai | Python | 16 | 6 | MIT | 2026-03-14 | 否 | 1 | 72 | 低 - Python 项目，16 Sta | 低 - 与办公自动化关系不大，但有通用学 | 中 - 可包装成工具或模板服务 | 中 - 可阅读学习，改造难度需评估 | 未发现明显风险 |
+| second-brain | [链接](https://github.com/henrydaum/second-brain) | henrydaum | Python | 567 | 66 | MIT | 2026-06-25 | 否 | 0 | 70 | 高 - Python 项目，567 St | 低 - 与办公自动化关系不大，但有通用学 | 低中 - 有一定变现潜力，需要加工 | 中 - 可阅读学习，改造难度需评估 | 未发现明显风险 |
+| claude-code-local | [链接](https://github.com/nicedreamzapp/claude-code-local) | nicedreamzapp | Python | 2910 | 556 | MIT | 2026-06-18 | 否 | 0 | 69 | 高 - Python 项目，2910 S | 低 - 与办公自动化关系不大，但有通用学 | 低 - 暂不适合直接变现，可学习技术 | 中 - 可阅读学习，改造难度需评估 | 未发现明显风险 |
+| row-bot | [链接](https://github.com/siddsachar/row-bot) | siddsachar | Python | 1326 | 157 | Apache-2.0 | 2026-07-02 | 否 | 23 | 69 | 高 - Python 项目，1326 S | 低 - 与办公自动化关系不大，但有通用学 | 中 - 可包装成工具或模板服务 | 低 - 项目较大，建议只学习部分模块 | 未发现明显风险 |
 
 ## 四、今日最值得精读项目
 
 ### 1. 项目一句话解释
 
-Production-ready AI chat interface starter template with tool calling, streaming, and multi-provider support
+Slack CLI - Command-line tool for interacting with Slack workspaces and channels. AI-friendly with structured output formats (JSON, table, text) designed for easy integration with AI tools and automation workflows.
 
-用小白能懂的话：这是一个开源项目，你可以阅读它的代码来学习怎么实现类似功能。
+用小白能懂的话：这个项目能帮你把重复性的工作自动化。
 
 ### 2. 为什么值得我今天读
 
-- **Vibe Coding 学习价值：** 中 - TypeScript 项目，119 Star，属于「Codex 可改造项目」方向，适合阅读学习核心机制
-- **Office / 办公自动化价值：** 高 - 涉及 template 相关功能
+- **Vibe Coding 学习价值：** 中 - TypeScript 项目，91 Star，属于「Office 文档自动化」方向，适合阅读学习核心机制
+- **Office / 办公自动化价值：** 低 - 与办公自动化关系不大，但有通用学习价值
 - **个人变现潜力：** 中 - 可包装成工具或模板服务
 - **Codex 改造可能性：** 中 - 有入门特征，可尝试 Codex 改造
 - **是否新鲜有趣：** 一般，但仍有学习价值
@@ -238,8 +238,8 @@ Production-ready AI chat interface starter template with tool calling, streaming
 ```
 请帮我只读分析以下 GitHub 项目，不要运行、不要安装、不要 clone、不要改代码。请分析项目结构、核心机制、可学习点、可迁移点、变现启发点。每个新名词先用小白能懂的话解释。最后沉淀成 Markdown 文件。
 
-项目地址：https://github.com/thorchh/agent-starter
-项目名：agent-starter
+项目地址：https://github.com/shaharia-lab/slackcli
+项目名：slackcli
 日期：2026-07-03
 
 分析要求：
@@ -265,11 +265,11 @@ Production-ready AI chat interface starter template with tool calling, streaming
 # 2026-07-03 Vibe Coding GitHub 学习沉淀
 
 ## 项目基本信息
-- 项目名：agent-starter
-- GitHub 链接：https://github.com/thorchh/agent-starter
-- 作者：thorchh
+- 项目名：slackcli
+- GitHub 链接：https://github.com/shaharia-lab/slackcli
+- 作者：shaharia-lab
 - 语言：TypeScript
-- Star：119
+- Star：91
 - License：MIT
 
 ## 为什么选它
@@ -303,17 +303,17 @@ Production-ready AI chat interface starter template with tool calling, streaming
 
 | 项目名 | GitHub 链接 | 语言 | Star | 推荐分 | 风险点 |
 |--------|------------|------|------|--------|--------|
-| second-brain | [链接](https://github.com/henrydaum/second-brain) | Python | 566 | 70 | 未发现明显风险 |
-| claude-code-local | [链接](https://github.com/nicedreamzapp/claude-code-local) | Python | 2909 | 69 | 未发现明显风险 |
-| row-bot | [链接](https://github.com/siddsachar/row-bot) | Python | 1326 | 69 | 未发现明显风险 |
 | restai | [链接](https://github.com/apocas/restai) | Python | 511 | 69 | 未发现明显风险 |
-| rekono | [链接](https://github.com/pablosnt/rekono) | Python | 525 | 69 | 未发现明显风险 |
+| bagidea-office | [链接](https://github.com/bagidea/bagidea-office) | JavaScript | 131 | 68 | 未发现明显风险 |
+| tutorials | [链接](https://github.com/luuquangvu/tutorials) | Python | 122 | 68 | 未发现明显风险 |
+| bridgic-browser | [链接](https://github.com/bitsky-tech/bridgic-browser) | Python | 75 | 68 | 未发现明显风险 |
+| hecat | [链接](https://github.com/nodiscc/hecat) | Python | 38 | 67 | 未发现明显风险 |
 
 ## 六、不推荐项目
 
+- **natural-db** ([链接](https://github.com/supabase-community/natural-db))：License 不明确，商用需谨慎
+- **poe-api-wrapper** ([链接](https://github.com/snowby666/poe-api-wrapper))：已归档停更
 - **bane** ([链接](https://github.com/AlaBouali/bane))：未发现明显风险
-- **pinecone-vercel-starter** ([链接](https://github.com/pinecone-io/pinecone-vercel-starter))：已归档停更；License 不明确，商用需谨慎；长期未更新（18 个月）
-- **malware-and-monsters** ([链接](https://github.com/klausagnoletti/malware-and-monsters))：未发现明显风险
 
 ## 七、明天建议关注方向
 

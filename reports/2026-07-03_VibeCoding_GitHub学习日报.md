@@ -4,7 +4,7 @@
 
 ## 一、今日结论
 
-今天最值得精读的项目是 **lark-coding-agent-bridge**（推荐分 87）。高 - TypeScript 项目，1658 Star，属于「个人效率工具」方向，适合阅读学习核心机制。可以接触新鲜有趣的技术和项目组织方式。建议用 30-45 分钟只读学习，不要安装运行，先理解核心机制和可迁移经验。
+今天最值得精读的项目是 **bagidea-office**（推荐分 91）。完美契合 Vibe Coding、Agent、MCP 和插件方向。其 2.5D 像素风视觉效果极佳，非常适合作为自媒体内容素材或课程案例。同时，可深入研究其基于 Claude Code 的底层机制、多模型上下文自动压缩技术以及 MCP 接入方案，为副业项目提供灵感。。对办公自动化有直接价值。建议用 30-45 分钟只读学习，不要安装运行，先理解核心机制和可迁移经验。
 
 ## 二、当前需求画像
 
@@ -26,55 +26,55 @@
 
 | 项目名 | GitHub 链接 | 作者 | 语言 | Star | Fork | License | 最近更新 | 归档 | Issues | 推荐分 | Vibe Coding | Office | 变现 | Codex | 风险点 |
 |--------|------------|------|------|------|------|---------|----------|------|--------|--------|-------------|--------|------|-------|--------|
-| lark-coding-agent-bridge | [链接](https://github.com/zarazhangrui/lark-coding-agent-bridge) | zarazhangrui | TypeScript | 1658 | 252 | MIT | 2026-07-03 | 否 | 127 | 87 | 高 - TypeScript 项目，16 | 低 - 与办公自动化关系不大，但有通用学 | 低 - 暂不适合直接变现，可学习技术 | 中 - 有入门特征，可尝试 Codex  | 未发现明显风险 |
-| claude-code-local | [链接](https://github.com/nicedreamzapp/claude-code-local) | nicedreamzapp | Python | 2910 | 556 | MIT | 2026-06-18 | 否 | 0 | 85 | 高 - Python 项目，2910 S | 低 - 与办公自动化关系不大，但有通用学 | 低 - 暂不适合直接变现，可学习技术 | 中 - 可阅读学习，改造难度需评估 | 未发现明显风险 |
+| bagidea-office | [链接](https://github.com/bagidea/bagidea-office) | bagidea | JavaScript | 131 | 45 | MIT | 2026-07-03 | 否 | 0 | 91 | 完美契合 Vibe Coding、Age | 高 - 涉及 office 相关功能 | 低 - 暂不适合直接变现，可学习技术 | 项目本身即是基于 Claude Code | 未发现明显风险 |
+| awesome-n8n-templates | [链接](https://github.com/enescingoz/awesome-n8n-templates) | enescingoz | 未知 | 23604 | 6207 | NOASSERTION | 2026-06-20 | 否 | 23 | 90 | 1. 办公自动化：直接复用邮件、文档处理 | 高 - 涉及 document, tem | 中 - 可包装成工具或模板服务 | 可将这些 n8n 模板的 JSON 结构 | 未发现明显风险 |
 
 ### 严格评分依据
 
-#### lark-coding-agent-bridge：87/100
+#### bagidea-office：91/100
 
-- Vibe Coding 学习价值：19/20
-- 办公自动化价值：3/20
+- Vibe Coding 学习价值：18/20
+- 办公自动化价值：7/20
 - 个人变现潜力：5/15
-- Codex 改造友好度：12/15
-- 新手学习友好度：9/10
-- 本地/免费优先：7/10
-- 近期活跃度：5/5
-- License 清晰度：5/5
-- 加分：命中白名单 2 个，加 4 分；优先语言 TypeScript，加 5 分
-- 强相关信号：codex、claude code
-- 入选理由：高 - TypeScript 项目，1658 Star，属于「个人效率工具」方向，适合阅读学习核心机制；中 - 有入门特征，可尝试 Codex 改造
-- 风险检查：未发现明显风险
-
-#### claude-code-local：85/100
-
-- Vibe Coding 学习价值：20/20
-- 办公自动化价值：3/20
-- 个人变现潜力：5/15
-- Codex 改造友好度：10/15
-- 新手学习友好度：9/10
+- Codex 改造友好度：8/15
+- 新手学习友好度：8/10
 - 本地/免费优先：6/10
 - 近期活跃度：5/5
 - License 清晰度：5/5
-- 加分：命中白名单 1 个，加 2 分；优先语言 Python，加 5 分
+- 加分：命中白名单 1 个，加 2 分；优先语言 JavaScript，加 5 分
 - 强相关信号：claude code
-- 入选理由：高 - Python 项目，2910 Star，属于「Office 文档自动化」方向，适合阅读学习核心机制；中 - 可阅读学习，改造难度需评估
+- 入选理由：完美契合 Vibe Coding、Agent、MCP 和插件方向。其 2.5D 像素风视觉效果极佳，非常适合作为自媒体内容素材或课程案例。同时，可深入研究其基于 Claude Code 的底层机制、多模型上下文自动压缩技术以及 MCP 接入方案，为副业项目提供灵感。；项目本身即是基于 Claude Code 构建的（'Built with Claude Code'），并在此基础上扩展了多模型支持（Swappable Brains）、自动上下文压缩和 MCP 工具集，是 Codex 深度改造、Agent 协同和二次开发的绝佳开源范例。
+- 风险检查：未发现明显风险
+
+#### awesome-n8n-templates：90/100
+
+- Vibe Coding 学习价值：19/20
+- 办公自动化价值：10/20
+- 个人变现潜力：8/15
+- Codex 改造友好度：8/15
+- 新手学习友好度：8/10
+- 本地/免费优先：5/10
+- 近期活跃度：5/5
+- License 清晰度：2/5
+- 加分：命中白名单 2 个，加 4 分
+- 强相关信号：ai agent
+- 入选理由：1. 办公自动化：直接复用邮件、文档处理模板提升效率；2. 课程制作：可作为 n8n 自动化实战课程的绝佳素材库；3. 副业项目：利用这些模板为客户提供定制化的自动化解决方案（如客服机器人、线索收集）进行变现。；可将这些 n8n 模板的 JSON 结构作为参考，通过 Vibe Coding 快速生成定制化的 n8n 工作流配置，或者将 n8n 的 Webhook 封装为 MCP 工具供大模型直接调用执行复杂任务。
 - 风险检查：未发现明显风险
 
 ## 四、今日最值得精读项目
 
 ### 1. 项目一句话解释
 
-Bot that bridges Feishu/Lark messenger with a local Claude Code or Codex CLI. Streaming cards, per-chat sessions, multiple workspaces
+A living AI-agent office on your desktop wallpaper — Claude Code agents that walk, work, delegate, learn & hold meetings. Per-agent swappable models (Claude/GLM/DeepSeek/Qwen/Kimi/OpenAI/Gemini/Groq/Ollama…), workflows, plugins, voice & Telegram/Discord/LINE. Open source.
 
-用小白能懂的话：这个项目是一个命令行工具，可以在终端里使用。
+用小白能懂的话：这是一个开源项目，你可以阅读它的代码来学习怎么实现类似功能。
 
 ### 2. 为什么值得我今天读
 
-- **Vibe Coding 学习价值：** 高 - TypeScript 项目，1658 Star，属于「个人效率工具」方向，适合阅读学习核心机制
-- **Office / 办公自动化价值：** 低 - 与办公自动化关系不大，但有通用学习价值
+- **Vibe Coding 学习价值：** 完美契合 Vibe Coding、Agent、MCP 和插件方向。其 2.5D 像素风视觉效果极佳，非常适合作为自媒体内容素材或课程案例。同时，可深入研究其基于 Claude Code 的底层机制、多模型上下文自动压缩技术以及 MCP 接入方案，为副业项目提供灵感。
+- **Office / 办公自动化价值：** 高 - 涉及 office 相关功能
 - **个人变现潜力：** 低 - 暂不适合直接变现，可学习技术
-- **Codex 改造可能性：** 中 - 有入门特征，可尝试 Codex 改造
+- **Codex 改造可能性：** 项目本身即是基于 Claude Code 构建的（'Built with Claude Code'），并在此基础上扩展了多模型支持（Swappable Brains）、自动上下文压缩和 MCP 工具集，是 Codex 深度改造、Agent 协同和二次开发的绝佳开源范例。
 - **是否新鲜有趣：** 一般，但仍有学习价值
 
 ### 3. 今天只读哪些文件
@@ -268,8 +268,8 @@ Bot that bridges Feishu/Lark messenger with a local Claude Code or Codex CLI. St
 ```
 请帮我只读分析以下 GitHub 项目，不要运行、不要安装、不要 clone、不要改代码。请分析项目结构、核心机制、可学习点、可迁移点、变现启发点。每个新名词先用小白能懂的话解释。最后沉淀成 Markdown 文件。
 
-项目地址：https://github.com/zarazhangrui/lark-coding-agent-bridge
-项目名：lark-coding-agent-bridge
+项目地址：https://github.com/bagidea/bagidea-office
+项目名：bagidea-office
 日期：2026-07-03
 
 分析要求：
@@ -295,11 +295,11 @@ Bot that bridges Feishu/Lark messenger with a local Claude Code or Codex CLI. St
 # 2026-07-03 Vibe Coding GitHub 学习沉淀
 
 ## 项目基本信息
-- 项目名：lark-coding-agent-bridge
-- GitHub 链接：https://github.com/zarazhangrui/lark-coding-agent-bridge
-- 作者：zarazhangrui
-- 语言：TypeScript
-- Star：1658
+- 项目名：bagidea-office
+- GitHub 链接：https://github.com/bagidea/bagidea-office
+- 作者：bagidea
+- 语言：JavaScript
+- Star：131
 - License：MIT
 
 ## 为什么选它

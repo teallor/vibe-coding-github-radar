@@ -1,6 +1,6 @@
 {
   "date": "2026-07-03",
-  "summary": "今天最值得精读的项目是 **lark-coding-agent-bridge**（推荐分 87）。高 - TypeScript 项目，1658 Star，属于「个人效率工具」方向，适合阅读学习核心机制。可以接触新鲜有趣的技术和项目组织方式。建议用 30-45 分钟只读学习，不要安装运行，先理解核心机制和可迁移经验。",
+  "summary": "今天最值得精读的项目是 **bagidea-office**（推荐分 91）。完美契合 Vibe Coding、Agent、MCP 和插件方向。其 2.5D 像素风视觉效果极佳，非常适合作为自媒体内容素材或课程案例。同时，可深入研究其基于 Claude Code 的底层机制、多模型上下文自动压缩技术以及 MCP 接入方案，为副业项目提供灵感。。对办公自动化有直接价值。建议用 30-45 分钟只读学习，不要安装运行，先理解核心机制和可迁移经验。",
   "activeProfile": "默认综合模式",
   "activeFocusAreas": [
     "Office 文档自动化",
@@ -25,31 +25,36 @@
     "failed": 0,
     "rateLimitRetries": 0,
     "complete": true,
+    "candidateTarget": 300,
+    "candidateTargetMet": true,
+    "hardGatePassed": 43,
+    "geminiReviewed": 10,
+    "geminiSucceeded": 9,
     "candidateCount": 318,
-    "qualifiedCount": 4
+    "qualifiedCount": 8
   },
   "topPick": {
-    "name": "lark-coding-agent-bridge",
-    "fullName": "zarazhangrui/lark-coding-agent-bridge",
-    "url": "https://github.com/zarazhangrui/lark-coding-agent-bridge",
-    "description": "Bot that bridges Feishu/Lark messenger with a local Claude Code or Codex CLI. Streaming cards, per-chat sessions, multiple workspaces",
-    "author": "zarazhangrui",
-    "language": "TypeScript",
-    "stars": 1658,
-    "forks": 252,
+    "name": "bagidea-office",
+    "fullName": "bagidea/bagidea-office",
+    "url": "https://github.com/bagidea/bagidea-office",
+    "description": "A living AI-agent office on your desktop wallpaper — Claude Code agents that walk, work, delegate, learn & hold meetings. Per-agent swappable models (Claude/GLM/DeepSeek/Qwen/Kimi/OpenAI/Gemini/Groq/Ollama…), workflows, plugins, voice & Telegram/Discord/LINE. Open source.",
+    "author": "bagidea",
+    "language": "JavaScript",
+    "stars": 131,
+    "forks": 45,
     "license": "MIT",
     "updatedAt": "2026-07-03",
     "archived": false,
-    "openIssues": 127,
-    "recommendScore": 87,
-    "rawRecommendScore": 73,
+    "openIssues": 0,
+    "recommendScore": 91,
+    "rawRecommendScore": 68,
     "scores": {
-      "vibeCodingLearning": 19,
-      "officeAutomation": 3,
+      "vibeCodingLearning": 18,
+      "officeAutomation": 7,
       "monetizationPotential": 5,
-      "codexFriendly": 12,
-      "beginnerFriendly": 9,
-      "localFirst": 7,
+      "codexFriendly": 8,
+      "beginnerFriendly": 8,
+      "localFirst": 6,
       "activity": 5,
       "license": 5
     },
@@ -58,13 +63,13 @@
         {
           "key": "vibeCodingLearning",
           "label": "Vibe Coding 学习价值",
-          "score": 19,
+          "score": 18,
           "max": 20
         },
         {
           "key": "officeAutomation",
           "label": "办公自动化价值",
-          "score": 3,
+          "score": 7,
           "max": 20
         },
         {
@@ -76,19 +81,19 @@
         {
           "key": "codexFriendly",
           "label": "Codex 改造友好度",
-          "score": 12,
+          "score": 8,
           "max": 15
         },
         {
           "key": "beginnerFriendly",
           "label": "新手学习友好度",
-          "score": 9,
+          "score": 8,
           "max": 10
         },
         {
           "key": "localFirst",
           "label": "本地/免费优先",
-          "score": 7,
+          "score": 6,
           "max": 10
         },
         {
@@ -106,93 +111,124 @@
       ],
       "penalties": [],
       "bonuses": [
-        "命中白名单 2 个，加 4 分",
-        "优先语言 TypeScript，加 5 分"
+        "命中白名单 1 个，加 2 分",
+        "优先语言 JavaScript，加 5 分"
       ]
     },
-    "vibeCodingValue": "高 - TypeScript 项目，1658 Star，属于「个人效率工具」方向，适合阅读学习核心机制",
-    "officeAutomationValue": "低 - 与办公自动化关系不大，但有通用学习价值",
+    "vibeCodingValue": "完美契合 Vibe Coding、Agent、MCP 和插件方向。其 2.5D 像素风视觉效果极佳，非常适合作为自媒体内容素材或课程案例。同时，可深入研究其基于 Claude Code 的底层机制、多模型上下文自动压缩技术以及 MCP 接入方案，为副业项目提供灵感。",
+    "officeAutomationValue": "高 - 涉及 office 相关功能",
     "monetizationPotential": "低 - 暂不适合直接变现，可学习技术",
-    "codexFriendly": "中 - 有入门特征，可尝试 Codex 改造",
+    "codexFriendly": "项目本身即是基于 Claude Code 构建的（'Built with Claude Code'），并在此基础上扩展了多模型支持（Swappable Brains）、自动上下文压缩和 MCP 工具集，是 Codex 深度改造、Agent 协同和二次开发的绝佳开源范例。",
     "riskPoints": "未发现明显风险",
-    "matchedArea": "个人效率工具",
+    "matchedArea": "Office 文档自动化",
     "penalties": [],
     "bonuses": [
-      "命中白名单 2 个，加 4 分",
-      "优先语言 TypeScript，加 5 分"
+      "命中白名单 1 个，加 2 分",
+      "优先语言 JavaScript，加 5 分"
     ],
     "qualityGate": {
       "passed": true,
-      "threshold": 85,
       "relevanceSignals": [
-        "codex",
         "claude code"
       ],
       "failures": []
-    }
+    },
+    "ruleScore": 84,
+    "semanticReview": {
+      "shouldRecommend": true,
+      "score": 91,
+      "type": "Agent 工具",
+      "oneLineConclusion": "一款基于 Claude Code 构建的 2.5D 桌面壁纸级 AI 虚拟办公室，支持多模型、MCP 工具、插件与工作流，极具 Vibe Coding 演示与学习价值。",
+      "whatHappened": "BagIdea Office 开源了一个运行在桌面壁纸上的 2.5D 虚拟办公室项目。AI 代理（底层基于 Claude Code）可以在其中走动、开会、学习技能并执行真实任务。项目支持接入多种大模型（包括本地 Ollama）、MCP 服务器（如 Notion、Postgres）、自定义插件，并内置了可视化工作流构建器。",
+      "consumerUseCase": "用户可以通过 `npx bagidea` 一键安装，将其作为动态桌面壁纸运行。在日常办公中，用户可以将任务委派给虚拟办公室中的 AI 员工，它们会调用 MCP 工具或插件自动完成任务，甚至主动发起项目提案供用户审批，实现高度可视化的办公自动化。",
+      "valueForRafael": "完美契合 Vibe Coding、Agent、MCP 和插件方向。其 2.5D 像素风视觉效果极佳，非常适合作为自媒体内容素材或课程案例。同时，可深入研究其基于 Claude Code 的底层机制、多模型上下文自动压缩技术以及 MCP 接入方案，为副业项目提供灵感。",
+      "codexIntegrationPotential": "项目本身即是基于 Claude Code 构建的（'Built with Claude Code'），并在此基础上扩展了多模型支持（Swappable Brains）、自动上下文压缩和 MCP 工具集，是 Codex 深度改造、Agent 协同和二次开发的绝佳开源范例。",
+      "actionSuggestion": "1. 运行 `npx bagidea` 在本地体验其视觉效果与交互；2. 重点阅读其 `Swappable Brains`（多模型代理路由）和 MCP 工具集接入的源码；3. 录制一期关于 '桌面级 AI 虚拟办公室' 的演示视频，展示 Vibe Coding 的前沿玩法。",
+      "reasons": [
+        "高度契合 Agent、MCP、插件和 Vibe Coding 标签，技术栈（JavaScript）友好。",
+        "视觉呈现极具新意（2.5D 像素风桌面壁纸），非常适合作为视频课程或自媒体吸睛素材。",
+        "内置零依赖的 Anthropic ↔ OpenAI 代理，支持多模型和本地模型（Ollama/LM Studio），降低了使用成本。",
+        "原生支持 MCP 服务器（浏览器自动化、Notion 等）和可视化工作流构建，具备真实的办公自动化潜力。"
+      ],
+      "risksOrMissingInfo": [
+        "Linux/macOS 版本仍处于 Beta 阶段，可能存在桌面壁纸层级的兼容性问题。",
+        "重度依赖 Node.js 环境和 Claude Code，对非技术背景的纯小白用户有一定安装门槛。",
+        "多 Agent 协同和高频 API 调用可能产生较高费用（尽管项目提供了便宜模型和平替方案）。"
+      ],
+      "evidenceRequired": true,
+      "dimensions": {
+        "rafaelMatch": 23,
+        "consumerUsability": 16,
+        "ecosystemRelevance": 20,
+        "actionableValue": 14,
+        "sourceReliability": 9,
+        "freshness": 9
+      }
+    },
+    "reviewProvider": "vertex"
   },
   "selectedProjects": [
     {
-      "name": "claude-code-local",
-      "fullName": "nicedreamzapp/claude-code-local",
-      "url": "https://github.com/nicedreamzapp/claude-code-local",
-      "description": "Run Claude Code 100% on-device with local AI on Apple Silicon. MLX-native Anthropic-API server, 65 tok/s Qwen 3.5 122B, Llama 3.3 70B, Gemma 4 31B. Private, offline, airgap-ready. Built for NDA / legal / healthcare workflows.",
-      "author": "nicedreamzapp",
-      "language": "Python",
-      "stars": 2910,
-      "forks": 556,
-      "license": "MIT",
-      "updatedAt": "2026-06-18",
+      "name": "awesome-n8n-templates",
+      "fullName": "enescingoz/awesome-n8n-templates",
+      "url": "https://github.com/enescingoz/awesome-n8n-templates",
+      "description": "280+ free n8n automation templates — ready-to-use workflows for Gmail, Telegram, Slack, Discord, WhatsApp, Google Drive, Notion, OpenAI, and more. AI agents, RAG   chatbots, email automation, social media, DevOps, and document processing. The largest open-source n8n template collection.",
+      "author": "enescingoz",
+      "language": "未知",
+      "stars": 23604,
+      "forks": 6207,
+      "license": "NOASSERTION",
+      "updatedAt": "2026-06-20",
       "archived": false,
-      "openIssues": 0,
-      "recommendScore": 85,
-      "rawRecommendScore": 69,
+      "openIssues": 23,
+      "recommendScore": 90,
+      "rawRecommendScore": 68,
       "scores": {
-        "vibeCodingLearning": 20,
-        "officeAutomation": 3,
-        "monetizationPotential": 5,
-        "codexFriendly": 10,
-        "beginnerFriendly": 9,
-        "localFirst": 6,
+        "vibeCodingLearning": 19,
+        "officeAutomation": 10,
+        "monetizationPotential": 8,
+        "codexFriendly": 8,
+        "beginnerFriendly": 8,
+        "localFirst": 5,
         "activity": 5,
-        "license": 5
+        "license": 2
       },
       "scoreBasis": {
         "dimensions": [
           {
             "key": "vibeCodingLearning",
             "label": "Vibe Coding 学习价值",
-            "score": 20,
+            "score": 19,
             "max": 20
           },
           {
             "key": "officeAutomation",
             "label": "办公自动化价值",
-            "score": 3,
+            "score": 10,
             "max": 20
           },
           {
             "key": "monetizationPotential",
             "label": "个人变现潜力",
-            "score": 5,
+            "score": 8,
             "max": 15
           },
           {
             "key": "codexFriendly",
             "label": "Codex 改造友好度",
-            "score": 10,
+            "score": 8,
             "max": 15
           },
           {
             "key": "beginnerFriendly",
             "label": "新手学习友好度",
-            "score": 9,
+            "score": 8,
             "max": 10
           },
           {
             "key": "localFirst",
             "label": "本地/免费优先",
-            "score": 6,
+            "score": 5,
             "max": 10
           },
           {
@@ -204,46 +240,74 @@
           {
             "key": "license",
             "label": "License 清晰度",
-            "score": 5,
+            "score": 2,
             "max": 5
           }
         ],
         "penalties": [],
         "bonuses": [
-          "命中白名单 1 个，加 2 分",
-          "优先语言 Python，加 5 分"
+          "命中白名单 2 个，加 4 分"
         ]
       },
-      "vibeCodingValue": "高 - Python 项目，2910 Star，属于「Office 文档自动化」方向，适合阅读学习核心机制",
-      "officeAutomationValue": "低 - 与办公自动化关系不大，但有通用学习价值",
-      "monetizationPotential": "低 - 暂不适合直接变现，可学习技术",
-      "codexFriendly": "中 - 可阅读学习，改造难度需评估",
+      "vibeCodingValue": "1. 办公自动化：直接复用邮件、文档处理模板提升效率；2. 课程制作：可作为 n8n 自动化实战课程的绝佳素材库；3. 副业项目：利用这些模板为客户提供定制化的自动化解决方案（如客服机器人、线索收集）进行变现。",
+      "officeAutomationValue": "高 - 涉及 document, template 相关功能",
+      "monetizationPotential": "中 - 可包装成工具或模板服务",
+      "codexFriendly": "可将这些 n8n 模板的 JSON 结构作为参考，通过 Vibe Coding 快速生成定制化的 n8n 工作流配置，或者将 n8n 的 Webhook 封装为 MCP 工具供大模型直接调用执行复杂任务。",
       "riskPoints": "未发现明显风险",
       "matchedArea": "Office 文档自动化",
       "penalties": [],
       "bonuses": [
-        "命中白名单 1 个，加 2 分",
-        "优先语言 Python，加 5 分"
+        "命中白名单 2 个，加 4 分"
       ],
       "qualityGate": {
         "passed": true,
-        "threshold": 85,
         "relevanceSignals": [
-          "claude code"
+          "ai agent"
         ],
         "failures": []
-      }
+      },
+      "ruleScore": 84,
+      "semanticReview": {
+        "shouldRecommend": true,
+        "score": 90,
+        "type": "Agent 工具",
+        "oneLineConclusion": "包含 280+ 个开箱即用的 n8n 自动化工作流模板库，完美契合 AI Agent 搭建、办公自动化与副业变现需求。",
+        "whatHappened": "该 GitHub 项目收集了超过 280 个免费的 n8n 自动化模板，涵盖 Gmail、Telegram、OpenAI、Google Drive 等主流平台，支持一键导入，实现邮件处理、文档自动化、AI 智能体和 RAG 聊天机器人等场景。",
+        "consumerUseCase": "用户可以通过下载 JSON 模板并导入 n8n，快速搭建自动化工作流，例如 AI 自动分类与回复邮件、社交媒体内容分发、PDF 文档处理及数据抓取，无需从零配置节点。",
+        "valueForRafael": "1. 办公自动化：直接复用邮件、文档处理模板提升效率；2. 课程制作：可作为 n8n 自动化实战课程的绝佳素材库；3. 副业项目：利用这些模板为客户提供定制化的自动化解决方案（如客服机器人、线索收集）进行变现。",
+        "codexIntegrationPotential": "可将这些 n8n 模板的 JSON 结构作为参考，通过 Vibe Coding 快速生成定制化的 n8n 工作流配置，或者将 n8n 的 Webhook 封装为 MCP 工具供大模型直接调用执行复杂任务。",
+        "actionSuggestion": "1. 挑选 3-5 个高频办公场景（如邮件分类、文档解析）进行本地测试；2. 录制一期“如何用 n8n 模板零代码搭建 AI 办公助手”的实战教程；3. 探索将 n8n 工作流打包为企业自动化服务的副业模式。",
+        "reasons": [
+          "强匹配用户画像：涵盖办公自动化、Agent、副业项目和课程制作等核心关注点。",
+          "极高的可操作性：提供现成的 JSON 文件，支持 n8n 一键导入，大幅降低了学习和使用门槛。",
+          "丰富的生态整合：集成了 OpenAI、Google Workspace 等多种工具，展现了强大的 Agent 编排能力。"
+        ],
+        "risksOrMissingInfo": [
+          "模板由社区收集，部分 API 接口或节点可能因第三方平台更新而失效，需自行调试。",
+          "依赖 n8n 环境（需本地部署或使用云服务），且部分高级 AI 模型节点需自备 API Key。"
+        ],
+        "evidenceRequired": true,
+        "dimensions": {
+          "rafaelMatch": 23,
+          "consumerUsability": 18,
+          "ecosystemRelevance": 18,
+          "actionableValue": 14,
+          "sourceReliability": 9,
+          "freshness": 8
+        }
+      },
+      "reviewProvider": "vertex"
     }
   ],
   "watchProjects": [],
   "notRecommendedProjects": [],
-  "codexPrompt": "请帮我只读分析以下 GitHub 项目，不要运行、不要安装、不要 clone、不要改代码。请分析项目结构、核心机制、可学习点、可迁移点、变现启发点。每个新名词先用小白能懂的话解释。最后沉淀成 Markdown 文件。\n\n项目地址：https://github.com/zarazhangrui/lark-coding-agent-bridge\n项目名：lark-coding-agent-bridge\n日期：2026-07-03\n\n分析要求：\n1. 用一句话解释它是什么\n2. 为什么值得我今天读\n3. 今天只读哪些文件（30-45 分钟）\n4. 仓库结构拆解\n5. 可迁移经验\n6. 个人变现判断\n7. 沉淀成 Markdown 模板\n\n安全要求：\n- 不运行任何代码\n- 不安装任何依赖\n- 不 clone 陌生项目\n- 不执行第三方脚本\n- 只做只读分析",
-  "markdownTemplate": "# 2026-07-03 Vibe Coding GitHub 学习沉淀\n\n## 项目基本信息\n- 项目名：lark-coding-agent-bridge\n- GitHub 链接：https://github.com/zarazhangrui/lark-coding-agent-bridge\n- 作者：zarazhangrui\n- 语言：TypeScript\n- Star：1658\n- License：MIT\n\n## 为什么选它\n\n## 它属于哪类机会\n- [ ] 办公自动化\n- [ ] 变现工具\n- [ ] 新鲜有趣\n- [ ] 学习技术\n- [ ] Codex 改造\n\n## 我读了哪些文件\n\n## 我学到的 3 个机制\n1. \n2. \n3. \n\n## 我没懂的地方\n\n## 可迁移到我的 Vibe Coding 实践的点\n\n## 可能的变现方式\n\n## 是否值得让 Codex 深挖\n\n## 我的主观评分（1-10）",
+  "codexPrompt": "请帮我只读分析以下 GitHub 项目，不要运行、不要安装、不要 clone、不要改代码。请分析项目结构、核心机制、可学习点、可迁移点、变现启发点。每个新名词先用小白能懂的话解释。最后沉淀成 Markdown 文件。\n\n项目地址：https://github.com/bagidea/bagidea-office\n项目名：bagidea-office\n日期：2026-07-03\n\n分析要求：\n1. 用一句话解释它是什么\n2. 为什么值得我今天读\n3. 今天只读哪些文件（30-45 分钟）\n4. 仓库结构拆解\n5. 可迁移经验\n6. 个人变现判断\n7. 沉淀成 Markdown 模板\n\n安全要求：\n- 不运行任何代码\n- 不安装任何依赖\n- 不 clone 陌生项目\n- 不执行第三方脚本\n- 只做只读分析",
+  "markdownTemplate": "# 2026-07-03 Vibe Coding GitHub 学习沉淀\n\n## 项目基本信息\n- 项目名：bagidea-office\n- GitHub 链接：https://github.com/bagidea/bagidea-office\n- 作者：bagidea\n- 语言：JavaScript\n- Star：131\n- License：MIT\n\n## 为什么选它\n\n## 它属于哪类机会\n- [ ] 办公自动化\n- [ ] 变现工具\n- [ ] 新鲜有趣\n- [ ] 学习技术\n- [ ] Codex 改造\n\n## 我读了哪些文件\n\n## 我学到的 3 个机制\n1. \n2. \n3. \n\n## 我没懂的地方\n\n## 可迁移到我的 Vibe Coding 实践的点\n\n## 可能的变现方式\n\n## 是否值得让 Codex 深挖\n\n## 我的主观评分（1-10）",
   "tomorrowDirections": [
     "办公自动化：继续深挖 Word/Excel/PDF 生成库，关注模板填充和批量处理",
     "变现工具：关注可包装成模板服务或 SaaS 的小工具",
     "Codex 改造：寻找结构更清晰、更适合拆解的入门项目"
   ],
   "configSource": "config/focus.json",
-  "updatedAt": "2026-07-03T11:33:38.680Z"
+  "updatedAt": "2026-07-03T13:00:05.570Z"
 }

@@ -91,25 +91,16 @@ function buildFullQuery(baseQuery, area, config) {
 function generateSearchTasks(config) {
   const areaQueries = generateSearchQueries(config);
   const tasks = [];
-  const priorityLangs = config.priorityLanguages || [];
-
   for (const { area, queries } of areaQueries) {
-    // 每个方向只取前 N 个关键词搜索，避免 API 调用过多
-    // 每个关键词最多搜 2 种语言（如果配置了优先语言）
+    // 每个方向取前 N 个关键词，每个关键词只搜索一次。
+    // 旧实现按三种语言重复搜索，5 个方向会产生 90 次请求，超过
+    // GitHub Search API 每分钟限额；语言偏好改由评分阶段处理。
     const maxKeywordsPerArea = 6;
     const limitedQueries = queries.slice(0, maxKeywordsPerArea);
 
     for (const baseQuery of limitedQueries) {
-      if (priorityLangs.length > 0) {
-        // 为每个优先语言生成一个搜索任务
-        for (const lang of priorityLangs.slice(0, 3)) {
-          const fullQuery = buildFullQuery(baseQuery, area, config) + ` language:${lang}`;
-          tasks.push({ area, query: fullQuery, language: lang });
-        }
-      } else {
-        const fullQuery = buildFullQuery(baseQuery, area, config);
-        tasks.push({ area, query: fullQuery, language: null });
-      }
+      const fullQuery = buildFullQuery(baseQuery, area, config);
+      tasks.push({ area, query: fullQuery, language: null });
     }
   }
 

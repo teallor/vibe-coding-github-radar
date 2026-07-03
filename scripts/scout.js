@@ -75,13 +75,15 @@ async function main() {
   const allCandidates = [];
   const seenRepos = new Set();
   const blockedRepos = new Set(config.blockedRepos || []);
+  const searchStats = { taskCount: tasks.length, succeeded: 0, failed: 0, rateLimitRetries: 0, complete: true };
 
   for (let i = 0; i < tasks.length; i++) {
     const task = tasks[i];
     console.log(`[${i + 1}/${tasks.length}] 搜索: ${task.query.substring(0, 80)}...`);
 
     try {
-      const repos = await searchGitHub(task.query, token);
+      const repos = await searchGitHub(task.query, token, { onRetry: () => { searchStats.rateLimitRetries += 1; } });
+      searchStats.succeeded += 1;
       console.log(`  → 找到 ${repos.length} 个结果`);
 
       for (const repo of repos) {
@@ -106,12 +108,15 @@ async function main() {
         await sleep(RATE_LIMIT_DELAY);
       }
     } catch (e) {
+      searchStats.failed += 1;
+      searchStats.complete = false;
       console.error(`  ❌ 搜索失败: ${e.message}`);
       // 继续下一个搜索任务
     }
   }
 
-  console.log(`\n📊 共收集 ${allCandidates.length} 个候选项目\n`);
+  console.log(`\n📊 搜索完成 ${searchStats.succeeded}/${searchStats.taskCount}，失败 ${searchStats.failed}，限流重试 ${searchStats.rateLimitRetries}`);
+  console.log(`📊 共收集 ${allCandidates.length} 个候选项目\n`);
 
   if (allCandidates.length === 0) {
     console.error('❌ 未找到任何项目，请检查配置、网络或 GitHub API 限额');
@@ -138,7 +143,7 @@ async function main() {
   const notRecommended = [];
 
   // 5. 生成输出文件
-  await generateAndSaveOutputs(config, source, selectedProjects, watchProjects, notRecommended, allCandidates, topPick);
+  await generateAndSaveOutputs(config, source, selectedProjects, watchProjects, notRecommended, allCandidates, topPick, searchStats, qualifiedCandidates.length);
 
   console.log('\n✅ 每日搜索完成！');
 }
@@ -183,7 +188,7 @@ function assessQuality(project, minScore = 85) {
 /**
  * 调用 GitHub Search API
  */
-async function searchGitHub(query, token) {
+async function searchGitHub(query, token, options = {}) {
   const url = `${GITHUB_API}/search/repositories?q=${encodeURIComponent(query)}&sort=stars&order=desc&per_page=${PER_PAGE}`;
   const headers = {
     'Accept': 'application/vnd.github.v3+json',
@@ -193,21 +198,32 @@ async function searchGitHub(query, token) {
     headers['Authorization'] = `Bearer ${token}`;
   }
 
-  const res = await fetch(url, { headers });
-
-  if (res.status === 403) {
-    // Rate limit
-    const reset = res.headers.get('x-ratelimit-reset');
-    console.error(`  ⚠️ API 限流！重置时间: ${reset ? new Date(parseInt(reset) * 1000).toLocaleString() : '未知'}`);
-    throw new Error('GitHub API 限流，请配置 GITHUB_TOKEN 或稍后再试');
+  const fetchImpl = options.fetchImpl || fetch;
+  const sleepImpl = options.sleepImpl || sleep;
+  const maxAttempts = options.maxAttempts || 3;
+  for (let attempt = 1; attempt <= maxAttempts; attempt++) {
+    const res = await fetchImpl(url, { headers });
+    const remaining = Number(res.headers.get('x-ratelimit-remaining'));
+    const reset = Number(res.headers.get('x-ratelimit-reset'));
+    if ([403, 429].includes(res.status)) {
+      if (attempt === maxAttempts) throw new Error(`GitHub Search API 限流，重试 ${maxAttempts} 次后仍未恢复`);
+      const waitMs = Number.isFinite(reset) && reset > 0 ? Math.max(1000, reset * 1000 - Date.now() + 1500) : 65000;
+      console.warn(`  ⏳ GitHub Search API 限流，等待 ${Math.ceil(waitMs / 1000)} 秒后自动重试（${attempt}/${maxAttempts - 1}）`);
+      if (options.onRetry) options.onRetry({ attempt, waitMs });
+      await sleepImpl(waitMs);
+      continue;
+    }
+    if (!res.ok) throw new Error(`GitHub API 返回 ${res.status}: ${res.statusText}`);
+    const data = await res.json();
+    // 用完本分钟搜索额度时主动等到重置，避免后续雷达立刻撞限流。
+    if (remaining === 0 && Number.isFinite(reset) && reset > 0) {
+      const waitMs = Math.max(1000, reset * 1000 - Date.now() + 1500);
+      console.warn(`  ⏳ GitHub Search API 本周期额度已用完，主动等待 ${Math.ceil(waitMs / 1000)} 秒`);
+      await sleepImpl(waitMs);
+    }
+    return data.items || [];
   }
-
-  if (!res.ok) {
-    throw new Error(`GitHub API 返回 ${res.status}: ${res.statusText}`);
-  }
-
-  const data = await res.json();
-  return data.items || [];
+  return [];
 }
 
 /**
@@ -228,6 +244,7 @@ function normalizeRepo(repo, scoreResult, area) {
     archived: repo.archived || false,
     openIssues: repo.open_issues_count || 0,
     recommendScore: scoreResult.recommendScore,
+    rawRecommendScore: scoreResult.rawRecommendScore,
     scores: scoreResult.scores,
     scoreBasis: scoreResult.scoreBasis,
     vibeCodingValue: scoreResult.vibeCodingValue,
@@ -244,12 +261,12 @@ function normalizeRepo(repo, scoreResult, area) {
 /**
  * 生成并保存所有输出文件
  */
-async function generateAndSaveOutputs(config, source, selectedProjects, watchProjects, notRecommended, allCandidates, topPick) {
+async function generateAndSaveOutputs(config, source, selectedProjects, watchProjects, notRecommended, allCandidates, topPick, searchStats, qualifiedCount) {
   const date = new Date().toISOString().slice(0, 10);
   const enabledAreas = (config.enabledFocusAreas || []).filter(a => a.enabled);
 
   // 生成总结
-  const summary = generateSummary(topPick, config);
+  const summary = generateSummary(topPick, config, searchStats, allCandidates.length);
 
   // 生成明日方向建议
   const tomorrowDirections = generateTomorrowDirections(config, enabledAreas);
@@ -267,6 +284,7 @@ async function generateAndSaveOutputs(config, source, selectedProjects, watchPro
     activeProfile: config.profileName,
     activeFocusAreas: enabledAreas.map(a => a.name),
     scoringWeights: config.scoringWeights,
+    screening: { ...searchStats, candidateCount: allCandidates.length, qualifiedCount },
     topPick: topPick || null,
     selectedProjects,
     watchProjects,
@@ -361,8 +379,9 @@ async function generateAndSaveOutputs(config, source, selectedProjects, watchPro
 /**
  * 生成总结
  */
-function generateSummary(topPick, config) {
-  if (!topPick) return '今日暂无推荐项目。请检查 GitHub Actions 是否正常运行，或调整需求画像配置。';
+function generateSummary(topPick, config, searchStats = { complete: true }, candidateCount = 0) {
+  if (!topPick && !searchStats.complete) return `GitHub 搜索未完整完成：${searchStats.succeeded || 0}/${searchStats.taskCount || 0} 个任务成功，当前结果不足以判断，已明确标记而不假装“无推荐”。`;
+  if (!topPick) return `已完整筛选 ${candidateCount} 个候选项目，今日没有达到严格质量门槛的项目，已跳过，不硬凑。`;
   const summary = `今天最值得精读的项目是 **${topPick.name}**（推荐分 ${topPick.recommendScore || 0}）。`;
   const reason = topPick.vibeCodingValue || '它有较高的 Vibe Coding 学习价值';
   const office = topPick.officeAutomationValue || '';
@@ -436,4 +455,4 @@ if (require.main === module) {
   });
 }
 
-module.exports = { main, assessQuality };
+module.exports = { main, assessQuality, searchGitHub, generateSummary };

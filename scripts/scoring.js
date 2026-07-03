@@ -134,11 +134,14 @@ function scoreProject(repo, config, area) {
     bonuses.push(`优先 owner ${owner}，加 10 分`);
   }
 
-  // 限制在 0-100
-  recommendScore = Math.max(0, Math.min(100, recommendScore));
+  // 原评分体系以 70 分为严格推荐线。运行配置统一改为 85 分后，
+  // 将原始分数映射到新标尺，保持原有质量含义：raw 70 => 85。
+  const rawRecommendScore = Math.max(0, Math.min(100, recommendScore));
+  recommendScore = calibrateScore(rawRecommendScore);
 
   return {
     recommendScore,
+    rawRecommendScore,
     scores: roundScores(scores),
     scoreBasis: buildScoreBasis(scores, weights, penalties, bonuses),
     penalties,
@@ -149,6 +152,11 @@ function scoreProject(repo, config, area) {
     codexFriendly: describeCodex(repo),
     riskPoints: describeRisks(repo, penalties)
   };
+}
+
+function calibrateScore(rawScore) {
+  const raw = Math.max(0, Math.min(100, Number(rawScore) || 0));
+  return raw >= 50 ? Math.round(50 + raw / 2) : raw;
 }
 
 function buildScoreBasis(scores, weights, penalties, bonuses) {
@@ -320,4 +328,4 @@ function roundScores(scores) {
   return rounded;
 }
 
-module.exports = { scoreProject };
+module.exports = { scoreProject, calibrateScore };

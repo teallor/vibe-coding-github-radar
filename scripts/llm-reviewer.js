@@ -54,7 +54,7 @@ async function callJson(url, headers, body, timeoutMs) {
 
 async function reviewCandidate(candidate, radarType, userProfile, config, options = {}) {
   if (options.forceUnavailable) return unavailable('forced for test');
-  const model = config.geminiModel || 'gemini-3.1-flash-lite';
+  const model = config.geminiModel || 'gemini-3.1-pro-preview';
   const prompt = promptFor(candidate, radarType, userProfile, config);
   const timeoutMs = options.timeoutMs || 30000;
   const project = process.env.GOOGLE_CLOUD_PROJECT || process.env.GCLOUD_PROJECT;
@@ -70,11 +70,12 @@ async function reviewCandidate(candidate, radarType, userProfile, config, option
         const url = `https://aiplatform.googleapis.com/v1/projects/${encodeURIComponent(project)}/locations/${encodeURIComponent(location)}/publishers/google/models/${encodeURIComponent(model)}:generateContent`;
         const data = await callJson(url, { Authorization: `Bearer ${token}` }, {
           contents: [{ role: 'user', parts: [{ text: prompt }] }],
-          generationConfig: { responseMimeType: 'application/json', temperature: 0.1, maxOutputTokens: 2048 }
+          generationConfig: { responseMimeType: 'application/json', temperature: 0.1, maxOutputTokens: 8192 }
         }, timeoutMs);
         const text = data.candidates?.[0]?.content?.parts?.map(part => part.text || '').join('') || '';
+        const review = parseReview(text, config.minScore);
         console.log(`[llm-reviewer] Vertex Gemini review succeeded (${model}); credentials were not logged.`);
-        return { status: 'success', provider: 'vertex', model, review: parseReview(text, config.minScore) };
+        return { status: 'success', provider: 'vertex', model, review };
       }
     }
     const key = process.env.GEMINI_API_KEY;
@@ -82,11 +83,12 @@ async function reviewCandidate(candidate, radarType, userProfile, config, option
     const url = `https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(model)}:generateContent?key=${encodeURIComponent(key)}`;
     const data = await callJson(url, {}, {
       contents: [{ parts: [{ text: prompt }] }],
-      generationConfig: { responseMimeType: 'application/json', temperature: 0.1, maxOutputTokens: 2048 }
+      generationConfig: { responseMimeType: 'application/json', temperature: 0.1, maxOutputTokens: 8192 }
     }, timeoutMs);
     const text = data.candidates?.[0]?.content?.parts?.map(part => part.text || '').join('') || '';
+    const review = parseReview(text, config.minScore);
     console.log(`[llm-reviewer] Gemini API review succeeded (${model}); API key was not logged.`);
-    return { status: 'success', provider: 'gemini-api', model, review: parseReview(text, config.minScore) };
+    return { status: 'success', provider: 'gemini-api', model, review };
   } catch (error) {
     console.warn(`[llm-reviewer] Gemini review unavailable; using rules: ${error.name === 'AbortError' ? 'timeout' : error.message.slice(0, 240)}`);
     return unavailable(error.name === 'AbortError' ? 'timeout' : 'request or JSON parsing failed');

@@ -18,7 +18,7 @@
 
 公开网页、GitHub API、RSS 和官方更新页负责获取候选；Gemini 只做二次质量评审、结构化摘要和是否推荐判断。Gemini 不可用、超时或返回非法 JSON 时，程序自动使用本地规则评分，不会令整个 workflow 失败。
 
-默认模型在 `config/runtime.json` 的 `radars.aiApp.geminiModel` 中配置。当前默认是 `gemini-3.1-flash-lite`，适合每日批量评审；可随 Google 模型生命周期调整。
+默认模型在 `config/runtime.json` 的 `radars.aiApp.geminiModel` 中配置。当前使用 Vertex AI 模型 ID `gemini-3.1-pro-preview`，以更强的推理能力执行严格质量评审；可随 Google 模型生命周期调整。
 
 #### 确保使用 Google Cloud 赠金
 

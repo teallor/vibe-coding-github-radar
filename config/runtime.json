@@ -13,7 +13,7 @@
       "candidateTarget": 30,
       "languages": ["zh", "en"],
       "useGeminiReview": true,
-      "geminiModel": "gemini-3.1-flash-lite",
+      "geminiModel": "gemini-3.1-pro-preview",
       "geminiProvider": "vertex-first",
       "keywords": {
         "OpenAI Codex": 25, "Codex CLI": 25, "Codex App": 25, "Codex workflow": 24,

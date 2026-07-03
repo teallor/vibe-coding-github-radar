@@ -25,12 +25,34 @@ async function accessToken() {
 }
 
 function promptFor(candidate, radarType, userProfile, config) {
+  const radarGuidance = radarType.includes('GitHub')
+    ? 'For a GitHub project, inspect supplied repository metadata and README evidence. Judge actual reproducibility, documentation, maintenance, beginner suitability, dependency/API requirements, and concrete reuse value. Do not reward stars or keywords alone.'
+    : radarType.includes('播客')
+      ? 'For a podcast episode, inspect supplied shownotes, outline, duration, guest and transcript evidence. Judge practical depth, whether it truly teaches Codex/AI coding/agent workflows, and whether listening is worth the user time. Never infer content from the title alone.'
+      : 'For an ecosystem update, verify that it is released, consumer-usable, actionable and supported by the supplied official or primary-source evidence.';
   return `You are a strict evidence-based reviewer for ${radarType}. Return JSON only.\n` +
     `User profile: ${JSON.stringify(userProfile)}\nThreshold: ${config.minScore}.\n` +
     `Score dimensions: Rafael match 0-25; consumer usability 0-20; Codex/Agent/Skills/MCP/plugin relevance 0-20; actionable value 0-15; source reliability 0-10; freshness/scarcity 0-10.\n` +
-    `Reject rumors, marketing copy, funding, generic AI news, missing source links, or claims not supported by supplied evidence. Never invent facts.\n` +
+    `${radarGuidance}\nReject rumors, marketing copy, funding, generic AI news, missing source links, or claims not supported by supplied evidence. Never invent facts.\n` +
     `Candidate: ${JSON.stringify(candidate)}\n` +
     `Required schema: {"shouldRecommend":boolean,"score":number,"type":"${TYPES.join(' / ')}","oneLineConclusion":"","whatHappened":"","consumerUseCase":"","valueForRafael":"","codexIntegrationPotential":"","actionSuggestion":"","reasons":[],"risksOrMissingInfo":[],"evidenceRequired":true,"dimensions":{"rafaelMatch":0,"consumerUsability":0,"ecosystemRelevance":0,"actionableValue":0,"sourceReliability":0,"freshness":0}}`;
+}
+
+async function withRetry(operation, options = {}) {
+  const attempts = options.attempts || 3;
+  const sleepImpl = options.sleepImpl || (ms => new Promise(resolve => setTimeout(resolve, ms)));
+  let lastError;
+  for (let attempt = 1; attempt <= attempts; attempt++) {
+    try { return await operation(); } catch (error) {
+      lastError = error;
+      const retryable = error.name === 'AbortError' || /HTTP 429|RESOURCE_EXHAUSTED|timeout/i.test(error.message);
+      if (!retryable || attempt === attempts) throw error;
+      const waitMs = attempt * 5000;
+      console.warn(`[llm-reviewer] Gemini temporarily unavailable; retrying in ${waitMs / 1000}s (${attempt}/${attempts - 1}).`);
+      await sleepImpl(waitMs);
+    }
+  }
+  throw lastError;
 }
 
 function parseReview(text, threshold) {
@@ -68,10 +90,10 @@ async function reviewCandidate(candidate, radarType, userProfile, config, option
       const token = await accessToken();
       if (token) {
         const url = `https://aiplatform.googleapis.com/v1/projects/${encodeURIComponent(project)}/locations/${encodeURIComponent(location)}/publishers/google/models/${encodeURIComponent(model)}:generateContent`;
-        const data = await callJson(url, { Authorization: `Bearer ${token}` }, {
+        const data = await withRetry(() => callJson(url, { Authorization: `Bearer ${token}` }, {
           contents: [{ role: 'user', parts: [{ text: prompt }] }],
           generationConfig: { responseMimeType: 'application/json', temperature: 0.1, maxOutputTokens: 8192 }
-        }, timeoutMs);
+        }, timeoutMs), { attempts: options.attempts, sleepImpl: options.sleepImpl });
         const text = data.candidates?.[0]?.content?.parts?.map(part => part.text || '').join('') || '';
         const review = parseReview(text, config.minScore);
         console.log(`[llm-reviewer] Vertex Gemini review succeeded (${model}); credentials were not logged.`);
@@ -81,10 +103,10 @@ async function reviewCandidate(candidate, radarType, userProfile, config, option
     const key = process.env.GEMINI_API_KEY;
     if (!key) return unavailable('Vertex project/credentials and GEMINI_API_KEY are unavailable');
     const url = `https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(model)}:generateContent?key=${encodeURIComponent(key)}`;
-    const data = await callJson(url, {}, {
+    const data = await withRetry(() => callJson(url, {}, {
       contents: [{ parts: [{ text: prompt }] }],
       generationConfig: { responseMimeType: 'application/json', temperature: 0.1, maxOutputTokens: 8192 }
-    }, timeoutMs);
+    }, timeoutMs), { attempts: options.attempts, sleepImpl: options.sleepImpl });
     const text = data.candidates?.[0]?.content?.parts?.map(part => part.text || '').join('') || '';
     const review = parseReview(text, config.minScore);
     console.log(`[llm-reviewer] Gemini API review succeeded (${model}); API key was not logged.`);
@@ -95,4 +117,4 @@ async function reviewCandidate(candidate, radarType, userProfile, config, option
   }
 }
 
-module.exports = { reviewCandidate, parseReview, unavailable, TYPES };
+module.exports = { reviewCandidate, parseReview, unavailable, withRetry, TYPES };

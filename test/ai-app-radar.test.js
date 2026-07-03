@@ -60,6 +60,10 @@ test('runtime limits GitHub and podcast radars to two', () => {
   assert.equal(runtime.radars.podcast.maxItems, 2);
   assert.equal(runtime.radars.github.minScore, 85);
   assert.equal(runtime.radars.podcast.minScore, 85);
+  assert.equal(runtime.radars.github.candidateTarget, 300);
+  assert.equal(runtime.radars.podcast.candidateTarget, 100);
+  assert.equal(runtime.radars.github.geminiModel, 'gemini-3.1-pro-preview');
+  assert.equal(runtime.radars.podcast.geminiModel, 'gemini-3.1-pro-preview');
 });
 
 test('daily card contains third section and sends through poster once', async () => {

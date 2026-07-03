@@ -1,6 +1,7 @@
 const test = require('node:test');
 const assert = require('node:assert/strict');
-const { parseDuration, classifyEpisode, extractOutline } = require('../scripts/find-codex-podcasts');
+const { parseDuration, classifyEpisode, extractOutline, selectPodcastRecommendations } = require('../scripts/find-codex-podcasts');
+const { loadRuntimeConfig } = require('../scripts/runtime-config');
 const { buildPodcastCard, buildCombinedCard } = require('../scripts/send-feishu');
 
 test('parses common podcast duration formats', () => {
@@ -55,4 +56,22 @@ test('combined card preserves GitHub radar and adds podcast radar', () => {
   assert.match(text, /GitHub 今日结论/);
   assert.match(text, /OpenAI Codex 高质量中文播客雷达/);
   assert.match(text, /今日未找到足够可靠/);
+});
+
+test('podcast final recommendation is decided by Gemini from shownotes evidence', async () => {
+  const runtime = loadRuntimeConfig();
+  const description = '本期用 OpenAI Codex CLI 实战演示 GitHub 自动化工作流。\n详细拆解安装、命令、项目构建和办公自动化案例。\n最后复盘 Vibe Coding 产品开发方法。'.repeat(4);
+  const item = classifyEpisode({
+    podcastName: '实战节目', title: 'Codex CLI 项目实战', link: 'https://example.com/episode', feedUrl: 'https://example.com/rss',
+    publishedAt: new Date().toISOString(), durationSeconds: 3600, description
+  }, new Date(), 85);
+  const selected = await selectPodcastRecommendations([item], runtime, {
+    linkVerifier: async () => true,
+    reviewer: async evidence => ({ status: 'success', provider: 'vertex', review: {
+      shouldRecommend: evidence.shownotes.includes('自动化'), score: 94, oneLineConclusion: '包含可复现工作流', valueForRafael: '值得听'
+    } })
+  });
+  assert.equal(selected.geminiSucceeded, 1);
+  assert.equal(selected.qualified[0].qualityScore, 94);
+  assert.equal(selected.qualified[0].reviewProvider, 'vertex');
 });

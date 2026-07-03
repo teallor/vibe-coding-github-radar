@@ -28,6 +28,7 @@ const { generateSearchTasks } = require('./keywords');
 const { scoreProject } = require('./scoring');
 const { generateReport, generateCodexPrompt, generateMarkdownTemplate } = require('./report');
 const { loadRuntimeConfig } = require('./runtime-config');
+const { reviewCandidate } = require('./llm-reviewer');
 
 // GitHub API 配置
 const GITHUB_API = 'https://api.github.com';
@@ -76,6 +77,14 @@ async function main() {
   const seenRepos = new Set();
   const blockedRepos = new Set(config.blockedRepos || []);
   const searchStats = { taskCount: tasks.length, succeeded: 0, failed: 0, rateLimitRetries: 0, complete: true };
+  const addRepos = (repos, area) => {
+    for (const repo of repos) {
+      if (seenRepos.has(repo.full_name)) continue;
+      seenRepos.add(repo.full_name);
+      if (blockedRepos.has(repo.full_name)) continue;
+      allCandidates.push(normalizeRepo(repo, scoreProject(repo, config, area), area));
+    }
+  };
 
   for (let i = 0; i < tasks.length; i++) {
     const task = tasks[i];
@@ -86,22 +95,7 @@ async function main() {
       searchStats.succeeded += 1;
       console.log(`  → 找到 ${repos.length} 个结果`);
 
-      for (const repo of repos) {
-        // 去重
-        if (seenRepos.has(repo.full_name)) continue;
-        seenRepos.add(repo.full_name);
-
-        // 屏蔽项目
-        if (blockedRepos.has(repo.full_name)) {
-          console.log(`  → 跳过屏蔽项目: ${repo.full_name}`);
-          continue;
-        }
-
-        // 评分
-        const scoreResult = scoreProject(repo, config, task.area);
-        const normalized = normalizeRepo(repo, scoreResult, task.area);
-        allCandidates.push(normalized);
-      }
+      addRepos(repos, task.area);
 
       // 限流延迟
       if (i < tasks.length - 1) {
@@ -115,6 +109,23 @@ async function main() {
     }
   }
 
+  if (allCandidates.length < radarConfig.candidateTarget) {
+    console.log(`📥 第一轮仅 ${allCandidates.length} 个唯一候选，目标 ${radarConfig.candidateTarget}，开始补抓真实搜索结果第 2 页`);
+    for (const task of tasks) {
+      if (allCandidates.length >= radarConfig.candidateTarget) break;
+      searchStats.taskCount += 1;
+      try {
+        const repos = await searchGitHub(task.query, token, { page: 2, onRetry: () => { searchStats.rateLimitRetries += 1; } });
+        searchStats.succeeded += 1;
+        addRepos(repos, task.area);
+      } catch (error) {
+        searchStats.failed += 1;
+        searchStats.complete = false;
+        console.error(`  ❌ 补抓失败: ${error.message}`);
+      }
+    }
+  }
+
   console.log(`\n📊 搜索完成 ${searchStats.succeeded}/${searchStats.taskCount}，失败 ${searchStats.failed}，限流重试 ${searchStats.rateLimitRetries}`);
   console.log(`📊 共收集 ${allCandidates.length} 个候选项目\n`);
 
@@ -124,14 +135,14 @@ async function main() {
     return;
   }
 
-  // 4. 先通过严格质量门槛，再排序。宁缺毋滥，不为凑数量降标准。
+  // 4. 规则负责硬门槛，Gemini 3.1 Pro 负责最终语义评审。
   allCandidates.sort((a, b) => b.recommendScore - a.recommendScore);
 
-  const qualifiedCandidates = allCandidates.filter(project => {
-    const assessment = assessQuality(project, radarConfig.minScore);
-    project.qualityGate = assessment;
-    return assessment.passed;
-  });
+  const poolTargetMet = allCandidates.length >= radarConfig.candidateTarget;
+  const selection = poolTargetMet
+    ? await selectGithubRecommendations(allCandidates, radarConfig, runtime.profile, token)
+    : { qualified: [], hardGatePassed: allCandidates.filter(project => assessHardGate(project).passed).length, geminiReviewed: 0, geminiSucceeded: 0 };
+  const qualifiedCandidates = selection.qualified;
   const recommendations = qualifiedCandidates.slice(0, radarConfig.maxItems);
   const topPick = recommendations[0] || null;
   const selectedProjects = recommendations.slice(1);
@@ -143,14 +154,27 @@ async function main() {
   const notRecommended = [];
 
   // 5. 生成输出文件
+  Object.assign(searchStats, {
+    candidateTarget: radarConfig.candidateTarget,
+    candidateTargetMet: poolTargetMet,
+    hardGatePassed: selection.hardGatePassed,
+    geminiReviewed: selection.geminiReviewed,
+    geminiSucceeded: selection.geminiSucceeded
+  });
   await generateAndSaveOutputs(config, source, selectedProjects, watchProjects, notRecommended, allCandidates, topPick, searchStats, qualifiedCandidates.length);
 
   console.log('\n✅ 每日搜索完成！');
 }
 
 function assessQuality(project, minScore = 85) {
+  const hard = assessHardGate(project);
+  const failures = [...hard.failures];
+  if (project.recommendScore < minScore) failures.unshift(`综合分低于 ${minScore}`);
+  return { passed: failures.length === 0, threshold: minScore, relevanceSignals: hard.relevanceSignals, failures };
+}
+
+function assessHardGate(project) {
   const failures = [];
-  if (project.recommendScore < minScore) failures.push(`综合分低于 ${minScore}`);
   if (project.archived) failures.push('仓库已归档');
   if (!project.license || project.license === '未知') failures.push('License 不明确');
   if (!project.description || project.description.trim().length < 30) failures.push('项目描述信息不足');
@@ -177,19 +201,55 @@ function assessQuality(project, minScore = 85) {
   const relevanceSignals = strongSignals.filter(signal => text.includes(signal));
   if (relevanceSignals.length === 0) failures.push('名称和描述未命中强相关主题');
 
-  return {
-    passed: failures.length === 0,
-    threshold: minScore,
-    relevanceSignals,
-    failures
-  };
+  return { passed: failures.length === 0, relevanceSignals, failures };
+}
+
+async function fetchGithubReadme(fullName, token) {
+  const headers = { Accept: 'application/vnd.github.raw+json', 'User-Agent': 'vibe-coding-github-radar' };
+  if (token) headers.Authorization = `Bearer ${token}`;
+  try {
+    const response = await fetch(`${GITHUB_API}/repos/${fullName}/readme`, { headers, signal: AbortSignal.timeout(15000) });
+    if (!response.ok) return '';
+    return (await response.text()).slice(0, 12000);
+  } catch { return ''; }
+}
+
+async function selectGithubRecommendations(candidates, radarConfig, profile, token, options = {}) {
+  const reviewer = options.reviewer || reviewCandidate;
+  const readmeFetcher = options.readmeFetcher || fetchGithubReadme;
+  const hardEligible = candidates.filter(project => {
+    project.qualityGate = assessHardGate(project);
+    return project.qualityGate.passed;
+  }).sort((a, b) => b.recommendScore - a.recommendScore);
+  const reviewLimit = radarConfig.geminiReviewLimit || 10;
+  const qualified = [];
+  let geminiSucceeded = 0;
+  for (const project of hardEligible.slice(0, reviewLimit)) {
+    const readmeEvidence = await readmeFetcher(project.fullName, token);
+    const result = radarConfig.useGeminiReview
+      ? await reviewer({ ...project, readmeEvidence: readmeEvidence || 'README unavailable' }, 'Vibe Coding / GitHub Radar', profile, radarConfig)
+      : { status: 'unavailable', provider: null };
+    if (result.status === 'success') {
+      geminiSucceeded += 1;
+      if (!result.review.shouldRecommend || result.review.score < radarConfig.minScore) continue;
+      qualified.push({ ...project, ruleScore: project.recommendScore, recommendScore: result.review.score,
+        semanticReview: result.review, reviewProvider: result.provider,
+        vibeCodingValue: result.review.valueForRafael || project.vibeCodingValue,
+        codexFriendly: result.review.codexIntegrationPotential || project.codexFriendly });
+    } else if (assessQuality(project, radarConfig.minScore).passed) {
+      qualified.push({ ...project, ruleScore: project.recommendScore, reviewProvider: 'rules-fallback' });
+    }
+  }
+  return { qualified: qualified.sort((a, b) => b.recommendScore - a.recommendScore), hardGatePassed: hardEligible.length,
+    geminiReviewed: Math.min(hardEligible.length, reviewLimit), geminiSucceeded };
 }
 
 /**
  * 调用 GitHub Search API
  */
 async function searchGitHub(query, token, options = {}) {
-  const url = `${GITHUB_API}/search/repositories?q=${encodeURIComponent(query)}&sort=stars&order=desc&per_page=${PER_PAGE}`;
+  const page = options.page || 1;
+  const url = `${GITHUB_API}/search/repositories?q=${encodeURIComponent(query)}&sort=stars&order=desc&per_page=${PER_PAGE}&page=${page}`;
   const headers = {
     'Accept': 'application/vnd.github.v3+json',
     'User-Agent': 'vibe-coding-github-radar'
@@ -381,6 +441,7 @@ async function generateAndSaveOutputs(config, source, selectedProjects, watchPro
  */
 function generateSummary(topPick, config, searchStats = { complete: true }, candidateCount = 0) {
   if (!topPick && !searchStats.complete) return `GitHub 搜索未完整完成：${searchStats.succeeded || 0}/${searchStats.taskCount || 0} 个任务成功，当前结果不足以判断，已明确标记而不假装“无推荐”。`;
+  if (!topPick && searchStats.candidateTarget && candidateCount < searchStats.candidateTarget) return `GitHub 仅收集到 ${candidateCount}/${searchStats.candidateTarget} 个真实候选，候选池未达标，本次不假装完成筛选。`;
   if (!topPick) return `已完整筛选 ${candidateCount} 个候选项目，今日没有达到严格质量门槛的项目，已跳过，不硬凑。`;
   const summary = `今天最值得精读的项目是 **${topPick.name}**（推荐分 ${topPick.recommendScore || 0}）。`;
   const reason = topPick.vibeCodingValue || '它有较高的 Vibe Coding 学习价值';
@@ -455,4 +516,4 @@ if (require.main === module) {
   });
 }
 
-module.exports = { main, assessQuality, searchGitHub, generateSummary };
+module.exports = { main, assessQuality, assessHardGate, searchGitHub, generateSummary, selectGithubRecommendations, fetchGithubReadme };

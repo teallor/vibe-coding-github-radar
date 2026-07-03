@@ -7,9 +7,10 @@ const fs = require('fs');
 const path = require('path');
 const { XMLParser } = require('fast-xml-parser');
 const { loadRuntimeConfig } = require('./runtime-config');
+const { reviewCandidate } = require('./llm-reviewer');
 
 const OUTPUT = path.join(process.cwd(), 'data', 'codex-podcasts-latest.json');
-const MAX_FEEDS = 60;
+const MAX_FEEDS = 100;
 const NETWORK_CONCURRENCY = 6;
 const SEARCH_TERMS = [
   'OpenAI Codex', 'Codex CLI', 'Codex App', 'Codex 编程',
@@ -112,15 +113,16 @@ function classifyEpisode(episode, now = new Date(), minScore = 85) {
   if (!Number.isFinite(episode.durationSeconds)) failures.push('无法确认时长');
   else if (episode.durationSeconds < 1200) failures.push('时长少于 20 分钟');
   if (description.length < 80 || result.outline.length === 0) failures.push('没有足够可读的 Shownotes、简介、大纲或摘要');
-  if (result.codexHits === 0) failures.push('正文证据中没有明确且实质性的 Codex 内容');
+  if (result.codexHits === 0 && result.practicalHits < 2) failures.push('正文证据中没有明确且实质性的 Codex / AI Coding 实操内容');
   if (termCount(combined, GENERIC_NEWS_TERMS) > 0 && result.practicalHits < 3) failures.push('内容主要是泛泛 AI 新闻或模型发布消息');
   if (chineseRatio(combined) < 0.12) failures.push('中文内容不足');
   if (!episode.link || !/^https?:\/\//.test(episode.link)) failures.push('缺少可验证的单集链接');
 
+  const hardPassed = failures.length === 0;
   let conclusion = failures.length ? '不推荐' : result.total >= minScore ? '推荐' : '不推荐';
   if (description.length < 80 && /codex/i.test(episode.title)) conclusion = '待人工确认';
   if (!failures.length && result.total < minScore) failures.push(`总分 ${result.total}，低于正式推荐阈值 ${minScore}`);
-  return { ...episode, description, ...result, failures, conclusion };
+  return { ...episode, description, ...result, hardPassed, failures, conclusion };
 }
 
 function rssItems(parsed) {
@@ -227,7 +229,7 @@ async function scanFeeds(feeds, sourceFailures) {
       for (const item of items.slice(0, 100)) {
         const episode = normalizeItem(item, podcastName || indexedName);
         const searchable = `${episode.title} ${cleanText(episode.description)}`;
-        if (!/codex/i.test(searchable)) continue;
+        if (!/codex|ai coding|vibe coding|claude code|gemini cli|\bmcp\b|coding agent|编程智能体|github 自动化/i.test(searchable)) continue;
         matching += 1;
         candidates.push({ ...episode, feedUrl });
       }
@@ -263,6 +265,42 @@ function valueReason(item) {
   return `Shownotes 提供了可核验的${dimensions.slice(0, 3).join('、') || 'Codex 实操信息'}，可用于判断具体方法是否能迁移到你的 Codex 学习与项目实践中。推荐依据来自节目正文说明，不是标题推断。`;
 }
 
+async function selectPodcastRecommendations(candidates, runtime, options = {}) {
+  const radarConfig = runtime.radars.podcast;
+  const reviewer = options.reviewer || reviewCandidate;
+  const linkVerifier = options.linkVerifier || verifyLink;
+  const hardEligible = candidates.filter(item => item.hardPassed).sort((a, b) => b.total - a.total);
+  const reviewLimit = radarConfig.geminiReviewLimit || 10;
+  const qualified = [];
+  let geminiSucceeded = 0;
+  for (const item of hardEligible.slice(0, reviewLimit)) {
+    if (!(await linkVerifier(item.link))) {
+      item.failures.push('单集链接无法访问');
+      item.hardPassed = false;
+      item.conclusion = '不推荐';
+      continue;
+    }
+    const evidence = {
+      podcastName: item.podcastName, title: item.title, link: item.link,
+      publishedAt: item.publishedAt, durationSeconds: item.durationSeconds,
+      shownotes: item.description.slice(0, 12000), outline: item.outline,
+      evidenceSource: item.feedUrl, ruleScore: item.total
+    };
+    const result = radarConfig.useGeminiReview
+      ? await reviewer(evidence, 'Codex / AI Coding 播客雷达', runtime.profile, radarConfig)
+      : { status: 'unavailable', provider: null };
+    if (result.status === 'success') {
+      geminiSucceeded += 1;
+      if (!result.review.shouldRecommend || result.review.score < radarConfig.minScore) continue;
+      qualified.push({ ...item, qualityScore: result.review.score, semanticReview: result.review, reviewProvider: result.provider });
+    } else if (item.total >= radarConfig.minScore) {
+      qualified.push({ ...item, qualityScore: item.total, reviewProvider: 'rules-fallback' });
+    }
+  }
+  return { qualified: qualified.sort((a, b) => b.qualityScore - a.qualityScore), hardGatePassed: hardEligible.length,
+    geminiReviewed: Math.min(hardEligible.length, reviewLimit), geminiSucceeded };
+}
+
 async function main() {
   const runtime = loadRuntimeConfig();
   const radarConfig = runtime.radars.podcast;
@@ -277,24 +315,23 @@ async function main() {
   const candidates = scanned.candidates.map(item => classifyEpisode(item, new Date(), radarConfig.minScore));
   const failures = scanned.failures;
   for (const candidate of candidates) {
-    if (candidate.conclusion === '推荐' && !(await verifyLink(candidate.link))) {
-      candidate.conclusion = '不推荐';
-      candidate.failures.push('单集链接无法访问');
-    }
     log(`候选：${candidate.podcastName}｜${candidate.title}｜${candidate.total} 分｜${candidate.conclusion}${candidate.failures.length ? `｜${candidate.failures.join('；')}` : ''}`);
   }
 
-  const recommendations = candidates
-    .filter(item => item.conclusion === '推荐')
-    .sort((a, b) => b.total - a.total)
+  const poolTargetMet = candidates.length >= radarConfig.candidateTarget;
+  const selection = poolTargetMet
+    ? await selectPodcastRecommendations(candidates, runtime)
+    : { qualified: [], hardGatePassed: candidates.filter(item => item.hardPassed).length, geminiReviewed: 0, geminiSucceeded: 0 };
+  const recommendations = selection.qualified
     .slice(0, radarConfig.maxItems)
     .map(item => ({
       podcastName: item.podcastName, title: item.title, link: item.link,
       publishedAt: item.publishedAt ? new Date(item.publishedAt).toISOString().slice(0, 10) : '无法识别',
       durationSeconds: item.durationSeconds, duration: durationLabel(item.durationSeconds),
-      outline: item.outline.slice(0, 5), whyWorthListening: valueReason(item),
-      codexRelevance: relevanceLabel(item), qualityScore: item.total,
-      scoreBreakdown: item.scores, conclusion: '推荐', evidenceSource: item.feedUrl
+      outline: item.outline.slice(0, 5), whyWorthListening: item.semanticReview?.valueForRafael || valueReason(item),
+      codexRelevance: item.semanticReview?.oneLineConclusion || relevanceLabel(item), qualityScore: item.qualityScore,
+      scoreBreakdown: item.scores, conclusion: '推荐', evidenceSource: item.feedUrl,
+      reviewProvider: item.reviewProvider, semanticReview: item.semanticReview || null
     }));
   const pending = candidates.filter(item => item.conclusion === '待人工确认').slice(0, 10).map(item => ({
     podcastName: item.podcastName, title: item.title, link: item.link, reasons: item.failures
@@ -305,7 +342,9 @@ async function main() {
   const date = new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Shanghai', year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date());
   const data = {
     date,
-    conclusion: recommendations.length
+    conclusion: !poolTargetMet
+      ? `仅收集到 ${candidates.length}/${radarConfig.candidateTarget} 个真实播客候选，候选池未达标，本次不假装完成筛选`
+      : recommendations.length
       ? `今日找到 ${recommendations.length} 条符合标准的高质量中文 Codex 播客`
       : '今日未找到足够可靠的高质量中文 Codex 播客',
     recommendations, pending, rejected,
@@ -314,7 +353,12 @@ async function main() {
       searchedTerms: SEARCH_TERMS,
       excluded: ['少于 20 分钟或时长无法确认', '无可读 Shownotes/简介/摘要', '正文无实质 Codex 内容', '泛泛 AI 新闻', '中文不足', '链接不可访问', '总分低于 75'],
       sourceFailures: failures,
-      candidateCount: candidates.length
+      candidateCount: candidates.length,
+      candidateTarget: radarConfig.candidateTarget,
+      candidateTargetMet: poolTargetMet,
+      hardGatePassed: selection.hardGatePassed,
+      geminiReviewed: selection.geminiReviewed,
+      geminiSucceeded: selection.geminiSucceeded
     },
     generatedAt: new Date().toISOString()
   };
@@ -328,4 +372,4 @@ if (require.main === module) {
   main().catch(error => { console.error(`[podcast-radar] 运行失败: ${error.stack || error.message}`); process.exit(1); });
 }
 
-module.exports = { cleanText, parseDuration, durationLabel, extractOutline, scoreEpisode, classifyEpisode, normalizeItem };
+module.exports = { cleanText, parseDuration, durationLabel, extractOutline, scoreEpisode, classifyEpisode, normalizeItem, selectPodcastRecommendations };

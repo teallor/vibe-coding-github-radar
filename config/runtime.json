@@ -3,8 +3,14 @@
   "runTime": "09:00",
   "preferredLanguages": ["zh", "en"],
   "radars": {
-    "github": { "enabled": true, "maxItems": 2, "minScore": 85, "candidateTarget": 20 },
-    "podcast": { "enabled": true, "maxItems": 2, "minScore": 85, "candidateTarget": 10 },
+    "github": {
+      "enabled": true, "maxItems": 2, "minScore": 85, "candidateTarget": 300,
+      "useGeminiReview": true, "geminiModel": "gemini-3.1-pro-preview", "geminiReviewLimit": 10
+    },
+    "podcast": {
+      "enabled": true, "maxItems": 2, "minScore": 85, "candidateTarget": 100,
+      "useGeminiReview": true, "geminiModel": "gemini-3.1-pro-preview", "geminiReviewLimit": 10
+    },
     "aiApp": {
       "enabled": true,
       "maxItems": 3,

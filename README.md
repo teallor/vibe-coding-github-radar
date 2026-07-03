@@ -16,7 +16,13 @@
 
 ### Gemini 在项目中做什么
 
-公开网页、GitHub API、RSS 和官方更新页负责获取候选；Gemini 只做二次质量评审、结构化摘要和是否推荐判断。Gemini 不可用、超时或返回非法 JSON 时，程序自动使用本地规则评分，不会令整个 workflow 失败。
+公开网页、GitHub API、Apple Podcasts、RSS 和官方更新页负责建立三类真实候选池；规则只负责来源、时长、License、活跃度、正文证据等不可妥协的硬门槛；Gemini 3.1 Pro 对三类内容都执行最终语义质量评审、结构化摘要和是否推荐判断。Gemini 不可用、超时或返回非法 JSON 时，程序会明确记录并按配置降级，不会令整个 workflow 失败。
+
+- GitHub Radar：目标至少 300 个去重候选；硬过滤后为前列项目补读 README，再由 Gemini 3.1 Pro 终审。
+- 播客 Radar：目标至少 100 个真实单集候选；必须有不少于 20 分钟的时长与可读 Shownotes/简介，再由 Gemini 3.1 Pro 终审。
+- AI C端应用与 Codex 生态：从 GitHub 与官方更新源建立候选池，规则排除传闻、融资和营销内容，再由 Gemini 3.1 Pro 终审。
+
+如果 GitHub 少于 300 个候选或播客少于 100 个候选，当天会明确显示“候选池未达标”，不会把不完整搜索伪装成“今日没有推荐”。
 
 默认模型在 `config/runtime.json` 的 `radars.aiApp.geminiModel` 中配置。当前使用 Vertex AI 模型 ID `gemini-3.1-pro-preview`，以更强的推理能力执行严格质量评审；可随 Google 模型生命周期调整。
 

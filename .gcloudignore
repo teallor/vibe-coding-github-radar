@@ -1,0 +1,16 @@
+.gcloudignore
+.git/
+.github/
+.wrangler/
+node_modules/
+.env
+.env.*
+wrangler.toml
+*.log
+data/
+docs/
+reports/
+test/
+public/
+scripts/*
+!scripts/test-feishu-feedback-cloud-run.js

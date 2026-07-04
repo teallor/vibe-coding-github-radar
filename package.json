@@ -5,6 +5,7 @@
   "author": "Rafael_Huang",
   "license": "MIT",
   "scripts": {
+    "start": "node workers/feishu-feedback-cloud-run.js",
     "scout": "node scripts/scout.js",
     "scout:local": "node scripts/scout.js",
     "podcast-radar": "node scripts/find-codex-podcasts.js",
@@ -16,7 +17,7 @@
     "test": "node --test test/github-radar.test.js test/podcast-radar.test.js test/ai-app-radar.test.js test/daily-report.test.js test/schedule.test.js test/send-ledger.test.js && npm run test:feedback && npm run test:schedule && npm run test:feishu-feedback",
     "test:feedback": "node scripts/test-feedback-dedupe.js",
     "test:schedule": "node scripts/test-schedule-time.js",
-    "test:feishu-feedback": "node scripts/test-feishu-feedback-worker.js",
+    "test:feishu-feedback": "node scripts/test-feishu-feedback-worker.js && node scripts/test-feishu-feedback-cloud-run.js",
     "feedback": "node scripts/record-feedback.js"
   },
   "dependencies": {

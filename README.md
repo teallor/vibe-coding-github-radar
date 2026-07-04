@@ -317,32 +317,84 @@ git push origin main
 
 ---
 
-## ⏰ 如何修改每日运行时间
+## ⏰ 每日 06:45 推送与延迟排查
 
 编辑 `.github/workflows/daily-scout.yml` 中的 cron 表达式：
 
 ```yaml
 on:
   schedule:
-    # 当前：每天 UTC 22:28（北京时间次日 06:28）
-    - cron: '28 22 * * *'
+    # Target Feishu send time: Asia/Shanghai 06:45.
+    # Start at 06:20 to generate first; UTC 22:20 = Asia/Shanghai next day 06:20.
+    - cron: '20 22 * * *'
 ```
 
-### 为什么不是直接设置 06:45？
+目标是飞书在北京时间 **06:45 左右发送成功**，不是 06:45 才开始生成。workflow 在 06:20 启动，先完成三类雷达；如果提前完成，就等待到 06:45 再发送。如果生成完成时已经超过 06:45，则立即发送，不再等待，并记录是 Actions 晚启动还是生成/平台耗时造成延迟。系统不会伪造时间，会同时记录 UTC、Asia/Shanghai、ISO 和中文时间。
 
-最近一次完整真实运行从触发到飞书发送成功耗时 **13 分 58 秒**：初始化约 12 秒、GitHub Radar 约 5 分 25 秒、播客约 4 分 27 秒、AI/Codex 生态约 3 分 53 秒、飞书发送约 1 秒。因此工作流在北京时间 **06:28** 启动，正常约 **06:42** 完成；考虑 GitHub 排队及 Gemini 波动，目标到达窗口为 **06:42–06:47**。GitHub 官方说明整点更容易拥堵，所以采用 28 分启动而不是整点。
+如果推送晚了，打开仓库 **Actions → Daily GitHub Scout → 当天运行 → scout**，搜索 `[time]`。重点比较 `workflow scheduled time`、`workflow actual start time`、`workflow job start time`、内容生成开始/结束和飞书发送开始/成功：前两项差距大是 Actions 排队，内容生成区间长则是搜索、网络或 Gemini 耗时。
+
+06:45–07:10 会记录真实延迟但视为可接受；如果 Actions 在 06:45 后才启动，飞书会直接显示对应原因。晚于 07:10，飞书卡片底部显示延迟警告；晚于 07:30，Markdown 日报增加“调度异常记录”。`workflow_dispatch` 手动运行默认立即发送且不误报每日定时异常；只有手动勾选 `wait_until_target` 才会等待到当日 06:45（若该时间已过则立即发送）。
 
 ### 时区对照表
 
 | 北京时间 | UTC |
 |---------|-----|
 | 6:00 | 22:00 (前一天) |
-| 6:28 | 22:28（前一天） |
+| 6:20（workflow 启动） | 22:20（前一天） |
 | 6:45 | 22:45（前一天） |
 | 12:00 | 4:00 |
 | 18:00 | 10:00 |
 
-> 建议不要使用整点 0 分，避免 GitHub Actions 拥堵。
+> 定时语法使用 UTC，是因为 workflow 文件采用 GitHub Actions 通用 cron 写法。
+
+---
+
+## 📝 反馈沉淀与重复内容
+
+本项目明确区分两种反馈能力：
+
+1. **当前基础能力（已实现）**：飞书展示反馈 ID；你把“反馈 ID + 已读不错/已读不行/重复了/允许继续追踪 + 原因”发给 Codex，由 Codex 调用 `scripts/record-feedback.js` 写入 `data/feedback.json`。
+2. **飞书自动反馈（已提供可部署 Worker，需完成一次外部配置）**：`workers/feishu-feedback-worker.js` 可接收飞书应用机器人的 `im.message.receive_v1` 事件，解析自然语言反馈并通过 GitHub Contents API 写入 `data/feedback.json`。普通 custom bot webhook 仍只负责每日推送；接收消息必须使用飞书应用机器人。
+
+启用步骤、最小权限与 Cloudflare Secret 配置见 [`docs/FEISHU_FEEDBACK_AUTOMATION.md`](docs/FEISHU_FEEDBACK_AUTOMATION.md)。该方案使用 Cloudflare Worker，不需要数据库、常驻服务器或付费 API。
+
+每条飞书和 Markdown 内容都有稳定反馈 ID。GitHub 使用 `github:<owner>/<repo>`；播客和 AI 应用使用归一化链接的短哈希。录入示例：
+
+```bash
+node scripts/record-feedback.js --id "podcast:8f3a91c2" --feedback "已读不错" --note "Codex 实操很有价值"
+node scripts/record-feedback.js --url "https://example.com/item" --feedback "已读不行" --note "标题党，内容太空"
+node scripts/record-feedback.js --title "某播客标题" --feedback "重复了"
+node scripts/record-feedback.js --id "github:owner/repo" --feedback "允许继续追踪"
+```
+
+标题匹配多个历史条目时，脚本只列候选，不会乱选。反馈分为：`positive`（已读不错）、`negative`（已读不行）、`duplicate`（重复了）、`allow_repeat`（允许继续追踪）和 `neutral`（意思不明确）。neutral 只保存；没有反馈时也不推断喜好。positive 只给相似新内容小幅加分，不会把低质量内容推过原门槛；negative 会让相似内容降权。
+
+重复规则：
+
+- 从未推过：正常筛选。
+- 推过但无反馈：低优先级允许再次出现，并明确标注重复。
+- positive：说明已经看过，同一条默认不再推。
+- negative 或 duplicate：同一条禁止再推；negative 相似内容降权。
+- allow_repeat：允许继续追踪，但标注“追踪更新”。
+- 播客除链接外还比较节目名、单集标题、发布日期、时长和 shownotes；只是同一档不同集不会误杀，无法确认时标为“疑似重复”并降权。
+
+手动自检：
+
+```bash
+npm test
+npm run test:feedback
+npm run test:schedule
+npm run preview
+npm run dry-run
+```
+
+`preview` 只根据现有数据生成飞书预览；`dry-run` 会联网生成三类雷达但不会发送飞书。
+
+### 同一天防重复发送锁
+
+真实发送记录保存在 `data/send-ledger.json`。当天只要已有一条 `status: "sent"`：后续 schedule 和手动运行都会跳过 webhook；确需再次真发时，必须在手动 Run workflow 时勾选 `force_send`。`preview` 与 `dry-run` 永远不会调用 webhook，也不会写成功发送记录。失败尝试可记录为 `failed`，但不会锁住当天，因此可以安全重试。
+
+每条成功记录包含日期、目标时间、实际发送时间、触发类型、Actions run ID、卡片摘要哈希和是否强制发送。workflow 使用同一个 concurrency group 串行运行，并在成功后自动提交发送台账，避免同一天的排队任务同时穿透检查。
 
 ---
 
@@ -508,8 +560,8 @@ vibe-coding-github-radar/
 
 ### GitHub Actions
 
-- 三类雷达每天北京时间 06:28 在同一个 workflow 中启动，目标约 06:45 完成飞书推送
-- 支持 workflow_dispatch 手动触发
+- 三类雷达每天北京时间 06:20 由同一个 workflow 定时触发，提前生成并在约 06:45 发送飞书
+- 支持 workflow_dispatch 手动触发；默认立即发送，也可勾选 `wait_until_target`
 - Node.js 20 环境
 - 调用 GitHub Search API 搜索公开仓库
 - 自动提交生成的数据文件

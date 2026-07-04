@@ -10,6 +10,11 @@ function line(value, fallback = '未提供') {
   return text || fallback;
 }
 
+function feedbackDetails(item) {
+  const id = item.feedbackId || '未生成';
+  return `- 反馈ID：${id}\n- 是否重复：${item.duplicateStatus === 'new' ? '否' : item.duplicateStatus === 'possible' ? '疑似重复' : '是'}\n- 首次推送日期：${line(item.firstPushedDate, '本次首次')}\n- 上次推送日期：${line(item.lastPushedDate, '无')}\n- 是否已有反馈：${item.hasFeedback ? `是（${item.feedbackType}）` : '否'}\n- 本次为什么允许推送：${line(item.reason, '新内容')}\n${item.annotation ? `- 重复说明：${item.annotation}\n` : ''}- 反馈录入命令：\n  \`node scripts/record-feedback.js --id "${id}" --feedback "已读不错"\`\n  \`node scripts/record-feedback.js --id "${id}" --feedback "已读不行"\`\n  \`node scripts/record-feedback.js --id "${id}" --feedback "重复了"\`\n  \`node scripts/record-feedback.js --id "${id}" --feedback "允许继续追踪"\``;
+}
+
 function githubSection(data) {
   const items = [data.topPick, ...(data.selectedProjects || [])].filter(Boolean);
   if (!items.length) return `## 一、Vibe Coding / GitHub Radar\n\n${line(data.summary, '今日未发现足够高质量的 GitHub 项目，已跳过，不硬凑。')}\n`;
@@ -22,6 +27,7 @@ function githubSection(data) {
 - 行动建议：${line(item.semanticReview?.actionSuggestion, '先阅读 README，再让 Codex 做最小复现。')}
 - 质量评分：${item.recommendScore || 0}/100
 - 最终评审：${item.reviewProvider === 'vertex' ? 'Gemini 3.1 Pro' : '规则降级'}
+${feedbackDetails(item)}
 `).join('\n');
   return `## 一、Vibe Coding / GitHub Radar\n\n${blocks}`;
 }
@@ -38,6 +44,7 @@ function podcastSection(data) {
 - 对 Codex / Vibe Coding / 办公自动化的价值：${line(item.codexRelevance)}
 - 质量评分：${item.qualityScore || 0}/100
 - 最终评审：${item.reviewProvider === 'vertex' ? 'Gemini 3.1 Pro' : '规则降级'}
+${feedbackDetails(item)}
 `).join('\n');
   return `## 二、Codex / AI Coding 播客雷达\n\n${blocks}`;
 }
@@ -63,12 +70,13 @@ function aiAppSection(data) {
 - 行动建议：${line(item.actionSuggestion)}
 - 质量评分：${item.score || 0}/100
 - 最终评审：${item.reviewProvider === 'vertex' ? 'Gemini 3.1 Pro' : '规则降级'}${extra}
+${feedbackDetails(item)}
 `;
   }).join('\n');
   return `## 三、AI C端应用与 Codex 生态更新雷达\n\n${blocks}`;
 }
 
-function buildDailyMarkdown(githubData, podcastData, aiAppData) {
+function buildDailyMarkdown(githubData, podcastData, aiAppData, timing = {}) {
   const date = aiAppData.date || podcastData.date || githubData.date;
   const githubItems = (githubData.topPick ? 1 : 0) + (githubData.selectedProjects || []).length;
   const podcastItems = (podcastData.recommendations || []).length;
@@ -92,6 +100,7 @@ ${aiAppSection(aiAppData)}
 - 播客候选：${ps.candidateCount || 0}/${ps.candidateTarget || 100}；Gemini 成功：${ps.geminiSucceeded || 0}
 - AI 应用生态候选：${as.candidateCount || 0}；Gemini 成功：${as.geminiSuccessCount || 0}
 - 原则：真实来源建池、规则守硬门槛、Gemini 3.1 Pro 最终语义评审；宁缺毋滥。
+${timing.reportAnomaly ? `\n## 调度异常记录\n\n${timing.reportAnomaly}\n` : ''}
 
 ---
 
@@ -99,12 +108,12 @@ ${aiAppSection(aiAppData)}
 `;
 }
 
-function writeDailyReport(githubData, podcastData, aiAppData, outputDir = path.join(process.cwd(), 'reports')) {
+function writeDailyReport(githubData, podcastData, aiAppData, outputDir = path.join(process.cwd(), 'reports'), timing = {}) {
   const date = aiAppData.date || podcastData.date || githubData.date;
   fs.mkdirSync(outputDir, { recursive: true });
   const filePath = path.join(outputDir, dailyReportFilename(date));
-  fs.writeFileSync(filePath, buildDailyMarkdown(githubData, podcastData, aiAppData), 'utf8');
+  fs.writeFileSync(filePath, buildDailyMarkdown(githubData, podcastData, aiAppData, timing), 'utf8');
   return filePath;
 }
 
-module.exports = { dailyReportFilename, buildDailyMarkdown, writeDailyReport };
+module.exports = { dailyReportFilename, buildDailyMarkdown, writeDailyReport, feedbackDetails };

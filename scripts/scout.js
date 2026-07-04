@@ -29,6 +29,7 @@ const { scoreProject } = require('./scoring');
 const { generateReport, generateCodexPrompt, generateMarkdownTemplate } = require('./report');
 const { loadRuntimeConfig } = require('./runtime-config');
 const { reviewCandidate } = require('./llm-reviewer');
+const { enrichAndFilter } = require('./dedupe');
 
 // GitHub API 配置
 const GITHUB_API = 'https://api.github.com';
@@ -143,7 +144,8 @@ async function main() {
     ? await selectGithubRecommendations(allCandidates, radarConfig, runtime.profile, token)
     : { qualified: [], hardGatePassed: allCandidates.filter(project => assessHardGate(project).passed).length, geminiReviewed: 0, geminiSucceeded: 0 };
   const qualifiedCandidates = selection.qualified;
-  const recommendations = qualifiedCandidates.slice(0, radarConfig.maxItems);
+  const dedupeResult = enrichAndFilter(qualifiedCandidates, 'github', { maxItems: radarConfig.maxItems });
+  const recommendations = dedupeResult.items;
   const topPick = recommendations[0] || null;
   const selectedProjects = recommendations.slice(1);
   const watchProjects = [];
@@ -161,6 +163,7 @@ async function main() {
     geminiReviewed: selection.geminiReviewed,
     geminiSucceeded: selection.geminiSucceeded
   });
+  searchStats.dedupeDecisions = dedupeResult.decisions;
   await generateAndSaveOutputs(config, source, selectedProjects, watchProjects, notRecommended, allCandidates, topPick, searchStats, qualifiedCandidates.length);
 
   console.log('\n✅ 每日搜索完成！');

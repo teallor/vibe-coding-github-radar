@@ -3,17 +3,17 @@
     {
       "date": "2026-07-03",
       "topPick": {
-        "name": "obsidian-second-brain",
-        "fullName": "eugeniughelbur/obsidian-second-brain",
-        "url": "https://github.com/eugeniughelbur/obsidian-second-brain",
-        "recommendScore": 92
+        "name": "bagidea-office",
+        "fullName": "bagidea/bagidea-office",
+        "url": "https://github.com/bagidea/bagidea-office",
+        "recommendScore": 91
       },
       "selectedProjects": [
         {
-          "name": "bagidea-office",
-          "fullName": "bagidea/bagidea-office",
-          "url": "https://github.com/bagidea/bagidea-office",
-          "recommendScore": 92
+          "name": "awesome-n8n-templates",
+          "fullName": "enescingoz/awesome-n8n-templates",
+          "url": "https://github.com/enescingoz/awesome-n8n-templates",
+          "recommendScore": 90
         }
       ],
       "profileName": "默认综合模式",
@@ -24,8 +24,34 @@
         "新鲜有趣项目",
         "个人效率工具"
       ],
-      "summary": "今天最值得精读的项目是 **obsidian-second-brain**（推荐分 92）。完美契合 Codex、Skill 和 Agent 关注点。该项目展示了如何为 Codex/Claude Code 编写复杂的本地化 Skill，其『自我重写』和『后台 Agent 维护』的架构设计非常适合作为 Vibe Coding 的学习案例，甚至可以转化为一门关于『AI 自动化知识库构建』的课程或副业项目。。可以接触新鲜有趣的技术和项目组织方式。建议用 30-45 分钟只读学习，不要安装运行，先理解核心机制和可迁移经验。"
+      "summary": "今天最值得精读的项目是 **bagidea-office**（推荐分 91）。完美契合 Vibe Coding、Agent、MCP 和插件方向。其 2.5D 像素风视觉效果极佳，非常适合作为自媒体内容素材或课程案例。同时，可深入研究其基于 Claude Code 的底层机制、多模型上下文自动压缩技术以及 MCP 接入方案，为副业项目提供灵感。。对办公自动化有直接价值。建议用 30-45 分钟只读学习，不要安装运行，先理解核心机制和可迁移经验。"
+    },
+    {
+      "date": "2026-07-04",
+      "topPick": {
+        "name": "lark-coding-agent-bridge",
+        "fullName": "zarazhangrui/lark-coding-agent-bridge",
+        "url": "https://github.com/zarazhangrui/lark-coding-agent-bridge",
+        "recommendScore": 87
+      },
+      "selectedProjects": [
+        {
+          "name": "claude-code-local",
+          "fullName": "nicedreamzapp/claude-code-local",
+          "url": "https://github.com/nicedreamzapp/claude-code-local",
+          "recommendScore": 85
+        }
+      ],
+      "profileName": "默认综合模式",
+      "focusAreas": [
+        "Office 文档自动化",
+        "个人 Vibe Coding 变现",
+        "Codex 可改造项目",
+        "新鲜有趣项目",
+        "个人效率工具"
+      ],
+      "summary": "今天最值得精读的项目是 **lark-coding-agent-bridge**（推荐分 87）。高 - TypeScript 项目，1661 Star，属于「个人效率工具」方向，适合阅读学习核心机制。可以接触新鲜有趣的技术和项目组织方式。建议用 30-45 分钟只读学习，不要安装运行，先理解核心机制和可迁移经验。"
     }
   ],
-  "updatedAt": "2026-07-03T23:39:12.161Z"
+  "updatedAt": "2026-07-04T02:10:58.124Z"
 }

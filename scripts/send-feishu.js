@@ -3,6 +3,10 @@ const crypto = require('crypto');
 const fs = require('fs');
 const https = require('https');
 const { dailyReportFilename, writeDailyReport } = require('./daily-report');
+const { logTime, delayDiagnostic, triggerContext, waitUntilTarget } = require('./time-utils');
+const { recordPushed, loadLedger, decisionFor } = require('./dedupe');
+const { loadFeedback } = require('./feedback-memory');
+const { loadSendLedger, messageDigest, evaluateSend, recordSend } = require('./send-ledger');
 
 const REPOSITORY = process.env.GITHUB_REPOSITORY || 'teallor/vibe-coding-github-radar';
 
@@ -34,7 +38,7 @@ function projectBlock(project, label) {
     tag: 'div',
     text: {
       tag: 'lark_md',
-      content: `**${label}：[${project.name}](${project.url}) · ${project.recommendScore || 0}/100**\n${compact(project.description, 120)}\n**最终评审：** ${project.reviewProvider === 'vertex' ? 'Gemini 3.1 Pro 语义评审' : '规则降级评审'}\n**评分依据：** ${scoring}\n**强相关信号：** ${signals}\n**调整项：** ${adjustments}\n**入选理由：** ${compact(project.vibeCodingValue, 100)}\n**风险：** ${project.riskPoints}`
+      content: `**${label}：[${project.name}](${project.url}) · ${project.recommendScore || 0}/100**\n${compact(project.description, 120)}\n**最终评审：** ${project.reviewProvider === 'vertex' ? 'Gemini 3.1 Pro 语义评审' : '规则降级评审'}\n**评分依据：** ${scoring}\n**强相关信号：** ${signals}\n**调整项：** ${adjustments}\n**入选理由：** ${compact(project.vibeCodingValue, 100)}\n**风险：** ${project.riskPoints}${feedbackMeta(project)}`
     }
   };
 }
@@ -82,7 +86,7 @@ function podcastBlock(item, index) {
         `链接：[打开单集](${item.link})\n时长：${item.duration}\n发布日期：${item.publishedAt}\n` +
         `质量评分：**${item.qualityScore}/100**\n最终评审：${item.reviewProvider === 'vertex' ? 'Gemini 3.1 Pro 语义评审' : '规则降级评审'}\nCodex 相关性：${compact(item.codexRelevance, 240)}\n` +
         `**内容大纲：**\n${outline}\n**为什么值得听：**\n${compact(item.whyWorthListening, 500)}\n` +
-        `**自检结论：${item.conclusion}**`
+        `**自检结论：${item.conclusion}**${feedbackMeta(item)}`
     }
   };
 }
@@ -134,6 +138,16 @@ function buildCombinedCard(githubData, podcastData) {
   };
 }
 
+function feedbackMeta(item) {
+  const repeat = item.duplicateStatus === 'new' ? '否' : item.duplicateStatus === 'possible' ? '疑似重复' : '是';
+  return `\n**反馈ID：** ${item.feedbackId || '未生成'}\n**重复：** ${repeat}；首次：${item.firstPushedDate || '本次'}；上次：${item.lastPushedDate || '无'}；已有反馈：${item.hasFeedback ? item.feedbackType : '否'}\n**本次允许原因：** ${item.reason || '新内容'}${item.annotation ? `\n${item.annotation}` : ''}\n反馈方式：直接回复“反馈 ${item.feedbackId || ''} 已读不错 / 已读不行 / 重复了 / 允许继续追踪，原因：……”。如未启用飞书自动反馈，请把这句话发给 Codex 录入。`;
+}
+
+function refreshDecisions(items, category) {
+  const ledger = loadLedger(); const feedback = loadFeedback();
+  return items.map(item => ({ ...item, ...decisionFor(item, category, ledger, feedback) })).filter(item => item.allowed);
+}
+
 function aiAppBlock(item, index) {
   const extra = ['Codex', 'Skill', 'MCP', '插件'].includes(item.type)
     ? `\n**适合解决的问题：** ${compact(item.suitableProblem, 260)}\n**使用门槛：** ${compact(item.usageBarrier, 200)}\n**是否需要 API Key / Token：** ${compact(item.requiresApiKey, 100)}\n**是否适合小白：** ${compact(item.beginnerFriendly, 120)}\n**是否值得保存到工具库：** ${compact(item.saveToToolkit, 120)}`
@@ -143,10 +157,10 @@ function aiAppBlock(item, index) {
     `**类型：** ${item.type}\n**来源：** ${compact(item.source, 100)}\n**发生了什么：** ${compact(item.whatHappened, 420)}\n` +
     `**C端用户能怎么用：** ${compact(item.consumerUseCase, 300)}\n**对 Rafael_Huang 的价值：** ${compact(item.valueForRafael, 300)}\n` +
     `**是否适合 Codex 集成或复现：** ${compact(item.codexIntegrationPotential, 260)}\n**行动建议：** ${compact(item.actionSuggestion, 220)}\n` +
-    `**质量评分：${item.score}/100**（${item.reviewProvider === 'rules' ? '规则降级评分' : 'Gemini 二次评审'}）${extra}` } };
+    `**质量评分：${item.score}/100**（${item.reviewProvider === 'rules' ? '规则降级评分' : 'Gemini 二次评审'}）${extra}${feedbackMeta(item)}` } };
 }
 
-function buildDailyCard(githubData, podcastData, aiAppData) {
+function buildDailyCard(githubData, podcastData, aiAppData, timing = {}) {
   const date = aiAppData.date || podcastData.date || githubData.date;
   const combinedReportUrl = `https://github.com/${REPOSITORY}/blob/main/reports/${encodeURIComponent(dailyReportFilename(date))}`;
   const githubCard = buildCard(githubData);
@@ -171,6 +185,7 @@ function buildDailyCard(githubData, podcastData, aiAppData) {
         `- GitHub 候选：${githubScreening.candidateCount || 0}/${githubScreening.candidateTarget || 300}；硬门槛通过：${githubScreening.hardGatePassed || 0}；Gemini 成功：${githubScreening.geminiSucceeded || 0}\n` +
         `- 播客候选：${podcastScreening.candidateCount || 0}/${podcastScreening.candidateTarget || 100}；硬门槛通过：${podcastScreening.hardGatePassed || 0}；Gemini 成功：${podcastScreening.geminiSucceeded || 0}\n` +
         `- AI 应用生态候选：${screening.candidateCount || 0}；达标：${screening.qualifiedCount || 0}；Gemini 成功：${screening.geminiSuccessCount || 0}\n- 被筛掉的主要原因：${(screening.excludedReasons || []).join('；') || '低于质量门槛或证据不足'}\n- 原则：真实来源建池、规则守硬门槛、Gemini 3.1 Pro 最终语义评审；宁缺毋滥。` } },
+      ...(timing.warning ? [{ tag: 'hr' }, { tag: 'note', elements: [{ tag: 'plain_text', content: timing.warning }] }] : []),
       { tag: 'action', actions: [{ tag: 'button', text: { tag: 'plain_text', content: '查看 GitHub 三合一完整日报' }, url: combinedReportUrl, type: 'primary' }] }
     ]
   };
@@ -208,6 +223,12 @@ async function sendCardOnce(card, credentials, poster = postJson) {
 }
 
 async function main() {
+  const processStartedAt = new Date();
+  const ctx = triggerContext();
+  console.log(`[time] trigger=${ctx.event}; ${ctx.isScheduled ? 'schedule 自动触发，执行延迟检测' : '手动/本地运行，不执行每日延迟告警'}`);
+  if (ctx.scheduledAt) logTime('workflow scheduled time', ctx.scheduledAt);
+  if (ctx.workflowStartedAt) logTime('workflow job start time', ctx.workflowStartedAt);
+  logTime('飞书发送步骤/内容生成开始时间', processStartedAt);
   const podcastMode = process.argv.includes('--codex-podcasts');
   const combinedMode = process.argv.includes('--combined');
   const dailyMode = process.argv.includes('--daily');
@@ -216,13 +237,28 @@ async function main() {
     ? JSON.parse(fs.readFileSync('data/codex-podcasts-latest.json', 'utf8'))
     : null;
   const aiAppData = dailyMode ? JSON.parse(fs.readFileSync('data/ai-app-radar-latest.json', 'utf8')) : null;
+  const githubItems = refreshDecisions([githubData.topPick, ...(githubData.selectedProjects || [])].filter(Boolean), 'github');
+  githubData.topPick = githubItems[0] || null; githubData.selectedProjects = githubItems.slice(1);
+  if (podcastData) podcastData.recommendations = refreshDecisions(podcastData.recommendations || [], 'podcast');
+  if (aiAppData) aiAppData.recommendations = refreshDecisions(aiAppData.recommendations || [], 'aiapp');
+  logTime('飞书内容准备完成时间', new Date());
+  const dryRun = process.env.FEISHU_DRY_RUN === '1';
+  const forceSend = /^(1|true|yes)$/i.test(process.env.FORCE_SEND || '');
+  const sendDecision = evaluateSend({ ledger: loadSendLedger(), force: forceSend, dryRun });
+  if (!dryRun && !sendDecision.allowed) {
+    console.log(`[send-lock] 今日已成功发送，跳过重复真发。previousRunId=${sendDecision.previous?.runId || 'unknown'}；如确需重发，请手动运行并勾选 force_send。`);
+    return;
+  }
+  const credentials = dryRun ? null : { webhook: requiredEnv('FEISHU_WEBHOOK'), secret: requiredEnv('FEISHU_SECRET') };
+  await waitUntilTarget();
+  const timing = delayDiagnostic(new Date());
   if (dailyMode) {
-    const reportPath = writeDailyReport(githubData, podcastData, aiAppData);
+    const reportPath = writeDailyReport(githubData, podcastData, aiAppData, undefined, timing);
     console.log(`Combined daily report written to ${reportPath}.`);
   }
   const data = podcastMode ? podcastData : githubData;
-  const card = dailyMode ? buildDailyCard(githubData, podcastData, aiAppData) : combinedMode ? buildCombinedCard(githubData, podcastData) : podcastMode ? buildPodcastCard(podcastData) : buildCard(githubData);
-  if (process.env.FEISHU_DRY_RUN === '1') {
+  const card = dailyMode ? buildDailyCard(githubData, podcastData, aiAppData, timing) : combinedMode ? buildCombinedCard(githubData, podcastData) : podcastMode ? buildPodcastCard(podcastData) : buildCard(githubData);
+  if (dryRun) {
     if (process.env.FEISHU_PREVIEW_FILE) {
       fs.writeFileSync(process.env.FEISHU_PREVIEW_FILE, JSON.stringify(card, null, 2));
       console.log(`Feishu preview written to ${process.env.FEISHU_PREVIEW_FILE}.`);
@@ -231,9 +267,26 @@ async function main() {
     console.log(`Feishu dry run completed for ${data.date}; no request was sent.`);
     return;
   }
-  const webhook = requiredEnv('FEISHU_WEBHOOK');
-  const secret = requiredEnv('FEISHU_SECRET');
-  await sendCardOnce(card, { webhook, secret });
+  const digest = messageDigest(card);
+  logTime('飞书发送开始时间', new Date());
+  try {
+    await sendCardOnce(card, credentials);
+  } catch (error) {
+    recordSend({ status: 'failed', trigger: ctx.event, runId: process.env.GITHUB_RUN_ID, digest, error: error.message, force: forceSend });
+    throw error;
+  }
+  const sentAt = new Date();
+  const sendEntry = recordSend({ status: 'sent', trigger: ctx.event, runId: process.env.GITHUB_RUN_ID, digest, force: forceSend, date: sentAt });
+  console.log(`[send-lock] 发送成功台账已记录：${sendEntry.date} ${sendEntry.actualSendTime} digest=${sendEntry.messageDigest}`);
+  logTime('飞书发送成功时间', sentAt);
+  const totalStart = ctx.workflowStartedAt || processStartedAt;
+  console.log(`[time] 总耗时=${Math.round((sentAt - totalStart) / 1000)} 秒；飞书步骤耗时=${Math.round((sentAt - processStartedAt) / 1000)} 秒；相对目标 06:45 延迟=${delayDiagnostic(sentAt).delayMinutes} 分钟`);
+  if (dailyMode) {
+    recordPushed([githubData.topPick, ...(githubData.selectedProjects || [])].filter(Boolean), 'github', process.cwd(), sentAt);
+    recordPushed(podcastData.recommendations || [], 'podcast', process.cwd(), sentAt);
+    recordPushed(aiAppData.recommendations || [], 'aiapp', process.cwd(), sentAt);
+    writeDailyReport(githubData, podcastData, aiAppData, undefined, delayDiagnostic(sentAt));
+  }
   console.log(`Feishu ${combinedMode ? 'combined GitHub and Codex podcast radar' : podcastMode ? 'Codex podcast radar' : 'digest'} sent successfully for ${data.date}.`);
 }
 
@@ -244,4 +297,4 @@ if (require.main === module) {
   });
 }
 
-module.exports = { sign, buildCard, buildPodcastCard, buildCombinedCard, buildDailyCard, aiAppBlock, postJson, sendCardOnce, main };
+module.exports = { sign, buildCard, buildPodcastCard, buildCombinedCard, buildDailyCard, aiAppBlock, feedbackMeta, refreshDecisions, postJson, sendCardOnce, main };

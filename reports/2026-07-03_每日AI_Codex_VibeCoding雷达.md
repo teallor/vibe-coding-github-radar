@@ -13,6 +13,18 @@
 - 行动建议：1. 运行 `npx bagidea` 在本地体验其视觉效果与交互；2. 重点阅读其 `Swappable Brains`（多模型代理路由）和 MCP 工具集接入的源码；3. 录制一期关于 '桌面级 AI 虚拟办公室' 的演示视频，展示 Vibe Coding 的前沿玩法。
 - 质量评分：91/100
 - 最终评审：Gemini 3.1 Pro
+- 反馈ID：github:bagidea/bagidea-office
+- 是否重复：是
+- 首次推送日期：2026-07-03
+- 上次推送日期：2026-07-03
+- 是否已有反馈：否
+- 本次为什么允许推送：already_pushed_without_feedback
+- 重复说明：⚠️ 重复推送：这条内容曾于 2026-07-03 推送过；目前没有收到任何反馈，因此本次允许重复出现。请反馈“已读不错 / 已读不行 / 重复了”，后续系统将据此处理。
+- 反馈录入命令：
+  `node scripts/record-feedback.js --id "github:bagidea/bagidea-office" --feedback "已读不错"`
+  `node scripts/record-feedback.js --id "github:bagidea/bagidea-office" --feedback "已读不行"`
+  `node scripts/record-feedback.js --id "github:bagidea/bagidea-office" --feedback "重复了"`
+  `node scripts/record-feedback.js --id "github:bagidea/bagidea-office" --feedback "允许继续追踪"`
 
 ### 2. [awesome-n8n-templates](https://github.com/enescingoz/awesome-n8n-templates)
 
@@ -23,6 +35,18 @@
 - 行动建议：1. 挑选 3-5 个高频办公场景（如邮件分类、文档解析）进行本地测试；2. 录制一期“如何用 n8n 模板零代码搭建 AI 办公助手”的实战教程；3. 探索将 n8n 工作流打包为企业自动化服务的副业模式。
 - 质量评分：90/100
 - 最终评审：Gemini 3.1 Pro
+- 反馈ID：github:enescingoz/awesome-n8n-templates
+- 是否重复：是
+- 首次推送日期：2026-07-03
+- 上次推送日期：2026-07-03
+- 是否已有反馈：否
+- 本次为什么允许推送：already_pushed_without_feedback
+- 重复说明：⚠️ 重复推送：这条内容曾于 2026-07-03 推送过；目前没有收到任何反馈，因此本次允许重复出现。请反馈“已读不错 / 已读不行 / 重复了”，后续系统将据此处理。
+- 反馈录入命令：
+  `node scripts/record-feedback.js --id "github:enescingoz/awesome-n8n-templates" --feedback "已读不错"`
+  `node scripts/record-feedback.js --id "github:enescingoz/awesome-n8n-templates" --feedback "已读不行"`
+  `node scripts/record-feedback.js --id "github:enescingoz/awesome-n8n-templates" --feedback "重复了"`
+  `node scripts/record-feedback.js --id "github:enescingoz/awesome-n8n-templates" --feedback "允许继续追踪"`
 
 
 ## 二、Codex / AI Coding 播客雷达
@@ -41,6 +65,18 @@
 - 对 Codex / Vibe Coding / 办公自动化的价值：OpenAI Codex 负责人深度分享 AI 时代产品开发范式的转变，强调“品味”与“判断力”的核心价值，并揭示 Codex 作为通用知识工作平台的潜力。
 - 质量评分：94/100
 - 最终评审：Gemini 3.1 Pro
+- 反馈ID：podcast:1fa53f7c
+- 是否重复：是
+- 首次推送日期：2026-07-03
+- 上次推送日期：2026-07-03
+- 是否已有反馈：否
+- 本次为什么允许推送：already_pushed_without_feedback
+- 重复说明：⚠️ 重复推送：这条内容曾于 2026-07-03 推送过；目前没有收到任何反馈，因此本次允许重复出现。请反馈“已读不错 / 已读不行 / 重复了”，后续系统将据此处理。
+- 反馈录入命令：
+  `node scripts/record-feedback.js --id "podcast:1fa53f7c" --feedback "已读不错"`
+  `node scripts/record-feedback.js --id "podcast:1fa53f7c" --feedback "已读不行"`
+  `node scripts/record-feedback.js --id "podcast:1fa53f7c" --feedback "重复了"`
+  `node scripts/record-feedback.js --id "podcast:1fa53f7c" --feedback "允许继续追踪"`
 
 ### 2. 跨国串门儿计划｜[#591.Matt Pocock：开发者如何用 AI 放大十倍产出，模型狂热时代的软件基本功](https://www.xiaoyuzhoufm.com/episode/6a353df14233e62bc54c7124?utm_source=rss)
 
@@ -56,6 +92,18 @@
 - 对 Codex / Vibe Coding / 办公自动化的价值：Matt Pocock 深度分享 Agentic Engineering 工作流，强调开发者应将战术性编程交给 AI，专注战略性设计，并演示了用于个性化教学和需求反问的 AI Skills。
 - 质量评分：93/100
 - 最终评审：Gemini 3.1 Pro
+- 反馈ID：podcast:ce49ae2b
+- 是否重复：是
+- 首次推送日期：2026-07-03
+- 上次推送日期：2026-07-03
+- 是否已有反馈：否
+- 本次为什么允许推送：already_pushed_without_feedback
+- 重复说明：⚠️ 重复推送：这条内容曾于 2026-07-03 推送过；目前没有收到任何反馈，因此本次允许重复出现。请反馈“已读不错 / 已读不行 / 重复了”，后续系统将据此处理。
+- 反馈录入命令：
+  `node scripts/record-feedback.js --id "podcast:ce49ae2b" --feedback "已读不错"`
+  `node scripts/record-feedback.js --id "podcast:ce49ae2b" --feedback "已读不行"`
+  `node scripts/record-feedback.js --id "podcast:ce49ae2b" --feedback "重复了"`
+  `node scripts/record-feedback.js --id "podcast:ce49ae2b" --feedback "允许继续追踪"`
 
 
 ## 三、AI C端应用与 Codex 生态更新雷达
@@ -71,6 +119,18 @@
 - 行动建议：访问该 GitHub 仓库，筛选出与 Office 自动化（Word/Excel/PPT）相关的 MCP 插件进行本地测试，并考虑将其加入你的 Vibe Coding 课程大纲中。
 - 质量评分：90/100
 - 最终评审：Gemini 3.1 Pro
+- 反馈ID：aiapp:96e2b95a
+- 是否重复：是
+- 首次推送日期：2026-07-03
+- 上次推送日期：2026-07-03
+- 是否已有反馈：否
+- 本次为什么允许推送：already_pushed_without_feedback
+- 重复说明：⚠️ 重复推送：这条内容曾于 2026-07-03 推送过；目前没有收到任何反馈，因此本次允许重复出现。请反馈“已读不错 / 已读不行 / 重复了”，后续系统将据此处理。
+- 反馈录入命令：
+  `node scripts/record-feedback.js --id "aiapp:96e2b95a" --feedback "已读不错"`
+  `node scripts/record-feedback.js --id "aiapp:96e2b95a" --feedback "已读不行"`
+  `node scripts/record-feedback.js --id "aiapp:96e2b95a" --feedback "重复了"`
+  `node scripts/record-feedback.js --id "aiapp:96e2b95a" --feedback "允许继续追踪"`
 
 ### 2. [New OpenAI Academy courses for the next era of work](https://openai.com/index/academy-courses-applying-ai-at-work)
 
@@ -88,6 +148,18 @@
 - 是否需要 API Key / Token：未知，需查看原始文档
 - 是否适合小白：较适合，建议先做最小复现
 - 是否值得保存到工具库：是，值得保存并后续复现
+- 反馈ID：aiapp:dd73139d
+- 是否重复：是
+- 首次推送日期：2026-07-03
+- 上次推送日期：2026-07-03
+- 是否已有反馈：否
+- 本次为什么允许推送：already_pushed_without_feedback
+- 重复说明：⚠️ 重复推送：这条内容曾于 2026-07-03 推送过；目前没有收到任何反馈，因此本次允许重复出现。请反馈“已读不错 / 已读不行 / 重复了”，后续系统将据此处理。
+- 反馈录入命令：
+  `node scripts/record-feedback.js --id "aiapp:dd73139d" --feedback "已读不错"`
+  `node scripts/record-feedback.js --id "aiapp:dd73139d" --feedback "已读不行"`
+  `node scripts/record-feedback.js --id "aiapp:dd73139d" --feedback "重复了"`
+  `node scripts/record-feedback.js --id "aiapp:dd73139d" --feedback "允许继续追踪"`
 
 
 ## 四、今日总评
@@ -99,6 +171,7 @@
 - AI 应用生态候选：134；Gemini 成功：10
 - 原则：真实来源建池、规则守硬门槛、Gemini 3.1 Pro 最终语义评审；宁缺毋滥。
 
+
 ---
 
-生成时间：2026-07-03T13:59:40.056Z
+生成时间：2026-07-04T02:06:39.279Z

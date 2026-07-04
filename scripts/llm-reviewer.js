@@ -1,6 +1,7 @@
 const { execFile } = require('child_process');
 const { promisify } = require('util');
 const execFileAsync = promisify(execFile);
+const { loadFeedback, feedbackSummaryText } = require('./feedback-memory');
 
 const TYPES = ['Codex', 'Skill', 'MCP', '插件', 'Agent 工具', 'AI 产品功能', '模型更新', '其他'];
 
@@ -25,6 +26,7 @@ async function accessToken() {
 }
 
 function promptFor(candidate, radarType, userProfile, config) {
+  const memory = feedbackSummaryText(loadFeedback(process.cwd(), { create: false }));
   const radarGuidance = radarType.includes('GitHub')
     ? 'For a GitHub project, inspect supplied repository metadata and README evidence. Judge actual reproducibility, documentation, maintenance, beginner suitability, dependency/API requirements, and concrete reuse value. Do not reward stars or keywords alone.'
     : radarType.includes('播客')
@@ -34,6 +36,7 @@ function promptFor(candidate, radarType, userProfile, config) {
     `User profile: ${JSON.stringify(userProfile)}\nTreat excludedFocus as a hard user-preference rejection even if the candidate is otherwise high quality.\nThreshold: ${config.minScore}.\n` +
     `Score dimensions: Rafael match 0-25; consumer usability 0-20; Codex/Agent/Skills/MCP/plugin relevance 0-20; actionable value 0-15; source reliability 0-10; freshness/scarcity 0-10.\n` +
     `${radarGuidance}\nReject rumors, marketing copy, funding, generic AI news, missing source links, or claims not supported by supplied evidence. Never invent facts.\n` +
+    (memory ? `${memory}\n` : '') +
     `Candidate: ${JSON.stringify(candidate)}\n` +
     `Required schema: {"shouldRecommend":boolean,"score":number,"type":"${TYPES.join(' / ')}","oneLineConclusion":"","whatHappened":"","consumerUseCase":"","valueForRafael":"","codexIntegrationPotential":"","actionSuggestion":"","reasons":[],"risksOrMissingInfo":[],"evidenceRequired":true,"dimensions":{"rafaelMatch":0,"consumerUsability":0,"ecosystemRelevance":0,"actionableValue":0,"sourceReliability":0,"freshness":0}}`;
 }

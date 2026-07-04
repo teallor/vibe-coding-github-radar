@@ -1,0 +1,14 @@
+name = "feishu-feedback-worker"
+main = "workers/feishu-feedback-worker.js"
+compatibility_date = "2026-07-04"
+
+[vars]
+GITHUB_REPO = "teallor/vibe-coding-github-radar"
+GITHUB_BRANCH = "main"
+FEISHU_ALLOWED_CHAT_ID = "oc_replace_with_your_chat_id"
+FEISHU_ALLOWED_USER_IDS = ""
+FEISHU_REPLY_ENABLED = "false"
+
+# Store secrets with `wrangler secret put`, never in this file:
+# GITHUB_TOKEN, FEISHU_VERIFICATION_TOKEN
+# Optional confirmation reply: FEISHU_APP_ID, FEISHU_APP_SECRET

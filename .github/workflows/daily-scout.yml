@@ -2,13 +2,30 @@ name: Daily GitHub Scout
 
 on:
   schedule:
-    # GitHub Actions uses UTC. 22:28 UTC = 06:28 Beijing time next day.
-    # The verified three-radar run takes about 14 minutes, so Feishu normally arrives around 06:42-06:47.
-    - cron: "28 22 * * *"
+    # Target Feishu send time: Asia/Shanghai 06:45.
+    # Start earlier at Asia/Shanghai 06:20 to generate content before send.
+    # Asia/Shanghai 06:20 = UTC 22:20 previous day.
+    - cron: "20 22 * * *"
   workflow_dispatch:
+    inputs:
+      wait_until_target:
+        description: "Wait until Asia/Shanghai 06:45 before sending Feishu"
+        required: false
+        default: false
+        type: boolean
+      force_send:
+        description: "Force a second real Feishu send even if today was already sent"
+        required: false
+        default: false
+        type: boolean
 
 permissions:
   contents: write
+
+# Serialize all runs so a queued run checks the ledger committed by the previous run.
+concurrency:
+  group: daily-feishu-send
+  cancel-in-progress: false
 
 jobs:
   scout:
@@ -17,6 +34,9 @@ jobs:
       GCP_CREDENTIALS: ${{ secrets.GCP_CREDENTIALS }}
 
     steps:
+      - name: Capture job start time
+        run: echo "WORKFLOW_STARTED_AT=$(date -u +%Y-%m-%dT%H:%M:%SZ)" >> "$GITHUB_ENV"
+
       - name: Checkout repository
         uses: actions/checkout@v5
 
@@ -33,6 +53,11 @@ jobs:
             npm install
           fi
 
+      - name: Log workflow schedule and actual start times
+        run: node scripts/time-utils.js --workflow
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Authenticate to Google Cloud for Vertex AI credits
         if: env.GCP_CREDENTIALS != ''
         uses: google-github-actions/auth@v3
@@ -41,7 +66,9 @@ jobs:
           project_id: ${{ vars.GOOGLE_CLOUD_PROJECT }}
 
       - name: Run daily scout
-        run: node scripts/scout.js
+        run: |
+          node scripts/time-utils.js "内容生成开始时间"
+          node scripts/scout.js
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -49,7 +76,9 @@ jobs:
         run: node scripts/find-codex-podcasts.js
 
       - name: Build Gemini-reviewed AI app and Codex ecosystem radar
-        run: node scripts/ai-app-radar.js
+        run: |
+          node scripts/ai-app-radar.js
+          node scripts/time-utils.js "内容生成结束时间"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
@@ -61,6 +90,9 @@ jobs:
           FEISHU_WEBHOOK: ${{ secrets.FEISHU_WEBHOOK }}
           FEISHU_SECRET: ${{ secrets.FEISHU_SECRET }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GITHUB_EVENT_NAME: ${{ github.event_name }}
+          WAIT_UNTIL_TARGET: ${{ github.event_name == 'schedule' || inputs.wait_until_target }}
+          FORCE_SEND: ${{ github.event_name == 'workflow_dispatch' && inputs.force_send }}
 
       - name: Upload podcast screening evidence
         if: always()
@@ -81,10 +113,11 @@ jobs:
           retention-days: 30
 
       - name: Commit generated reports
+        if: always() && !cancelled()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/latest.json data/history.json reports || true
+          git add data/latest.json data/history.json data/codex-podcasts-latest.json data/ai-app-radar-latest.json data/feedback.json data/push-history.json data/send-ledger.json reports || true
           if git diff --cached --quiet; then
             echo "No generated changes to commit."
           else

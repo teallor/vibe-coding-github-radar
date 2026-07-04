@@ -1,0 +1,107 @@
+{
+  "version": 1,
+  "updatedAt": "2026-07-04T03:10:26.891Z",
+  "items": [
+    {
+      "feedbackId": "github:bagidea/bagidea-office",
+      "category": "github",
+      "title": "bagidea-office",
+      "url": "https://github.com/bagidea/bagidea-office",
+      "podcastName": null,
+      "episodeTitle": null,
+      "publishedAt": null,
+      "durationSeconds": null,
+      "shownotes": "",
+      "firstPushedDate": "2026-07-03",
+      "lastPushedDate": "2026-07-03",
+      "pushCount": 1,
+      "migrated": true
+    },
+    {
+      "feedbackId": "github:enescingoz/awesome-n8n-templates",
+      "category": "github",
+      "title": "awesome-n8n-templates",
+      "url": "https://github.com/enescingoz/awesome-n8n-templates",
+      "podcastName": null,
+      "episodeTitle": null,
+      "publishedAt": null,
+      "durationSeconds": null,
+      "shownotes": "",
+      "firstPushedDate": "2026-07-03",
+      "lastPushedDate": "2026-07-03",
+      "pushCount": 1,
+      "migrated": true
+    },
+    {
+      "feedbackId": "podcast:1fa53f7c",
+      "category": "podcast",
+      "title": "#606.Codex 负责人：品味与判断力为何成为你最值钱的资产",
+      "url": "https://www.xiaoyuzhoufm.com/episode/6a43a9699d2f574368405276",
+      "podcastName": "跨国串门儿计划",
+      "episodeTitle": "#606.Codex 负责人：品味与判断力为何成为你最值钱的资产",
+      "publishedAt": "2026-06-30",
+      "durationSeconds": 3627,
+      "shownotes": "完美契合 Rafael 对 Codex、Agent 和 Vibe Coding 的关注。节目不仅提供了 Codex 负责人的第一手产品理念，还展示了 Codex 在自动化办公（处理消息、邮件）和通用任务中的实际应用，对课程制作和副业项目的产品规划有极高的战略指导价值。",
+      "firstPushedDate": "2026-07-03",
+      "lastPushedDate": "2026-07-03",
+      "pushCount": 1,
+      "migrated": true
+    },
+    {
+      "feedbackId": "podcast:ce49ae2b",
+      "category": "podcast",
+      "title": "#591.Matt Pocock：开发者如何用 AI 放大十倍产出，模型狂热时代的软件基本功",
+      "url": "https://www.xiaoyuzhoufm.com/episode/6a353df14233e62bc54c7124",
+      "podcastName": "跨国串门儿计划",
+      "episodeTitle": "#591.Matt Pocock：开发者如何用 AI 放大十倍产出，模型狂热时代的软件基本功",
+      "publishedAt": "2026-06-19",
+      "durationSeconds": 3539,
+      "shownotes": "高度契合 Rafael 的关注点：1. 深入探讨了 Vibe Coding 和 Agentic Engineering 的实际工作流；2. 详细拆解了具体的 Skills（teach, grill me），对开发自定义 MCP/插件有直接启发；3. teach skill 涉及个性化课程制作，与“课程制作”标签完美匹配；4. 涉及 GitHub Actions 与 Agent 的结合，对自动化工作流有参考价值。",
+      "firstPushedDate": "2026-07-03",
+      "lastPushedDate": "2026-07-03",
+      "pushCount": 1,
+      "migrated": true
+    },
+    {
+      "feedbackId": "aiapp:96e2b95a",
+      "category": "aiapp",
+      "title": "hashgraph-online/awesome-ai-plugins",
+      "url": "https://github.com/hashgraph-online/awesome-ai-plugins",
+      "podcastName": null,
+      "episodeTitle": null,
+      "publishedAt": "2026-07-03T13:04:23Z",
+      "durationSeconds": null,
+      "shownotes": "",
+      "firstPushedDate": "2026-07-03",
+      "lastPushedDate": "2026-07-03",
+      "pushCount": 1,
+      "migrated": true
+    },
+    {
+      "feedbackId": "aiapp:dd73139d",
+      "category": "aiapp",
+      "title": "New OpenAI Academy courses for the next era of work",
+      "url": "https://openai.com/index/academy-courses-applying-ai-at-work",
+      "podcastName": null,
+      "episodeTitle": null,
+      "publishedAt": "Fri, 12 Jun 2026 10:00:00 GMT",
+      "durationSeconds": null,
+      "shownotes": "",
+      "firstPushedDate": "2026-07-03",
+      "lastPushedDate": "2026-07-03",
+      "pushCount": 1,
+      "migrated": true
+    }
+  ],
+  "decisions": [],
+  "migration": {
+    "completedAt": "2026-07-04T02:03:36.551Z",
+    "sources": [
+      "data/history.json",
+      "data/latest.json",
+      "data/codex-podcasts-latest.json",
+      "data/ai-app-radar-latest.json",
+      "reports/*.md (2 files inspected; structured records take precedence)"
+    ]
+  }
+}

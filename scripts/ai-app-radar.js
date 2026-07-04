@@ -3,6 +3,7 @@ const path = require('path');
 const { XMLParser } = require('fast-xml-parser');
 const { loadRuntimeConfig } = require('./runtime-config');
 const { reviewCandidate } = require('./llm-reviewer');
+const { enrichAndFilter } = require('./dedupe');
 
 const OUTPUT = path.join(process.cwd(), 'data', 'ai-app-radar-latest.json');
 const OFFICIAL_FEEDS = [
@@ -164,7 +165,7 @@ async function runAiAppRadar(options = {}) {
   const qualified = reviewed.filter(item => item.review.shouldRecommend && item.review.score >= cfg.minScore)
     .sort((a, b) => a.review.priority - b.review.priority || b.review.score - a.review.score);
   const preferred = qualified.filter(item => item.review.score >= cfg.preferScore);
-  const selected = (preferred.length ? preferred : qualified).slice(0, cfg.maxItems).map(({ candidate, review, reviewProvider }) => ({
+  const selectable = (preferred.length ? preferred : qualified).map(({ candidate, review, reviewProvider }) => ({
     title: candidate.title, link: candidate.url, source: candidate.source, publishedAt: candidate.publishedAt,
     ...review, reviewProvider,
     suitableProblem: ['Codex', 'Skill', 'MCP', '插件'].includes(review.type) ? review.consumerUseCase : '',
@@ -172,13 +173,15 @@ async function runAiAppRadar(options = {}) {
     requiresApiKey: '未知，需查看原始文档', beginnerFriendly: review.score >= 90 ? '较适合，建议先做最小复现' : '需 Codex 协助评估',
     saveToToolkit: review.priority <= 2 ? '是，值得保存并后续复现' : '视实际使用需求决定'
   }));
+  const dedupeResult = enrichAndFilter(selectable, 'aiapp', { maxItems: cfg.maxItems });
+  const selected = dedupeResult.items;
   const date = new Intl.DateTimeFormat('en-CA', { timeZone: runtime.timezone }).format(new Date());
   const output = {
     date,
     conclusion: selected.length ? `今日入选 ${selected.length} 条 AI C端应用与 Codex 生态高价值更新` : '今日未发现足够高质量的 AI C端应用与 Codex 生态更新，已跳过，不硬凑。',
     recommendations: selected,
     screening: { candidateTarget: cfg.candidateTarget, candidateCount: deduped.length, reviewedCount: reviewed.length, qualifiedCount: qualified.length, minScore: cfg.minScore, sourceFailures: failures, geminiRequested: cfg.useGeminiReview, geminiSuccessCount: reviewed.filter(item => item.reviewProvider !== 'rules').length,
-      excludedReasons: ['低于 85 分', '缺少明确来源', '泛 AI 新闻或营销软文', '融资、股价或传闻', '对 Rafael_Huang 无直接行动价值'] },
+      excludedReasons: ['低于 85 分', '缺少明确来源', '泛 AI 新闻或营销软文', '融资、股价或传闻', '对 Rafael_Huang 无直接行动价值'], dedupeDecisions: dedupeResult.decisions },
     generatedAt: new Date().toISOString()
   };
   if (options.write !== false) { fs.mkdirSync(path.dirname(OUTPUT), { recursive: true }); fs.writeFileSync(OUTPUT, JSON.stringify(output, null, 2)); }

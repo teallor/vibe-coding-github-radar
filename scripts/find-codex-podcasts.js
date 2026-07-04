@@ -8,6 +8,7 @@ const path = require('path');
 const { XMLParser } = require('fast-xml-parser');
 const { loadRuntimeConfig } = require('./runtime-config');
 const { reviewCandidate } = require('./llm-reviewer');
+const { enrichAndFilter } = require('./dedupe');
 
 const OUTPUT = path.join(process.cwd(), 'data', 'codex-podcasts-latest.json');
 const MAX_FEEDS = 100;
@@ -322,8 +323,8 @@ async function main() {
   const selection = poolTargetMet
     ? await selectPodcastRecommendations(candidates, runtime)
     : { qualified: [], hardGatePassed: candidates.filter(item => item.hardPassed).length, geminiReviewed: 0, geminiSucceeded: 0 };
-  const recommendations = selection.qualified
-    .slice(0, radarConfig.maxItems)
+  const dedupeResult = enrichAndFilter(selection.qualified, 'podcast', { maxItems: radarConfig.maxItems });
+  const recommendations = dedupeResult.items
     .map(item => ({
       podcastName: item.podcastName, title: item.title, link: item.link,
       publishedAt: item.publishedAt ? new Date(item.publishedAt).toISOString().slice(0, 10) : '无法识别',
@@ -332,6 +333,9 @@ async function main() {
       codexRelevance: item.semanticReview?.oneLineConclusion || relevanceLabel(item), qualityScore: item.qualityScore,
       scoreBreakdown: item.scores, conclusion: '推荐', evidenceSource: item.feedUrl,
       reviewProvider: item.reviewProvider, semanticReview: item.semanticReview || null
+      , feedbackId: item.feedbackId, decision: item.decision, duplicateStatus: item.duplicateStatus,
+      firstPushedDate: item.firstPushedDate, lastPushedDate: item.lastPushedDate,
+      hasFeedback: item.hasFeedback, feedbackType: item.feedbackType, annotation: item.annotation
     }));
   const pending = candidates.filter(item => item.conclusion === '待人工确认').slice(0, 10).map(item => ({
     podcastName: item.podcastName, title: item.title, link: item.link, reasons: item.failures
@@ -359,6 +363,7 @@ async function main() {
       hardGatePassed: selection.hardGatePassed,
       geminiReviewed: selection.geminiReviewed,
       geminiSucceeded: selection.geminiSucceeded
+      , dedupeDecisions: dedupeResult.decisions
     },
     generatedAt: new Date().toISOString()
   };

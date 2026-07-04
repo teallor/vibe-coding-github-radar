@@ -74,6 +74,9 @@ function generateReport(data) {
       if (p.qualityGate && p.qualityGate.relevanceSignals.length) md += `- 强相关信号：${p.qualityGate.relevanceSignals.join('、')}\n`;
       md += `- 入选理由：${p.vibeCodingValue}；${p.codexFriendly}\n`;
       md += `- 风险检查：${p.riskPoints}\n\n`;
+      md += `- 反馈ID：${p.feedbackId}\n- 是否重复：${p.duplicateStatus === 'new' ? '否' : '是'}\n- 首次推送：${p.firstPushedDate || '本次首次'}；上次推送：${p.lastPushedDate || '无'}\n- 是否已有反馈：${p.hasFeedback ? p.feedbackType : '否'}\n- 本次允许原因：${p.reason || '新内容'}\n`;
+      if (p.annotation) md += `- 重复说明：${p.annotation}\n`;
+      md += `- 反馈录入：\`node scripts/record-feedback.js --id "${p.feedbackId}" --feedback "已读不错"\`（也可替换为“已读不行 / 重复了 / 允许继续追踪”）\n\n`;
     }
   } else {
     md += `*今日无精选项目。*\n\n`;

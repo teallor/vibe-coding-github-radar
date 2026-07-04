@@ -1,6 +1,10 @@
 /* Cloudflare Worker (Service Worker syntax): Feishu message event -> GitHub feedback.json */
-importScripts('../scripts/feedback-rules.js');
-const { MESSAGE_RE: FEEDBACK_RE, parseFeedbackMessage: parseFeedbackText, tokenize: tokens } = FeedbackRules;
+// Keep this entrypoint self-contained: `importScripts` is unavailable when
+// Wrangler validates the bundled Worker in its module runtime.
+const FEEDBACK_TYPES = { '已读不错': 'positive', '已读不行': 'negative', '重复了': 'duplicate', '允许继续追踪': 'allow_repeat' };
+const FEEDBACK_RE = /^反馈\s+(\S+)\s+(已读不错|已读不行|重复了|允许继续追踪)(?:[，,]\s*原因[:：]\s*(.+))?\s*$/;
+function parseFeedbackText(text) { const match = String(text || '').trim().match(FEEDBACK_RE); return match ? { feedbackId: match[1], rawFeedback: match[2], feedbackType: FEEDBACK_TYPES[match[2]], note: (match[3] || '').trim() } : null; }
+function tokens(text) { return [...new Set(String(text || '').toLowerCase().match(/[\p{L}\p{N}]{2,}/gu) || [])].slice(0, 12); }
 
 function json(body, status = 200) { return new Response(JSON.stringify(body), { status, headers: { 'content-type': 'application/json; charset=utf-8' } }); }
 function rebuildSummary(data) { const s = { positiveSignals: [], negativeSignals: [], duplicateSignals: [], allowRepeatSignals: [], lastUpdatedAt: new Date().toISOString() }; const add = (key, values) => { s[key] = [...new Set([...s[key], ...values])].slice(-40); }; for (const item of data.items || []) { const words = item.learnedPreference?.keywords || []; if (item.feedbackType === 'positive') add('positiveSignals', words); if (item.feedbackType === 'negative') add('negativeSignals', words); if (item.feedbackType === 'duplicate') add('duplicateSignals', [item.feedbackId]); if (item.feedbackType === 'allow_repeat') add('allowRepeatSignals', [item.feedbackId]); } data.summaryMemory = s; return data; }

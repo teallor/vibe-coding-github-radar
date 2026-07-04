@@ -1,6 +1,5 @@
 const assert = require('assert');
 global.addEventListener = () => {};
-global.importScripts = () => { global.FeedbackRules = require('./feedback-rules'); };
 const { parseFeedbackText, handleRequest } = require('../workers/feishu-feedback-worker');
 
 function event(text, token = 'verify-token') { return { schema: '2.0', header: { token, event_id: 'evt-1', event_type: 'im.message.receive_v1' }, event: { sender: { sender_id: { open_id: 'ou-user' } }, message: { message_id: 'om-1', chat_id: 'oc-chat', message_type: 'text', content: JSON.stringify({ text }) } } }; }

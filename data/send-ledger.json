@@ -1,5 +1,17 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-04T00:00:00.000Z",
-  "entries": []
+  "updatedAt": "2026-07-04T23:38:06.873Z",
+  "entries": [
+    {
+      "date": "2026-07-05",
+      "targetSendTime": "06:45",
+      "actualSendTime": "07:38:06",
+      "actualSendAt": "2026-07-04T23:38:06.873Z",
+      "status": "sent",
+      "trigger": "schedule",
+      "runId": "28723023632",
+      "messageDigest": "f9e62bcff8be0feb",
+      "forced": false
+    }
+  ]
 }

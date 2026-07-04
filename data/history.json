@@ -29,17 +29,17 @@
     {
       "date": "2026-07-04",
       "topPick": {
-        "name": "lark-coding-agent-bridge",
-        "fullName": "zarazhangrui/lark-coding-agent-bridge",
-        "url": "https://github.com/zarazhangrui/lark-coding-agent-bridge",
-        "recommendScore": 87
+        "name": "claude-code-local",
+        "fullName": "nicedreamzapp/claude-code-local",
+        "url": "https://github.com/nicedreamzapp/claude-code-local",
+        "recommendScore": 91
       },
       "selectedProjects": [
         {
-          "name": "claude-code-local",
-          "fullName": "nicedreamzapp/claude-code-local",
-          "url": "https://github.com/nicedreamzapp/claude-code-local",
-          "recommendScore": 85
+          "name": "obsidian-second-brain",
+          "fullName": "eugeniughelbur/obsidian-second-brain",
+          "url": "https://github.com/eugeniughelbur/obsidian-second-brain",
+          "recommendScore": 91
         }
       ],
       "profileName": "默认综合模式",
@@ -50,8 +50,8 @@
         "新鲜有趣项目",
         "个人效率工具"
       ],
-      "summary": "今天最值得精读的项目是 **lark-coding-agent-bridge**（推荐分 87）。高 - TypeScript 项目，1661 Star，属于「个人效率工具」方向，适合阅读学习核心机制。可以接触新鲜有趣的技术和项目组织方式。建议用 30-45 分钟只读学习，不要安装运行，先理解核心机制和可迁移经验。"
+      "summary": "今天最值得精读的项目是 **claude-code-local**（推荐分 91）。完美契合 Vibe Coding 和 Agent 探索方向。该项目展示了如何通过兼容 Anthropic API 来驱动官方 Agent 工具，对于研究 Codex 本地化改造、构建隐私安全的本地工作流极具参考价值。。可以接触新鲜有趣的技术和项目组织方式。建议用 30-45 分钟只读学习，不要安装运行，先理解核心机制和可迁移经验。"
     }
   ],
-  "updatedAt": "2026-07-04T02:10:58.124Z"
+  "updatedAt": "2026-07-04T23:31:45.693Z"
 }

@@ -4,7 +4,7 @@
 
 ## 一、今日结论
 
-今天最值得精读的项目是 **lark-coding-agent-bridge**（推荐分 87）。高 - TypeScript 项目，1661 Star，属于「个人效率工具」方向，适合阅读学习核心机制。可以接触新鲜有趣的技术和项目组织方式。建议用 30-45 分钟只读学习，不要安装运行，先理解核心机制和可迁移经验。
+今天最值得精读的项目是 **claude-code-local**（推荐分 91）。完美契合 Vibe Coding 和 Agent 探索方向。该项目展示了如何通过兼容 Anthropic API 来驱动官方 Agent 工具，对于研究 Codex 本地化改造、构建隐私安全的本地工作流极具参考价值。。可以接触新鲜有趣的技术和项目组织方式。建议用 30-45 分钟只读学习，不要安装运行，先理解核心机制和可迁移经验。
 
 ## 二、当前需求画像
 
@@ -26,34 +26,12 @@
 
 | 项目名 | GitHub 链接 | 作者 | 语言 | Star | Fork | License | 最近更新 | 归档 | Issues | 推荐分 | Vibe Coding | Office | 变现 | Codex | 风险点 |
 |--------|------------|------|------|------|------|---------|----------|------|--------|--------|-------------|--------|------|-------|--------|
-| lark-coding-agent-bridge | [链接](https://github.com/zarazhangrui/lark-coding-agent-bridge) | zarazhangrui | TypeScript | 1661 | 254 | MIT | 2026-07-03 | 否 | 130 | 87 | 高 - TypeScript 项目，16 | 低 - 与办公自动化关系不大，但有通用学 | 低 - 暂不适合直接变现，可学习技术 | 中 - 有入门特征，可尝试 Codex  | 未发现明显风险 |
-| claude-code-local | [链接](https://github.com/nicedreamzapp/claude-code-local) | nicedreamzapp | Python | 2913 | 557 | MIT | 2026-06-18 | 否 | 0 | 85 | 高 - Python 项目，2913 S | 低 - 与办公自动化关系不大，但有通用学 | 低 - 暂不适合直接变现，可学习技术 | 中 - 可阅读学习，改造难度需评估 | 未发现明显风险 |
+| claude-code-local | [链接](https://github.com/nicedreamzapp/claude-code-local) | nicedreamzapp | Python | 2915 | 557 | MIT | 2026-06-18 | 否 | 0 | 91 | 完美契合 Vibe Coding 和 A | 低 - 与办公自动化关系不大，但有通用学 | 低 - 暂不适合直接变现，可学习技术 | 极高。它本质上是一个兼容 Anthrop | 未发现明显风险 |
+| obsidian-second-brain | [链接](https://github.com/eugeniughelbur/obsidian-second-brain) | eugeniughelbur | Python | 2952 | 354 | MIT | 2026-07-03 | 否 | 0 | 91 | 完美契合 Codex、Skill 和 A | 低 - 与办公自动化关系不大，但有通用学 | 低 - 暂不适合直接变现，可学习技术 | 极高。项目本身就是为 Codex CLI | 未发现明显风险 |
 
 ### 严格评分依据
 
-#### lark-coding-agent-bridge：87/100
-
-- Vibe Coding 学习价值：19/20
-- 办公自动化价值：3/20
-- 个人变现潜力：5/15
-- Codex 改造友好度：12/15
-- 新手学习友好度：9/10
-- 本地/免费优先：7/10
-- 近期活跃度：5/5
-- License 清晰度：5/5
-- 加分：命中白名单 2 个，加 4 分；优先语言 TypeScript，加 5 分
-- 强相关信号：codex、claude code
-- 入选理由：高 - TypeScript 项目，1661 Star，属于「个人效率工具」方向，适合阅读学习核心机制；中 - 有入门特征，可尝试 Codex 改造
-- 风险检查：未发现明显风险
-
-- 反馈ID：github:zarazhangrui/lark-coding-agent-bridge
-- 是否重复：否
-- 首次推送：本次首次；上次推送：无
-- 是否已有反馈：否
-- 本次允许原因：never_pushed
-- 反馈录入：`node scripts/record-feedback.js --id "github:zarazhangrui/lark-coding-agent-bridge" --feedback "已读不错"`（也可替换为“已读不行 / 重复了 / 允许继续追踪”）
-
-#### claude-code-local：85/100
+#### claude-code-local：91/100
 
 - Vibe Coding 学习价值：20/20
 - 办公自动化价值：3/20
@@ -65,7 +43,7 @@
 - License 清晰度：5/5
 - 加分：命中白名单 1 个，加 2 分；优先语言 Python，加 5 分
 - 强相关信号：claude code
-- 入选理由：高 - Python 项目，2913 Star，属于「Office 文档自动化」方向，适合阅读学习核心机制；中 - 可阅读学习，改造难度需评估
+- 入选理由：完美契合 Vibe Coding 和 Agent 探索方向。该项目展示了如何通过兼容 Anthropic API 来驱动官方 Agent 工具，对于研究 Codex 本地化改造、构建隐私安全的本地工作流极具参考价值。；极高。它本质上是一个兼容 Anthropic API 的本地模型服务层，可以直接作为 Codex 或其他依赖 Claude API 的 Agent 的底层引擎，实现零成本、高隐私的本地 Vibe Coding。
 - 风险检查：未发现明显风险
 
 - 反馈ID：github:nicedreamzapp/claude-code-local
@@ -75,20 +53,42 @@
 - 本次允许原因：never_pushed
 - 反馈录入：`node scripts/record-feedback.js --id "github:nicedreamzapp/claude-code-local" --feedback "已读不错"`（也可替换为“已读不行 / 重复了 / 允许继续追踪”）
 
+#### obsidian-second-brain：91/100
+
+- Vibe Coding 学习价值：19/20
+- 办公自动化价值：3/20
+- 个人变现潜力：5/15
+- Codex 改造友好度：9/15
+- 新手学习友好度：8/10
+- 本地/免费优先：7/10
+- 近期活跃度：5/5
+- License 清晰度：5/5
+- 加分：命中白名单 2 个，加 4 分；优先语言 Python，加 5 分
+- 强相关信号：codex、claude code
+- 入选理由：完美契合 Codex、Skill 和 Agent 方向。该项目展示了如何为 Codex/Claude Code 编写复杂的跨平台 Skill，包含丰富的 Prompt 模式、本地文件操作和 Agent 调度逻辑，非常适合作为 Vibe Coding 的学习案例，或提取其机制用于课程制作与副业项目开发。；极高。项目本身就是为 Codex CLI 和 Claude Code 设计的 Skill，提供了完整的指令集和本地文件操作逻辑，可直接作为 Codex 的扩展技能使用，或作为开发自定义 Codex Skill 的脚手架。
+- 风险检查：未发现明显风险
+
+- 反馈ID：github:eugeniughelbur/obsidian-second-brain
+- 是否重复：否
+- 首次推送：本次首次；上次推送：无
+- 是否已有反馈：否
+- 本次允许原因：never_pushed
+- 反馈录入：`node scripts/record-feedback.js --id "github:eugeniughelbur/obsidian-second-brain" --feedback "已读不错"`（也可替换为“已读不行 / 重复了 / 允许继续追踪”）
+
 ## 四、今日最值得精读项目
 
 ### 1. 项目一句话解释
 
-Bot that bridges Feishu/Lark messenger with a local Claude Code or Codex CLI. Streaming cards, per-chat sessions, multiple workspaces
+Run Claude Code 100% on-device with local AI on Apple Silicon. MLX-native Anthropic-API server, 65 tok/s Qwen 3.5 122B, Llama 3.3 70B, Gemma 4 31B. Private, offline, airgap-ready. Built for NDA / legal / healthcare workflows.
 
-用小白能懂的话：这个项目是一个命令行工具，可以在终端里使用。
+用小白能懂的话：这是一个开源项目，你可以阅读它的代码来学习怎么实现类似功能。
 
 ### 2. 为什么值得我今天读
 
-- **Vibe Coding 学习价值：** 高 - TypeScript 项目，1661 Star，属于「个人效率工具」方向，适合阅读学习核心机制
+- **Vibe Coding 学习价值：** 完美契合 Vibe Coding 和 Agent 探索方向。该项目展示了如何通过兼容 Anthropic API 来驱动官方 Agent 工具，对于研究 Codex 本地化改造、构建隐私安全的本地工作流极具参考价值。
 - **Office / 办公自动化价值：** 低 - 与办公自动化关系不大，但有通用学习价值
 - **个人变现潜力：** 低 - 暂不适合直接变现，可学习技术
-- **Codex 改造可能性：** 中 - 有入门特征，可尝试 Codex 改造
+- **Codex 改造可能性：** 极高。它本质上是一个兼容 Anthropic API 的本地模型服务层，可以直接作为 Codex 或其他依赖 Claude API 的 Agent 的底层引擎，实现零成本、高隐私的本地 Vibe Coding。
 - **是否新鲜有趣：** 一般，但仍有学习价值
 
 ### 3. 今天只读哪些文件
@@ -282,8 +282,8 @@ Bot that bridges Feishu/Lark messenger with a local Claude Code or Codex CLI. St
 ```
 请帮我只读分析以下 GitHub 项目，不要运行、不要安装、不要 clone、不要改代码。请分析项目结构、核心机制、可学习点、可迁移点、变现启发点。每个新名词先用小白能懂的话解释。最后沉淀成 Markdown 文件。
 
-项目地址：https://github.com/zarazhangrui/lark-coding-agent-bridge
-项目名：lark-coding-agent-bridge
+项目地址：https://github.com/nicedreamzapp/claude-code-local
+项目名：claude-code-local
 日期：2026-07-04
 
 分析要求：
@@ -309,11 +309,11 @@ Bot that bridges Feishu/Lark messenger with a local Claude Code or Codex CLI. St
 # 2026-07-04 Vibe Coding GitHub 学习沉淀
 
 ## 项目基本信息
-- 项目名：lark-coding-agent-bridge
-- GitHub 链接：https://github.com/zarazhangrui/lark-coding-agent-bridge
-- 作者：zarazhangrui
-- 语言：TypeScript
-- Star：1661
+- 项目名：claude-code-local
+- GitHub 链接：https://github.com/nicedreamzapp/claude-code-local
+- 作者：nicedreamzapp
+- 语言：Python
+- Star：2915
 - License：MIT
 
 ## 为什么选它
@@ -328,9 +328,9 @@ Bot that bridges Feishu/Lark messenger with a local Claude Code or Codex CLI. St
 ## 我读了哪些文件
 
 ## 我学到的 3 个机制
-1.
-2.
-3.
+1. 
+2. 
+3. 
 
 ## 我没懂的地方
 

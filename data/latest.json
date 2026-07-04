@@ -1,6 +1,6 @@
 {
   "date": "2026-07-04",
-  "summary": "今天最值得精读的项目是 **lark-coding-agent-bridge**（推荐分 87）。高 - TypeScript 项目，1661 Star，属于「个人效率工具」方向，适合阅读学习核心机制。可以接触新鲜有趣的技术和项目组织方式。建议用 30-45 分钟只读学习，不要安装运行，先理解核心机制和可迁移经验。",
+  "summary": "今天最值得精读的项目是 **claude-code-local**（推荐分 91）。完美契合 Vibe Coding 和 Agent 探索方向。该项目展示了如何通过兼容 Anthropic API 来驱动官方 Agent 工具，对于研究 Codex 本地化改造、构建隐私安全的本地工作流极具参考价值。。可以接触新鲜有趣的技术和项目组织方式。建议用 30-45 分钟只读学习，不要安装运行，先理解核心机制和可迁移经验。",
   "activeProfile": "默认综合模式",
   "activeFocusAreas": [
     "Office 文档自动化",
@@ -27,13 +27,13 @@
     "complete": true,
     "candidateTarget": 300,
     "candidateTargetMet": true,
-    "hardGatePassed": 42,
+    "hardGatePassed": 43,
     "geminiReviewed": 10,
-    "geminiSucceeded": 0,
+    "geminiSucceeded": 9,
     "dedupeDecisions": [
       {
-        "feedbackId": "github:zarazhangrui/lark-coding-agent-bridge",
-        "title": "lark-coding-agent-bridge",
+        "feedbackId": "github:nicedreamzapp/claude-code-local",
+        "title": "claude-code-local",
         "category": "github",
         "decision": "allow_new",
         "reason": "never_pushed",
@@ -47,8 +47,68 @@
         "annotation": ""
       },
       {
-        "feedbackId": "github:nicedreamzapp/claude-code-local",
-        "title": "claude-code-local",
+        "feedbackId": "github:eugeniughelbur/obsidian-second-brain",
+        "title": "obsidian-second-brain",
+        "category": "github",
+        "decision": "allow_new",
+        "reason": "never_pushed",
+        "allowed": true,
+        "duplicateStatus": "new",
+        "firstPushedDate": null,
+        "lastPushedDate": null,
+        "feedbackType": null,
+        "hasFeedback": false,
+        "scoreDelta": 0,
+        "annotation": ""
+      },
+      {
+        "feedbackId": "github:bagidea/bagidea-office",
+        "title": "bagidea-office",
+        "category": "github",
+        "decision": "allow_unanswered_repeat",
+        "reason": "already_pushed_without_feedback",
+        "allowed": true,
+        "duplicateStatus": "repeat",
+        "firstPushedDate": "2026-07-03",
+        "lastPushedDate": "2026-07-03",
+        "feedbackType": null,
+        "hasFeedback": false,
+        "scoreDelta": -10,
+        "annotation": "⚠️ 重复推送：这条内容曾于 2026-07-03 推送过；目前没有收到任何反馈，因此本次允许重复出现。请反馈“已读不错 / 已读不行 / 重复了”，后续系统将据此处理。"
+      },
+      {
+        "feedbackId": "github:narumiruna/pi-extensions",
+        "title": "pi-extensions",
+        "category": "github",
+        "decision": "allow_new",
+        "reason": "never_pushed",
+        "allowed": true,
+        "duplicateStatus": "new",
+        "firstPushedDate": null,
+        "lastPushedDate": null,
+        "feedbackType": null,
+        "hasFeedback": false,
+        "scoreDelta": 0,
+        "annotation": ""
+      },
+      {
+        "feedbackId": "github:dyan-dev/loopi",
+        "title": "loopi",
+        "category": "github",
+        "decision": "allow_new",
+        "reason": "never_pushed",
+        "allowed": true,
+        "duplicateStatus": "new",
+        "firstPushedDate": null,
+        "lastPushedDate": null,
+        "feedbackType": null,
+        "hasFeedback": false,
+        "scoreDelta": 0,
+        "annotation": ""
+      },
+      {
+        "feedbackId": "github:zarazhangrui/lark-coding-agent-bridge",
+        "title": "lark-coding-agent-bridge",
         "category": "github",
         "decision": "allow_new",
         "reason": "never_pushed",
@@ -77,8 +137,23 @@
         "annotation": ""
       },
       {
-        "feedbackId": "github:eugeniughelbur/obsidian-second-brain",
-        "title": "obsidian-second-brain",
+        "feedbackId": "github:datadrivenconstruction/ddc_skills_for_ai_agents_in_construction",
+        "title": "DDC_Skills_for_AI_Agents_in_Construction",
+        "category": "github",
+        "decision": "allow_new",
+        "reason": "never_pushed",
+        "allowed": true,
+        "duplicateStatus": "new",
+        "firstPushedDate": null,
+        "lastPushedDate": null,
+        "feedbackType": null,
+        "hasFeedback": false,
+        "scoreDelta": 0,
+        "annotation": ""
+      },
+      {
+        "feedbackId": "github:creminiai/skillpack",
+        "title": "skillpack",
         "category": "github",
         "decision": "allow_new",
         "reason": "never_pushed",
@@ -93,30 +168,30 @@
       }
     ],
     "candidateCount": 317,
-    "qualifiedCount": 4
+    "qualifiedCount": 9
   },
   "topPick": {
-    "name": "lark-coding-agent-bridge",
-    "fullName": "zarazhangrui/lark-coding-agent-bridge",
-    "url": "https://github.com/zarazhangrui/lark-coding-agent-bridge",
-    "description": "Bot that bridges Feishu/Lark messenger with a local Claude Code or Codex CLI. Streaming cards, per-chat sessions, multiple workspaces",
-    "author": "zarazhangrui",
-    "language": "TypeScript",
-    "stars": 1661,
-    "forks": 254,
+    "name": "claude-code-local",
+    "fullName": "nicedreamzapp/claude-code-local",
+    "url": "https://github.com/nicedreamzapp/claude-code-local",
+    "description": "Run Claude Code 100% on-device with local AI on Apple Silicon. MLX-native Anthropic-API server, 65 tok/s Qwen 3.5 122B, Llama 3.3 70B, Gemma 4 31B. Private, offline, airgap-ready. Built for NDA / legal / healthcare workflows.",
+    "author": "nicedreamzapp",
+    "language": "Python",
+    "stars": 2915,
+    "forks": 557,
     "license": "MIT",
-    "updatedAt": "2026-07-03",
+    "updatedAt": "2026-06-18",
     "archived": false,
-    "openIssues": 130,
-    "recommendScore": 87,
-    "rawRecommendScore": 73,
+    "openIssues": 0,
+    "recommendScore": 91,
+    "rawRecommendScore": 69,
     "scores": {
-      "vibeCodingLearning": 19,
+      "vibeCodingLearning": 20,
       "officeAutomation": 3,
       "monetizationPotential": 5,
-      "codexFriendly": 12,
+      "codexFriendly": 10,
       "beginnerFriendly": 9,
-      "localFirst": 7,
+      "localFirst": 6,
       "activity": 5,
       "license": 5
     },
@@ -125,7 +200,7 @@
         {
           "key": "vibeCodingLearning",
           "label": "Vibe Coding 学习价值",
-          "score": 19,
+          "score": 20,
           "max": 20
         },
         {
@@ -143,7 +218,7 @@
         {
           "key": "codexFriendly",
           "label": "Codex 改造友好度",
-          "score": 12,
+          "score": 10,
           "max": 15
         },
         {
@@ -155,7 +230,7 @@
         {
           "key": "localFirst",
           "label": "本地/免费优先",
-          "score": 7,
+          "score": 6,
           "max": 10
         },
         {
@@ -173,32 +248,60 @@
       ],
       "penalties": [],
       "bonuses": [
-        "命中白名单 2 个，加 4 分",
-        "优先语言 TypeScript，加 5 分"
+        "命中白名单 1 个，加 2 分",
+        "优先语言 Python，加 5 分"
       ]
     },
-    "vibeCodingValue": "高 - TypeScript 项目，1661 Star，属于「个人效率工具」方向，适合阅读学习核心机制",
+    "vibeCodingValue": "完美契合 Vibe Coding 和 Agent 探索方向。该项目展示了如何通过兼容 Anthropic API 来驱动官方 Agent 工具，对于研究 Codex 本地化改造、构建隐私安全的本地工作流极具参考价值。",
     "officeAutomationValue": "低 - 与办公自动化关系不大，但有通用学习价值",
     "monetizationPotential": "低 - 暂不适合直接变现，可学习技术",
-    "codexFriendly": "中 - 有入门特征，可尝试 Codex 改造",
+    "codexFriendly": "极高。它本质上是一个兼容 Anthropic API 的本地模型服务层，可以直接作为 Codex 或其他依赖 Claude API 的 Agent 的底层引擎，实现零成本、高隐私的本地 Vibe Coding。",
     "riskPoints": "未发现明显风险",
-    "matchedArea": "个人效率工具",
+    "matchedArea": "Office 文档自动化",
     "penalties": [],
     "bonuses": [
-      "命中白名单 2 个，加 4 分",
-      "优先语言 TypeScript，加 5 分"
+      "命中白名单 1 个，加 2 分",
+      "优先语言 Python，加 5 分"
     ],
     "qualityGate": {
       "passed": true,
       "relevanceSignals": [
-        "codex",
         "claude code"
       ],
       "failures": []
     },
-    "ruleScore": 87,
-    "reviewProvider": "rules-fallback",
-    "feedbackId": "github:zarazhangrui/lark-coding-agent-bridge",
+    "ruleScore": 85,
+    "semanticReview": {
+      "shouldRecommend": true,
+      "score": 91,
+      "type": "Agent 工具",
+      "oneLineConclusion": "在 Apple Silicon Mac 上 100% 本地离线运行 Claude Code 的开源方案，支持 DeepSeek V4 Flash 等大模型。",
+      "whatHappened": "开发者开源了 claude-code-local，通过构建 MLX 原生的 Anthropic API 兼容服务器，让用户能在 Mac 上完全离线（Airgap）运行官方的 Claude Code CLI 工具，支持 Gemma 4 31B、Qwen 3.5 122B 及最新的 DeepSeek V4 Flash 模型。",
+      "consumerUseCase": "在处理涉及 NDA、医疗、法律等高度机密数据的代码项目时，无需将代码上传至云端，直接在本地 Mac 上安全地使用 Claude Code 进行 Vibe Coding。",
+      "valueForRafael": "完美契合 Vibe Coding 和 Agent 探索方向。该项目展示了如何通过兼容 Anthropic API 来驱动官方 Agent 工具，对于研究 Codex 本地化改造、构建隐私安全的本地工作流极具参考价值。",
+      "codexIntegrationPotential": "极高。它本质上是一个兼容 Anthropic API 的本地模型服务层，可以直接作为 Codex 或其他依赖 Claude API 的 Agent 的底层引擎，实现零成本、高隐私的本地 Vibe Coding。",
+      "actionSuggestion": "克隆该项目并在配备 32GB 以上内存的 Mac 上测试 Gemma 4 31B 模型，体验本地运行 Claude Code 的流畅度；研究其 API 兼容层的实现逻辑，为后续 Codex 接入本地模型做技术储备。",
+      "reasons": [
+        "直接赋能 Vibe Coding，解决云端大模型处理敏感代码时的隐私痛点。",
+        "支持最新的 DeepSeek V4 Flash 和 Qwen 3.5，技术栈前沿 (MLX, ds4)，且提供 1M Token 上下文支持。",
+        "GitHub 接近 3000 Star，提供详细的 Benchmark 和视频演示，可复现性强。"
+      ],
+      "risksOrMissingInfo": [
+        "硬件门槛较高，运行 31B 模型至少需要 32GB 统一内存，122B/284B 模型需要 96GB-128GB 内存。",
+        "本地模型的代码生成能力（如 Gemma/Qwen）相比云端 Claude 3.7 Sonnet 可能仍有差距，需实际评估复杂任务的完成率。"
+      ],
+      "evidenceRequired": true,
+      "dimensions": {
+        "rafaelMatch": 23,
+        "consumerUsability": 15,
+        "ecosystemRelevance": 20,
+        "actionableValue": 14,
+        "sourceReliability": 9,
+        "freshness": 10
+      }
+    },
+    "reviewProvider": "vertex",
+    "feedbackId": "github:nicedreamzapp/claude-code-local",
     "category": "github",
     "decision": "allow_new",
     "reason": "never_pushed",
@@ -214,27 +317,27 @@
   },
   "selectedProjects": [
     {
-      "name": "claude-code-local",
-      "fullName": "nicedreamzapp/claude-code-local",
-      "url": "https://github.com/nicedreamzapp/claude-code-local",
-      "description": "Run Claude Code 100% on-device with local AI on Apple Silicon. MLX-native Anthropic-API server, 65 tok/s Qwen 3.5 122B, Llama 3.3 70B, Gemma 4 31B. Private, offline, airgap-ready. Built for NDA / legal / healthcare workflows.",
-      "author": "nicedreamzapp",
+      "name": "obsidian-second-brain",
+      "fullName": "eugeniughelbur/obsidian-second-brain",
+      "url": "https://github.com/eugeniughelbur/obsidian-second-brain",
+      "description": "Cross-CLI skill for Obsidian: turn your vault into a living AI-first second brain across Claude Code, Codex, Gemini, OpenCode, Hermes, and Pi. 44 commands - self-rewriting notes, local+hybrid semantic search, key-less web research, /obsidian-architect codebase docs, and scheduled agents that maintain the vault while you sleep.",
+      "author": "eugeniughelbur",
       "language": "Python",
-      "stars": 2913,
-      "forks": 557,
+      "stars": 2952,
+      "forks": 354,
       "license": "MIT",
-      "updatedAt": "2026-06-18",
+      "updatedAt": "2026-07-03",
       "archived": false,
       "openIssues": 0,
-      "recommendScore": 85,
+      "recommendScore": 91,
       "rawRecommendScore": 69,
       "scores": {
-        "vibeCodingLearning": 20,
+        "vibeCodingLearning": 19,
         "officeAutomation": 3,
         "monetizationPotential": 5,
-        "codexFriendly": 10,
-        "beginnerFriendly": 9,
-        "localFirst": 6,
+        "codexFriendly": 9,
+        "beginnerFriendly": 8,
+        "localFirst": 7,
         "activity": 5,
         "license": 5
       },
@@ -243,7 +346,7 @@
           {
             "key": "vibeCodingLearning",
             "label": "Vibe Coding 学习价值",
-            "score": 20,
+            "score": 19,
             "max": 20
           },
           {
@@ -261,19 +364,19 @@
           {
             "key": "codexFriendly",
             "label": "Codex 改造友好度",
-            "score": 10,
+            "score": 9,
             "max": 15
           },
           {
             "key": "beginnerFriendly",
             "label": "新手学习友好度",
-            "score": 9,
+            "score": 8,
             "max": 10
           },
           {
             "key": "localFirst",
             "label": "本地/免费优先",
-            "score": 6,
+            "score": 7,
             "max": 10
           },
           {
@@ -291,31 +394,63 @@
         ],
         "penalties": [],
         "bonuses": [
-          "命中白名单 1 个，加 2 分",
+          "命中白名单 2 个，加 4 分",
           "优先语言 Python，加 5 分"
         ]
       },
-      "vibeCodingValue": "高 - Python 项目，2913 Star，属于「Office 文档自动化」方向，适合阅读学习核心机制",
+      "vibeCodingValue": "完美契合 Codex、Skill 和 Agent 方向。该项目展示了如何为 Codex/Claude Code 编写复杂的跨平台 Skill，包含丰富的 Prompt 模式、本地文件操作和 Agent 调度逻辑，非常适合作为 Vibe Coding 的学习案例，或提取其机制用于课程制作与副业项目开发。",
       "officeAutomationValue": "低 - 与办公自动化关系不大，但有通用学习价值",
       "monetizationPotential": "低 - 暂不适合直接变现，可学习技术",
-      "codexFriendly": "中 - 可阅读学习，改造难度需评估",
+      "codexFriendly": "极高。项目本身就是为 Codex CLI 和 Claude Code 设计的 Skill，提供了完整的指令集和本地文件操作逻辑，可直接作为 Codex 的扩展技能使用，或作为开发自定义 Codex Skill 的脚手架。",
       "riskPoints": "未发现明显风险",
-      "matchedArea": "Office 文档自动化",
+      "matchedArea": "个人效率工具",
       "penalties": [],
       "bonuses": [
-        "命中白名单 1 个，加 2 分",
+        "命中白名单 2 个，加 4 分",
         "优先语言 Python，加 5 分"
       ],
       "qualityGate": {
         "passed": true,
         "relevanceSignals": [
+          "codex",
           "claude code"
         ],
         "failures": []
       },
       "ruleScore": 85,
-      "reviewProvider": "rules-fallback",
-      "feedbackId": "github:nicedreamzapp/claude-code-local",
+      "semanticReview": {
+        "shouldRecommend": true,
+        "score": 91,
+        "type": "其他",
+        "oneLineConclusion": "一个原生支持 Codex 和 Claude Code 的 Obsidian 跨平台 Skill，通过 44 个指令和自动化 Agent 实现知识库的自我重写与维护。",
+        "whatHappened": "开发者开源了 obsidian-second-brain，这是一个基于 Karpathy LLM Wiki 模式演进的跨 CLI Skill（支持 Codex、Claude Code、Gemini 等）。它包含 44 个命令，能通过 Agent 自动重写笔记、解决冲突、进行网络检索，甚至扫描代码库生成架构文档（/obsidian-architect）。",
+        "consumerUseCase": "用户可以通过 Codex 或 Claude Code 终端直接调用指令（如 `/obsidian-save`, `/research-deep`），让 AI 自动整理会议记录、总结音视频、进行深度搜索，并在后台自动维护和更新 Obsidian 知识库，无需手动整理碎片信息。",
+        "valueForRafael": "完美契合 Codex、Skill 和 Agent 方向。该项目展示了如何为 Codex/Claude Code 编写复杂的跨平台 Skill，包含丰富的 Prompt 模式、本地文件操作和 Agent 调度逻辑，非常适合作为 Vibe Coding 的学习案例，或提取其机制用于课程制作与副业项目开发。",
+        "codexIntegrationPotential": "极高。项目本身就是为 Codex CLI 和 Claude Code 设计的 Skill，提供了完整的指令集和本地文件操作逻辑，可直接作为 Codex 的扩展技能使用，或作为开发自定义 Codex Skill 的脚手架。",
+        "actionSuggestion": "建议 Clone 该项目，重点阅读其指令注册机制（Command Schema）和 Agent 调度逻辑，测试其在 Codex CLI 下的实际表现。可提取其核心的“自我重写”和“冲突解决”逻辑，用于自己的效率工具开发。",
+        "reasons": [
+          "高度匹配 Codex 和 Skill 标签，原生支持 Codex CLI 和 Claude Code",
+          "包含 44 个实用指令和 4 个后台 Agent，自动化程度高，展示了高级的 Vibe Coding 玩法",
+          "2.9k Star 的优质 Python 开源项目，代码架构和 Prompt 设计具有极高学习价值",
+          "创新性地将 AI 辅助编程工具的 CLI 用于个人知识库管理，思路新颖"
+        ],
+        "risksOrMissingInfo": [
+          "需要配置多个 API Key（如 Perplexity, Grok, Gemini 等）才能体验完整功能",
+          "作为 CLI 工具，对普通非技术用户的上手门槛较高",
+          "频繁的自动化重写可能会对 Obsidian 本地文件造成意外覆盖，使用前需做好 Vault 备份"
+        ],
+        "evidenceRequired": true,
+        "dimensions": {
+          "rafaelMatch": 24,
+          "consumerUsability": 16,
+          "ecosystemRelevance": 20,
+          "actionableValue": 14,
+          "sourceReliability": 9,
+          "freshness": 8
+        }
+      },
+      "reviewProvider": "vertex",
+      "feedbackId": "github:eugeniughelbur/obsidian-second-brain",
       "category": "github",
       "decision": "allow_new",
       "reason": "never_pushed",
@@ -332,13 +467,13 @@
   ],
   "watchProjects": [],
   "notRecommendedProjects": [],
-  "codexPrompt": "请帮我只读分析以下 GitHub 项目，不要运行、不要安装、不要 clone、不要改代码。请分析项目结构、核心机制、可学习点、可迁移点、变现启发点。每个新名词先用小白能懂的话解释。最后沉淀成 Markdown 文件。\n\n项目地址：https://github.com/zarazhangrui/lark-coding-agent-bridge\n项目名：lark-coding-agent-bridge\n日期：2026-07-04\n\n分析要求：\n1. 用一句话解释它是什么\n2. 为什么值得我今天读\n3. 今天只读哪些文件（30-45 分钟）\n4. 仓库结构拆解\n5. 可迁移经验\n6. 个人变现判断\n7. 沉淀成 Markdown 模板\n\n安全要求：\n- 不运行任何代码\n- 不安装任何依赖\n- 不 clone 陌生项目\n- 不执行第三方脚本\n- 只做只读分析",
-  "markdownTemplate": "# 2026-07-04 Vibe Coding GitHub 学习沉淀\n\n## 项目基本信息\n- 项目名：lark-coding-agent-bridge\n- GitHub 链接：https://github.com/zarazhangrui/lark-coding-agent-bridge\n- 作者：zarazhangrui\n- 语言：TypeScript\n- Star：1661\n- License：MIT\n\n## 为什么选它\n\n## 它属于哪类机会\n- [ ] 办公自动化\n- [ ] 变现工具\n- [ ] 新鲜有趣\n- [ ] 学习技术\n- [ ] Codex 改造\n\n## 我读了哪些文件\n\n## 我学到的 3 个机制\n1. \n2. \n3. \n\n## 我没懂的地方\n\n## 可迁移到我的 Vibe Coding 实践的点\n\n## 可能的变现方式\n\n## 是否值得让 Codex 深挖\n\n## 我的主观评分（1-10）",
+  "codexPrompt": "请帮我只读分析以下 GitHub 项目，不要运行、不要安装、不要 clone、不要改代码。请分析项目结构、核心机制、可学习点、可迁移点、变现启发点。每个新名词先用小白能懂的话解释。最后沉淀成 Markdown 文件。\n\n项目地址：https://github.com/nicedreamzapp/claude-code-local\n项目名：claude-code-local\n日期：2026-07-04\n\n分析要求：\n1. 用一句话解释它是什么\n2. 为什么值得我今天读\n3. 今天只读哪些文件（30-45 分钟）\n4. 仓库结构拆解\n5. 可迁移经验\n6. 个人变现判断\n7. 沉淀成 Markdown 模板\n\n安全要求：\n- 不运行任何代码\n- 不安装任何依赖\n- 不 clone 陌生项目\n- 不执行第三方脚本\n- 只做只读分析",
+  "markdownTemplate": "# 2026-07-04 Vibe Coding GitHub 学习沉淀\n\n## 项目基本信息\n- 项目名：claude-code-local\n- GitHub 链接：https://github.com/nicedreamzapp/claude-code-local\n- 作者：nicedreamzapp\n- 语言：Python\n- Star：2915\n- License：MIT\n\n## 为什么选它\n\n## 它属于哪类机会\n- [ ] 办公自动化\n- [ ] 变现工具\n- [ ] 新鲜有趣\n- [ ] 学习技术\n- [ ] Codex 改造\n\n## 我读了哪些文件\n\n## 我学到的 3 个机制\n1. \n2. \n3. \n\n## 我没懂的地方\n\n## 可迁移到我的 Vibe Coding 实践的点\n\n## 可能的变现方式\n\n## 是否值得让 Codex 深挖\n\n## 我的主观评分（1-10）",
   "tomorrowDirections": [
     "办公自动化：继续深挖 Word/Excel/PDF 生成库，关注模板填充和批量处理",
     "变现工具：关注可包装成模板服务或 SaaS 的小工具",
     "Codex 改造：寻找结构更清晰、更适合拆解的入门项目"
   ],
   "configSource": "config/focus.json",
-  "updatedAt": "2026-07-04T02:10:58.122Z"
+  "updatedAt": "2026-07-04T23:31:45.692Z"
 }

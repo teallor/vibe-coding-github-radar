@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-04T15:04:23.006Z",
+  "updatedAt": "2026-07-05T00:13:45.868Z",
   "items": [
     {
       "feedbackId": "podcast:test123",
@@ -25,15 +25,40 @@
         ],
         "negativeSignals": []
       }
+    },
+    {
+      "feedbackId": "podcast:live-feishu-test",
+      "category": "podcast",
+      "title": "",
+      "url": "",
+      "firstSeenDate": "2026-07-05",
+      "lastPushedDate": null,
+      "feedbackDate": "2026-07-05",
+      "feedbackType": "positive",
+      "rawFeedback": "已读不错",
+      "note": "测试真实飞书自动反馈",
+      "allowRepeat": false,
+      "source": "feishu",
+      "sourceEventId": "8ea3983fdb29bb1518c0f62a4309bcc4",
+      "sourceMessageId": "om_x100b6bae55bf78a0c00265e8eee16ed",
+      "learnedPreference": {
+        "preferMoreLikeThis": true,
+        "avoidMoreLikeThis": false,
+        "keywords": [
+          "测试真实飞书自动反馈"
+        ],
+        "negativeSignals": []
+      }
     }
   ],
   "summaryMemory": {
     "positiveSignals": [
-      "测试飞书自动反馈"
+      "测试飞书自动反馈",
+      "测试真实飞书自动反馈"
     ],
     "negativeSignals": [],
     "duplicateSignals": [],
     "allowRepeatSignals": [],
-    "lastUpdatedAt": "2026-07-04T15:04:23.006Z"
+    "lastUpdatedAt": "2026-07-05T00:13:45.868Z"
   }
 }

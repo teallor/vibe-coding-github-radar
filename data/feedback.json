@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-05T01:19:10.543Z",
+  "updatedAt": "2026-07-05T05:54:06.292Z",
   "items": [
     {
       "feedbackId": "podcast:test123",
@@ -49,16 +49,41 @@
         ],
         "negativeSignals": []
       }
+    },
+    {
+      "feedbackId": "podcast:group-live-test",
+      "category": "podcast",
+      "title": "",
+      "url": "",
+      "firstSeenDate": "2026-07-05",
+      "lastPushedDate": null,
+      "feedbackDate": "2026-07-05",
+      "feedbackType": "positive",
+      "rawFeedback": "已读不错",
+      "note": "测试飞书群自动反馈",
+      "allowRepeat": false,
+      "source": "feishu",
+      "sourceEventId": "6307a1a2ab22e0f65edb478a2ef9a897",
+      "sourceMessageId": "om_x100b6bab59706ca4c000cfc4ba5817c",
+      "learnedPreference": {
+        "preferMoreLikeThis": true,
+        "avoidMoreLikeThis": false,
+        "keywords": [
+          "测试飞书群自动反馈"
+        ],
+        "negativeSignals": []
+      }
     }
   ],
   "summaryMemory": {
     "positiveSignals": [
       "测试飞书自动反馈",
-      "测试真实飞书自动反馈"
+      "测试真实飞书自动反馈",
+      "测试飞书群自动反馈"
     ],
     "negativeSignals": [],
     "duplicateSignals": [],
     "allowRepeatSignals": [],
-    "lastUpdatedAt": "2026-07-05T01:19:10.543Z"
+    "lastUpdatedAt": "2026-07-05T05:54:06.292Z"
   }
 }

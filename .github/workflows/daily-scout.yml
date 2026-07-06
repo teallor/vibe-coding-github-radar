@@ -53,6 +53,14 @@ jobs:
             npm install
           fi
 
+      - name: Run configuration and workflow smoke tests
+        run: |
+          echo "Running credential-free tests before public discovery or delivery."
+          if ! npm test; then
+            echo "::error::Smoke tests failed. Review the failing test name before running discovery or Feishu delivery."
+            exit 1
+          fi
+
       - name: Log workflow schedule and actual start times
         run: node scripts/time-utils.js --workflow
         env:

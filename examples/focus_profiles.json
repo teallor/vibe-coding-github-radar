@@ -1,0 +1,102 @@
+{
+  "formatVersion": 1,
+  "integrationStatus": "sample-only",
+  "profiles": [
+    {
+      "id": "codex-ai-coding",
+      "keywords": [
+        "codex cli",
+        "ai coding agent",
+        "coding assistant",
+        "mcp developer tools"
+      ],
+      "exclude_keywords": [
+        "crypto",
+        "casino",
+        "email scraper",
+        "unofficial crack"
+      ],
+      "scoring_weights": {
+        "vibeCodingLearning": 25,
+        "officeAutomation": 5,
+        "monetizationPotential": 5,
+        "codexFriendly": 30,
+        "beginnerFriendly": 15,
+        "localFirst": 10,
+        "activity": 5,
+        "license": 5
+      },
+      "preferred_evidence": [
+        "public README with setup and usage",
+        "tests or visible CI",
+        "recent public commits or releases",
+        "clear open-source license"
+      ],
+      "report_focus": "Explain the coding workflow, extension points, evidence of maintenance, and whether a learner can reproduce the setup."
+    },
+    {
+      "id": "office-automation",
+      "keywords": [
+        "document automation",
+        "excel automation",
+        "docx xlsx pptx",
+        "pdf workflow"
+      ],
+      "exclude_keywords": [
+        "email scraper",
+        "lead harvesting",
+        "proprietary template dump",
+        "malware"
+      ],
+      "scoring_weights": {
+        "vibeCodingLearning": 15,
+        "officeAutomation": 35,
+        "monetizationPotential": 10,
+        "codexFriendly": 10,
+        "beginnerFriendly": 10,
+        "localFirst": 10,
+        "activity": 5,
+        "license": 5
+      },
+      "preferred_evidence": [
+        "documented supported file formats",
+        "sample input and output",
+        "local execution instructions",
+        "tests for document conversion or generation"
+      ],
+      "report_focus": "Describe the concrete office task, supported formats, local or cloud requirements, and reusable automation value."
+    },
+    {
+      "id": "oss-learning",
+      "keywords": [
+        "beginner friendly open source",
+        "well documented javascript",
+        "well documented python",
+        "good first issue developer tool"
+      ],
+      "exclude_keywords": [
+        "archived",
+        "source unavailable",
+        "license unknown",
+        "tutorial copy"
+      ],
+      "scoring_weights": {
+        "vibeCodingLearning": 30,
+        "officeAutomation": 5,
+        "monetizationPotential": 5,
+        "codexFriendly": 15,
+        "beginnerFriendly": 25,
+        "localFirst": 5,
+        "activity": 10,
+        "license": 5
+      },
+      "preferred_evidence": [
+        "clear architecture or contributor documentation",
+        "automated tests",
+        "active issue or pull-request workflow",
+        "recent maintainer activity"
+      ],
+      "report_focus": "Explain what can be learned, where to start reading, how contribution works, and what maintenance evidence is public."
+    }
+  ]
+}

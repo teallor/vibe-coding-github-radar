@@ -132,6 +132,8 @@ workers/      Optional Feishu feedback adapters
 - [Changelog](CHANGELOG.md)
 - [OpenAI Codex for Open Source review notes](docs/OPENAI_CODEX_FOR_OSS_EVIDENCE.md)
 - [Scoring transparency and examples](docs/SCORING_EXAMPLES.md)
+- [Focus profiles guide](docs/FOCUS_PROFILES.md)
+- [Focus profiles sample](examples/focus_profiles.json)
 - [Operations and troubleshooting](docs/TROUBLESHOOTING.md)
 - [Documentation index](docs/README.md)
 - [MIT License](LICENSE)

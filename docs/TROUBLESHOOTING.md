@@ -13,6 +13,24 @@ This guide covers the repository's current local and GitHub Actions workflows. S
 
 If a manual run works but a scheduled run does not start on time, preserve the run URL and timestamps in an issue. Do not present a delayed schedule as a successful on-time run.
 
+## Actions failure categories
+
+Use the first failed step to classify the problem before changing configuration:
+
+| Failed step or signal | Category | First check |
+| --- | --- | --- |
+| Install dependencies | Dependency/registry | `package-lock.json`, Node version, and npm registry availability |
+| Run configuration and workflow smoke tests | Code/config regression | Named failing test; reproduce locally with `npm test` |
+| Log workflow schedule and actual start times | Actions metadata/permissions | `GITHUB_TOKEN` availability and run metadata response |
+| Run daily scout | GitHub discovery | Search task summary, public API rate limit, network, and focus config |
+| Find and verify Codex podcasts | Public source/RSS | `[podcast-radar]` error and failing source URL |
+| Build Gemini-reviewed AI app and Codex ecosystem radar | Source or optional reviewer | `[ai-app-radar]` summary and `[llm-reviewer]` fallback message |
+| Push one combined three-part radar to Feishu | Optional delivery | secret presence, `[send-lock]`, and send-ledger status |
+| Upload evidence | Artifact retention/path | expected JSON path and earlier generation step |
+| Commit generated reports | Repository write | contents permission, concurrent remote update, and staged paths |
+
+The smoke-test step runs before public discovery and delivery, requires no credentials, and emits an Actions error annotation when tests fail. This improves failure locality but does not yet provide structured machine-readable error codes for every external source; that remaining work keeps roadmap issue #3 open.
+
 ## Discovery or report generation fails
 
 Inspect the named workflow step and its summary lines:

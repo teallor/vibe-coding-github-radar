@@ -9,6 +9,8 @@ All notable project changes will be documented here. This project follows semant
 - Scoring transparency documentation with evidence guidance and three evaluation templates.
 - Operations and troubleshooting guidance for Actions, reports, Feishu, logs, and secrets.
 - Public roadmap issues linked from the four-week maintenance plan.
+- Three validated sample focus profiles with an explicit mapping to current runtime configuration.
+- A credential-free Actions smoke-test step and documented failure categories.
 
 ## [0.1.0] - 2026-07-06
 

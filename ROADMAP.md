@@ -11,6 +11,7 @@ This roadmap describes near-term maintenance goals, not promises of adoption or 
 
 ## Week 2 — Transparent selection
 
+- Tracking issue: [#2 Improve scoring transparency with examples](https://github.com/teallor/vibe-coding-github-radar/issues/2)
 - Document scoring inputs, weights, hard filters, and fallback behavior.
 - Add small, reproducible scoring examples.
 - Improve logs for candidate counts, rejection reasons, and source failures.
@@ -18,6 +19,7 @@ This roadmap describes near-term maintenance goals, not promises of adoption or 
 
 ## Week 3 — Reliable automation
 
+- Tracking issue: [#3 Improve GitHub Actions reliability and logs](https://github.com/teallor/vibe-coding-github-radar/issues/3)
 - Improve GitHub Actions reliability and diagnostics.
 - Review network error handling and rate-limit behavior.
 - Improve report clarity and evidence links.
@@ -25,6 +27,7 @@ This roadmap describes near-term maintenance goals, not promises of adoption or 
 
 ## Week 4 — Contributor workflow
 
+- Configuration issue: [#4 Add sample configuration for focus profiles](https://github.com/teallor/vibe-coding-github-radar/issues/4)
 - Refine issue templates and pull-request review workflow from contributor feedback.
 - Document release and maintenance checklists.
 - Evaluate an optional read-only dashboard or GitHub Pages documentation site.

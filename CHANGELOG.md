@@ -4,7 +4,11 @@ All notable project changes will be documented here. This project follows semant
 
 ## [Unreleased]
 
-- Continue improving scoring transparency, contributor workflows, and automation reliability.
+### Added
+
+- Scoring transparency documentation with evidence guidance and three evaluation templates.
+- Operations and troubleshooting guidance for Actions, reports, Feishu, logs, and secrets.
+- Public roadmap issues linked from the four-week maintenance plan.
 
 ## [0.1.0] - 2026-07-06
 

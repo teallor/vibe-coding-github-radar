@@ -124,13 +124,15 @@ workers/      Optional Feishu feedback adapters
 
 ## Project governance
 
+- [v0.1.0 release](https://github.com/teallor/vibe-coding-github-radar/releases/tag/v0.1.0)
 - [Roadmap](ROADMAP.md)
 - [Contributing guide](CONTRIBUTING.md)
 - [Security policy](SECURITY.md)
 - [Code of Conduct](CODE_OF_CONDUCT.md)
 - [Changelog](CHANGELOG.md)
-- [v0.1.0 release notes](docs/RELEASE_NOTES_v0.1.0.md)
 - [OpenAI Codex for Open Source review notes](docs/OPENAI_CODEX_FOR_OSS_EVIDENCE.md)
+- [Scoring transparency and examples](docs/SCORING_EXAMPLES.md)
+- [Operations and troubleshooting](docs/TROUBLESHOOTING.md)
 - [Documentation index](docs/README.md)
 - [MIT License](LICENSE)
 

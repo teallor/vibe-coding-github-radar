@@ -20,6 +20,12 @@ This is an early-stage public OSS release. Adoption is currently limited; the re
 - Contributor activity and external adoption are limited at this early stage.
 - The project does not inspect private repositories or execute discovered code.
 
+## Safety boundary
+
+- Discovery reads public repository metadata and public content only.
+- Private repositories are not scanned, and discovered third-party code is not executed by default.
+- Secrets must be stored in GitHub Secrets or ignored local environment variables; API keys, webhooks, tokens, cookies, and credentials must never be committed.
+
 ## Maintainer workflow
 
 The maintainer uses tests, Actions logs, generated reports, and public issues to review changes. Codex may assist with documentation, issue triage, pull-request review, changelog drafting, release preparation, workflow maintenance, testing, and refactoring; the maintainer reviews changes before merge or publication.

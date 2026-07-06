@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-05T23:45:00.423Z",
+  "updatedAt": "2026-07-06T23:45:33.060Z",
   "items": [
     {
       "feedbackId": "github:bagidea/bagidea-office",
@@ -41,11 +41,13 @@
       "episodeTitle": "#606.Codex 负责人：品味与判断力为何成为你最值钱的资产",
       "publishedAt": "2026-06-30",
       "durationSeconds": 3627,
-      "shownotes": "完美契合 Rafael 对 Codex、Agent 和 Vibe Coding 的关注。节目不仅提供了 Codex 负责人的第一手产品理念，还展示了 Codex 在自动化办公（处理消息、邮件）和通用任务中的实际应用，对课程制作和副业项目的产品规划有极高的战略指导价值。",
+      "shownotes": "",
       "firstPushedDate": "2026-07-03",
-      "lastPushedDate": "2026-07-03",
-      "pushCount": 1,
-      "migrated": true
+      "lastPushedDate": "2026-07-06",
+      "pushCount": 2,
+      "migrated": true,
+      "lastDecision": "allow_unanswered_repeat",
+      "feedbackType": null
     },
     {
       "feedbackId": "podcast:ce49ae2b",
@@ -165,13 +167,13 @@
       "url": "https://github.com/JSONbored/awesome-claude",
       "podcastName": null,
       "episodeTitle": null,
-      "publishedAt": "2026-07-04T23:31:18Z",
+      "publishedAt": "2026-07-06T23:25:54Z",
       "durationSeconds": null,
       "shownotes": "",
       "firstPushedDate": "2026-07-04",
-      "lastPushedDate": "2026-07-04",
-      "pushCount": 1,
-      "lastDecision": "allow_new",
+      "lastPushedDate": "2026-07-06",
+      "pushCount": 2,
+      "lastDecision": "allow_unanswered_repeat",
       "feedbackType": null
     },
     {
@@ -298,6 +300,54 @@
       "shownotes": "",
       "firstPushedDate": "2026-07-05",
       "lastPushedDate": "2026-07-05",
+      "pushCount": 1,
+      "lastDecision": "allow_new",
+      "feedbackType": null
+    },
+    {
+      "feedbackId": "github:dyan-dev/loopi",
+      "category": "github",
+      "title": "loopi",
+      "url": "https://github.com/Dyan-Dev/loopi",
+      "podcastName": null,
+      "episodeTitle": null,
+      "publishedAt": null,
+      "durationSeconds": null,
+      "shownotes": "A desktop automation platform — control browsers, system cursor/keyboard, run shell commands, and orchestrate workflows with AI agents and 80+ integrations. Runs locally.",
+      "firstPushedDate": "2026-07-06",
+      "lastPushedDate": "2026-07-06",
+      "pushCount": 1,
+      "lastDecision": "allow_new",
+      "feedbackType": null
+    },
+    {
+      "feedbackId": "github:henrydaum/second-brain",
+      "category": "github",
+      "title": "second-brain",
+      "url": "https://github.com/henrydaum/second-brain",
+      "podcastName": null,
+      "episodeTitle": null,
+      "publishedAt": null,
+      "durationSeconds": null,
+      "shownotes": "Second Brain is an agentic framework that acts as an operating system, using local file intelligence, workflow automation, and LLMs to complete tasks and communicate over multiple modalities and messaging platforms.",
+      "firstPushedDate": "2026-07-06",
+      "lastPushedDate": "2026-07-06",
+      "pushCount": 1,
+      "lastDecision": "allow_new",
+      "feedbackType": null
+    },
+    {
+      "feedbackId": "podcast:a37ac12e",
+      "category": "podcast",
+      "title": "#576.Claude Code：工程师如何放大生产力，AI 重塑团队分工的通才时代",
+      "url": "https://www.xiaoyuzhoufm.com/episode/6a26a3e4b30e1571aea2b45c",
+      "podcastName": "跨国串门儿计划",
+      "episodeTitle": "#576.Claude Code：工程师如何放大生产力，AI 重塑团队分工的通才时代",
+      "publishedAt": "2026-06-08",
+      "durationSeconds": 1771,
+      "shownotes": "",
+      "firstPushedDate": "2026-07-06",
+      "lastPushedDate": "2026-07-06",
       "pushCount": 1,
       "lastDecision": "allow_new",
       "feedbackType": null
@@ -431,6 +481,22 @@
       "scoreDelta": 0,
       "annotation": "",
       "date": "2026-07-05"
+    },
+    {
+      "feedbackId": "aiapp:a5d3a50a",
+      "title": "JSONbored/awesome-claude",
+      "category": "aiapp",
+      "decision": "allow_unanswered_repeat",
+      "reason": "already_pushed_without_feedback",
+      "allowed": true,
+      "duplicateStatus": "repeat",
+      "firstPushedDate": "2026-07-04",
+      "lastPushedDate": "2026-07-04",
+      "feedbackType": null,
+      "hasFeedback": false,
+      "scoreDelta": -10,
+      "annotation": "⚠️ 重复推送：这条内容曾于 2026-07-04 推送过；目前没有收到任何反馈，因此本次允许重复出现。请反馈“已读不错 / 已读不行 / 重复了”，后续系统将据此处理。",
+      "date": "2026-07-06"
     }
   ],
   "migration": {

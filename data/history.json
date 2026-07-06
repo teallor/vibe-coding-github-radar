@@ -77,7 +77,33 @@
         "个人效率工具"
       ],
       "summary": "今天最值得精读的项目是 **lark-coding-agent-bridge**（推荐分 95）。完美命中你的核心关注点：1. 直接支持 Codex CLI 和 Claude Code；2. 契合你历史偏好的『飞书自动反馈/群反馈』测试场景；3. 优秀的 Agent 落地实践，可用于日常办公自动化或作为副业项目的提效工具。。可以接触新鲜有趣的技术和项目组织方式。建议用 30-45 分钟只读学习，不要安装运行，先理解核心机制和可迁移经验。"
+    },
+    {
+      "date": "2026-07-06",
+      "topPick": {
+        "name": "loopi",
+        "fullName": "Dyan-Dev/loopi",
+        "url": "https://github.com/Dyan-Dev/loopi",
+        "recommendScore": 88
+      },
+      "selectedProjects": [
+        {
+          "name": "second-brain",
+          "fullName": "henrydaum/second-brain",
+          "url": "https://github.com/henrydaum/second-brain",
+          "recommendScore": 87
+        }
+      ],
+      "profileName": "默认综合模式",
+      "focusAreas": [
+        "Office 文档自动化",
+        "个人 Vibe Coding 变现",
+        "Codex 可改造项目",
+        "新鲜有趣项目",
+        "个人效率工具"
+      ],
+      "summary": "今天最值得精读的项目是 **loopi**（推荐分 88）。1. 完美契合「Agent」与「Office 自动化」方向，提供比 n8n/Zapier 更深度的本地桌面控制能力；2. 基于 TypeScript/Electron/ReactFlow 构建，源码是学习可视化工作流和桌面控制的优秀范例，适合 Vibe Coding 学习；3. 可基于此框架二次开发，包装成特定行业的自动化小工具进行副业变现。。有个人变现潜力。建议用 30-45 分钟只读学习，不要安装运行，先理解核心机制和可迁移经验。"
     }
   ],
-  "updatedAt": "2026-07-05T23:37:57.261Z"
+  "updatedAt": "2026-07-06T23:38:39.456Z"
 }

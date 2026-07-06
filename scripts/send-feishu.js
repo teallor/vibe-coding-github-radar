@@ -7,12 +7,13 @@ const { logTime, delayDiagnostic, triggerContext, waitUntilTarget } = require('.
 const { recordPushed, loadLedger, decisionFor } = require('./dedupe');
 const { loadFeedback } = require('./feedback-memory');
 const { loadSendLedger, messageDigest, evaluateSend, recordSend } = require('./send-ledger');
+const { formatDiagnostic, categorizedError } = require('./error-categories');
 
 const REPOSITORY = process.env.GITHUB_REPOSITORY || 'teallor/vibe-coding-github-radar';
 
 function requiredEnv(name) {
   const value = process.env[name];
-  if (!value) throw new Error(`Missing required environment variable: ${name}`);
+  if (!value) throw categorizedError('ENVIRONMENT_VALIDATION_FAILURE', `Missing required environment variable: ${name}`);
   return value;
 }
 
@@ -292,7 +293,7 @@ async function main() {
 
 if (require.main === module) {
   main().catch(error => {
-    console.error(error.message);
+    console.error(formatDiagnostic(error.errorCode || 'FEISHU_DELIVERY_FAILURE', error));
     process.exit(1);
   });
 }

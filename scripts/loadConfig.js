@@ -10,6 +10,7 @@
 
 const fs = require('fs');
 const path = require('path');
+const { formatDiagnostic } = require('./error-categories');
 
 // Fallback 默认配置（只在两个配置文件都不存在时使用）
 const FALLBACK_CONFIG = {
@@ -142,6 +143,7 @@ function loadConfig() {
       return { config, source: 'config/focus.json' };
     } catch (e) {
       console.warn('⚠️ config/focus.json 解析失败，尝试默认配置:', e.message);
+      console.warn(formatDiagnostic('CONFIG_VALIDATION_FAILURE', e));
     }
   }
 
@@ -151,6 +153,7 @@ function loadConfig() {
       return { config, source: 'config/default-focus.json' };
     } catch (e) {
       console.warn('⚠️ config/default-focus.json 解析失败，使用 fallback:', e.message);
+      console.warn(formatDiagnostic('CONFIG_VALIDATION_FAILURE', e));
     }
   }
 

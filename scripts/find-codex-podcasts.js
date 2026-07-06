@@ -9,6 +9,7 @@ const { XMLParser } = require('fast-xml-parser');
 const { loadRuntimeConfig } = require('./runtime-config');
 const { reviewCandidate } = require('./llm-reviewer');
 const { enrichAndFilter } = require('./dedupe');
+const { formatDiagnostic } = require('./error-categories');
 
 const OUTPUT = path.join(process.cwd(), 'data', 'codex-podcasts-latest.json');
 const MAX_FEEDS = 100;
@@ -190,6 +191,7 @@ async function discoverFeeds() {
       } catch (error) {
         const reason = `Apple Podcasts (${country}, “${term}”) 失败: ${error.message}`;
         failures.push(reason); log(reason);
+        console.warn(formatDiagnostic('RSS_SOURCE_FAILURE', error));
         return [];
       }
   });
@@ -238,6 +240,7 @@ async function scanFeeds(feeds, sourceFailures) {
     } catch (error) {
       const reason = `RSS 解析失败 (${indexedName}, ${feedUrl}): ${error.message}`;
       failures.push(reason); log(reason);
+      console.warn(formatDiagnostic('RSS_SOURCE_FAILURE', error));
     }
   });
   return { candidates, failures };

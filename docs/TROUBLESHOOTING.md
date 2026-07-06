@@ -29,7 +29,23 @@ Use the first failed step to classify the problem before changing configuration:
 | Upload evidence | Artifact retention/path | expected JSON path and earlier generation step |
 | Commit generated reports | Repository write | contents permission, concurrent remote update, and staged paths |
 
-The smoke-test step runs before public discovery and delivery, requires no credentials, and emits an Actions error annotation when tests fail. This improves failure locality but does not yet provide structured machine-readable error codes for every external source; that remaining work keeps roadmap issue #3 open.
+The smoke-test step runs before public discovery and delivery, requires no credentials, and emits an Actions error annotation when tests fail. Runtime paths now share the structured categories below so source failures and deliberate fallbacks remain auditable.
+
+## Structured error codes
+
+Runtime diagnostics use `[structured-error]` followed by one JSON object. The shared catalog in `scripts/error-categories.js` always includes `error_code`, `human_readable_message`, `likely_causes`, `suggested_fix`, `workflow_behavior`, and a sanitized `detail`. Query strings and credential-shaped values are redacted before logging.
+
+| `error_code` | Meaning | Workflow behavior | What to do |
+| --- | --- | --- | --- |
+| `GITHUB_SOURCE_FAILURE` | Public GitHub repository search/read failed | Degrade gracefully and continue other queries | Check rate-limit and HTTP status logs; retry later without lowering quality gates |
+| `RSS_SOURCE_FAILURE` | Podcast/RSS source fetch or parse failed | Degrade gracefully and continue other feeds | Inspect the named public feed and retry once |
+| `AI_REVIEWER_FAILURE` | Optional AI review timed out, failed, or returned invalid JSON | Degrade gracefully to rule scoring | Check optional provider configuration and confirm the log states the fallback |
+| `FEISHU_DELIVERY_FAILURE` | Feishu rejected or did not receive delivery | Fail the delivery step | Check redacted response context, Secrets, and send ledger before a manual retry |
+| `CONFIG_VALIDATION_FAILURE` | Focus/default configuration could not be parsed | Degrade gracefully to documented fallback | Validate JSON and compare changed fields with the default config |
+| `ENVIRONMENT_VALIDATION_FAILURE` | A required value for the requested operation is absent/invalid | Fail that requested operation | Configure the named GitHub Secret or environment variable; never commit its value |
+| `SCHEDULE_RUNTIME_FAILURE` | Actions timing/runtime metadata was unavailable | Degrade gracefully while preserving local timestamps | Compare scheduled, actual-start, generation, and delivery times |
+
+`degrade_gracefully` means the affected optional source or reviewer is recorded and the remaining safe workflow continues. `fail_hard` means the requested delivery or operation cannot be truthfully reported as successful. A graceful fallback is not evidence that the failed source succeeded; use the detail, source-failure arrays, and artifacts together.
 
 ## Discovery or report generation fails
 

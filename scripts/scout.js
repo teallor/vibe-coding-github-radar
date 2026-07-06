@@ -30,6 +30,7 @@ const { generateReport, generateCodexPrompt, generateMarkdownTemplate } = requir
 const { loadRuntimeConfig } = require('./runtime-config');
 const { reviewCandidate } = require('./llm-reviewer');
 const { enrichAndFilter } = require('./dedupe');
+const { formatDiagnostic } = require('./error-categories');
 
 // GitHub API 配置
 const GITHUB_API = 'https://api.github.com';
@@ -106,6 +107,7 @@ async function main() {
       searchStats.failed += 1;
       searchStats.complete = false;
       console.error(`  ❌ 搜索失败: ${e.message}`);
+      console.error(formatDiagnostic('GITHUB_SOURCE_FAILURE', e));
       // 继续下一个搜索任务
     }
   }
@@ -123,6 +125,7 @@ async function main() {
         searchStats.failed += 1;
         searchStats.complete = false;
         console.error(`  ❌ 补抓失败: ${error.message}`);
+        console.error(formatDiagnostic('GITHUB_SOURCE_FAILURE', error));
       }
     }
   }

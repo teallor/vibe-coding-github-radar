@@ -2,6 +2,7 @@ const { execFile } = require('child_process');
 const { promisify } = require('util');
 const execFileAsync = promisify(execFile);
 const { loadFeedback, feedbackSummaryText } = require('./feedback-memory');
+const { formatDiagnostic } = require('./error-categories');
 
 const TYPES = ['Codex', 'Skill', 'MCP', '插件', 'Agent 工具', 'AI 产品功能', '模型更新', '其他'];
 
@@ -116,6 +117,7 @@ async function reviewCandidate(candidate, radarType, userProfile, config, option
     return { status: 'success', provider: 'gemini-api', model, review };
   } catch (error) {
     console.warn(`[llm-reviewer] Gemini review unavailable; using rules: ${error.name === 'AbortError' ? 'timeout' : error.message.slice(0, 240)}`);
+    console.warn(formatDiagnostic('AI_REVIEWER_FAILURE', error));
     return unavailable(error.name === 'AbortError' ? 'timeout' : 'request or JSON parsing failed');
   }
 }

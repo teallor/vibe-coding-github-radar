@@ -1,6 +1,6 @@
 {
   "name": "vibe-coding-github-radar",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "一个可调整需求画像的 GitHub 机会雷达，用于个人 Vibe Coding 学习、办公自动化、个人变现和新鲜有趣项目发现",
   "author": "Rafael_Huang",
   "license": "MIT",
@@ -14,7 +14,7 @@
     "preview": "node scripts/radar-cli.js preview",
     "send-test": "node scripts/radar-cli.js send-test",
     "full-run": "node scripts/radar-cli.js full-run",
-    "test": "node --test test/github-radar.test.js test/podcast-radar.test.js test/ai-app-radar.test.js test/daily-report.test.js test/schedule.test.js test/send-ledger.test.js test/focus-profiles.test.js && npm run test:feedback && npm run test:schedule && npm run test:feishu-feedback",
+    "test": "node --test test/github-radar.test.js test/podcast-radar.test.js test/ai-app-radar.test.js test/daily-report.test.js test/schedule.test.js test/send-ledger.test.js test/focus-profiles.test.js test/error-categories.test.js && npm run test:feedback && npm run test:schedule && npm run test:feishu-feedback",
     "test:feedback": "node scripts/test-feedback-dedupe.js",
     "test:schedule": "node scripts/test-schedule-time.js",
     "test:feishu-feedback": "node scripts/test-feishu-feedback-worker.js && node scripts/test-feishu-feedback-cloud-run.js",

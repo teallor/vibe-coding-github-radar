@@ -1,3 +1,4 @@
+const { formatDiagnostic } = require('./error-categories');
 const TARGET = { timezone: 'Asia/Shanghai', hour: 6, minute: 45 };
 const WORKFLOW_START = { timezone: 'Asia/Shanghai', hour: 6, minute: 20 };
 function parts(date, timeZone = TARGET.timezone) { return Object.fromEntries(new Intl.DateTimeFormat('en-CA', { timeZone, year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit', hourCycle: 'h23' }).formatToParts(date).filter(x => x.type !== 'literal').map(x => [x.type, x.value])); }
@@ -38,7 +39,7 @@ async function logWorkflowTimes(env = process.env) {
       const run = await response.json();
       if (run.created_at) logTime('workflow actual start time', new Date(run.created_at));
       if (run.run_started_at) logTime('workflow job start time', new Date(run.run_started_at));
-    } catch (e) { console.warn(`[time] 无法读取 Actions 运行元数据：${e.message}`); }
+    } catch (e) { console.warn(`[time] 无法读取 Actions 运行元数据：${e.message}`); console.warn(formatDiagnostic('SCHEDULE_RUNTIME_FAILURE', e)); }
   }
   logTime('workflow job start time (local marker)', new Date());
 }

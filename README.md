@@ -1,6 +1,7 @@
 # Vibe Coding GitHub Radar
 
 [![Daily GitHub Scout](https://github.com/teallor/vibe-coding-github-radar/actions/workflows/daily-scout.yml/badge.svg)](https://github.com/teallor/vibe-coding-github-radar/actions/workflows/daily-scout.yml)
+[![CI](https://github.com/teallor/vibe-coding-github-radar/actions/workflows/ci.yml/badge.svg)](https://github.com/teallor/vibe-coding-github-radar/actions/workflows/ci.yml)
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Last commit](https://img.shields.io/github/last-commit/teallor/vibe-coding-github-radar)](https://github.com/teallor/vibe-coding-github-radar/commits/main)
 [![Status: early stage](https://img.shields.io/badge/status-early--stage-orange)](ROADMAP.md)

@@ -16,7 +16,7 @@ The original-author attribution is retained in the README, package metadata, lic
 
 ## 3. Project status
 
-This is an **early-stage, actively maintained** project. Current adoption metrics are limited, and no claim of broad adoption, institutional endorsement, or affiliation is made. The repository already contains working automation, generated public reports, configuration, tests, and maintenance history, while its governance and contributor experience continue to mature.
+This repository is **early-stage but actively maintained**. Current adoption metrics are limited, and I am not claiming adoption metrics that do not exist. No claim of broad community use, institutional endorsement, OpenAI affiliation, or guaranteed acceptance is made. The repository contains working automation, generated public reports, configuration, tests, releases, and maintenance history, while its contributor experience continues to mature.
 
 ## 4. Why this repository qualifies
 
@@ -51,12 +51,20 @@ I am **not requesting Codex Security at this stage**. The project is early-stage
 Evidence available directly in the repository includes:
 
 - a scheduled and manually runnable GitHub Actions workflow;
-- automated Node.js tests covering radar rules, reporting, scheduling, deduplication, delivery safeguards, and feedback adapters;
+- an independent, credential-free `CI` workflow for pushes and pull requests;
+- 34 automated Node.js test cases covering radar rules, reports, scheduling, error categories, configuration samples, deduplication, and delivery safeguards, plus supplementary feedback and adapter checks;
 - dated generated reports and auditable data files;
 - configurable discovery, scoring, and runtime settings;
 - commit history showing iterative workflow and feedback maintenance;
 - a changelog, four-week roadmap, contribution guide, security policy, issue templates, and release notes; and
 - workflow artifacts that retain screening evidence for review.
+
+Public maintenance milestones are directly verifiable:
+
+- [v0.1.0](https://github.com/teallor/vibe-coding-github-radar/releases/tag/v0.1.0) is published as the initial public OSS release.
+- [Issue #2](https://github.com/teallor/vibe-coding-github-radar/issues/2) is closed with commit evidence for scoring transparency.
+- [Issue #4](https://github.com/teallor/vibe-coding-github-radar/issues/4) is closed with commit and test evidence for sample focus profiles.
+- [Issue #3](https://github.com/teallor/vibe-coding-github-radar/issues/3) is closed with commit and test evidence for structured workflow errors, troubleshooting, and independent CI.
 
 These items are inspectable repository evidence; they are not claims about user count or community adoption.
 
@@ -73,6 +81,6 @@ These items are inspectable repository evidence; they are not claims about user 
 
 ## 10. Roadmap
 
-The near-term roadmap prioritizes documentation and v0.1.0, scoring transparency and examples, GitHub Actions reliability and report quality, and a stronger issue/review workflow. See [`ROADMAP.md`](../ROADMAP.md) for the four-week plan and [`CHANGELOG.md`](../CHANGELOG.md) for the current release record.
+The initial roadmap items for scoring transparency, sample focus profiles, and Actions reliability are completed with public issue and commit evidence. Future work should follow genuine maintenance needs rather than creating activity for appearance. See [`ROADMAP.md`](../ROADMAP.md) and [`CHANGELOG.md`](../CHANGELOG.md).
 
 This review note is intended to make the repository easier to assess honestly. It does not guarantee acceptance and does not replace the application form or OpenAI's review process.

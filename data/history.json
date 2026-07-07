@@ -103,7 +103,33 @@
         "个人效率工具"
       ],
       "summary": "今天最值得精读的项目是 **loopi**（推荐分 88）。1. 完美契合「Agent」与「Office 自动化」方向，提供比 n8n/Zapier 更深度的本地桌面控制能力；2. 基于 TypeScript/Electron/ReactFlow 构建，源码是学习可视化工作流和桌面控制的优秀范例，适合 Vibe Coding 学习；3. 可基于此框架二次开发，包装成特定行业的自动化小工具进行副业变现。。有个人变现潜力。建议用 30-45 分钟只读学习，不要安装运行，先理解核心机制和可迁移经验。"
+    },
+    {
+      "date": "2026-07-07",
+      "topPick": {
+        "name": "DDC_Skills_for_AI_Agents_in_Construction",
+        "fullName": "datadrivenconstruction/DDC_Skills_for_AI_Agents_in_Construction",
+        "url": "https://github.com/datadrivenconstruction/DDC_Skills_for_AI_Agents_in_Construction",
+        "recommendScore": 87
+      },
+      "selectedProjects": [
+        {
+          "name": "lark-coding-agent-bridge",
+          "fullName": "zarazhangrui/lark-coding-agent-bridge",
+          "url": "https://github.com/zarazhangrui/lark-coding-agent-bridge",
+          "recommendScore": 96
+        }
+      ],
+      "profileName": "默认综合模式",
+      "focusAreas": [
+        "Office 文档自动化",
+        "个人 Vibe Coding 变现",
+        "Codex 可改造项目",
+        "新鲜有趣项目",
+        "个人效率工具"
+      ],
+      "summary": "今天最值得精读的项目是 **DDC_Skills_for_AI_Agents_in_Construction**（推荐分 87）。1. 完美契合 Vibe Coding 和 Skills 概念，展示了如何通过结构化的 Markdown 文件指导 AI 助手。\n2. 包含大量 Office 自动化（Excel, DOCX, PPTX）的实际用例，可直接提取用于课程制作或副业项目。\n3. 提供了将复杂业务拆解为 AI Agent 可执行技能的优秀范式。。对办公自动化有直接价值。建议用 30-45 分钟只读学习，不要安装运行，先理解核心机制和可迁移经验。"
     }
   ],
-  "updatedAt": "2026-07-06T23:38:39.456Z"
+  "updatedAt": "2026-07-07T23:30:28.688Z"
 }

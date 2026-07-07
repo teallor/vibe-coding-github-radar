@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-06T23:45:33.060Z",
+  "updatedAt": "2026-07-07T23:37:20.756Z",
   "items": [
     {
       "feedbackId": "github:bagidea/bagidea-office",
@@ -155,9 +155,9 @@
       "durationSeconds": 1988,
       "shownotes": "",
       "firstPushedDate": "2026-07-04",
-      "lastPushedDate": "2026-07-04",
-      "pushCount": 1,
-      "lastDecision": "allow_new",
+      "lastPushedDate": "2026-07-07",
+      "pushCount": 2,
+      "lastDecision": "allow_unanswered_repeat",
       "feedbackType": null
     },
     {
@@ -203,9 +203,9 @@
       "durationSeconds": null,
       "shownotes": "Bot that bridges Feishu/Lark messenger with a local Claude Code or Codex CLI. Streaming cards, per-chat sessions, multiple workspaces",
       "firstPushedDate": "2026-07-05",
-      "lastPushedDate": "2026-07-05",
-      "pushCount": 1,
-      "lastDecision": "allow_new",
+      "lastPushedDate": "2026-07-07",
+      "pushCount": 2,
+      "lastDecision": "allow_unanswered_repeat",
       "feedbackType": null
     },
     {
@@ -251,9 +251,9 @@
       "durationSeconds": 2310,
       "shownotes": "",
       "firstPushedDate": "2026-07-05",
-      "lastPushedDate": "2026-07-05",
-      "pushCount": 1,
-      "lastDecision": "allow_new",
+      "lastPushedDate": "2026-07-07",
+      "pushCount": 2,
+      "lastDecision": "allow_unanswered_repeat",
       "feedbackType": null
     },
     {
@@ -348,6 +348,54 @@
       "shownotes": "",
       "firstPushedDate": "2026-07-06",
       "lastPushedDate": "2026-07-06",
+      "pushCount": 1,
+      "lastDecision": "allow_new",
+      "feedbackType": null
+    },
+    {
+      "feedbackId": "github:datadrivenconstruction/ddc_skills_for_ai_agents_in_construction",
+      "category": "github",
+      "title": "DDC_Skills_for_AI_Agents_in_Construction",
+      "url": "https://github.com/datadrivenconstruction/DDC_Skills_for_AI_Agents_in_Construction",
+      "podcastName": null,
+      "episodeTitle": null,
+      "publishedAt": null,
+      "durationSeconds": null,
+      "shownotes": "221 AI skills for construction: BIM analysis, cost estimation, scheduling, document control, and automation with Claude Code",
+      "firstPushedDate": "2026-07-07",
+      "lastPushedDate": "2026-07-07",
+      "pushCount": 1,
+      "lastDecision": "allow_new",
+      "feedbackType": null
+    },
+    {
+      "feedbackId": "aiapp:ca46a533",
+      "category": "aiapp",
+      "title": "GitHub Copilot app available to all",
+      "url": "https://github.blog/changelog/2026-07-07-github-copilot-app-available-to-all",
+      "podcastName": null,
+      "episodeTitle": null,
+      "publishedAt": "Tue, 07 Jul 2026 15:10:14 +0000",
+      "durationSeconds": null,
+      "shownotes": "",
+      "firstPushedDate": "2026-07-07",
+      "lastPushedDate": "2026-07-07",
+      "pushCount": 1,
+      "lastDecision": "allow_new",
+      "feedbackType": null
+    },
+    {
+      "feedbackId": "aiapp:800d6a30",
+      "category": "aiapp",
+      "title": "joselrnz/agent-kit-board",
+      "url": "https://github.com/joselrnz/agent-kit-board",
+      "podcastName": null,
+      "episodeTitle": null,
+      "publishedAt": "2026-07-07T23:17:12Z",
+      "durationSeconds": null,
+      "shownotes": "",
+      "firstPushedDate": "2026-07-07",
+      "lastPushedDate": "2026-07-07",
       "pushCount": 1,
       "lastDecision": "allow_new",
       "feedbackType": null
@@ -497,6 +545,38 @@
       "scoreDelta": -10,
       "annotation": "⚠️ 重复推送：这条内容曾于 2026-07-04 推送过；目前没有收到任何反馈，因此本次允许重复出现。请反馈“已读不错 / 已读不行 / 重复了”，后续系统将据此处理。",
       "date": "2026-07-06"
+    },
+    {
+      "feedbackId": "aiapp:ca46a533",
+      "title": "GitHub Copilot app available to all",
+      "category": "aiapp",
+      "decision": "allow_new",
+      "reason": "never_pushed",
+      "allowed": true,
+      "duplicateStatus": "new",
+      "firstPushedDate": null,
+      "lastPushedDate": null,
+      "feedbackType": null,
+      "hasFeedback": false,
+      "scoreDelta": 0,
+      "annotation": "",
+      "date": "2026-07-07"
+    },
+    {
+      "feedbackId": "aiapp:800d6a30",
+      "title": "joselrnz/agent-kit-board",
+      "category": "aiapp",
+      "decision": "allow_new",
+      "reason": "never_pushed",
+      "allowed": true,
+      "duplicateStatus": "new",
+      "firstPushedDate": null,
+      "lastPushedDate": null,
+      "feedbackType": null,
+      "hasFeedback": false,
+      "scoreDelta": 0,
+      "annotation": "",
+      "date": "2026-07-07"
     }
   ],
   "migration": {

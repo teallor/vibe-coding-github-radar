@@ -1,138 +1,139 @@
 {
-  "date": "2026-07-07",
+  "date": "2026-07-08",
   "conclusion": "今日找到 2 条符合标准的高质量中文 Codex 播客",
   "recommendations": [
     {
       "podcastName": "跨国串门儿计划",
-      "title": "#576.Claude Code：工程师如何放大生产力，AI 重塑团队分工的通才时代",
-      "link": "https://www.xiaoyuzhoufm.com/episode/6a26a3e4b30e1571aea2b45c?utm_source=rss",
-      "publishedAt": "2026-06-08",
-      "durationSeconds": 1771,
-      "duration": "29 分钟",
+      "title": "#544. HTML 是新的 Markdown：用AI生成动态 Spec",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6a0d679c1b7bd5029580b25f?utm_source=rss",
+      "publishedAt": "2026-05-20",
+      "durationSeconds": 1988,
+      "duration": "33 分钟",
       "outline": [
-        "本期我们克隆了： WorkOS: Boris Cherny: Claude Code & the Future of Engineering | Acquired Unplugged presented by WorkOS",
-        "本期嘉宾 Boris Cherny 是 Anthropic 的技术员工，也是 Claude Code 早期核心参与者之一。",
-        "在这期节目中，他和 Acquired 的两位主持人 Ben Gilbert、David Rosenthal 深入聊了 Claude Code 的起源、Anthropic 内部如何使用 AI 编程工具，以及 AI 正在怎样重塑工程团队、产品团队乃至整个公司的组织方式。",
-        "这不是一场单纯关于“AI 写代码”的访谈。",
-        "Boris 从 Anthropic 的 AI 安全使命讲起，解释为什么编程是模型与现实世界互动的关键入口；"
+        "本期我们克隆了：AI 工具实践播客《How I AI》 Why this Claude Code engineer uses HTML files as AI specs | Thariq Shihipar (Anthropic)",
+        "本期节目来自 Anthropic 的 Code with Claude 开发者大会现场。",
+        "主持人 Clara Vo 邀请参与 Claude Code 工作的 Thariq Shihipar，讨论一个正在悄悄改变 AI 编程工作流的趋势：HTML 正在成为人与 Agent 协作的新型文档格式。",
+        "过去，很多人用 Markdown 写 PRD、spec、实现计划，再交给 AI 执行。",
+        "但随着 Agent 可以运行更久、处理更复杂的任务，计划文档越来越长，人类反而越来越不愿意读。"
       ],
-      "whyWorthListening": "完美契合 Vibe Coding 和 Agent 理念。Boris 提到的“卸载 IDE”、“编写 prompt 循环”以及“通才独立发布代码”，为你的课程制作和副业项目提供了顶级的行业背书和前沿的方法论参考。",
-      "codexRelevance": "Anthropic 核心工程师揭秘 Claude Code 内部实践：AI 编程正推动“通才时代”，Vibe Coding 成为现实。",
-      "qualityScore": 93,
+      "whyWorthListening": "完美契合 Vibe Coding 和 Agent 工作流的探索。提供了一种全新的 Prompt/Spec 编写思路（HTML 替代 Markdown），可以直接应用到日常的 AI 编程、副业项目开发以及课程制作中，展示了最前沿的人机协作界面设计理念。",
+      "codexRelevance": "Anthropic 工程师分享 Claude Code 最佳实践：用动态 HTML 替代 Markdown 编写 AI Spec，大幅提升人机协作与 Vibe Coding 效率。",
+      "qualityScore": 92,
       "scoreBreakdown": {
         "codexRelevance": 0,
         "practicalDensity": 25,
         "outlineVerifiability": 15,
-        "personalValue": 15,
+        "personalValue": 9,
         "podcastQuality": 10,
-        "timeliness": 5
+        "timeliness": 4
       },
       "conclusion": "推荐",
       "evidenceSource": "https://feed.xyzfm.space/r8t44lmvu99m",
       "reviewProvider": "vertex",
       "semanticReview": {
         "shouldRecommend": true,
-        "score": 93,
-        "type": "Codex",
-        "oneLineConclusion": "Anthropic 核心工程师揭秘 Claude Code 内部实践：AI 编程正推动“通才时代”，Vibe Coding 成为现实。",
-        "whatHappened": "本期播客克隆了 Acquired 对 Anthropic 工程师 Boris Cherny 的访谈。Boris 分享了 Claude Code 从内部原型到核心 Agent 的演进，透露他已卸载 IDE，转而编写循环来指挥多个 Claude 工作。同时指出 AI 正在打破传统岗位边界，推动产品、设计、工程融合的“通才黄金时代”。",
-        "consumerUseCase": "开发者和非技术人员可以使用 Claude Code（或面向非终端用户的 Claude Cowork）直接在本地文件系统中执行复杂任务、数据分析甚至构建完整产品，无需手动编写大量底层代码。",
-        "valueForRafael": "完美契合 Vibe Coding 和 Agent 理念。Boris 提到的“卸载 IDE”、“编写 prompt 循环”以及“通才独立发布代码”，为你的课程制作和副业项目提供了顶级的行业背书和前沿的方法论参考。",
-        "codexIntegrationPotential": "Claude Code 本身就是顶级的 AI 编程 Agent，其 CLI 形态和即将推出的 Claude Cowork 展现了未来 MCP 和本地工具调用的标准范式。",
-        "actionSuggestion": "收听本期播客，重点关注 12:16（卸载 IDE 的工作流）和 23:48（面向 AI 时代的组织重组：多给 token 少配人），可将其作为 Vibe Coding 课程的绝佳案例。",
+        "score": 92,
+        "type": "其他",
+        "oneLineConclusion": "Anthropic 工程师分享 Claude Code 最佳实践：用动态 HTML 替代 Markdown 编写 AI Spec，大幅提升人机协作与 Vibe Coding 效率。",
+        "whatHappened": "本期播客翻译了 Anthropic 开发者大会上 Claude Code 工程师 Thariq Shihipar 的分享。他提出在 Agent 时代，由于任务变复杂、计划文档变长，人类阅读 Markdown 的意愿下降。HTML 因支持视觉化 Mockup、交互式界面和微型应用（Micro App），正成为更适合人类与 Claude 共同理解、修改和推进工作的新型 Spec/PRD 格式。",
+        "consumerUseCase": "产品经理、开发者和创作者在与 Claude Code 等 Agent 协作时，可以要求 AI 输出 HTML 格式的 PRD、实现计划或 Living Design System，甚至为特定决策生成一次性的交互式微型网页（Micro App），从而更直观地审阅、测试和调整需求。",
+        "valueForRafael": "完美契合 Vibe Coding 和 Agent 工作流的探索。提供了一种全新的 Prompt/Spec 编写思路（HTML 替代 Markdown），可以直接应用到日常的 AI 编程、副业项目开发以及课程制作中，展示了最前沿的人机协作界面设计理念。",
+        "codexIntegrationPotential": "高度相关。Claude Code 本身就是顶级的 AI 编程 Agent，使用 HTML 作为交互界面的思路可以无缝迁移到 Cursor、Windsurf 等 AI IDE 的工作流中，或者作为未来自定义 MCP 插件的富文本输出格式。",
+        "actionSuggestion": "尝试在下一次使用 Claude 或 Cursor 进行项目开发时，在 Prompt 中要求：'请用 HTML 格式输出包含视觉 Mockup 和交互逻辑的实现计划，而不是 Markdown'，体验动态 Spec 带来的直观反馈。",
         "reasons": [
-          "高度契合 Vibe Coding 理念，嘉宾亲身实践了“卸载 IDE”的纯 AI 编程工作流",
-          "深入探讨了 AI Agent（Claude Code）如何重塑开发流程和团队分工",
-          "信息源极具价值，来自 Anthropic 内部核心员工的真实使用反馈"
+          "Anthropic 官方工程师的一手经验分享，探讨 Claude Code 核心工作流，极具权威性与前瞻性。",
+          "提出了 'HTML 是新的 Markdown' 这一极具启发性的 Vibe Coding 新范式，解决了长文本 Prompt 难以阅读的痛点。",
+          "包含具体的实操建议：HTML Brainstorm、Micro App 和 Living Design System，Actionable Value 极高。",
+          "完美契合用户对 Agent、AI 编程和高效工作流的关注，无任何 Excluded Focus 内容。"
         ],
         "risksOrMissingInfo": [
-          "本播客为 AI 克隆和翻译版本，部分音频表现和翻译可能存在不通顺或失真",
-          "Claude Cowork 等内部工具的具体发布时间和外部可用性细节未完全明确"
+          "该播客为 AI 克隆和翻译版本（原版为英文），可能存在部分语音不自然或专业术语翻译不够精准的情况。",
+          "需要听众具备一定的 AI 编程（如 Cursor/Claude Code）使用经验，才能完全体会 HTML Spec 的优势。"
         ],
         "evidenceRequired": true,
         "dimensions": {
           "rafaelMatch": 24,
           "consumerUsability": 18,
-          "ecosystemRelevance": 20,
-          "actionableValue": 13,
-          "sourceReliability": 9,
+          "ecosystemRelevance": 19,
+          "actionableValue": 14,
+          "sourceReliability": 8,
           "freshness": 9
         }
       },
-      "feedbackId": "podcast:a37ac12e",
-      "decision": "allow_new",
-      "duplicateStatus": "new",
-      "firstPushedDate": null,
-      "lastPushedDate": null,
+      "feedbackId": "podcast:46202b88",
+      "decision": "allow_unanswered_repeat",
+      "duplicateStatus": "repeat",
+      "firstPushedDate": "2026-07-04",
+      "lastPushedDate": "2026-07-04",
       "hasFeedback": false,
       "feedbackType": null,
-      "annotation": ""
+      "annotation": "⚠️ 重复推送：这条内容曾于 2026-07-04 推送过；目前没有收到任何反馈，因此本次允许重复出现。请反馈“已读不错 / 已读不行 / 重复了”，后续系统将据此处理。"
     },
     {
-      "podcastName": "跨国串门儿计划",
-      "title": "#606.Codex 负责人：品味与判断力为何成为你最值钱的资产",
-      "link": "https://www.xiaoyuzhoufm.com/episode/6a43a9699d2f574368405276?utm_source=rss",
-      "publishedAt": "2026-06-30",
-      "durationSeconds": 3627,
-      "duration": "1 小时 0 分钟",
+      "podcastName": "AI駆動開発部の日常",
+      "title": "46【ターミナルはもう要らない？】Codex App一つで完結する開発",
+      "link": "https://stand.fm/episodes/6a3e22f0f7af24411e1fb745",
+      "publishedAt": "2026-06-26",
+      "durationSeconds": 2310,
+      "duration": "38 分钟",
       "outline": [
-        "本期我们克隆了：知名产品与增长播客《Lenny's Podcast》 OpenAI Codex lead on taste, curation, and building for AGI | Andrew Ambrosino",
-        "原内容更新时间：2026-06-28",
-        "本期嘉宾是 OpenAI 旗下 Codex 应用的产品与工程负责人 Andrew Ambrosino，主持人是 Lenny Rachitsky。",
-        "Andrew 本人经历了从设计师到工程师再到产品经理的转型，目前正带领团队打造这款正被全球越来越多人使用的桌面应用。",
-        "这期节目录制于线下，是一场关于 AI 时代产品工作形态的坦诚交流。"
+        "今回は、Claude Codeを使っていた阿部さんが、改めてOpenAIのCodex Appに戻り「これはすごい」と興奮ぎみに話してくれたのを起点に、Codex CLIではなくアプリ版で何が変わるのかを掘り下げました。",
+        "僕も久しぶりに触ってみたところだったので、使い心地を持ち寄っています。",
+        "阿部さんが推すのは、ファイルもdiffもブラウザもアプリ一本で完結する感覚と、オートメーションまで自動で組んでくれる体験。",
+        "一方の僕は、万能ゆえのコンテキストの肥大化や、役割ごとの責務をどう切り分けるかの引っかかりを抱えていて、同じツールでも見ている景色が少し違いました。",
+        "話しているうちに、GitHubに積み上げた課題を勝手にトリアージして実装まで進める、いわば「AI自立開発」の輪郭が想像より近くに見えてきた回です。"
       ],
-      "whyWorthListening": "极度契合！不仅直接探讨了你高度关注的 Codex 和 Agent（Computer Use）的最新发展，还深入剖析了 Vibe Coding 时代下，个人如何通过提升“品味”和“判断力”来构建产品，对你的副业项目和 AI 编程实践有极高的战略指导价值。",
-      "codexRelevance": "OpenAI Codex 负责人深度分享：AI 时代产品开发的范式转移，以及 Codex 如何从开发者工具演变为通用 Agent 平台。",
-      "qualityScore": 93,
+      "whyWorthListening": "高度契合 Rafael 对 Codex、GitHub 和 Agent 的关注。播客中提到的『GitHub Issue 自动分类与实现』以及『Codex App 自动化工作流』能直接为副业项目或日常开发提供 Vibe Coding 的新思路。",
+      "codexRelevance": "探讨了从 Claude Code 转向 Codex App 的实际体验，强调了其在文件处理、Diff、浏览器集成及 GitHub 自动化分发上的优势。",
+      "qualityScore": 87,
       "scoreBreakdown": {
-        "codexRelevance": 30,
-        "practicalDensity": 24,
+        "codexRelevance": 24,
+        "practicalDensity": 8,
         "outlineVerifiability": 15,
-        "personalValue": 9,
+        "personalValue": 3,
         "podcastQuality": 10,
         "timeliness": 5
       },
       "conclusion": "推荐",
-      "evidenceSource": "https://feed.xyzfm.space/r8t44lmvu99m",
+      "evidenceSource": "https://stand.fm/rss/68dc82a9036795923c400b4f",
       "reviewProvider": "vertex",
       "semanticReview": {
         "shouldRecommend": true,
-        "score": 93,
+        "score": 87,
         "type": "其他",
-        "oneLineConclusion": "OpenAI Codex 负责人深度分享：AI 时代产品开发的范式转移，以及 Codex 如何从开发者工具演变为通用 Agent 平台。",
-        "whatHappened": "知名播客《Lenny's Podcast》采访了 OpenAI Codex 产品与工程负责人 Andrew Ambrosino。他分享了内部的“90个原型”文化、AI 编程的前沿演进（从手写代码到“驾驶 AI”），以及 Codex 桌面版如何通过 Computer Use 成为通用知识工作平台。",
-        "consumerUseCase": "利用 Codex 桌面版进行日常办公自动化（如汇总 Slack 信息、处理文件、数据分析），以及非技术人员如何通过“驾驶 AI”完成端到端的产品构建。",
-        "valueForRafael": "极度契合！不仅直接探讨了你高度关注的 Codex 和 Agent（Computer Use）的最新发展，还深入剖析了 Vibe Coding 时代下，个人如何通过提升“品味”和“判断力”来构建产品，对你的副业项目和 AI 编程实践有极高的战略指导价值。",
-        "codexIntegrationPotential": "Codex 桌面版正朝着超级 App 和通用 Agent 发展，未来可能无缝调用各种专业工具（如视频剪辑、Office 自动化），并直接接管电脑操作（Computer Use）。",
-        "actionSuggestion": "强烈建议收听。重点关注 32:52（AI 编程前沿与 Vibe Coding）和 40:18（Computer Use 实际应用），思考如何在自己的副业和课程制作中应用这些前沿理念。",
+        "oneLineConclusion": "探讨了从 Claude Code 转向 Codex App 的实际体验，强调了其在文件处理、Diff、浏览器集成及 GitHub 自动化分发上的优势。",
+        "whatHappened": "播客主播阿部分享了使用 OpenAI Codex App（而非 CLI）的体验，指出其能在一个应用内完成文件管理、代码 Diff、浏览器预览及自动化构建。两人还探讨了 Codex 如何自动对 GitHub 上的 Issue 进行分类并推进实现（AI 自主开发），以及随之而来的上下文膨胀和角色划分问题。",
+        "consumerUseCase": "开发者可以使用 Codex App 替代传统的终端+编辑器组合，实现从 GitHub Issue 认领、代码编写、Diff 对比到自动化测试的一站式 AI 辅助开发（Vibe Coding）。",
+        "valueForRafael": "高度契合 Rafael 对 Codex、GitHub 和 Agent 的关注。播客中提到的『GitHub Issue 自动分类与实现』以及『Codex App 自动化工作流』能直接为副业项目或日常开发提供 Vibe Coding 的新思路。",
+        "codexIntegrationPotential": "极高。内容完全围绕 Codex App 的核心能力（文件、Diff、浏览器、自动化）及其与 GitHub 的深度集成展开，探讨了 AI 代理在实际开发中的工作流构建。",
+        "actionSuggestion": "收听该播客以了解 Codex App 的最新实践；尝试在个人项目中配置 Codex App 与 GitHub 的联动，测试其自动处理 Issue 的能力。",
         "reasons": [
-          "直接命中核心关注点 Codex 和 Agent，嘉宾为 OpenAI Codex 负责人",
-          "探讨了 Vibe Coding（驾驶 AI 写 100% 代码）的实际应用与演进",
-          "包含 Computer Use 等前沿 Agent 技术的内部视角与真实用例"
+          "直接讨论 Codex App 与 Claude Code 的对比，契合核心关注点",
+          "深入探讨了 GitHub Issue 自动分类与代码实现的 Agent 工作流",
+          "分享了真实开发者的使用痛点（如上下文膨胀）和解决方案"
         ],
         "risksOrMissingInfo": [
-          "本期播客为 AI 克隆和翻译版本，部分表达可能不够通顺",
-          "包含极短的过滤垃圾邮件案例（39:45），但不涉及你排斥的邮件营销/群发自动化，可放心收听"
+          "播客为日文内容，可能存在语言门槛",
+          "主要为经验分享和讨论，缺乏具体的代码配置步骤或教程"
         ],
         "evidenceRequired": true,
         "dimensions": {
-          "rafaelMatch": 25,
-          "consumerUsability": 18,
-          "ecosystemRelevance": 20,
+          "rafaelMatch": 23,
+          "consumerUsability": 16,
+          "ecosystemRelevance": 19,
           "actionableValue": 12,
           "sourceReliability": 8,
-          "freshness": 10
+          "freshness": 9
         }
       },
-      "feedbackId": "podcast:1fa53f7c",
+      "feedbackId": "podcast:c5f34012",
       "decision": "allow_unanswered_repeat",
       "duplicateStatus": "repeat",
-      "firstPushedDate": "2026-07-03",
-      "lastPushedDate": "2026-07-03",
+      "firstPushedDate": "2026-07-05",
+      "lastPushedDate": "2026-07-05",
       "hasFeedback": false,
       "feedbackType": null,
-      "annotation": "⚠️ 重复推送：这条内容曾于 2026-07-03 推送过；目前没有收到任何反馈，因此本次允许重复出现。请反馈“已读不错 / 已读不行 / 重复了”，后续系统将据此处理。"
+      "annotation": "⚠️ 重复推送：这条内容曾于 2026-07-05 推送过；目前没有收到任何反馈，因此本次允许重复出现。请反馈“已读不错 / 已读不行 / 重复了”，后续系统将据此处理。"
     }
   ],
   "pending": [
@@ -147,6 +148,15 @@
       ]
     },
     {
+      "podcastName": "AI前沿播客",
+      "title": "OpenAI Codex智能体编程革命",
+      "link": "https://www.ximalaya.com/sound/968459494",
+      "reasons": [
+        "时长少于 20 分钟",
+        "没有足够可读的 Shownotes、简介、大纲或摘要"
+      ]
+    },
+    {
       "podcastName": "郭老师讲AI，99%的人听不懂",
       "title": "Codex王炸？实测！",
       "link": "https://www.ximalaya.com/sound/977047239",
@@ -154,15 +164,6 @@
         "时长少于 20 分钟",
         "没有足够可读的 Shownotes、简介、大纲或摘要",
         "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
-      ]
-    },
-    {
-      "podcastName": "AI前沿播客",
-      "title": "OpenAI Codex智能体编程革命",
-      "link": "https://www.ximalaya.com/sound/968459494",
-      "reasons": [
-        "时长少于 20 分钟",
-        "没有足够可读的 Shownotes、简介、大纲或摘要"
       ]
     }
   ],
@@ -173,6 +174,14 @@
       "score": 44,
       "reasons": [
         "总分 44，低于正式推荐阈值 85"
+      ]
+    },
+    {
+      "podcastName": "人民公园说AI",
+      "title": "水｜用什么Fable 5？都给我去用国产模型！当顶级模型变奢侈品，普通人怎么用 AI？",
+      "score": 30,
+      "reasons": [
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
       ]
     },
     {
@@ -287,6 +296,610 @@
       "score": 37,
       "reasons": [
         "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
+      ]
+    },
+    {
+      "podcastName": "新鲜事晚点报",
+      "title": "探秘 OpenAI 新一代 Codex 系统",
+      "score": 30,
+      "reasons": [
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
+      ]
+    },
+    {
+      "podcastName": "新鲜事晚点报",
+      "title": "MCP Server 选择分析与安全策略",
+      "score": 48,
+      "reasons": [
+        "时长少于 20 分钟"
+      ]
+    },
+    {
+      "podcastName": "晚安咖啡GoodNightCoffee",
+      "title": "《晚安咖啡》科技夜话（英文版）：可灵融资30亿美元，小鹏MONA M03亮相，中国电动车欧洲首超日本",
+      "score": 30,
+      "reasons": [
+        "时长少于 20 分钟",
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
+      ]
+    },
+    {
+      "podcastName": "晚安咖啡GoodNightCoffee",
+      "title": "《晚安咖啡》科技夜话：可灵融资30亿美元，小鹏MONA M03亮相，中国电动车欧洲首超日本",
+      "score": 24,
+      "reasons": [
+        "时长少于 20 分钟",
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
+      ]
+    },
+    {
+      "podcastName": "晚安咖啡GoodNightCoffee",
+      "title": "《晚安咖啡》科技夜话（英文版）：OpenAI硬件预告，微软市值蒸发，苹果iPhone泄露",
+      "score": 30,
+      "reasons": [
+        "时长少于 20 分钟",
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
+      ]
+    },
+    {
+      "podcastName": "晚安咖啡GoodNightCoffee",
+      "title": "《晚安咖啡》科技夜话：OpenAI硬件预告，微软市值蒸发，苹果iPhone泄露",
+      "score": 17,
+      "reasons": [
+        "时长少于 20 分钟",
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
+      ]
+    },
+    {
+      "podcastName": "晚安咖啡GoodNightCoffee",
+      "title": "《晚安咖啡》科技夜话（英文版）：SpaceX收购Cursor，G7聚焦AI，字节转向B端",
+      "score": 30,
+      "reasons": [
+        "时长少于 20 分钟",
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
+        "中文内容不足"
+      ]
+    },
+    {
+      "podcastName": "晚安咖啡GoodNightCoffee",
+      "title": "《晚安咖啡》科技夜话（英文版）：谷歌发债800亿，英伟达CEO讲话泄露，OpenAI整合Codex",
+      "score": 29,
+      "reasons": [
+        "时长少于 20 分钟",
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
+      ]
+    },
+    {
+      "podcastName": "晚安咖啡GoodNightCoffee",
+      "title": "《晚安咖啡》科技夜话：谷歌发债800亿，英伟达CEO讲话泄露，OpenAI整合Codex",
+      "score": 29,
+      "reasons": [
+        "时长少于 20 分钟",
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
+      ]
+    },
+    {
+      "podcastName": "晚安咖啡GoodNightCoffee",
+      "title": "《晚安咖啡》科技夜话（英文版）：谷歌AI搜索革新，卡帕斯加入Anthropic，寒武纪市值创新高",
+      "score": 29,
+      "reasons": [
+        "时长少于 20 分钟",
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
+      ]
+    },
+    {
+      "podcastName": "David的AI全景图",
+      "title": "Vibe Coding是我的草诀歌｜和时旭聊AI时代的“毛笔”",
+      "score": 51,
+      "reasons": [
+        "总分 51，低于正式推荐阈值 85"
+      ]
+    },
+    {
+      "podcastName": "David的AI全景图",
+      "title": "如何把Codex用到极致",
+      "score": 43,
+      "reasons": [
+        "时长少于 20 分钟"
+      ]
+    },
+    {
+      "podcastName": "David的AI全景图",
+      "title": "《视频即代码全景图》全文精华",
+      "score": 33,
+      "reasons": [
+        "时长少于 20 分钟",
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
+      ]
+    },
+    {
+      "podcastName": "David的AI全景图",
+      "title": "Boris Cherny：为什么编程已被解决",
+      "score": 33,
+      "reasons": [
+        "时长少于 20 分钟",
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
+      ]
+    },
+    {
+      "podcastName": "David的AI全景图",
+      "title": "Claude Code源代码深度解读：Harness engineering的经典案例",
+      "score": 42,
+      "reasons": [
+        "总分 42，低于正式推荐阈值 85"
+      ]
+    },
+    {
+      "podcastName": "David的AI全景图",
+      "title": "Claude工程师如何使用skills",
+      "score": 39,
+      "reasons": [
+        "总分 39，低于正式推荐阈值 85"
+      ]
+    },
+    {
+      "podcastName": "David的AI全景图",
+      "title": "Clawdbot/Moltbot创始人首次公开访谈精华",
+      "score": 51,
+      "reasons": [
+        "时长少于 20 分钟"
+      ]
+    },
+    {
+      "podcastName": "David的AI全景图",
+      "title": "听听奇绩创坛2025秋季路演日项目",
+      "score": 31,
+      "reasons": [
+        "时长少于 20 分钟",
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
+      ]
+    },
+    {
+      "podcastName": "David的AI全景图",
+      "title": "Codex的前生今世和AI编程的未来",
+      "score": 32,
+      "reasons": [
+        "总分 32，低于正式推荐阈值 85"
+      ]
+    },
+    {
+      "podcastName": "David的AI全景图",
+      "title": "OpenAI内部工程师都是如何使用Codex的",
+      "score": 14,
+      "reasons": [
+        "时长少于 20 分钟",
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
+      ]
+    },
+    {
+      "podcastName": "David的AI全景图",
+      "title": "聊聊刚发布的GPT 5-Codex",
+      "score": 21,
+      "reasons": [
+        "时长少于 20 分钟",
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
+      ]
+    },
+    {
+      "podcastName": "David的AI全景图",
+      "title": "吴恩达Claude Code课程精华",
+      "score": 39,
+      "reasons": [
+        "时长少于 20 分钟"
+      ]
+    },
+    {
+      "podcastName": "David的AI全景图",
+      "title": "实用的74页《MCP图解指南》讲解",
+      "score": 42,
+      "reasons": [
+        "时长少于 20 分钟"
+      ]
+    },
+    {
+      "podcastName": "David的AI全景图",
+      "title": "聊聊《AI Coding非共识报告》",
+      "score": 34,
+      "reasons": [
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
+      ]
+    },
+    {
+      "podcastName": "David的AI全景图",
+      "title": "访谈精华｜超级酷的AI公司Every",
+      "score": 49,
+      "reasons": [
+        "时长少于 20 分钟"
+      ]
+    },
+    {
+      "podcastName": "David的AI全景图",
+      "title": "访谈精华 | 一人公司新传奇Base44",
+      "score": 42,
+      "reasons": [
+        "时长少于 20 分钟"
+      ]
+    },
+    {
+      "podcastName": "些许播客",
+      "title": "0127 | 麻省理工研发“智能胶囊” | 宇树与春晚合作 | 香港安全带新规 | 广东连续6年出生人口超百万",
+      "score": 28,
+      "reasons": [
+        "时长少于 20 分钟",
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
+      ]
+    },
+    {
+      "podcastName": "今日深度AI",
+      "title": "Anthropic官方《Claude Skill构建实战指南》",
+      "score": 48,
+      "reasons": [
+        "时长少于 20 分钟"
+      ]
+    },
+    {
+      "podcastName": "今日深度AI",
+      "title": "OpenClaw企业级自主代理架构与部署深度指南",
+      "score": 40,
+      "reasons": [
+        "总分 40，低于正式推荐阈值 85"
+      ]
+    },
+    {
+      "podcastName": "今日深度AI",
+      "title": "2026年Agent Skills的革命：从聊天机器人到数字同事",
+      "score": 32,
+      "reasons": [
+        "时长少于 20 分钟",
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
+      ]
+    },
+    {
+      "podcastName": "今日深度AI",
+      "title": "『AI小酒馆』vol.03:当“氛围编程”遇见“编程智能体”——人人都是CEO的时代到来了吗？",
+      "score": 35,
+      "reasons": [
+        "总分 35，低于正式推荐阈值 85"
+      ]
+    },
+    {
+      "podcastName": "Seventy3",
+      "title": "【第630期】前沿代码智能体AlphaZero自主实现能力评估报告",
+      "score": 30,
+      "reasons": [
+        "时长少于 20 分钟",
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
+      ]
+    },
+    {
+      "podcastName": "Seventy3",
+      "title": "【第624期】可观察性驱动的编程智能体测试床自动演进",
+      "score": 44,
+      "reasons": [
+        "总分 44，低于正式推荐阈值 85"
+      ]
+    },
+    {
+      "podcastName": "Seventy3",
+      "title": "【第613期】Autogenesis：A Self-Evolving Agent Protocol",
+      "score": 29,
+      "reasons": [
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
+      ]
+    },
+    {
+      "podcastName": "Seventy3",
+      "title": "【第608期】记忆迁移学习：编程代理的跨域经验共享",
+      "score": 29,
+      "reasons": [
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
+      ]
+    },
+    {
+      "podcastName": "Seventy3",
+      "title": "【第598期】通过原子技能强化学习扩展编程智能体",
+      "score": 29,
+      "reasons": [
+        "时长少于 20 分钟",
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
+      ]
+    },
+    {
+      "podcastName": "Seventy3",
+      "title": "【第589期】代码智能体：长文本处理的高效利器",
+      "score": 36,
+      "reasons": [
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
+      ]
+    },
+    {
+      "podcastName": "Seventy3",
+      "title": "【第582期】Claudini：利用AI代理自动研发LLM对抗攻击算法",
+      "score": 33,
+      "reasons": [
+        "时长少于 20 分钟",
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
+      ]
+    },
+    {
+      "podcastName": "Seventy3",
+      "title": "【第572期】OpenDev：基于Rust的终端原生AI编码智能体架构",
+      "score": 45,
+      "reasons": [
+        "总分 45，低于正式推荐阈值 85"
+      ]
+    },
+    {
+      "podcastName": "Seventy3",
+      "title": "【第555期】编码代理中 AGENTS.md 上下文文件的效用评估",
+      "score": 32,
+      "reasons": [
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
+      ]
+    },
+    {
+      "podcastName": "✦ 罗伯特带添添闯 Aī",
+      "title": "E2524 智能体·NLWeb：在对话中，重塑 Web 的未来",
+      "score": 26,
+      "reasons": [
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
+      ]
+    },
+    {
+      "podcastName": "✦ 罗伯特带添添闯 Aī",
+      "title": "E2518 智能体·超越算法边界：人类连接的价值-EP2",
+      "score": 30,
+      "reasons": [
+        "时长少于 20 分钟",
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
+      ]
+    },
+    {
+      "podcastName": "✦ 罗伯特带添添闯 Aī",
+      "title": "E2517 智能体·超越算法边界：人类连接的价值-EP1",
+      "score": 30,
+      "reasons": [
+        "时长少于 20 分钟",
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
+      ]
+    },
+    {
+      "podcastName": "✦ 罗伯特带添添闯 Aī",
+      "title": "E2516 智能体·MCP 构建起智能体时代的互联网络-EP3",
+      "score": 41,
+      "reasons": [
+        "总分 41，低于正式推荐阈值 85"
+      ]
+    },
+    {
+      "podcastName": "✦ 罗伯特带添添闯 Aī",
+      "title": "E2515 智能体·MCP 构建起智能体时代的互联网络-EP2",
+      "score": 41,
+      "reasons": [
+        "时长少于 20 分钟"
+      ]
+    },
+    {
+      "podcastName": "✦ 罗伯特带添添闯 Aī",
+      "title": "E2514 智能体·MCP 构建起智能体时代的互联网络-EP1",
+      "score": 49,
+      "reasons": [
+        "总分 49，低于正式推荐阈值 85"
+      ]
+    },
+    {
+      "podcastName": "✦ 罗伯特带添添闯 Aī",
+      "title": "E2506 智能体·25 年展望关键词(自主性/端到端/上下文层/大型推理模型)",
+      "score": 55,
+      "reasons": [
+        "总分 55，低于正式推荐阈值 85"
+      ]
+    },
+    {
+      "podcastName": "✦ 罗伯特带添添闯 Aī",
+      "title": "E2435 智能体·玩起来! 玩游戏再还用看攻略?",
+      "score": 26,
+      "reasons": [
+        "时长少于 20 分钟",
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
+      ]
+    },
+    {
+      "podcastName": "✦ 罗伯特带添添闯 Aī",
+      "title": "E2433 智能体·编程 Copilot和Agent的核心区别是什么？",
+      "score": 40,
+      "reasons": [
+        "时长少于 20 分钟"
+      ]
+    },
+    {
+      "podcastName": "✦ 罗伯特带添添闯 Aī",
+      "title": "E2404 智能应用·写代码一定要用手么?",
+      "score": 41,
+      "reasons": [
+        "总分 41，低于正式推荐阈值 85"
+      ]
+    },
+    {
+      "podcastName": "AI圈儿",
+      "title": "【AI干货系列】怎么让你的AI Agent爬公众号、小红书和小宇宙？",
+      "score": 34,
+      "reasons": [
+        "时长少于 20 分钟",
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
+      ]
+    },
+    {
+      "podcastName": "AI圈儿",
+      "title": "【0625 | AI日报】Mythos攻破美机密系统/Claude Code升级/智谱GLM-5.2登顶开源",
+      "score": 30,
+      "reasons": [
+        "时长少于 20 分钟",
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
+      ]
+    },
+    {
+      "podcastName": "AI圈儿",
+      "title": "【0624 | AI 日报】豆包 180 万亿 / Vera Rubin 四倍 / 百度 Unlimited OCR",
+      "score": 37,
+      "reasons": [
+        "时长少于 20 分钟",
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
+      ]
+    },
+    {
+      "podcastName": "AI圈儿",
+      "title": "【0622 | AI 日报】AWS 发 AI 代理双服务 / 微信小微灰度测试 / 高通押注智能眼镜",
+      "score": 34,
+      "reasons": [
+        "时长少于 20 分钟",
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
+      ]
+    },
+    {
+      "podcastName": "AI圈儿",
+      "title": "【0614 | AI 日报】阿里首席科学家 6 天离任 / Moonshot 开源 Kimi K2.7",
+      "score": 30,
+      "reasons": [
+        "时长少于 20 分钟",
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
+      ]
+    },
+    {
+      "podcastName": "AI圈儿",
+      "title": "【0608 | AI日报】Siri联手Gemini反击/Claude Code凭证泄露/芯片元老叛逃Anthropic",
+      "score": 36,
+      "reasons": [
+        "时长少于 20 分钟",
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
+      ]
+    },
+    {
+      "podcastName": "AI圈儿",
+      "title": "【0603 | AI日报】英伟达双线出击/Groq融资迷雾/OpenAI曲线登陆AWS",
+      "score": 36,
+      "reasons": [
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
+      ]
+    },
+    {
+      "podcastName": "AI圈儿",
+      "title": "【0531 | AI日报】OpenAI纠错率骤降/MiniMax启动A股IPO/阶跃星辰198B编程模型发布",
+      "score": 29,
+      "reasons": [
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
+        "内容主要是泛泛 AI 新闻或模型发布消息"
+      ]
+    },
+    {
+      "podcastName": "AI圈儿",
+      "title": "【0530 | AI日报】Opus4.8陷蒸馏争议/Codex杀入手机/苹果联手Gemini",
+      "score": 33,
+      "reasons": [
+        "时长少于 20 分钟",
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
+      ]
+    },
+    {
+      "podcastName": "AI圈儿",
+      "title": "【AI干货系列】保姆级教程：Claude Code 从安装到接入 DeepSeek V4",
+      "score": 40,
+      "reasons": [
+        "总分 40，低于正式推荐阈值 85"
+      ]
+    },
+    {
+      "podcastName": "AI圈儿",
+      "title": "【0529 | AI日报】Meta推AI订阅/小米模型降价99%/米哈游一夜烧掉200万Token",
+      "score": 36,
+      "reasons": [
+        "时长少于 20 分钟",
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
+      ]
+    },
+    {
+      "podcastName": "AI圈儿",
+      "title": "【0526 | AI日报】Grok1.5T出炉/算力锁喉Anthropic/Deepseek造编程工具",
+      "score": 43,
+      "reasons": [
+        "时长少于 20 分钟"
+      ]
+    },
+    {
+      "podcastName": "AI圈儿",
+      "title": "【0521 | AI日报】Cerebras上市670亿/OpenAI算力换股权/微软GitHub生存危机",
+      "score": 36,
+      "reasons": [
+        "时长少于 20 分钟",
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
+      ]
+    },
+    {
+      "podcastName": "AI圈儿",
+      "title": "【0516 | AI日报】拒掉字节谷歌，被裁的Meta大佬凭什么一轮融了六亿美金？",
+      "score": 29,
+      "reasons": [
+        "时长少于 20 分钟",
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
+      ]
+    },
+    {
+      "podcastName": "AI圈儿",
+      "title": "【0515 | AI日报】AI已经写了Anthropic九成代码，你还在亲手敲吗？",
+      "score": 47,
+      "reasons": [
+        "时长少于 20 分钟"
+      ]
+    },
+    {
+      "podcastName": "AI圈儿",
+      "title": "【0505 | AI日报】AI智能体调用一次烧117万Token，Cloudflare一招砍到1000？",
+      "score": 29,
+      "reasons": [
+        "时长少于 20 分钟",
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
+      ]
+    },
+    {
+      "podcastName": "AI圈儿",
+      "title": "【0502 | AI日报】藏在Linux内核里23年的漏洞，被一个AI用最笨的方法翻了出来",
+      "score": 33,
+      "reasons": [
+        "时长少于 20 分钟",
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
+      ]
+    },
+    {
+      "podcastName": "AI圈儿",
+      "title": "【0417 | AI日报】你以为和AI的对话是私密的吗？法庭上可能不是这么想的。",
+      "score": 36,
+      "reasons": [
+        "时长少于 20 分钟",
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
+      ]
+    },
+    {
+      "podcastName": "AI圈儿",
+      "title": "20260414 |【字节】养虾人编程/【Cloudflare】AI白嫖怪/【日本】万亿日元AI联盟",
+      "score": 40,
+      "reasons": [
+        "时长少于 20 分钟"
+      ]
+    },
+    {
+      "podcastName": "AI圈儿",
+      "title": "20260413 |【中国】36.4万超声数据/【Claude】复活30年游戏/【CF】瞄准WordPress",
+      "score": 37,
+      "reasons": [
+        "时长少于 20 分钟"
+      ]
+    },
+    {
+      "podcastName": "跨国串门儿计划",
+      "title": "#618.OpenCode 创始人：AI 编程狂潮下，如何保持清醒并找到你的不对称优势",
+      "score": 52,
+      "reasons": [
+        "总分 52，低于正式推荐阈值 85"
       ]
     },
     {
@@ -482,710 +1095,6 @@
       ]
     },
     {
-      "podcastName": "跨国串门儿计划",
-      "title": "#519.普林斯顿Zhuang Liu谈架构、数据与记忆的真相",
-      "score": 44,
-      "reasons": [
-        "总分 44，低于正式推荐阈值 85"
-      ]
-    },
-    {
-      "podcastName": "David的AI全景图",
-      "title": "Vibe Coding是我的草诀歌｜和时旭聊AI时代的“毛笔”",
-      "score": 51,
-      "reasons": [
-        "总分 51，低于正式推荐阈值 85"
-      ]
-    },
-    {
-      "podcastName": "David的AI全景图",
-      "title": "如何把Codex用到极致",
-      "score": 43,
-      "reasons": [
-        "时长少于 20 分钟"
-      ]
-    },
-    {
-      "podcastName": "David的AI全景图",
-      "title": "《视频即代码全景图》全文精华",
-      "score": 33,
-      "reasons": [
-        "时长少于 20 分钟",
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
-      ]
-    },
-    {
-      "podcastName": "David的AI全景图",
-      "title": "Boris Cherny：为什么编程已被解决",
-      "score": 33,
-      "reasons": [
-        "时长少于 20 分钟",
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
-      ]
-    },
-    {
-      "podcastName": "David的AI全景图",
-      "title": "Claude Code源代码深度解读：Harness engineering的经典案例",
-      "score": 42,
-      "reasons": [
-        "总分 42，低于正式推荐阈值 85"
-      ]
-    },
-    {
-      "podcastName": "David的AI全景图",
-      "title": "Claude工程师如何使用skills",
-      "score": 39,
-      "reasons": [
-        "总分 39，低于正式推荐阈值 85"
-      ]
-    },
-    {
-      "podcastName": "David的AI全景图",
-      "title": "Clawdbot/Moltbot创始人首次公开访谈精华",
-      "score": 51,
-      "reasons": [
-        "时长少于 20 分钟"
-      ]
-    },
-    {
-      "podcastName": "David的AI全景图",
-      "title": "听听奇绩创坛2025秋季路演日项目",
-      "score": 31,
-      "reasons": [
-        "时长少于 20 分钟",
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
-      ]
-    },
-    {
-      "podcastName": "David的AI全景图",
-      "title": "Codex的前生今世和AI编程的未来",
-      "score": 32,
-      "reasons": [
-        "总分 32，低于正式推荐阈值 85"
-      ]
-    },
-    {
-      "podcastName": "David的AI全景图",
-      "title": "OpenAI内部工程师都是如何使用Codex的",
-      "score": 14,
-      "reasons": [
-        "时长少于 20 分钟",
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
-      ]
-    },
-    {
-      "podcastName": "David的AI全景图",
-      "title": "聊聊刚发布的GPT 5-Codex",
-      "score": 21,
-      "reasons": [
-        "时长少于 20 分钟",
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
-      ]
-    },
-    {
-      "podcastName": "David的AI全景图",
-      "title": "吴恩达Claude Code课程精华",
-      "score": 39,
-      "reasons": [
-        "时长少于 20 分钟"
-      ]
-    },
-    {
-      "podcastName": "David的AI全景图",
-      "title": "实用的74页《MCP图解指南》讲解",
-      "score": 42,
-      "reasons": [
-        "时长少于 20 分钟"
-      ]
-    },
-    {
-      "podcastName": "David的AI全景图",
-      "title": "聊聊《AI Coding非共识报告》",
-      "score": 34,
-      "reasons": [
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
-      ]
-    },
-    {
-      "podcastName": "David的AI全景图",
-      "title": "访谈精华｜超级酷的AI公司Every",
-      "score": 49,
-      "reasons": [
-        "时长少于 20 分钟"
-      ]
-    },
-    {
-      "podcastName": "David的AI全景图",
-      "title": "访谈精华 | 一人公司新传奇Base44",
-      "score": 42,
-      "reasons": [
-        "时长少于 20 分钟"
-      ]
-    },
-    {
-      "podcastName": "新鲜事晚点报",
-      "title": "探秘 OpenAI 新一代 Codex 系统",
-      "score": 30,
-      "reasons": [
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
-      ]
-    },
-    {
-      "podcastName": "新鲜事晚点报",
-      "title": "MCP Server 选择分析与安全策略",
-      "score": 48,
-      "reasons": [
-        "时长少于 20 分钟"
-      ]
-    },
-    {
-      "podcastName": "些许播客",
-      "title": "0127 | 麻省理工研发“智能胶囊” | 宇树与春晚合作 | 香港安全带新规 | 广东连续6年出生人口超百万",
-      "score": 28,
-      "reasons": [
-        "时长少于 20 分钟",
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
-      ]
-    },
-    {
-      "podcastName": "今日深度AI",
-      "title": "Anthropic官方《Claude Skill构建实战指南》",
-      "score": 48,
-      "reasons": [
-        "时长少于 20 分钟"
-      ]
-    },
-    {
-      "podcastName": "今日深度AI",
-      "title": "OpenClaw企业级自主代理架构与部署深度指南",
-      "score": 40,
-      "reasons": [
-        "总分 40，低于正式推荐阈值 85"
-      ]
-    },
-    {
-      "podcastName": "今日深度AI",
-      "title": "2026年Agent Skills的革命：从聊天机器人到数字同事",
-      "score": 32,
-      "reasons": [
-        "时长少于 20 分钟",
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
-      ]
-    },
-    {
-      "podcastName": "今日深度AI",
-      "title": "『AI小酒馆』vol.03:当“氛围编程”遇见“编程智能体”——人人都是CEO的时代到来了吗？",
-      "score": 35,
-      "reasons": [
-        "总分 35，低于正式推荐阈值 85"
-      ]
-    },
-    {
-      "podcastName": "晚安咖啡GoodNightCoffee",
-      "title": "《晚安咖啡》科技夜话（英文版）：可灵融资30亿美元，小鹏MONA M03亮相，中国电动车欧洲首超日本",
-      "score": 30,
-      "reasons": [
-        "时长少于 20 分钟",
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
-      ]
-    },
-    {
-      "podcastName": "晚安咖啡GoodNightCoffee",
-      "title": "《晚安咖啡》科技夜话：可灵融资30亿美元，小鹏MONA M03亮相，中国电动车欧洲首超日本",
-      "score": 24,
-      "reasons": [
-        "时长少于 20 分钟",
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
-      ]
-    },
-    {
-      "podcastName": "晚安咖啡GoodNightCoffee",
-      "title": "《晚安咖啡》科技夜话（英文版）：OpenAI硬件预告，微软市值蒸发，苹果iPhone泄露",
-      "score": 30,
-      "reasons": [
-        "时长少于 20 分钟",
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
-      ]
-    },
-    {
-      "podcastName": "晚安咖啡GoodNightCoffee",
-      "title": "《晚安咖啡》科技夜话：OpenAI硬件预告，微软市值蒸发，苹果iPhone泄露",
-      "score": 17,
-      "reasons": [
-        "时长少于 20 分钟",
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
-      ]
-    },
-    {
-      "podcastName": "晚安咖啡GoodNightCoffee",
-      "title": "《晚安咖啡》科技夜话（英文版）：SpaceX收购Cursor，G7聚焦AI，字节转向B端",
-      "score": 30,
-      "reasons": [
-        "时长少于 20 分钟",
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
-        "中文内容不足"
-      ]
-    },
-    {
-      "podcastName": "晚安咖啡GoodNightCoffee",
-      "title": "《晚安咖啡》科技夜话（英文版）：谷歌发债800亿，英伟达CEO讲话泄露，OpenAI整合Codex",
-      "score": 29,
-      "reasons": [
-        "时长少于 20 分钟",
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
-      ]
-    },
-    {
-      "podcastName": "晚安咖啡GoodNightCoffee",
-      "title": "《晚安咖啡》科技夜话：谷歌发债800亿，英伟达CEO讲话泄露，OpenAI整合Codex",
-      "score": 29,
-      "reasons": [
-        "时长少于 20 分钟",
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
-      ]
-    },
-    {
-      "podcastName": "晚安咖啡GoodNightCoffee",
-      "title": "《晚安咖啡》科技夜话（英文版）：谷歌AI搜索革新，卡帕斯加入Anthropic，寒武纪市值创新高",
-      "score": 29,
-      "reasons": [
-        "时长少于 20 分钟",
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
-      ]
-    },
-    {
-      "podcastName": "AI圈儿",
-      "title": "【AI干货系列】怎么让你的AI Agent爬公众号、小红书和小宇宙？",
-      "score": 34,
-      "reasons": [
-        "时长少于 20 分钟",
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
-      ]
-    },
-    {
-      "podcastName": "AI圈儿",
-      "title": "【0625 | AI日报】Mythos攻破美机密系统/Claude Code升级/智谱GLM-5.2登顶开源",
-      "score": 30,
-      "reasons": [
-        "时长少于 20 分钟",
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
-      ]
-    },
-    {
-      "podcastName": "AI圈儿",
-      "title": "【0624 | AI 日报】豆包 180 万亿 / Vera Rubin 四倍 / 百度 Unlimited OCR",
-      "score": 37,
-      "reasons": [
-        "时长少于 20 分钟",
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
-      ]
-    },
-    {
-      "podcastName": "AI圈儿",
-      "title": "【0622 | AI 日报】AWS 发 AI 代理双服务 / 微信小微灰度测试 / 高通押注智能眼镜",
-      "score": 34,
-      "reasons": [
-        "时长少于 20 分钟",
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
-      ]
-    },
-    {
-      "podcastName": "AI圈儿",
-      "title": "【0614 | AI 日报】阿里首席科学家 6 天离任 / Moonshot 开源 Kimi K2.7",
-      "score": 30,
-      "reasons": [
-        "时长少于 20 分钟",
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
-      ]
-    },
-    {
-      "podcastName": "AI圈儿",
-      "title": "【0608 | AI日报】Siri联手Gemini反击/Claude Code凭证泄露/芯片元老叛逃Anthropic",
-      "score": 37,
-      "reasons": [
-        "时长少于 20 分钟",
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
-      ]
-    },
-    {
-      "podcastName": "AI圈儿",
-      "title": "【0603 | AI日报】英伟达双线出击/Groq融资迷雾/OpenAI曲线登陆AWS",
-      "score": 36,
-      "reasons": [
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
-      ]
-    },
-    {
-      "podcastName": "AI圈儿",
-      "title": "【0531 | AI日报】OpenAI纠错率骤降/MiniMax启动A股IPO/阶跃星辰198B编程模型发布",
-      "score": 29,
-      "reasons": [
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
-        "内容主要是泛泛 AI 新闻或模型发布消息"
-      ]
-    },
-    {
-      "podcastName": "AI圈儿",
-      "title": "【0530 | AI日报】Opus4.8陷蒸馏争议/Codex杀入手机/苹果联手Gemini",
-      "score": 33,
-      "reasons": [
-        "时长少于 20 分钟",
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
-      ]
-    },
-    {
-      "podcastName": "AI圈儿",
-      "title": "【AI干货系列】保姆级教程：Claude Code 从安装到接入 DeepSeek V4",
-      "score": 40,
-      "reasons": [
-        "总分 40，低于正式推荐阈值 85"
-      ]
-    },
-    {
-      "podcastName": "AI圈儿",
-      "title": "【0529 | AI日报】Meta推AI订阅/小米模型降价99%/米哈游一夜烧掉200万Token",
-      "score": 36,
-      "reasons": [
-        "时长少于 20 分钟",
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
-      ]
-    },
-    {
-      "podcastName": "AI圈儿",
-      "title": "【0526 | AI日报】Grok1.5T出炉/算力锁喉Anthropic/Deepseek造编程工具",
-      "score": 43,
-      "reasons": [
-        "时长少于 20 分钟"
-      ]
-    },
-    {
-      "podcastName": "AI圈儿",
-      "title": "【0521 | AI日报】Cerebras上市670亿/OpenAI算力换股权/微软GitHub生存危机",
-      "score": 36,
-      "reasons": [
-        "时长少于 20 分钟",
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
-      ]
-    },
-    {
-      "podcastName": "AI圈儿",
-      "title": "【0516 | AI日报】拒掉字节谷歌，被裁的Meta大佬凭什么一轮融了六亿美金？",
-      "score": 29,
-      "reasons": [
-        "时长少于 20 分钟",
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
-      ]
-    },
-    {
-      "podcastName": "AI圈儿",
-      "title": "【0515 | AI日报】AI已经写了Anthropic九成代码，你还在亲手敲吗？",
-      "score": 47,
-      "reasons": [
-        "时长少于 20 分钟"
-      ]
-    },
-    {
-      "podcastName": "AI圈儿",
-      "title": "【0505 | AI日报】AI智能体调用一次烧117万Token，Cloudflare一招砍到1000？",
-      "score": 29,
-      "reasons": [
-        "时长少于 20 分钟",
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
-      ]
-    },
-    {
-      "podcastName": "AI圈儿",
-      "title": "【0502 | AI日报】藏在Linux内核里23年的漏洞，被一个AI用最笨的方法翻了出来",
-      "score": 33,
-      "reasons": [
-        "时长少于 20 分钟",
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
-      ]
-    },
-    {
-      "podcastName": "AI圈儿",
-      "title": "【0417 | AI日报】你以为和AI的对话是私密的吗？法庭上可能不是这么想的。",
-      "score": 36,
-      "reasons": [
-        "时长少于 20 分钟",
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
-      ]
-    },
-    {
-      "podcastName": "AI圈儿",
-      "title": "20260414 |【字节】养虾人编程/【Cloudflare】AI白嫖怪/【日本】万亿日元AI联盟",
-      "score": 40,
-      "reasons": [
-        "时长少于 20 分钟"
-      ]
-    },
-    {
-      "podcastName": "AI圈儿",
-      "title": "20260413 |【中国】36.4万超声数据/【Claude】复活30年游戏/【CF】瞄准WordPress",
-      "score": 37,
-      "reasons": [
-        "时长少于 20 分钟"
-      ]
-    },
-    {
-      "podcastName": "Seventy3",
-      "title": "【第630期】前沿代码智能体AlphaZero自主实现能力评估报告",
-      "score": 30,
-      "reasons": [
-        "时长少于 20 分钟",
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
-      ]
-    },
-    {
-      "podcastName": "Seventy3",
-      "title": "【第624期】可观察性驱动的编程智能体测试床自动演进",
-      "score": 44,
-      "reasons": [
-        "总分 44，低于正式推荐阈值 85"
-      ]
-    },
-    {
-      "podcastName": "Seventy3",
-      "title": "【第613期】Autogenesis：A Self-Evolving Agent Protocol",
-      "score": 29,
-      "reasons": [
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
-      ]
-    },
-    {
-      "podcastName": "Seventy3",
-      "title": "【第608期】记忆迁移学习：编程代理的跨域经验共享",
-      "score": 29,
-      "reasons": [
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
-      ]
-    },
-    {
-      "podcastName": "Seventy3",
-      "title": "【第598期】通过原子技能强化学习扩展编程智能体",
-      "score": 29,
-      "reasons": [
-        "时长少于 20 分钟",
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
-      ]
-    },
-    {
-      "podcastName": "Seventy3",
-      "title": "【第589期】代码智能体：长文本处理的高效利器",
-      "score": 36,
-      "reasons": [
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
-      ]
-    },
-    {
-      "podcastName": "Seventy3",
-      "title": "【第582期】Claudini：利用AI代理自动研发LLM对抗攻击算法",
-      "score": 33,
-      "reasons": [
-        "时长少于 20 分钟",
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
-      ]
-    },
-    {
-      "podcastName": "Seventy3",
-      "title": "【第572期】OpenDev：基于Rust的终端原生AI编码智能体架构",
-      "score": 45,
-      "reasons": [
-        "总分 45，低于正式推荐阈值 85"
-      ]
-    },
-    {
-      "podcastName": "Seventy3",
-      "title": "【第555期】编码代理中 AGENTS.md 上下文文件的效用评估",
-      "score": 32,
-      "reasons": [
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
-      ]
-    },
-    {
-      "podcastName": "✦ 罗伯特带添添闯 Aī",
-      "title": "E2524 智能体·NLWeb：在对话中，重塑 Web 的未来",
-      "score": 26,
-      "reasons": [
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
-      ]
-    },
-    {
-      "podcastName": "✦ 罗伯特带添添闯 Aī",
-      "title": "E2518 智能体·超越算法边界：人类连接的价值-EP2",
-      "score": 30,
-      "reasons": [
-        "时长少于 20 分钟",
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
-      ]
-    },
-    {
-      "podcastName": "✦ 罗伯特带添添闯 Aī",
-      "title": "E2517 智能体·超越算法边界：人类连接的价值-EP1",
-      "score": 30,
-      "reasons": [
-        "时长少于 20 分钟",
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
-      ]
-    },
-    {
-      "podcastName": "✦ 罗伯特带添添闯 Aī",
-      "title": "E2516 智能体·MCP 构建起智能体时代的互联网络-EP3",
-      "score": 41,
-      "reasons": [
-        "总分 41，低于正式推荐阈值 85"
-      ]
-    },
-    {
-      "podcastName": "✦ 罗伯特带添添闯 Aī",
-      "title": "E2515 智能体·MCP 构建起智能体时代的互联网络-EP2",
-      "score": 41,
-      "reasons": [
-        "时长少于 20 分钟"
-      ]
-    },
-    {
-      "podcastName": "✦ 罗伯特带添添闯 Aī",
-      "title": "E2514 智能体·MCP 构建起智能体时代的互联网络-EP1",
-      "score": 49,
-      "reasons": [
-        "总分 49，低于正式推荐阈值 85"
-      ]
-    },
-    {
-      "podcastName": "✦ 罗伯特带添添闯 Aī",
-      "title": "E2506 智能体·25 年展望关键词(自主性/端到端/上下文层/大型推理模型)",
-      "score": 55,
-      "reasons": [
-        "总分 55，低于正式推荐阈值 85"
-      ]
-    },
-    {
-      "podcastName": "✦ 罗伯特带添添闯 Aī",
-      "title": "E2435 智能体·玩起来! 玩游戏再还用看攻略?",
-      "score": 26,
-      "reasons": [
-        "时长少于 20 分钟",
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
-      ]
-    },
-    {
-      "podcastName": "✦ 罗伯特带添添闯 Aī",
-      "title": "E2433 智能体·编程 Copilot和Agent的核心区别是什么？",
-      "score": 40,
-      "reasons": [
-        "时长少于 20 分钟"
-      ]
-    },
-    {
-      "podcastName": "✦ 罗伯特带添添闯 Aī",
-      "title": "E2404 智能应用·写代码一定要用手么?",
-      "score": 41,
-      "reasons": [
-        "总分 41，低于正式推荐阈值 85"
-      ]
-    },
-    {
-      "podcastName": "字节篝火",
-      "title": "Vol.59 揭秘AI突破：为何只有新数据集",
-      "score": 44,
-      "reasons": [
-        "时长少于 20 分钟"
-      ]
-    },
-    {
-      "podcastName": "字节篝火",
-      "title": "Vol.54 解锁AI Agent实操：MCP协议与可执行世界",
-      "score": 41,
-      "reasons": [
-        "时长少于 20 分钟"
-      ]
-    },
-    {
-      "podcastName": "字节篝火",
-      "title": "Vol.51 告别切换：AI 助手已接入你的所有开发工具",
-      "score": 51,
-      "reasons": [
-        "时长少于 20 分钟"
-      ]
-    },
-    {
-      "podcastName": "字节篝火",
-      "title": "Vol.29 AWS的系统正确性：比测试更硬核",
-      "score": 55,
-      "reasons": [
-        "时长少于 20 分钟"
-      ]
-    },
-    {
-      "podcastName": "字节篝火",
-      "title": "Vol.26 GitHub AI安全漏洞：私有代码或被公开！",
-      "score": 44,
-      "reasons": [
-        "时长少于 20 分钟"
-      ]
-    },
-    {
-      "podcastName": "字节篝火",
-      "title": "Vol.22 LLM判断为何不可靠？揭秘AI应用的深层隐担忧",
-      "score": 37,
-      "reasons": [
-        "总分 37，低于正式推荐阈值 85"
-      ]
-    },
-    {
-      "podcastName": "字节篝火",
-      "title": "Vol.9 本地大模型能“看图”了？AI Agent协议之争与下一代开发者工具",
-      "score": 51,
-      "reasons": [
-        "总分 51，低于正式推荐阈值 85"
-      ]
-    },
-    {
-      "podcastName": "字节篝火",
-      "title": "Vol.2 SSR金星着陆器、语言脑与编程、VR节奏光剑：开发者周报",
-      "score": 44,
-      "reasons": [
-        "时长少于 20 分钟"
-      ]
-    },
-    {
-      "podcastName": "HuggingFace 每日AI论文速递",
-      "title": "【周末特辑】7月第1周最火AI论文 | Orca：从视频中学习世界模型；智能体弃权：学会何时停止。",
-      "score": 30,
-      "reasons": [
-        "时长少于 20 分钟",
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
-      ]
-    },
-    {
-      "podcastName": "HuggingFace 每日AI论文速递",
-      "title": "2026.07.01 | Orca世界模型验证状态预测范式；Dockerless实现无环境代码验证",
-      "score": 30,
-      "reasons": [
-        "时长少于 20 分钟",
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
-      ]
-    },
-    {
-      "podcastName": "HuggingFace 每日AI论文速递",
-      "title": "2026.06.24 | Qwen-AgentWorld超越GPT-5.4；NatureBench揭示AI创新瓶颈",
-      "score": 30,
-      "reasons": [
-        "时长少于 20 分钟",
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
-      ]
-    },
-    {
-      "podcastName": "HuggingFace 每日AI论文速递",
-      "title": "2026.06.09 | 代码探索短板凸显；策略内蒸馏几何特性揭示",
-      "score": 30,
-      "reasons": [
-        "时长少于 20 分钟",
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
-      ]
-    },
-    {
       "podcastName": "AI智识录",
       "title": "Anthropic Research报告：智能体编程与不可替代的专业壁垒",
       "score": 37,
@@ -1309,6 +1218,106 @@
       ]
     },
     {
+      "podcastName": "字节篝火",
+      "title": "Vol.59 揭秘AI突破：为何只有新数据集",
+      "score": 44,
+      "reasons": [
+        "时长少于 20 分钟"
+      ]
+    },
+    {
+      "podcastName": "字节篝火",
+      "title": "Vol.54 解锁AI Agent实操：MCP协议与可执行世界",
+      "score": 41,
+      "reasons": [
+        "时长少于 20 分钟"
+      ]
+    },
+    {
+      "podcastName": "字节篝火",
+      "title": "Vol.51 告别切换：AI 助手已接入你的所有开发工具",
+      "score": 51,
+      "reasons": [
+        "时长少于 20 分钟"
+      ]
+    },
+    {
+      "podcastName": "字节篝火",
+      "title": "Vol.29 AWS的系统正确性：比测试更硬核",
+      "score": 55,
+      "reasons": [
+        "时长少于 20 分钟"
+      ]
+    },
+    {
+      "podcastName": "字节篝火",
+      "title": "Vol.26 GitHub AI安全漏洞：私有代码或被公开！",
+      "score": 44,
+      "reasons": [
+        "时长少于 20 分钟"
+      ]
+    },
+    {
+      "podcastName": "字节篝火",
+      "title": "Vol.22 LLM判断为何不可靠？揭秘AI应用的深层隐担忧",
+      "score": 37,
+      "reasons": [
+        "总分 37，低于正式推荐阈值 85"
+      ]
+    },
+    {
+      "podcastName": "字节篝火",
+      "title": "Vol.9 本地大模型能“看图”了？AI Agent协议之争与下一代开发者工具",
+      "score": 51,
+      "reasons": [
+        "总分 51，低于正式推荐阈值 85"
+      ]
+    },
+    {
+      "podcastName": "字节篝火",
+      "title": "Vol.2 SSR金星着陆器、语言脑与编程、VR节奏光剑：开发者周报",
+      "score": 44,
+      "reasons": [
+        "时长少于 20 分钟"
+      ]
+    },
+    {
+      "podcastName": "HuggingFace 每日AI论文速递",
+      "title": "【周末特辑】7月第1周最火AI论文 | Orca：从视频中学习世界模型；智能体弃权：学会何时停止。",
+      "score": 30,
+      "reasons": [
+        "时长少于 20 分钟",
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
+      ]
+    },
+    {
+      "podcastName": "HuggingFace 每日AI论文速递",
+      "title": "2026.07.01 | Orca世界模型验证状态预测范式；Dockerless实现无环境代码验证",
+      "score": 30,
+      "reasons": [
+        "时长少于 20 分钟",
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
+      ]
+    },
+    {
+      "podcastName": "HuggingFace 每日AI论文速递",
+      "title": "2026.06.24 | Qwen-AgentWorld超越GPT-5.4；NatureBench揭示AI创新瓶颈",
+      "score": 30,
+      "reasons": [
+        "时长少于 20 分钟",
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
+      ]
+    },
+    {
+      "podcastName": "HuggingFace 每日AI论文速递",
+      "title": "2026.06.09 | 代码探索短板凸显；策略内蒸馏几何特性揭示",
+      "score": 30,
+      "reasons": [
+        "时长少于 20 分钟",
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
+      ]
+    },
+    {
       "podcastName": "敢想科技说",
       "title": "火山引擎引爆AI革命豆包大模型16重塑Agent新纪元",
       "score": 30,
@@ -1338,6 +1347,15 @@
       "podcastName": "敢想科技说",
       "title": "Claude 4震撼发布AI工程师爆料未来智能体将全天候工作，DeepSeek被指不算前沿",
       "score": 30,
+      "reasons": [
+        "时长少于 20 分钟",
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
+      ]
+    },
+    {
+      "podcastName": "C哥聊科技",
+      "title": "【C哥日课】国内怎么用上 Codex：分有没有海外网络，两种情况全讲清",
+      "score": 34,
       "reasons": [
         "时长少于 20 分钟",
         "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
@@ -1515,11 +1533,11 @@
       ]
     },
     {
-      "podcastName": "C哥聊科技",
-      "title": "【C哥日课】Skill的安全问题",
-      "score": 39,
+      "podcastName": "出海去孵化器",
+      "title": "EP59 | 别让好点子卡在“部署地狱”！",
+      "score": 45,
       "reasons": [
-        "时长少于 20 分钟"
+        "总分 45，低于正式推荐阈值 85"
       ]
     },
     {
@@ -1537,14 +1555,6 @@
       "reasons": [
         "时长少于 20 分钟",
         "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
-      ]
-    },
-    {
-      "podcastName": "出海去孵化器",
-      "title": "EP59 | 别让好点子卡在“部署地狱”！",
-      "score": 45,
-      "reasons": [
-        "总分 45，低于正式推荐阈值 85"
       ]
     },
     {
@@ -1601,38 +1611,6 @@
       "score": 39,
       "reasons": [
         "总分 39，低于正式推荐阈值 85"
-      ]
-    },
-    {
-      "podcastName": "浪说播客",
-      "title": "聊聊 AI 编程的现状和未来",
-      "score": 60,
-      "reasons": [
-        "总分 60，低于正式推荐阈值 85"
-      ]
-    },
-    {
-      "podcastName": "浪说播客",
-      "title": "“VibeCoding”时代，程序员会被取代吗？",
-      "score": 56,
-      "reasons": [
-        "总分 56，低于正式推荐阈值 85"
-      ]
-    },
-    {
-      "podcastName": "浪说播客",
-      "title": "微软MVP/云原生专家：张晋涛的探索路程",
-      "score": 51,
-      "reasons": [
-        "总分 51，低于正式推荐阈值 85"
-      ]
-    },
-    {
-      "podcastName": "浪说播客",
-      "title": "AI 时代做基建才是最佳选择：走进大牛零弌的职业历程",
-      "score": 44,
-      "reasons": [
-        "总分 44，低于正式推荐阈值 85"
       ]
     },
     {
@@ -1879,1042 +1857,6 @@
       "score": 30,
       "reasons": [
         "时长少于 20 分钟"
-      ]
-    },
-    {
-      "podcastName": "アニメとAIで人生を楽しむラジオ｜クドラジ",
-      "title": "【健康は大事に！】皮膚科に行ったらウイルス性の発疹症と診断された…",
-      "score": 27,
-      "reasons": [
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
-      ]
-    },
-    {
-      "podcastName": "アニメとAIで人生を楽しむラジオ｜クドラジ",
-      "title": "【Claude Code】HTMLを使ったスライド資料作成のすゝめ！",
-      "score": 16,
-      "reasons": [
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
-        "中文内容不足"
-      ]
-    },
-    {
-      "podcastName": "アニメとAIで人生を楽しむラジオ｜クドラジ",
-      "title": "【Powershellから乗り換え】VSCode拡張機能のClaude Codeがめっちゃ便利なんだが！",
-      "score": 19,
-      "reasons": [
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
-        "中文内容不足"
-      ]
-    },
-    {
-      "podcastName": "アニメとAIで人生を楽しむラジオ｜クドラジ",
-      "title": "【AI雑談】Geminiデスクトップアプリ / Claude Code週間制限50％増↑ / Claude落ちた / CLIツール探求",
-      "score": 23,
-      "reasons": [
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
-        "中文内容不足"
-      ]
-    },
-    {
-      "podcastName": "アニメとAIで人生を楽しむラジオ｜クドラジ",
-      "title": "【ジェットストリームアタック】AI界の黒い三連星「Claude Code・Codex CLI・Gemini CLI」で連携攻撃だ！！",
-      "score": 35,
-      "reasons": [
-        "中文内容不足"
-      ]
-    },
-    {
-      "podcastName": "アニメとAIで人生を楽しむラジオ｜クドラジ",
-      "title": "【Codex CLI】導入してみた！Claude Codeとの連携も！",
-      "score": 35,
-      "reasons": [
-        "中文内容不足"
-      ]
-    },
-    {
-      "podcastName": "アニメとAIで人生を楽しむラジオ｜クドラジ",
-      "title": "【Claude Code】ポッドキャストからショート動画をAIで完全自動生成する",
-      "score": 33,
-      "reasons": [
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
-        "中文内容不足"
-      ]
-    },
-    {
-      "podcastName": "アニメとAIで人生を楽しむラジオ｜クドラジ",
-      "title": "【めっちゃ簡単】Claude CodeでオリジナルのMCPサーバーを自作してみた！",
-      "score": 33,
-      "reasons": [
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
-        "中文内容不足"
-      ]
-    },
-    {
-      "podcastName": "アニメとAIで人生を楽しむラジオ｜クドラジ",
-      "title": "【Google Workspace CLI】Claude Codeからドキュメントやスプレッドシートを操作できるように！",
-      "score": 32,
-      "reasons": [
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
-        "中文内容不足"
-      ]
-    },
-    {
-      "podcastName": "AI駆動開発部の日常",
-      "title": "48【裏技】Codexから技術顧問としてGPT-5.5 Proを呼ぶ",
-      "score": 53,
-      "reasons": [
-        "中文内容不足"
-      ]
-    },
-    {
-      "podcastName": "AI駆動開発部の日常",
-      "title": "47【ClaudeCodeのワークフローから考える】エージェントハーネス設計談義",
-      "score": 34,
-      "reasons": [
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
-        "中文内容不足"
-      ]
-    },
-    {
-      "podcastName": "AI駆動開発部の日常",
-      "title": "46【ターミナルはもう要らない？】Codex App一つで完結する開発",
-      "score": 65,
-      "reasons": [
-        "总分 65，低于正式推荐阈值 85"
-      ]
-    },
-    {
-      "podcastName": "AI駆動開発部の日常",
-      "title": "44【おすすめ便利機能】Claude Codeの/btwとCodexの/side",
-      "score": 34,
-      "reasons": [
-        "时长少于 20 分钟",
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
-      ]
-    },
-    {
-      "podcastName": "AI駆動開発部の日常",
-      "title": "43【最強の布陣】Claude Codeを司令塔、Codexをサブエージェントに",
-      "score": 53,
-      "reasons": [
-        "总分 53，低于正式推荐阈值 85"
-      ]
-    },
-    {
-      "podcastName": "AI駆動開発部の日常",
-      "title": "42【圧倒的性能】Claude Fable 5のファーストインプレッション",
-      "score": 46,
-      "reasons": [
-        "时长少于 20 分钟"
-      ]
-    },
-    {
-      "podcastName": "AI駆動開発部の日常",
-      "title": "41【触れ込みは本物か？】MiniMax M3を4モデル横並び比較",
-      "score": 29,
-      "reasons": [
-        "时长少于 20 分钟",
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
-      ]
-    },
-    {
-      "podcastName": "AI駆動開発部の日常",
-      "title": "40【一晩で何サイクル回せる？】CodexやClaude Codeの使い方",
-      "score": 29,
-      "reasons": [
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
-      ]
-    },
-    {
-      "podcastName": "AI駆動開発部の日常",
-      "title": "36【実装が先？デザインが先？】Claude Designで変わる開発フロー",
-      "score": 29,
-      "reasons": [
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
-      ]
-    },
-    {
-      "podcastName": "AI駆動開発部の日常",
-      "title": "34【AIがデザインシステムを作る？】Claude Designを触ってみた衝撃",
-      "score": 29,
-      "reasons": [
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
-      ]
-    },
-    {
-      "podcastName": "AI駆動開発部の日常",
-      "title": "33【GPT-5.5は本当に変わった？】使ってみたリアルな所感",
-      "score": 29,
-      "reasons": [
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
-      ]
-    },
-    {
-      "podcastName": "AI駆動開発部の日常",
-      "title": "32【お便り】MiMo-V2-Pro、AI記憶を管理、AIの情報収集方法について",
-      "score": 40,
-      "reasons": [
-        "总分 40，低于正式推荐阈值 85"
-      ]
-    },
-    {
-      "podcastName": "AI駆動開発部の日常",
-      "title": "27【GPT-5.4はクビ！？】OhMyOpenCodeでのモデル選定",
-      "score": 35,
-      "reasons": [
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
-        "中文内容不足"
-      ]
-    },
-    {
-      "podcastName": "AI駆動開発部の日常",
-      "title": "26【100万トークンで超有能？】GPT-5.4と5.3-Codexの使い分け",
-      "score": 44,
-      "reasons": [
-        "总分 44，低于正式推荐阈值 85"
-      ]
-    },
-    {
-      "podcastName": "AI駆動開発部の日常",
-      "title": "25【AI駆動開発の秘密兵器】OpenCodeとOhMyOpenCode活用術",
-      "score": 28,
-      "reasons": [
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
-      ]
-    },
-    {
-      "podcastName": "AI駆動開発部の日常",
-      "title": "24【CodeRabbitを導入！】1PR毎のAIレビュー375件をどう捌く？",
-      "score": 39,
-      "reasons": [
-        "总分 39，低于正式推荐阈值 85"
-      ]
-    },
-    {
-      "podcastName": "AI駆動開発部の日常",
-      "title": "22【悲願のCodexサブエージェント！】並列化でAIの思考が深まる理由とは？",
-      "score": 35,
-      "reasons": [
-        "时长少于 20 分钟",
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
-        "中文内容不足"
-      ]
-    },
-    {
-      "podcastName": "AI駆動開発部の日常",
-      "title": "21【Z.ai GLM-5はメインで使える？】Opus 4.6やCodexと比較",
-      "score": 35,
-      "reasons": [
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
-        "中文内容不足"
-      ]
-    },
-    {
-      "podcastName": "AI駆動開発部の日常",
-      "title": "20【Claude Codeの新機能】Agent Teamsとサブエージェント",
-      "score": 28,
-      "reasons": [
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
-        "中文内容不足"
-      ]
-    },
-    {
-      "podcastName": "AI駆動開発部の日常",
-      "title": "18【FigmaからPencilへ？】AIネイティブなデザインツールの可能性",
-      "score": 28,
-      "reasons": [
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
-        "中文内容不足"
-      ]
-    },
-    {
-      "podcastName": "AI駆動開発部の日常",
-      "title": "17【コスパ最強は本当か】Z.ai GLM-4.7をCursorで使ってみた",
-      "score": 28,
-      "reasons": [
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
-        "中文内容不足"
-      ]
-    },
-    {
-      "podcastName": "AI駆動開発部の日常",
-      "title": "16【opencode試した】並列開発サブエージェントとBest-of-Nの違い",
-      "score": 35,
-      "reasons": [
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
-      ]
-    },
-    {
-      "podcastName": "AI駆動開発部の日常",
-      "title": "15【便利なCursorのDebugMode】CodexとClaudeで使える？",
-      "score": 50,
-      "reasons": [
-        "中文内容不足"
-      ]
-    },
-    {
-      "podcastName": "AI駆動開発部の日常",
-      "title": "14【PRレビューの指摘をAIで自動修正】Codexクラウドでサブスク内で完結",
-      "score": 34,
-      "reasons": [
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
-        "中文内容不足"
-      ]
-    },
-    {
-      "podcastName": "AI駆動開発部の日常",
-      "title": "13【衝撃のCursor新機能】ビジュアルエディタ×デバッグモードを使いこなす",
-      "score": 27,
-      "reasons": [
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
-        "中文内容不足"
-      ]
-    },
-    {
-      "podcastName": "AI駆動開発部の日常",
-      "title": "12【ベンチマークは鵜呑み厳禁!?】AIコーディングツールIDE vs CLI",
-      "score": 43,
-      "reasons": [
-        "总分 43，低于正式推荐阈值 85"
-      ]
-    },
-    {
-      "podcastName": "AI駆動開発部の日常",
-      "title": "11【AI駆動開発のドキュメント管理術とは？】DevinとDeepWiki活用",
-      "score": 34,
-      "reasons": [
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
-        "中文内容不足"
-      ]
-    },
-    {
-      "podcastName": "AI駆動開発部の日常",
-      "title": "10【結局どれ?】Antigravity・Cursor・ClaudeCode等",
-      "score": 27,
-      "reasons": [
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
-        "中文内容不足"
-      ]
-    },
-    {
-      "podcastName": "AI駆動開発部の日常",
-      "title": "9【衝撃】Google Antigravityの圧倒的UI生成力",
-      "score": 27,
-      "reasons": [
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
-        "中文内容不足"
-      ]
-    },
-    {
-      "podcastName": "AI駆動開発部の日常",
-      "title": "8【Windsurfの推し機能3選】Fast Context、Codemaps等",
-      "score": 27,
-      "reasons": [
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
-      ]
-    },
-    {
-      "podcastName": "AI駆動開発部の日常",
-      "title": "6【長時間自律駆動開発の秘訣とは？】CodexやClaudeCodeを効率的に",
-      "score": 27,
-      "reasons": [
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
-      ]
-    },
-    {
-      "podcastName": "AI駆動開発部の日常",
-      "title": "5【AI駆動開発必須】ClaudeCodeやCodexには「tmux」を使え！",
-      "score": 27,
-      "reasons": [
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
-      ]
-    },
-    {
-      "podcastName": "AI駆動開発部の日常",
-      "title": "4【常駐録音の革新】limitlessから学ぶAPI/MCPの重要性",
-      "score": 27,
-      "reasons": [
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
-      ]
-    },
-    {
-      "podcastName": "AI駆動開発部の日常",
-      "title": "3【ClaudeCodeの新機能Pluginsの可能性】おすすめツールghq等",
-      "score": 27,
-      "reasons": [
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
-      ]
-    },
-    {
-      "podcastName": "AI駆動開発部の日常",
-      "title": "2【Claude Sonnet 4.5】GPT-5-Codexより優っている？",
-      "score": 40,
-      "reasons": [
-        "中文内容不足"
-      ]
-    },
-    {
-      "podcastName": "AI駆動開発部の日常",
-      "title": "1【AI駆動開発】 Codex CLIとClaude Codeどっちがいい？",
-      "score": 33,
-      "reasons": [
-        "中文内容不足"
-      ]
-    },
-    {
-      "podcastName": "小羊侃财",
-      "title": "国产算力跑出“世界级”大模型，五万卡国产算力跑通万亿参数 | 热财经",
-      "score": 41,
-      "reasons": [
-        "时长少于 20 分钟"
-      ]
-    },
-    {
-      "podcastName": "ちょっとAI",
-      "title": "#198 Gemini CLIのアップデートで感じた戸惑い",
-      "score": 31,
-      "reasons": [
-        "时长少于 20 分钟",
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
-        "中文内容不足"
-      ]
-    },
-    {
-      "podcastName": "ちょっとAI",
-      "title": "#151 Codex CLIの「書き込み権限がない」エラーを解決する設定",
-      "score": 43,
-      "reasons": [
-        "时长少于 20 分钟"
-      ]
-    },
-    {
-      "podcastName": "ちょっとAI",
-      "title": "#147 Gemini CLI、作業が捗る神コマンド4選",
-      "score": 31,
-      "reasons": [
-        "时长少于 20 分钟",
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
-        "中文内容不足"
-      ]
-    },
-    {
-      "podcastName": "ちょっとAI",
-      "title": "#146 AIの応答、もっと速くならない？Codex CLI「モデル切替」",
-      "score": 43,
-      "reasons": [
-        "时长少于 20 分钟",
-        "中文内容不足"
-      ]
-    },
-    {
-      "podcastName": "ちょっとAI",
-      "title": "#131 Gemini CLIを一発起動するMacアプリ化",
-      "score": 31,
-      "reasons": [
-        "时长少于 20 分钟",
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
-        "中文内容不足"
-      ]
-    },
-    {
-      "podcastName": "ちょっとAI",
-      "title": "#125 Codex vs Gemini、文章作成で私がメインで使うのは…",
-      "score": 27,
-      "reasons": [
-        "时长少于 20 分钟",
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
-      ]
-    },
-    {
-      "podcastName": "ちょっとAI",
-      "title": "#116 Udemyで突破 Codex CLI導入メモ",
-      "score": 43,
-      "reasons": [
-        "时长少于 20 分钟"
-      ]
-    },
-    {
-      "podcastName": "ちょっとAI",
-      "title": "#105 私は誤解していた。Gemini CLIの「脆弱性事件」の本当の話",
-      "score": 31,
-      "reasons": [
-        "时长少于 20 分钟",
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
-      ]
-    },
-    {
-      "podcastName": "ムーザルのプログラミング絶望ラジオ",
-      "title": "#37 Cursor最強説？, Claude CodeとCopilotとバトルさせてみた, AIは虚業？！, AIへの言葉遣い, 設計の考慮漏れ対策, 哲学と数学とプログラミング, HaskellミニブログMonalogの存亡",
-      "score": 18,
-      "reasons": [
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
-      ]
-    },
-    {
-      "podcastName": "ムーザルのプログラミング絶望ラジオ",
-      "title": "#32 Skills・MCPって効果あるの？ Codex Appの話 AIコーディングとフロントエンドの相性の悪さとFigma MCP 並列AIエージェントの苦しみ エージェントピアレビュー良いよ",
-      "score": 30,
-      "reasons": [
-        "中文内容不足"
-      ]
-    },
-    {
-      "podcastName": "ムーザルのプログラミング絶望ラジオ",
-      "title": "BunがAnthropicに買収された話, Reactの脆弱性, ChatGPTからGemini Proへ乗り換えた, MCPサーバいらないかもぉ？, 育児と仕事の両立, 不具合どうすりゃいいの #22",
-      "score": 17,
-      "reasons": [
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
-      ]
-    },
-    {
-      "podcastName": "ムーザルのプログラミング絶望ラジオ",
-      "title": "Codex CLI 優秀 / Next.js,ReactはAI優位性低い / エンジニアリングマネージャーってどう？ / AIで無くならない仕事 #12",
-      "score": 33,
-      "reasons": [
-        "中文内容不足"
-      ]
-    },
-    {
-      "podcastName": "ムーザルのプログラミング絶望ラジオ",
-      "title": "注目フレームワーク / GitHub Spec Kit / Codex CLI再燃？ / AIを使うと頭が悪くなる？ / Cloud Run最高 vs Vercel最高#9",
-      "score": 40,
-      "reasons": [
-        "中文内容不足"
-      ]
-    },
-    {
-      "podcastName": "耳で学ぶAI、ロボシンク",
-      "title": "【耳で学ぶAI⑥】AIエージェントの使い方。どのように導入するか？",
-      "score": 29,
-      "reasons": [
-        "时长少于 20 分钟",
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
-      ]
-    },
-    {
-      "podcastName": "耳で学ぶAI、ロボシンク",
-      "title": "#112 GPT-5.4が登場。何が変わった？GeminiやClaudeとの比較",
-      "score": 28,
-      "reasons": [
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
-      ]
-    },
-    {
-      "podcastName": "耳で学ぶAI、ロボシンク",
-      "title": "#111 Claudeの魅力を語る回。Claude Code / Claude Cowork",
-      "score": 28,
-      "reasons": [
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
-      ]
-    },
-    {
-      "podcastName": "耳で学ぶAI、ロボシンク",
-      "title": "#109 AIエージェントでチームを作るという視点",
-      "score": 28,
-      "reasons": [
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
-      ]
-    },
-    {
-      "podcastName": "耳で学ぶAI、ロボシンク",
-      "title": "#108 OpenAIがリリースしたCodex appってなにですか？",
-      "score": 40,
-      "reasons": [
-        "总分 40，低于正式推荐阈值 85"
-      ]
-    },
-    {
-      "podcastName": "耳で学ぶAI、ロボシンク",
-      "title": "#102 📅2025年の振り返りとベストAIツール",
-      "score": 27,
-      "reasons": [
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
-      ]
-    },
-    {
-      "podcastName": "耳で学ぶAI、ロボシンク",
-      "title": "Claudeの魅力を語る回(Claude Sonnet 4.5)",
-      "score": 27,
-      "reasons": [
-        "时长少于 20 分钟",
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
-      ]
-    },
-    {
-      "podcastName": "耳で学ぶAI、ロボシンク",
-      "title": "#89 AIでスライドを作成する方法",
-      "score": 27,
-      "reasons": [
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
-      ]
-    },
-    {
-      "podcastName": "耳で学ぶAI、ロボシンク",
-      "title": "#84 GPT-5のプロンプトを改善する",
-      "score": 43,
-      "reasons": [
-        "时长少于 20 分钟"
-      ]
-    },
-    {
-      "podcastName": "耳で学ぶAI、ロボシンク",
-      "title": "Amazonが公開したコーディングツールのKiroを試す。プログラミング初心者におすすめのツールなのでは？",
-      "score": 27,
-      "reasons": [
-        "时长少于 20 分钟",
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
-      ]
-    },
-    {
-      "podcastName": "耳で学ぶAI、ロボシンク",
-      "title": "#69 Vibe coding、Vibe marketingって何ですか？",
-      "score": 33,
-      "reasons": [
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
-      ]
-    },
-    {
-      "podcastName": "耳で学ぶAI、ロボシンク",
-      "title": "#66 AIの使い分けどうしてる？AI各社の特徴と推論モデルについて話す会",
-      "score": 26,
-      "reasons": [
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
-      ]
-    },
-    {
-      "podcastName": "耳で学ぶAI、ロボシンク",
-      "title": "#65 最近よく耳にするMCPって何ですか？ / GPT-4.1のニュース",
-      "score": 26,
-      "reasons": [
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
-      ]
-    },
-    {
-      "podcastName": "虾闯天下",
-      "title": "EP031 - AI编程的浏览器时刻——Codex扩展400万周活意味着什么？",
-      "score": 26,
-      "reasons": [
-        "时长少于 20 分钟",
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
-        "缺少可验证的单集链接"
-      ]
-    },
-    {
-      "podcastName": "虾闯天下",
-      "title": "EP057 - 苹果WWDC与AI成本危机同时爆发，连Uber都扛不住的Token账单",
-      "score": 20,
-      "reasons": [
-        "时长少于 20 分钟",
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
-        "缺少可验证的单集链接"
-      ]
-    },
-    {
-      "podcastName": "虾闯天下",
-      "title": "EP060 - 微软彻底摊牌了：7款自研模型炸场，纳德拉宣告与OpenAI彻底分手",
-      "score": 39,
-      "reasons": [
-        "时长少于 20 分钟",
-        "内容主要是泛泛 AI 新闻或模型发布消息",
-        "缺少可验证的单集链接"
-      ]
-    },
-    {
-      "podcastName": "虾闯天下",
-      "title": "EP076 - AI双雄IPO军备竞赛",
-      "score": 30,
-      "reasons": [
-        "时长少于 20 分钟",
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
-        "缺少可验证的单集链接"
-      ]
-    },
-    {
-      "podcastName": "虾闯天下",
-      "title": "EP083 - 智谱AI发布ZCode编程工具，直面挑战Claude Code、Cursor和GitHub Copilot，三足鼎立的AI编程工具市场迎来新玩家。",
-      "score": 55,
-      "reasons": [
-        "时长少于 20 分钟",
-        "缺少可验证的单集链接"
-      ]
-    },
-    {
-      "podcastName": "破壊と再生 -生き方の最適解-",
-      "title": "💡お知らせ I Substack・LIVE配信・Codex app",
-      "score": 38,
-      "reasons": [
-        "总分 38，低于正式推荐阈值 85"
-      ]
-    },
-    {
-      "podcastName": "晨间信号",
-      "title": "【2026-07-06】李飞飞署名具身新论文：Sim2Real烧不起，Real2Sim量大管饱 | 壁仞科技上市半年后开启配售：拟募资 70 亿港元，以加快…",
-      "score": 51,
-      "reasons": [
-        "时长少于 20 分钟",
-        "缺少可验证的单集链接"
-      ]
-    },
-    {
-      "podcastName": "晨间信号",
-      "title": "【2026-07-04】DeepSeek-V4 原厂直供模型 7 月中旬登陆腾讯云，同步引入峰谷定价机制 | 全球首例 AI Agent 勒索攻击曝光，从漏…",
-      "score": 30,
-      "reasons": [
-        "时长少于 20 分钟",
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
-        "缺少可验证的单集链接"
-      ]
-    },
-    {
-      "podcastName": "晨间信号",
-      "title": "【2026-06-25】OpenAI、博通联手打造的 AI 芯片 Jalapeño 首秀，号称媲美英伟达 Blackwell | 刚刚，Claude Cod…",
-      "score": 30,
-      "reasons": [
-        "时长少于 20 分钟",
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
-        "缺少可验证的单集链接"
-      ]
-    },
-    {
-      "podcastName": "晨间信号",
-      "title": "【2026-06-23】诺奖得主 John Jumper 离开 DeepMind，转投 Anthropic | 微信推出原生 AI 助手“小微”：14 亿用…",
-      "score": 37,
-      "reasons": [
-        "时长少于 20 分钟",
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
-        "缺少可验证的单集链接"
-      ]
-    },
-    {
-      "podcastName": "晨间信号",
-      "title": "【2026-06-20】Codex 大更新：你在电脑上的操作正在成为 AI 的经验包 | 全球首个人形机器人通用小脑发布：2 万小时人类动作数据，实现零样本泛化",
-      "score": 37,
-      "reasons": [
-        "时长少于 20 分钟",
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
-        "缺少可验证的单集链接"
-      ]
-    },
-    {
-      "podcastName": "晨间信号",
-      "title": "【2026-05-26】无人车遇水则瘫？Waymo大规模召回，叫停多城Robotaxi服务 | Figure 03 人形机器人完成 200 小时全自动作业直…",
-      "score": 36,
-      "reasons": [
-        "时长少于 20 分钟",
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
-        "缺少可验证的单集链接"
-      ]
-    },
-    {
-      "podcastName": "晨间信号",
-      "title": "【2026-05-23】OpenAI 最快周五递交 IPO 招股书：估值超 8500 亿美元，或成史上最大上市案 | DeepSeek 推进 700 亿元融…",
-      "score": 29,
-      "reasons": [
-        "时长少于 20 分钟",
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
-        "缺少可验证的单集链接"
-      ]
-    },
-    {
-      "podcastName": "晨间信号",
-      "title": "【2026-05-16】OpenAI 推出 ChatGPT 个人理财：将允许连接用户银行账户 | 挑战 Claude Cowork：谷歌 Gemini 神秘…",
-      "score": 47,
-      "reasons": [
-        "时长少于 20 分钟",
-        "缺少可验证的单集链接"
-      ]
-    },
-    {
-      "podcastName": "晨间信号",
-      "title": "【2026-05-15】OpenAI Codex 登陆 ChatGPT 移动端，编程 Agent 走出桌面 | Anthropic 高管：公司 90% 代码…",
-      "score": 41,
-      "reasons": [
-        "时长少于 20 分钟",
-        "缺少可验证的单集链接"
-      ]
-    },
-    {
-      "podcastName": "晨间信号",
-      "title": "【2026-05-12】谷歌宣布首次发现 AI 制造的零日漏洞 | OpenAI 豪掷 40 亿美元成立新公司 DeployCo,专注帮企业部署 AI",
-      "score": 44,
-      "reasons": [
-        "时长少于 20 分钟",
-        "缺少可验证的单集链接"
-      ]
-    },
-    {
-      "podcastName": "晨间信号",
-      "title": "【2026-05-09】消息称 DeepSeek 寻求 500 亿元融资，下月将发布 V4.1 更新 | 网信办、国家发改委、工信部联合印发《智能体规范应用…",
-      "score": 29,
-      "reasons": [
-        "时长少于 20 分钟",
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
-        "缺少可验证的单集链接"
-      ]
-    },
-    {
-      "podcastName": "晨间信号",
-      "title": "【2026-05-08】SpaceX has a $55 billion plan to build AI chips in Texas",
-      "score": 29,
-      "reasons": [
-        "时长少于 20 分钟",
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
-        "缺少可验证的单集链接"
-      ]
-    },
-    {
-      "podcastName": "晨间信号",
-      "title": "【2026-05-03】苹果官方App误打包了Claude.md，这么大的公司也Vibe Coding啊？ | 谷歌、微软等四巨头今年将豪掷超 7000 亿…",
-      "score": 55,
-      "reasons": [
-        "时长少于 20 分钟",
-        "缺少可验证的单集链接"
-      ]
-    },
-    {
-      "podcastName": "晨间信号",
-      "title": "【2026-04-29】OpenAI 模型、Codex、Managed Agents 全面登陆 AWS Bedrock | Google 与五角大楼签署机密…",
-      "score": 36,
-      "reasons": [
-        "时长少于 20 分钟",
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
-        "缺少可验证的单集链接"
-      ]
-    },
-    {
-      "podcastName": "晨间信号",
-      "title": "【2026-04-23】谷歌推出 TPU 8t / 8i，两款 AI 芯片分别面向训练和智能体推理 | 通义千问 Qwen3.6-27B 宣布开源：270 …",
-      "score": 43,
-      "reasons": [
-        "时长少于 20 分钟",
-        "缺少可验证的单集链接"
-      ]
-    },
-    {
-      "podcastName": "晨间信号",
-      "title": "【2026-04-22】SpaceX 与 Cursor 达成合作并取得以 600 亿美元收购的选择权 | Mozilla：Anthropic 新模型 Myt…",
-      "score": 29,
-      "reasons": [
-        "时长少于 20 分钟",
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
-        "缺少可验证的单集链接"
-      ]
-    },
-    {
-      "podcastName": "晨间信号",
-      "title": "【2026-04-17】Anthropic 发布 Claude Opus 4.7，高阶编程能力提升 | 它石智航 Pre-A 轮 4.55 亿美元融资，刷新…",
-      "score": 41,
-      "reasons": [
-        "时长少于 20 分钟",
-        "缺少可验证的单集链接"
-      ]
-    },
-    {
-      "podcastName": "晨间信号",
-      "title": "【2026-04-13】Claude Mythos 跨大西洋政策分裂：英国紧急评估 vs 美国推银行测试 | OpenAI 回击马斯克&#x27;法律突袭&#x27;，千亿诉讼…",
-      "score": 36,
-      "reasons": [
-        "时长少于 20 分钟",
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
-        "缺少可验证的单集链接"
-      ]
-    },
-    {
-      "podcastName": "晨间信号",
-      "title": "【2026-04-10】Trump-appointed judges refuse to block Trump blacklisting of Anthro…",
-      "score": 40,
-      "reasons": [
-        "时长少于 20 分钟",
-        "缺少可验证的单集链接"
-      ]
-    },
-    {
-      "podcastName": "晨间信号",
-      "title": "【2026-04-06】OpenAI 新模型路线图曝光：GPT-6 现身，全新预训练架构「土豆」取代 Sora | Gemma 4 登陆 iPhone，LM…",
-      "score": 42,
-      "reasons": [
-        "时长少于 20 分钟",
-        "缺少可验证的单集链接"
-      ]
-    },
-    {
-      "podcastName": "晨间信号",
-      "title": "【2026-04-05】伊朗导弹袭击摧毁 AWS 巴林和迪拜数据中心，多可用区硬宕机 | MCP 出行生态爆发：滴滴开放打车 Skill、哈啰上线首个 MC…",
-      "score": 28,
-      "reasons": [
-        "时长少于 20 分钟",
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
-        "缺少可验证的单集链接"
-      ]
-    },
-    {
-      "podcastName": "晨间信号",
-      "title": "【2026-04-02】Anthropic 试图挽救泄露源代码，却「误删」数千 GitHub 仓库 | Claude Code 源码泄露揭示 Anthrop…",
-      "score": 53,
-      "reasons": [
-        "时长少于 20 分钟",
-        "缺少可验证的单集链接"
-      ]
-    },
-    {
-      "podcastName": "晨间信号",
-      "title": "【2026-04-01】OpenAI 完成史上最大融资，估值 8520 亿美元逼近万亿 | Claude Code 源码意外泄露，51 万行代码因 sour…",
-      "score": 28,
-      "reasons": [
-        "时长少于 20 分钟",
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
-        "缺少可验证的单集链接"
-      ]
-    },
-    {
-      "podcastName": "晨间信号",
-      "title": "【2026-03-28】谷歌接近达成协议，将为Anthropic的数据中心提供融资支持 | GLM-5.1上线，编程表现贴Opus 4.6开大，Coding…",
-      "score": 28,
-      "reasons": [
-        "时长少于 20 分钟",
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
-        "缺少可验证的单集链接"
-      ]
-    },
-    {
-      "podcastName": "每日AI",
-      "title": "Anthropic Claude Code：专业领域知识的持久价值 懂业务的人编程赢过程序员",
-      "score": 38,
-      "reasons": [
-        "时长少于 20 分钟"
-      ]
-    },
-    {
-      "podcastName": "每日AI",
-      "title": "Microsoft：Arbor 基于假设树细化的通用自主研究框架 树灵框架让AI进化为科学家",
-      "score": 27,
-      "reasons": [
-        "时长少于 20 分钟",
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
-      ]
-    },
-    {
-      "podcastName": "每日AI",
-      "title": "CMU：Agent Harness Engineering综述",
-      "score": 44,
-      "reasons": [
-        "总分 44，低于正式推荐阈值 85"
-      ]
-    },
-    {
-      "podcastName": "AI報報報",
-      "title": "EP-84 把Claude Code的AI能力整合到GitHub工作流程中的一款工具：claude-hub，變成GitHub的AI助手，實現自動化開發流程",
-      "score": 44,
-      "reasons": [
-        "时长少于 20 分钟"
-      ]
-    },
-    {
-      "podcastName": "AI報報報",
-      "title": "EP-66 微軟開源的：NLWeb，讓網站從點按鈕、填表格的方式升級為用聊天的方式",
-      "score": 40,
-      "reasons": [
-        "时长少于 20 分钟"
-      ]
-    },
-    {
-      "podcastName": "AI報報報",
-      "title": "EP-57 微軟Microsoft Build 2025 強調人工智慧為開發者帶來的新平台轉變",
-      "score": 40,
-      "reasons": [
-        "时长少于 20 分钟"
-      ]
-    },
-    {
-      "podcastName": "AI報報報",
-      "title": "EP-55 OpenAI Codex 程式設計應用與指南",
-      "score": 58,
-      "reasons": [
-        "时长少于 20 分钟"
-      ]
-    },
-    {
-      "podcastName": "AI報報報",
-      "title": "EP-51 一款具備自我進化能力的多智能體自動化系統：EvoAgentX，對需要持續優化及多步驟協作的複雜AI應用場景非常適用",
-      "score": 44,
-      "reasons": [
-        "时长少于 20 分钟"
-      ]
-    },
-    {
-      "podcastName": "AI報報報",
-      "title": "EP-50 整合了RAG、MCP的多智能體無程式碼建構工具：open-agent-platform，圖形化操作，適合無程式快速原型",
-      "score": 40,
-      "reasons": [
-        "时长少于 20 分钟"
-      ]
-    },
-    {
-      "podcastName": "AI報報報",
-      "title": "EP-48 新出的一款整合了瀏覽器操作、MCP、自動工具呼叫、任務規劃、深度研究等多種能力的智慧體框架：minion-agent",
-      "score": 40,
-      "reasons": [
-        "时长少于 20 分钟"
-      ]
-    },
-    {
-      "podcastName": "AI報報報",
-      "title": "EP-46 Qwen3的Agent能力使用指南！透過Qwen-Agent讓Qwen3模型無縫調用MCP Server，一鍵將文件轉換為結構化的心智圖",
-      "score": 33,
-      "reasons": [
-        "时长少于 20 分钟",
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
-      ]
-    },
-    {
-      "podcastName": "AI報報報",
-      "title": "EP-40 利用OpenMemory MCP，為AI工具加上一個可共享的大腦，讓AI工具可以記住並分享互動前的信息，保持上下文，本地運行",
-      "score": 44,
-      "reasons": [
-        "时长少于 20 分钟"
-      ]
-    },
-    {
-      "podcastName": "AI報報報",
-      "title": "EP-33 字節開源了，DeerFlow基於LangChain和LangGraph框架的一款智慧研究助手",
-      "score": 40,
-      "reasons": [
-        "时长少于 20 分钟"
-      ]
-    },
-    {
-      "podcastName": "AI報報報",
-      "title": "EP-23 利用Firecrawl MCP，可以在桌面應用程式裡直接進行網頁資料擷取、搜尋、擷取以及批次處理",
-      "score": 33,
-      "reasons": [
-        "时长少于 20 分钟",
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
-      ]
-    },
-    {
-      "podcastName": "AI報報報",
-      "title": "EP-20 比較實用的一款會議準備自動化工具：Meeting Prep Agent，適合需要關閉參加會議，但又沒時間做充分準備的用戶",
-      "score": 44,
-      "reasons": [
-        "时长少于 20 分钟"
-      ]
-    },
-    {
-      "podcastName": "AI報報報",
-      "title": "EP-19 整合了MCP能力的多智能體建置工具：rowboat，具備智慧建置能力，用自然描述可以快速建置和部署智慧體",
-      "score": 45,
-      "reasons": [
-        "时长少于 20 分钟"
-      ]
-    },
-    {
-      "podcastName": "AI報報報",
-      "title": "EP-3 探索MCP：AI助理從「說話」到「執行」的飛躍",
-      "score": 13,
-      "reasons": [
-        "时长少于 20 分钟",
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
       ]
     },
     {
@@ -3242,18 +2184,570 @@
       ]
     },
     {
-      "podcastName": "安全新鲜事",
-      "title": "新型供应链攻击Red Hat和OpenAI，Linux内核严重漏洞，荷兰警方捣毁大规模僵尸网络",
+      "podcastName": "アニメとAIで人生を楽しむラジオ｜クドラジ",
+      "title": "【健康は大事に！】皮膚科に行ったらウイルス性の発疹症と診断された…",
+      "score": 27,
+      "reasons": [
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
+      ]
+    },
+    {
+      "podcastName": "アニメとAIで人生を楽しむラジオ｜クドラジ",
+      "title": "【Claude Code】HTMLを使ったスライド資料作成のすゝめ！",
       "score": 16,
+      "reasons": [
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
+        "中文内容不足"
+      ]
+    },
+    {
+      "podcastName": "アニメとAIで人生を楽しむラジオ｜クドラジ",
+      "title": "【Powershellから乗り換え】VSCode拡張機能のClaude Codeがめっちゃ便利なんだが！",
+      "score": 19,
+      "reasons": [
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
+        "中文内容不足"
+      ]
+    },
+    {
+      "podcastName": "アニメとAIで人生を楽しむラジオ｜クドラジ",
+      "title": "【AI雑談】Geminiデスクトップアプリ / Claude Code週間制限50％増↑ / Claude落ちた / CLIツール探求",
+      "score": 23,
+      "reasons": [
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
+        "中文内容不足"
+      ]
+    },
+    {
+      "podcastName": "アニメとAIで人生を楽しむラジオ｜クドラジ",
+      "title": "【ジェットストリームアタック】AI界の黒い三連星「Claude Code・Codex CLI・Gemini CLI」で連携攻撃だ！！",
+      "score": 35,
+      "reasons": [
+        "中文内容不足"
+      ]
+    },
+    {
+      "podcastName": "アニメとAIで人生を楽しむラジオ｜クドラジ",
+      "title": "【Codex CLI】導入してみた！Claude Codeとの連携も！",
+      "score": 35,
+      "reasons": [
+        "中文内容不足"
+      ]
+    },
+    {
+      "podcastName": "アニメとAIで人生を楽しむラジオ｜クドラジ",
+      "title": "【Claude Code】ポッドキャストからショート動画をAIで完全自動生成する",
+      "score": 33,
+      "reasons": [
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
+        "中文内容不足"
+      ]
+    },
+    {
+      "podcastName": "アニメとAIで人生を楽しむラジオ｜クドラジ",
+      "title": "【めっちゃ簡単】Claude CodeでオリジナルのMCPサーバーを自作してみた！",
+      "score": 32,
+      "reasons": [
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
+        "中文内容不足"
+      ]
+    },
+    {
+      "podcastName": "アニメとAIで人生を楽しむラジオ｜クドラジ",
+      "title": "【Google Workspace CLI】Claude Codeからドキュメントやスプレッドシートを操作できるように！",
+      "score": 32,
+      "reasons": [
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
+        "中文内容不足"
+      ]
+    },
+    {
+      "podcastName": "AI駆動開発部の日常",
+      "title": "48【裏技】Codexから技術顧問としてGPT-5.5 Proを呼ぶ",
+      "score": 53,
+      "reasons": [
+        "中文内容不足"
+      ]
+    },
+    {
+      "podcastName": "AI駆動開発部の日常",
+      "title": "47【ClaudeCodeのワークフローから考える】エージェントハーネス設計談義",
+      "score": 34,
+      "reasons": [
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
+        "中文内容不足"
+      ]
+    },
+    {
+      "podcastName": "AI駆動開発部の日常",
+      "title": "46【ターミナルはもう要らない？】Codex App一つで完結する開発",
+      "score": 65,
+      "reasons": [
+        "总分 65，低于正式推荐阈值 85"
+      ]
+    },
+    {
+      "podcastName": "AI駆動開発部の日常",
+      "title": "44【おすすめ便利機能】Claude Codeの/btwとCodexの/side",
+      "score": 34,
       "reasons": [
         "时长少于 20 分钟",
         "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
       ]
     },
     {
-      "podcastName": "安全新鲜事",
-      "title": "AI高危漏洞曝光，Vercel平台遭攻击，关键基础设施面临新威胁",
-      "score": 16,
+      "podcastName": "AI駆動開発部の日常",
+      "title": "43【最強の布陣】Claude Codeを司令塔、Codexをサブエージェントに",
+      "score": 53,
+      "reasons": [
+        "总分 53，低于正式推荐阈值 85"
+      ]
+    },
+    {
+      "podcastName": "AI駆動開発部の日常",
+      "title": "42【圧倒的性能】Claude Fable 5のファーストインプレッション",
+      "score": 46,
+      "reasons": [
+        "时长少于 20 分钟"
+      ]
+    },
+    {
+      "podcastName": "AI駆動開発部の日常",
+      "title": "41【触れ込みは本物か？】MiniMax M3を4モデル横並び比較",
+      "score": 29,
+      "reasons": [
+        "时长少于 20 分钟",
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
+      ]
+    },
+    {
+      "podcastName": "AI駆動開発部の日常",
+      "title": "40【一晩で何サイクル回せる？】CodexやClaude Codeの使い方",
+      "score": 29,
+      "reasons": [
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
+      ]
+    },
+    {
+      "podcastName": "AI駆動開発部の日常",
+      "title": "36【実装が先？デザインが先？】Claude Designで変わる開発フロー",
+      "score": 29,
+      "reasons": [
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
+      ]
+    },
+    {
+      "podcastName": "AI駆動開発部の日常",
+      "title": "34【AIがデザインシステムを作る？】Claude Designを触ってみた衝撃",
+      "score": 29,
+      "reasons": [
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
+      ]
+    },
+    {
+      "podcastName": "AI駆動開発部の日常",
+      "title": "33【GPT-5.5は本当に変わった？】使ってみたリアルな所感",
+      "score": 29,
+      "reasons": [
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
+      ]
+    },
+    {
+      "podcastName": "AI駆動開発部の日常",
+      "title": "32【お便り】MiMo-V2-Pro、AI記憶を管理、AIの情報収集方法について",
+      "score": 40,
+      "reasons": [
+        "总分 40，低于正式推荐阈值 85"
+      ]
+    },
+    {
+      "podcastName": "AI駆動開発部の日常",
+      "title": "27【GPT-5.4はクビ！？】OhMyOpenCodeでのモデル選定",
+      "score": 35,
+      "reasons": [
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
+        "中文内容不足"
+      ]
+    },
+    {
+      "podcastName": "AI駆動開発部の日常",
+      "title": "26【100万トークンで超有能？】GPT-5.4と5.3-Codexの使い分け",
+      "score": 44,
+      "reasons": [
+        "总分 44，低于正式推荐阈值 85"
+      ]
+    },
+    {
+      "podcastName": "AI駆動開発部の日常",
+      "title": "25【AI駆動開発の秘密兵器】OpenCodeとOhMyOpenCode活用術",
+      "score": 28,
+      "reasons": [
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
+      ]
+    },
+    {
+      "podcastName": "AI駆動開発部の日常",
+      "title": "24【CodeRabbitを導入！】1PR毎のAIレビュー375件をどう捌く？",
+      "score": 39,
+      "reasons": [
+        "总分 39，低于正式推荐阈值 85"
+      ]
+    },
+    {
+      "podcastName": "AI駆動開発部の日常",
+      "title": "22【悲願のCodexサブエージェント！】並列化でAIの思考が深まる理由とは？",
+      "score": 35,
+      "reasons": [
+        "时长少于 20 分钟",
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
+        "中文内容不足"
+      ]
+    },
+    {
+      "podcastName": "AI駆動開発部の日常",
+      "title": "21【Z.ai GLM-5はメインで使える？】Opus 4.6やCodexと比較",
+      "score": 35,
+      "reasons": [
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
+        "中文内容不足"
+      ]
+    },
+    {
+      "podcastName": "AI駆動開発部の日常",
+      "title": "20【Claude Codeの新機能】Agent Teamsとサブエージェント",
+      "score": 28,
+      "reasons": [
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
+        "中文内容不足"
+      ]
+    },
+    {
+      "podcastName": "AI駆動開発部の日常",
+      "title": "18【FigmaからPencilへ？】AIネイティブなデザインツールの可能性",
+      "score": 28,
+      "reasons": [
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
+        "中文内容不足"
+      ]
+    },
+    {
+      "podcastName": "AI駆動開発部の日常",
+      "title": "17【コスパ最強は本当か】Z.ai GLM-4.7をCursorで使ってみた",
+      "score": 28,
+      "reasons": [
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
+        "中文内容不足"
+      ]
+    },
+    {
+      "podcastName": "AI駆動開発部の日常",
+      "title": "16【opencode試した】並列開発サブエージェントとBest-of-Nの違い",
+      "score": 35,
+      "reasons": [
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
+      ]
+    },
+    {
+      "podcastName": "AI駆動開発部の日常",
+      "title": "15【便利なCursorのDebugMode】CodexとClaudeで使える？",
+      "score": 50,
+      "reasons": [
+        "中文内容不足"
+      ]
+    },
+    {
+      "podcastName": "AI駆動開発部の日常",
+      "title": "14【PRレビューの指摘をAIで自動修正】Codexクラウドでサブスク内で完結",
+      "score": 34,
+      "reasons": [
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
+        "中文内容不足"
+      ]
+    },
+    {
+      "podcastName": "AI駆動開発部の日常",
+      "title": "13【衝撃のCursor新機能】ビジュアルエディタ×デバッグモードを使いこなす",
+      "score": 27,
+      "reasons": [
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
+        "中文内容不足"
+      ]
+    },
+    {
+      "podcastName": "AI駆動開発部の日常",
+      "title": "12【ベンチマークは鵜呑み厳禁!?】AIコーディングツールIDE vs CLI",
+      "score": 43,
+      "reasons": [
+        "总分 43，低于正式推荐阈值 85"
+      ]
+    },
+    {
+      "podcastName": "AI駆動開発部の日常",
+      "title": "11【AI駆動開発のドキュメント管理術とは？】DevinとDeepWiki活用",
+      "score": 34,
+      "reasons": [
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
+        "中文内容不足"
+      ]
+    },
+    {
+      "podcastName": "AI駆動開発部の日常",
+      "title": "10【結局どれ?】Antigravity・Cursor・ClaudeCode等",
+      "score": 27,
+      "reasons": [
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
+        "中文内容不足"
+      ]
+    },
+    {
+      "podcastName": "AI駆動開発部の日常",
+      "title": "9【衝撃】Google Antigravityの圧倒的UI生成力",
+      "score": 27,
+      "reasons": [
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
+        "中文内容不足"
+      ]
+    },
+    {
+      "podcastName": "AI駆動開発部の日常",
+      "title": "8【Windsurfの推し機能3選】Fast Context、Codemaps等",
+      "score": 27,
+      "reasons": [
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
+      ]
+    },
+    {
+      "podcastName": "AI駆動開発部の日常",
+      "title": "6【長時間自律駆動開発の秘訣とは？】CodexやClaudeCodeを効率的に",
+      "score": 27,
+      "reasons": [
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
+      ]
+    },
+    {
+      "podcastName": "AI駆動開発部の日常",
+      "title": "5【AI駆動開発必須】ClaudeCodeやCodexには「tmux」を使え！",
+      "score": 27,
+      "reasons": [
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
+      ]
+    },
+    {
+      "podcastName": "AI駆動開発部の日常",
+      "title": "4【常駐録音の革新】limitlessから学ぶAPI/MCPの重要性",
+      "score": 27,
+      "reasons": [
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
+      ]
+    },
+    {
+      "podcastName": "AI駆動開発部の日常",
+      "title": "3【ClaudeCodeの新機能Pluginsの可能性】おすすめツールghq等",
+      "score": 27,
+      "reasons": [
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
+      ]
+    },
+    {
+      "podcastName": "AI駆動開発部の日常",
+      "title": "2【Claude Sonnet 4.5】GPT-5-Codexより優っている？",
+      "score": 40,
+      "reasons": [
+        "中文内容不足"
+      ]
+    },
+    {
+      "podcastName": "AI駆動開発部の日常",
+      "title": "1【AI駆動開発】 Codex CLIとClaude Codeどっちがいい？",
+      "score": 33,
+      "reasons": [
+        "中文内容不足"
+      ]
+    },
+    {
+      "podcastName": "Ai未來報",
+      "title": "EP14_黑盒子裡的AI夥伴？OpenAI_Codex_CLI_深度解析：開發者是愛還是恨？",
+      "score": 57,
+      "reasons": [
+        "时长少于 20 分钟"
+      ]
+    },
+    {
+      "podcastName": "Ai未來報",
+      "title": "免程式碼打造產品原型！MiniMax_Agent_從零到部署，AI_幫你實現想像：多模態、智能協作、Remix_社群與實用開發技巧大公開！",
+      "score": 38,
+      "reasons": [
+        "总分 38，低于正式推荐阈值 85"
+      ]
+    },
+    {
+      "podcastName": "Ai未來報",
+      "title": "Claude_Code_不只是程式助手：打造你的_AI_代理團隊，個人化生活與工作全面升級",
+      "score": 34,
+      "reasons": [
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
+      ]
+    },
+    {
+      "podcastName": "ムーザルのプログラミング絶望ラジオ",
+      "title": "#37 Cursor最強説？, Claude CodeとCopilotとバトルさせてみた, AIは虚業？！, AIへの言葉遣い, 設計の考慮漏れ対策, 哲学と数学とプログラミング, HaskellミニブログMonalogの存亡",
+      "score": 18,
+      "reasons": [
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
+      ]
+    },
+    {
+      "podcastName": "ムーザルのプログラミング絶望ラジオ",
+      "title": "#32 Skills・MCPって効果あるの？ Codex Appの話 AIコーディングとフロントエンドの相性の悪さとFigma MCP 並列AIエージェントの苦しみ エージェントピアレビュー良いよ",
+      "score": 30,
+      "reasons": [
+        "中文内容不足"
+      ]
+    },
+    {
+      "podcastName": "ムーザルのプログラミング絶望ラジオ",
+      "title": "BunがAnthropicに買収された話, Reactの脆弱性, ChatGPTからGemini Proへ乗り換えた, MCPサーバいらないかもぉ？, 育児と仕事の両立, 不具合どうすりゃいいの #22",
+      "score": 17,
+      "reasons": [
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
+      ]
+    },
+    {
+      "podcastName": "ムーザルのプログラミング絶望ラジオ",
+      "title": "Codex CLI 優秀 / Next.js,ReactはAI優位性低い / エンジニアリングマネージャーってどう？ / AIで無くならない仕事 #12",
+      "score": 33,
+      "reasons": [
+        "中文内容不足"
+      ]
+    },
+    {
+      "podcastName": "ムーザルのプログラミング絶望ラジオ",
+      "title": "注目フレームワーク / GitHub Spec Kit / Codex CLI再燃？ / AIを使うと頭が悪くなる？ / Cloud Run最高 vs Vercel最高#9",
+      "score": 40,
+      "reasons": [
+        "中文内容不足"
+      ]
+    },
+    {
+      "podcastName": "耳で学ぶAI、ロボシンク",
+      "title": "【耳で学ぶAI⑥】AIエージェントの使い方。どのように導入するか？",
+      "score": 29,
+      "reasons": [
+        "时长少于 20 分钟",
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
+      ]
+    },
+    {
+      "podcastName": "耳で学ぶAI、ロボシンク",
+      "title": "#112 GPT-5.4が登場。何が変わった？GeminiやClaudeとの比較",
+      "score": 28,
+      "reasons": [
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
+      ]
+    },
+    {
+      "podcastName": "耳で学ぶAI、ロボシンク",
+      "title": "#111 Claudeの魅力を語る回。Claude Code / Claude Cowork",
+      "score": 28,
+      "reasons": [
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
+      ]
+    },
+    {
+      "podcastName": "耳で学ぶAI、ロボシンク",
+      "title": "#109 AIエージェントでチームを作るという視点",
+      "score": 28,
+      "reasons": [
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
+      ]
+    },
+    {
+      "podcastName": "耳で学ぶAI、ロボシンク",
+      "title": "#108 OpenAIがリリースしたCodex appってなにですか？",
+      "score": 40,
+      "reasons": [
+        "总分 40，低于正式推荐阈值 85"
+      ]
+    },
+    {
+      "podcastName": "耳で学ぶAI、ロボシンク",
+      "title": "#102 📅2025年の振り返りとベストAIツール",
+      "score": 27,
+      "reasons": [
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
+      ]
+    },
+    {
+      "podcastName": "耳で学ぶAI、ロボシンク",
+      "title": "Claudeの魅力を語る回(Claude Sonnet 4.5)",
+      "score": 27,
+      "reasons": [
+        "时长少于 20 分钟",
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
+      ]
+    },
+    {
+      "podcastName": "耳で学ぶAI、ロボシンク",
+      "title": "#89 AIでスライドを作成する方法",
+      "score": 27,
+      "reasons": [
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
+      ]
+    },
+    {
+      "podcastName": "耳で学ぶAI、ロボシンク",
+      "title": "#84 GPT-5のプロンプトを改善する",
+      "score": 43,
+      "reasons": [
+        "时长少于 20 分钟"
+      ]
+    },
+    {
+      "podcastName": "耳で学ぶAI、ロボシンク",
+      "title": "Amazonが公開したコーディングツールのKiroを試す。プログラミング初心者におすすめのツールなのでは？",
+      "score": 27,
+      "reasons": [
+        "时长少于 20 分钟",
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
+      ]
+    },
+    {
+      "podcastName": "耳で学ぶAI、ロボシンク",
+      "title": "#69 Vibe coding、Vibe marketingって何ですか？",
+      "score": 33,
+      "reasons": [
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
+      ]
+    },
+    {
+      "podcastName": "耳で学ぶAI、ロボシンク",
+      "title": "#66 AIの使い分けどうしてる？AI各社の特徴と推論モデルについて話す会",
+      "score": 26,
+      "reasons": [
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
+      ]
+    },
+    {
+      "podcastName": "耳で学ぶAI、ロボシンク",
+      "title": "#65 最近よく耳にするMCPって何ですか？ / GPT-4.1のニュース",
+      "score": 26,
+      "reasons": [
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
+      ]
+    },
+    {
+      "podcastName": "AI前沿播客",
+      "title": "Codex-maxxing - Jason Liu",
+      "score": 20,
+      "reasons": [
+        "时长少于 20 分钟",
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
+      ]
+    },
+    {
+      "podcastName": "AI前沿播客",
+      "title": "没有编程经验的他，用Claude Code六周独立开发了一款iOS App",
+      "score": 12,
       "reasons": [
         "时长少于 20 分钟",
         "没有足够可读的 Shownotes、简介、大纲或摘要",
@@ -3261,28 +2755,562 @@
       ]
     },
     {
-      "podcastName": "安全新鲜事",
-      "title": "AI自动化平台被滥用于网络攻击，Nginx UI高危漏洞遭利用，Chrome扩展窃取用户数据",
-      "score": 30,
-      "reasons": [
-        "时长少于 20 分钟"
-      ]
-    },
-    {
-      "podcastName": "安全新鲜事",
-      "title": "新型恶意软件活跃，高危漏洞被利用，Dark Sword攻击工具曝光",
-      "score": 25,
+      "podcastName": "AI前沿播客",
+      "title": "MCP：让Agent连接到生产系统",
+      "score": 26,
       "reasons": [
         "时长少于 20 分钟",
         "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
       ]
     },
     {
-      "podcastName": "安全新鲜事",
-      "title": "朝鲜黑客攻击开发者，AI工具高危漏洞，LinkedIn私信传播木马",
-      "score": 36,
+      "podcastName": "AI前沿播客",
+      "title": "用17年经验训练AI：Claude Code实践",
+      "score": 23,
+      "reasons": [
+        "时长少于 20 分钟",
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
+      ]
+    },
+    {
+      "podcastName": "AI前沿播客",
+      "title": "Claude Code 质量回退事件深度解读",
+      "score": 8,
+      "reasons": [
+        "时长少于 20 分钟",
+        "没有足够可读的 Shownotes、简介、大纲或摘要",
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
+      ]
+    },
+    {
+      "podcastName": "AI前沿播客",
+      "title": "Anthropic 增长神话：从营销已死到“分发工程师”的架构重构",
+      "score": 47,
       "reasons": [
         "时长少于 20 分钟"
+      ]
+    },
+    {
+      "podcastName": "AI前沿播客",
+      "title": "Claude Code 会话管理：100万上下文窗口的高效使用指南",
+      "score": 19,
+      "reasons": [
+        "时长少于 20 分钟",
+        "没有足够可读的 Shownotes、简介、大纲或摘要",
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
+      ]
+    },
+    {
+      "podcastName": "AI前沿播客",
+      "title": "Codex for (almost) everything",
+      "score": 16,
+      "reasons": [
+        "时长少于 20 分钟",
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
+      ]
+    },
+    {
+      "podcastName": "AI前沿播客",
+      "title": "Anthropic技能创建器四大创新解析",
+      "score": 15,
+      "reasons": [
+        "时长少于 20 分钟",
+        "没有足够可读的 Shownotes、简介、大纲或摘要",
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
+      ]
+    },
+    {
+      "podcastName": "AI前沿播客",
+      "title": "OpenAI Codex智能体开发百万行代码",
+      "score": 38,
+      "reasons": [
+        "时长少于 20 分钟"
+      ]
+    },
+    {
+      "podcastName": "AI前沿播客",
+      "title": "AI技术双爆：开发者工具战与情绪机制揭秘",
+      "score": 29,
+      "reasons": [
+        "时长少于 20 分钟"
+      ]
+    },
+    {
+      "podcastName": "虾闯天下",
+      "title": "EP083 - 智谱AI发布ZCode编程工具，直面挑战Claude Code、Cursor和GitHub Copilot，三足鼎立的AI编程工具市场迎来新玩家。",
+      "score": 31,
+      "reasons": [
+        "时长少于 20 分钟",
+        "没有足够可读的 Shownotes、简介、大纲或摘要"
+      ]
+    },
+    {
+      "podcastName": "虾闯天下",
+      "title": "EP057 - 苹果WWDC与AI成本危机同时爆发，连Uber都扛不住的Token账单",
+      "score": 31,
+      "reasons": [
+        "时长少于 20 分钟",
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
+      ]
+    },
+    {
+      "podcastName": "虾闯天下",
+      "title": "EP031 - AI编程的浏览器时刻——Codex扩展400万周活意味着什么？",
+      "score": 26,
+      "reasons": [
+        "时长少于 20 分钟",
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
+      ]
+    },
+    {
+      "podcastName": "ちょっとAI",
+      "title": "#198 Gemini CLIのアップデートで感じた戸惑い",
+      "score": 31,
+      "reasons": [
+        "时长少于 20 分钟",
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
+        "中文内容不足"
+      ]
+    },
+    {
+      "podcastName": "ちょっとAI",
+      "title": "#151 Codex CLIの「書き込み権限がない」エラーを解決する設定",
+      "score": 43,
+      "reasons": [
+        "时长少于 20 分钟"
+      ]
+    },
+    {
+      "podcastName": "ちょっとAI",
+      "title": "#147 Gemini CLI、作業が捗る神コマンド4選",
+      "score": 31,
+      "reasons": [
+        "时长少于 20 分钟",
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
+        "中文内容不足"
+      ]
+    },
+    {
+      "podcastName": "ちょっとAI",
+      "title": "#146 AIの応答、もっと速くならない？Codex CLI「モデル切替」",
+      "score": 43,
+      "reasons": [
+        "时长少于 20 分钟",
+        "中文内容不足"
+      ]
+    },
+    {
+      "podcastName": "ちょっとAI",
+      "title": "#131 Gemini CLIを一発起動するMacアプリ化",
+      "score": 31,
+      "reasons": [
+        "时长少于 20 分钟",
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
+        "中文内容不足"
+      ]
+    },
+    {
+      "podcastName": "ちょっとAI",
+      "title": "#125 Codex vs Gemini、文章作成で私がメインで使うのは…",
+      "score": 27,
+      "reasons": [
+        "时长少于 20 分钟",
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
+      ]
+    },
+    {
+      "podcastName": "ちょっとAI",
+      "title": "#116 Udemyで突破 Codex CLI導入メモ",
+      "score": 43,
+      "reasons": [
+        "时长少于 20 分钟"
+      ]
+    },
+    {
+      "podcastName": "ちょっとAI",
+      "title": "#105 私は誤解していた。Gemini CLIの「脆弱性事件」の本当の話",
+      "score": 31,
+      "reasons": [
+        "时长少于 20 分钟",
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
+      ]
+    },
+    {
+      "podcastName": "破壊と再生 -生き方の最適解-",
+      "title": "💡お知らせ I Substack・LIVE配信・Codex app",
+      "score": 38,
+      "reasons": [
+        "总分 38，低于正式推荐阈值 85"
+      ]
+    },
+    {
+      "podcastName": "每日AI",
+      "title": "Anthropic Claude Code：专业领域知识的持久价值 懂业务的人编程赢过程序员",
+      "score": 38,
+      "reasons": [
+        "时长少于 20 分钟"
+      ]
+    },
+    {
+      "podcastName": "每日AI",
+      "title": "Microsoft：Arbor 基于假设树细化的通用自主研究框架 树灵框架让AI进化为科学家",
+      "score": 27,
+      "reasons": [
+        "时长少于 20 分钟",
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
+      ]
+    },
+    {
+      "podcastName": "每日AI",
+      "title": "CMU：Agent Harness Engineering综述",
+      "score": 44,
+      "reasons": [
+        "总分 44，低于正式推荐阈值 85"
+      ]
+    },
+    {
+      "podcastName": "AI報報報",
+      "title": "EP-84 把Claude Code的AI能力整合到GitHub工作流程中的一款工具：claude-hub，變成GitHub的AI助手，實現自動化開發流程",
+      "score": 44,
+      "reasons": [
+        "时长少于 20 分钟"
+      ]
+    },
+    {
+      "podcastName": "AI報報報",
+      "title": "EP-66 微軟開源的：NLWeb，讓網站從點按鈕、填表格的方式升級為用聊天的方式",
+      "score": 40,
+      "reasons": [
+        "时长少于 20 分钟"
+      ]
+    },
+    {
+      "podcastName": "AI報報報",
+      "title": "EP-57 微軟Microsoft Build 2025 強調人工智慧為開發者帶來的新平台轉變",
+      "score": 40,
+      "reasons": [
+        "时长少于 20 分钟"
+      ]
+    },
+    {
+      "podcastName": "AI報報報",
+      "title": "EP-55 OpenAI Codex 程式設計應用與指南",
+      "score": 58,
+      "reasons": [
+        "时长少于 20 分钟"
+      ]
+    },
+    {
+      "podcastName": "AI報報報",
+      "title": "EP-51 一款具備自我進化能力的多智能體自動化系統：EvoAgentX，對需要持續優化及多步驟協作的複雜AI應用場景非常適用",
+      "score": 44,
+      "reasons": [
+        "时长少于 20 分钟"
+      ]
+    },
+    {
+      "podcastName": "AI報報報",
+      "title": "EP-50 整合了RAG、MCP的多智能體無程式碼建構工具：open-agent-platform，圖形化操作，適合無程式快速原型",
+      "score": 40,
+      "reasons": [
+        "时长少于 20 分钟"
+      ]
+    },
+    {
+      "podcastName": "AI報報報",
+      "title": "EP-48 新出的一款整合了瀏覽器操作、MCP、自動工具呼叫、任務規劃、深度研究等多種能力的智慧體框架：minion-agent",
+      "score": 40,
+      "reasons": [
+        "时长少于 20 分钟"
+      ]
+    },
+    {
+      "podcastName": "AI報報報",
+      "title": "EP-46 Qwen3的Agent能力使用指南！透過Qwen-Agent讓Qwen3模型無縫調用MCP Server，一鍵將文件轉換為結構化的心智圖",
+      "score": 33,
+      "reasons": [
+        "时长少于 20 分钟",
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
+      ]
+    },
+    {
+      "podcastName": "AI報報報",
+      "title": "EP-40 利用OpenMemory MCP，為AI工具加上一個可共享的大腦，讓AI工具可以記住並分享互動前的信息，保持上下文，本地運行",
+      "score": 44,
+      "reasons": [
+        "时长少于 20 分钟"
+      ]
+    },
+    {
+      "podcastName": "AI報報報",
+      "title": "EP-33 字節開源了，DeerFlow基於LangChain和LangGraph框架的一款智慧研究助手",
+      "score": 40,
+      "reasons": [
+        "时长少于 20 分钟"
+      ]
+    },
+    {
+      "podcastName": "AI報報報",
+      "title": "EP-23 利用Firecrawl MCP，可以在桌面應用程式裡直接進行網頁資料擷取、搜尋、擷取以及批次處理",
+      "score": 33,
+      "reasons": [
+        "时长少于 20 分钟",
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
+      ]
+    },
+    {
+      "podcastName": "AI報報報",
+      "title": "EP-20 比較實用的一款會議準備自動化工具：Meeting Prep Agent，適合需要關閉參加會議，但又沒時間做充分準備的用戶",
+      "score": 44,
+      "reasons": [
+        "时长少于 20 分钟"
+      ]
+    },
+    {
+      "podcastName": "AI報報報",
+      "title": "EP-19 整合了MCP能力的多智能體建置工具：rowboat，具備智慧建置能力，用自然描述可以快速建置和部署智慧體",
+      "score": 45,
+      "reasons": [
+        "时长少于 20 分钟"
+      ]
+    },
+    {
+      "podcastName": "AI報報報",
+      "title": "EP-3 探索MCP：AI助理從「說話」到「執行」的飛躍",
+      "score": 13,
+      "reasons": [
+        "时长少于 20 分钟",
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
+      ]
+    },
+    {
+      "podcastName": "晨间信号",
+      "title": "【2026-07-06】李飞飞署名具身新论文：Sim2Real烧不起，Real2Sim量大管饱 | 壁仞科技上市半年后开启配售：拟募资 70 亿港元，以加快…",
+      "score": 51,
+      "reasons": [
+        "时长少于 20 分钟",
+        "缺少可验证的单集链接"
+      ]
+    },
+    {
+      "podcastName": "晨间信号",
+      "title": "【2026-07-04】DeepSeek-V4 原厂直供模型 7 月中旬登陆腾讯云，同步引入峰谷定价机制 | 全球首例 AI Agent 勒索攻击曝光，从漏…",
+      "score": 30,
+      "reasons": [
+        "时长少于 20 分钟",
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
+        "缺少可验证的单集链接"
+      ]
+    },
+    {
+      "podcastName": "晨间信号",
+      "title": "【2026-06-25】OpenAI、博通联手打造的 AI 芯片 Jalapeño 首秀，号称媲美英伟达 Blackwell | 刚刚，Claude Cod…",
+      "score": 30,
+      "reasons": [
+        "时长少于 20 分钟",
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
+        "缺少可验证的单集链接"
+      ]
+    },
+    {
+      "podcastName": "晨间信号",
+      "title": "【2026-06-23】诺奖得主 John Jumper 离开 DeepMind，转投 Anthropic | 微信推出原生 AI 助手“小微”：14 亿用…",
+      "score": 37,
+      "reasons": [
+        "时长少于 20 分钟",
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
+        "缺少可验证的单集链接"
+      ]
+    },
+    {
+      "podcastName": "晨间信号",
+      "title": "【2026-06-20】Codex 大更新：你在电脑上的操作正在成为 AI 的经验包 | 全球首个人形机器人通用小脑发布：2 万小时人类动作数据，实现零样本泛化",
+      "score": 37,
+      "reasons": [
+        "时长少于 20 分钟",
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
+        "缺少可验证的单集链接"
+      ]
+    },
+    {
+      "podcastName": "晨间信号",
+      "title": "【2026-05-26】无人车遇水则瘫？Waymo大规模召回，叫停多城Robotaxi服务 | Figure 03 人形机器人完成 200 小时全自动作业直…",
+      "score": 36,
+      "reasons": [
+        "时长少于 20 分钟",
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
+        "缺少可验证的单集链接"
+      ]
+    },
+    {
+      "podcastName": "晨间信号",
+      "title": "【2026-05-23】OpenAI 最快周五递交 IPO 招股书：估值超 8500 亿美元，或成史上最大上市案 | DeepSeek 推进 700 亿元融…",
+      "score": 29,
+      "reasons": [
+        "时长少于 20 分钟",
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
+        "缺少可验证的单集链接"
+      ]
+    },
+    {
+      "podcastName": "晨间信号",
+      "title": "【2026-05-16】OpenAI 推出 ChatGPT 个人理财：将允许连接用户银行账户 | 挑战 Claude Cowork：谷歌 Gemini 神秘…",
+      "score": 47,
+      "reasons": [
+        "时长少于 20 分钟",
+        "缺少可验证的单集链接"
+      ]
+    },
+    {
+      "podcastName": "晨间信号",
+      "title": "【2026-05-15】OpenAI Codex 登陆 ChatGPT 移动端，编程 Agent 走出桌面 | Anthropic 高管：公司 90% 代码…",
+      "score": 41,
+      "reasons": [
+        "时长少于 20 分钟",
+        "缺少可验证的单集链接"
+      ]
+    },
+    {
+      "podcastName": "晨间信号",
+      "title": "【2026-05-12】谷歌宣布首次发现 AI 制造的零日漏洞 | OpenAI 豪掷 40 亿美元成立新公司 DeployCo,专注帮企业部署 AI",
+      "score": 44,
+      "reasons": [
+        "时长少于 20 分钟",
+        "缺少可验证的单集链接"
+      ]
+    },
+    {
+      "podcastName": "晨间信号",
+      "title": "【2026-05-09】消息称 DeepSeek 寻求 500 亿元融资，下月将发布 V4.1 更新 | 网信办、国家发改委、工信部联合印发《智能体规范应用…",
+      "score": 29,
+      "reasons": [
+        "时长少于 20 分钟",
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
+        "缺少可验证的单集链接"
+      ]
+    },
+    {
+      "podcastName": "晨间信号",
+      "title": "【2026-05-08】SpaceX has a $55 billion plan to build AI chips in Texas",
+      "score": 29,
+      "reasons": [
+        "时长少于 20 分钟",
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
+        "缺少可验证的单集链接"
+      ]
+    },
+    {
+      "podcastName": "晨间信号",
+      "title": "【2026-05-03】苹果官方App误打包了Claude.md，这么大的公司也Vibe Coding啊？ | 谷歌、微软等四巨头今年将豪掷超 7000 亿…",
+      "score": 55,
+      "reasons": [
+        "时长少于 20 分钟",
+        "缺少可验证的单集链接"
+      ]
+    },
+    {
+      "podcastName": "晨间信号",
+      "title": "【2026-04-29】OpenAI 模型、Codex、Managed Agents 全面登陆 AWS Bedrock | Google 与五角大楼签署机密…",
+      "score": 36,
+      "reasons": [
+        "时长少于 20 分钟",
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
+        "缺少可验证的单集链接"
+      ]
+    },
+    {
+      "podcastName": "晨间信号",
+      "title": "【2026-04-23】谷歌推出 TPU 8t / 8i，两款 AI 芯片分别面向训练和智能体推理 | 通义千问 Qwen3.6-27B 宣布开源：270 …",
+      "score": 43,
+      "reasons": [
+        "时长少于 20 分钟",
+        "缺少可验证的单集链接"
+      ]
+    },
+    {
+      "podcastName": "晨间信号",
+      "title": "【2026-04-22】SpaceX 与 Cursor 达成合作并取得以 600 亿美元收购的选择权 | Mozilla：Anthropic 新模型 Myt…",
+      "score": 29,
+      "reasons": [
+        "时长少于 20 分钟",
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
+        "缺少可验证的单集链接"
+      ]
+    },
+    {
+      "podcastName": "晨间信号",
+      "title": "【2026-04-17】Anthropic 发布 Claude Opus 4.7，高阶编程能力提升 | 它石智航 Pre-A 轮 4.55 亿美元融资，刷新…",
+      "score": 41,
+      "reasons": [
+        "时长少于 20 分钟",
+        "缺少可验证的单集链接"
+      ]
+    },
+    {
+      "podcastName": "晨间信号",
+      "title": "【2026-04-13】Claude Mythos 跨大西洋政策分裂：英国紧急评估 vs 美国推银行测试 | OpenAI 回击马斯克&#x27;法律突袭&#x27;，千亿诉讼…",
+      "score": 36,
+      "reasons": [
+        "时长少于 20 分钟",
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
+        "缺少可验证的单集链接"
+      ]
+    },
+    {
+      "podcastName": "晨间信号",
+      "title": "【2026-04-10】Trump-appointed judges refuse to block Trump blacklisting of Anthro…",
+      "score": 40,
+      "reasons": [
+        "时长少于 20 分钟",
+        "缺少可验证的单集链接"
+      ]
+    },
+    {
+      "podcastName": "晨间信号",
+      "title": "【2026-04-06】OpenAI 新模型路线图曝光：GPT-6 现身，全新预训练架构「土豆」取代 Sora | Gemma 4 登陆 iPhone，LM…",
+      "score": 42,
+      "reasons": [
+        "时长少于 20 分钟",
+        "缺少可验证的单集链接"
+      ]
+    },
+    {
+      "podcastName": "晨间信号",
+      "title": "【2026-04-05】伊朗导弹袭击摧毁 AWS 巴林和迪拜数据中心，多可用区硬宕机 | MCP 出行生态爆发：滴滴开放打车 Skill、哈啰上线首个 MC…",
+      "score": 28,
+      "reasons": [
+        "时长少于 20 分钟",
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
+        "缺少可验证的单集链接"
+      ]
+    },
+    {
+      "podcastName": "晨间信号",
+      "title": "【2026-04-02】Anthropic 试图挽救泄露源代码，却「误删」数千 GitHub 仓库 | Claude Code 源码泄露揭示 Anthrop…",
+      "score": 53,
+      "reasons": [
+        "时长少于 20 分钟",
+        "缺少可验证的单集链接"
+      ]
+    },
+    {
+      "podcastName": "晨间信号",
+      "title": "【2026-04-01】OpenAI 完成史上最大融资，估值 8520 亿美元逼近万亿 | Claude Code 源码意外泄露，51 万行代码因 sour…",
+      "score": 28,
+      "reasons": [
+        "时长少于 20 分钟",
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
+        "缺少可验证的单集链接"
+      ]
+    },
+    {
+      "podcastName": "晨间信号",
+      "title": "【2026-03-28】谷歌接近达成协议，将为Anthropic的数据中心提供融资支持 | GLM-5.1上线，编程表现贴Opus 4.6开大，Coding…",
+      "score": 28,
+      "reasons": [
+        "时长少于 20 分钟",
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
+        "缺少可验证的单集链接"
       ]
     },
     {
@@ -3397,7 +3425,7 @@
     {
       "podcastName": "BestBlogs",
       "title": "EP81 · Fadell 访谈、Codex 零行人工代码、Agent 范式解析 · 06-08 早报",
-      "score": 48,
+      "score": 47,
       "reasons": [
         "时长少于 20 分钟"
       ]
@@ -3679,68 +3707,6 @@
       ]
     },
     {
-      "podcastName": "強者我朋友 by 志祺七七",
-      "title": "【強者我朋友】Vibe Coding 熱潮有多夯？他會泡沫化、還是未來必備趨勢？ft. 前 LINE TAIWAN 總經理 陶韻智｜志祺七七Podcast",
-      "score": 41,
-      "reasons": [
-        "总分 41，低于正式推荐阈值 85"
-      ]
-    },
-    {
-      "podcastName": "Connected",
-      "title": "610: The Only Way to Deal with John",
-      "score": 30,
-      "reasons": [
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
-        "中文内容不足"
-      ]
-    },
-    {
-      "podcastName": "Connected",
-      "title": "604: The Floor of the Street",
-      "score": 29,
-      "reasons": [
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
-        "中文内容不足"
-      ]
-    },
-    {
-      "podcastName": "Connected",
-      "title": "599: Then I Went a Step Beyond... Actually Two Steps",
-      "score": 33,
-      "reasons": [
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
-        "中文内容不足"
-      ]
-    },
-    {
-      "podcastName": "Connected",
-      "title": "573: Grand Central Dispatch for the Planet",
-      "score": 27,
-      "reasons": [
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
-        "中文内容不足"
-      ]
-    },
-    {
-      "podcastName": "Connected",
-      "title": "571: Touch Bar It Out of Existence",
-      "score": 27,
-      "reasons": [
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
-        "中文内容不足"
-      ]
-    },
-    {
-      "podcastName": "Connected",
-      "title": "552: Stage Manager Could Never",
-      "score": 33,
-      "reasons": [
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
-        "中文内容不足"
-      ]
-    },
-    {
       "podcastName": "AI懶人報",
       "title": "EP354 – 從寫程式到品味決策：深度訪談 OpenAI Codex Lead，揭秘 AI 時代如何交付千萬級成果",
       "score": 49,
@@ -3802,7 +3768,7 @@
     {
       "podcastName": "AI懶人報",
       "title": "EP333 ｜ AI懶人精選週報 – 實測 Claude Code 41 個 AI 代理同步作業！教你打造最像你自主優化的代理人OS系統，不動手只動嘴的ＡＩ架構師時代來了！",
-      "score": 34,
+      "score": 33,
       "reasons": [
         "时长少于 20 分钟",
         "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
@@ -4096,7 +4062,7 @@
     {
       "podcastName": "AI懶人報",
       "title": "EP278 - 你更新了嗎？Google、Apple 默默靠 Claude Mythos 幫你擋駭客，資安防護再升級！",
-      "score": 36,
+      "score": 35,
       "reasons": [
         "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
       ]
@@ -4193,11 +4159,77 @@
       ]
     },
     {
-      "podcastName": "AI懶人報",
-      "title": "EP258 - Claude Code 竟讓資料憑空消失！工程師親揭恐怖真相：AI 代理真的能失控？",
-      "score": 42,
+      "podcastName": "Connected",
+      "title": "610: The Only Way to Deal with John",
+      "score": 30,
       "reasons": [
-        "总分 42，低于正式推荐阈值 85"
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
+        "中文内容不足"
+      ]
+    },
+    {
+      "podcastName": "Connected",
+      "title": "604: The Floor of the Street",
+      "score": 29,
+      "reasons": [
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
+        "中文内容不足"
+      ]
+    },
+    {
+      "podcastName": "Connected",
+      "title": "599: Then I Went a Step Beyond... Actually Two Steps",
+      "score": 33,
+      "reasons": [
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
+        "中文内容不足"
+      ]
+    },
+    {
+      "podcastName": "Connected",
+      "title": "573: Grand Central Dispatch for the Planet",
+      "score": 27,
+      "reasons": [
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
+        "中文内容不足"
+      ]
+    },
+    {
+      "podcastName": "Connected",
+      "title": "571: Touch Bar It Out of Existence",
+      "score": 27,
+      "reasons": [
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
+        "中文内容不足"
+      ]
+    },
+    {
+      "podcastName": "Connected",
+      "title": "552: Stage Manager Could Never",
+      "score": 33,
+      "reasons": [
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
+        "中文内容不足"
+      ]
+    },
+    {
+      "podcastName": "All-In with Chamath, Jason, Sacks & Friedberg",
+      "title": "OpenAI Misses Targets, Codex vs Claude, Elon vs Sam Trial, Big Hyperscaler Beats, Peptide Craze",
+      "score": 29,
+      "reasons": [
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
+        "中文内容不足",
+        "缺少可验证的单集链接"
+      ]
+    },
+    {
+      "podcastName": "All-In with Chamath, Jason, Sacks & Friedberg",
+      "title": "Anthropic's $30B Ramp, Mythos Doomsday, OpenClaw Ankled, Iran War Ceasefire, Israel's Influence",
+      "score": 36,
+      "reasons": [
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
+        "中文内容不足",
+        "缺少可验证的单集链接"
       ]
     },
     {
@@ -4217,30 +4249,6 @@
       "reasons": [
         "无法确认时长",
         "中文内容不足"
-      ]
-    },
-    {
-      "podcastName": "Ai未來報",
-      "title": "EP14_黑盒子裡的AI夥伴？OpenAI_Codex_CLI_深度解析：開發者是愛還是恨？",
-      "score": 57,
-      "reasons": [
-        "时长少于 20 分钟"
-      ]
-    },
-    {
-      "podcastName": "Ai未來報",
-      "title": "免程式碼打造產品原型！MiniMax_Agent_從零到部署，AI_幫你實現想像：多模態、智能協作、Remix_社群與實用開發技巧大公開！",
-      "score": 38,
-      "reasons": [
-        "总分 38，低于正式推荐阈值 85"
-      ]
-    },
-    {
-      "podcastName": "Ai未來報",
-      "title": "Claude_Code_不只是程式助手：打造你的_AI_代理團隊，個人化生活與工作全面升級",
-      "score": 34,
-      "reasons": [
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
       ]
     },
     {
@@ -4306,7 +4314,7 @@
     {
       "podcastName": "Authority Hacker Podcast – AI & Automation for Small biz & Marketers",
       "title": "Claude Mythos Changes Everything",
-      "score": 29,
+      "score": 28,
       "reasons": [
         "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
         "中文内容不足",
@@ -4500,9 +4508,174 @@
       ]
     },
     {
-      "podcastName": "All-In with Chamath, Jason, Sacks & Friedberg",
-      "title": "OpenAI Misses Targets, Codex vs Claude, Elon vs Sam Trial, Big Hyperscaler Beats, Peptide Craze",
-      "score": 29,
+      "podcastName": "安全新鲜事",
+      "title": "新型供应链攻击Red Hat和OpenAI，Linux内核严重漏洞，荷兰警方捣毁大规模僵尸网络",
+      "score": 16,
+      "reasons": [
+        "时长少于 20 分钟",
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
+      ]
+    },
+    {
+      "podcastName": "安全新鲜事",
+      "title": "AI高危漏洞曝光，Vercel平台遭攻击，关键基础设施面临新威胁",
+      "score": 16,
+      "reasons": [
+        "时长少于 20 分钟",
+        "没有足够可读的 Shownotes、简介、大纲或摘要",
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
+      ]
+    },
+    {
+      "podcastName": "安全新鲜事",
+      "title": "AI自动化平台被滥用于网络攻击，Nginx UI高危漏洞遭利用，Chrome扩展窃取用户数据",
+      "score": 30,
+      "reasons": [
+        "时长少于 20 分钟"
+      ]
+    },
+    {
+      "podcastName": "安全新鲜事",
+      "title": "新型恶意软件活跃，高危漏洞被利用，Dark Sword攻击工具曝光",
+      "score": 25,
+      "reasons": [
+        "时长少于 20 分钟",
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
+      ]
+    },
+    {
+      "podcastName": "Y Combinator Startup Podcast",
+      "title": "Why Domain Experts Are Winning In The Age Of AI",
+      "score": 16,
+      "reasons": [
+        "没有足够可读的 Shownotes、简介、大纲或摘要",
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
+        "中文内容不足"
+      ]
+    },
+    {
+      "podcastName": "Y Combinator Startup Podcast",
+      "title": "Tokenmaxxing: How Top Builders Use AI To Do The Work Of 400 Engineers",
+      "score": 15,
+      "reasons": [
+        "没有足够可读的 Shownotes、简介、大纲或摘要",
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
+        "中文内容不足"
+      ]
+    },
+    {
+      "podcastName": "Y Combinator Startup Podcast",
+      "title": "The $9B Startup That Wants to Create a Billion New Developers",
+      "score": 18,
+      "reasons": [
+        "没有足够可读的 Shownotes、简介、大纲或摘要",
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
+        "中文内容不足"
+      ]
+    },
+    {
+      "podcastName": "Y Combinator Startup Podcast",
+      "title": "How François Chollet Is Building A New Path To AGI",
+      "score": 10,
+      "reasons": [
+        "没有足够可读的 Shownotes、简介、大纲或摘要",
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
+        "中文内容不足"
+      ]
+    },
+    {
+      "podcastName": "Y Combinator Startup Podcast",
+      "title": "Building A Global AI Startup From India",
+      "score": 28,
+      "reasons": [
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
+        "中文内容不足"
+      ]
+    },
+    {
+      "podcastName": "Y Combinator Startup Podcast",
+      "title": "How To Avoid AI Design Slop",
+      "score": 17,
+      "reasons": [
+        "没有足够可读的 Shownotes、简介、大纲或摘要",
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
+        "中文内容不足"
+      ]
+    },
+    {
+      "podcastName": "Y Combinator Startup Podcast",
+      "title": "Inside Claude Code With Its Creator Boris Cherny",
+      "score": 15,
+      "reasons": [
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
+        "中文内容不足"
+      ]
+    },
+    {
+      "podcastName": "Y Combinator Startup Podcast",
+      "title": "We're All Addicted To Claude Code",
+      "score": 10,
+      "reasons": [
+        "没有足够可读的 Shownotes、简介、大纲或摘要",
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
+        "中文内容不足"
+      ]
+    },
+    {
+      "podcastName": "Y Combinator Startup Podcast",
+      "title": "Michael Truell: Building Cursor at 23, Taking on GitHub Copilot, and Advice to Engineering Students",
+      "score": 16,
+      "reasons": [
+        "没有足够可读的 Shownotes、简介、大纲或摘要",
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
+        "中文内容不足"
+      ]
+    },
+    {
+      "podcastName": "Y Combinator Startup Podcast",
+      "title": "Replit CEO Amjad Masad: Coding Agents, Autonomy, and the Future of Work",
+      "score": 9,
+      "reasons": [
+        "没有足够可读的 Shownotes、简介、大纲或摘要",
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
+        "中文内容不足"
+      ]
+    },
+    {
+      "podcastName": "Y Combinator Startup Podcast",
+      "title": "Andrew Ng: Building Faster with AI",
+      "score": 13,
+      "reasons": [
+        "没有足够可读的 Shownotes、简介、大纲或摘要",
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
+        "中文内容不足"
+      ]
+    },
+    {
+      "podcastName": "Y Combinator Startup Podcast",
+      "title": "How AI Coding Agents Will Change Your Job",
+      "score": 26,
+      "reasons": [
+        "时长少于 20 分钟",
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
+        "中文内容不足"
+      ]
+    },
+    {
+      "podcastName": "Y Combinator Startup Podcast",
+      "title": "How To Get The Most Out Of Vibe Coding | Startup School",
+      "score": 15,
+      "reasons": [
+        "时长少于 20 分钟",
+        "没有足够可读的 Shownotes、简介、大纲或摘要",
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
+        "中文内容不足"
+      ]
+    },
+    {
+      "podcastName": "New Books Network",
+      "title": "Matthew Del Papa and Andy Taylor, \"Supercanucks: An Anthology of Canadian Small-Town Superheroes\" (Latitude 46, 2026)",
+      "score": 30,
       "reasons": [
         "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
         "中文内容不足",
@@ -4510,13 +4683,119 @@
       ]
     },
     {
-      "podcastName": "All-In with Chamath, Jason, Sacks & Friedberg",
-      "title": "Anthropic's $30B Ramp, Mythos Doomsday, OpenClaw Ankled, Iran War Ceasefire, Israel's Influence",
+      "podcastName": "The a16z Show",
+      "title": "Is Software Losing Its Head?",
+      "score": 34,
+      "reasons": [
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
+        "中文内容不足"
+      ]
+    },
+    {
+      "podcastName": "The a16z Show",
+      "title": "Rick Rubin on AI, Creativity, and The Way of Code",
+      "score": 37,
+      "reasons": [
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
+        "中文内容不足"
+      ]
+    },
+    {
+      "podcastName": "The a16z Show",
+      "title": "AI Eats the World? A Reality Check with Benedict Evans",
+      "score": 30,
+      "reasons": [
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
+        "中文内容不足"
+      ]
+    },
+    {
+      "podcastName": "The a16z Show",
+      "title": "Building Search for AI Agents with Exa CEO Will Bryk",
+      "score": 33,
+      "reasons": [
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
+        "中文内容不足"
+      ]
+    },
+    {
+      "podcastName": "The a16z Show",
+      "title": "AI Agents and the Fight for Customer Data",
+      "score": 33,
+      "reasons": [
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
+        "中文内容不足"
+      ]
+    },
+    {
+      "podcastName": "The a16z Show",
+      "title": "Why $1B Exits are Dead",
+      "score": 29,
+      "reasons": [
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
+        "中文内容不足"
+      ]
+    },
+    {
+      "podcastName": "The a16z Show",
+      "title": "Marc Andreessen on AI, California, and the Future of America | Joe Rogan",
+      "score": 33,
+      "reasons": [
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
+        "中文内容不足"
+      ]
+    },
+    {
+      "podcastName": "The a16z Show",
+      "title": "Martin Shkreli on AI, Pharma, and What Actually Matters",
       "score": 36,
       "reasons": [
         "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
-        "中文内容不足",
-        "缺少可验证的单集链接"
+        "中文内容不足"
+      ]
+    },
+    {
+      "podcastName": "The a16z Show",
+      "title": "Rethinking Git for the Age of Coding Agents with GitHub Cofounder Scott Chacon",
+      "score": 40,
+      "reasons": [
+        "中文内容不足"
+      ]
+    },
+    {
+      "podcastName": "The a16z Show",
+      "title": "Replit's CEO on Vibe Coding, Wealth Building, and What Most People Get Wrong About AI",
+      "score": 36,
+      "reasons": [
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
+        "中文内容不足"
+      ]
+    },
+    {
+      "podcastName": "The a16z Show",
+      "title": "The Agent Era: Building Software Beyond Chat with Box CEO Aaron Levie",
+      "score": 28,
+      "reasons": [
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
+        "中文内容不足"
+      ]
+    },
+    {
+      "podcastName": "The a16z Show",
+      "title": "Peter Yang on Small Teams, Coding Agents, and Why Human Ambition Has No Ceiling",
+      "score": 28,
+      "reasons": [
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
+        "中文内容不足"
+      ]
+    },
+    {
+      "podcastName": "The a16z Show",
+      "title": "Marc Andreessen on AI Winters and Agent Breakthroughs",
+      "score": 28,
+      "reasons": [
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
+        "中文内容不足"
       ]
     },
     {
@@ -4781,183 +5060,94 @@
       ]
     },
     {
-      "podcastName": "Y Combinator Startup Podcast",
-      "title": "Why Domain Experts Are Winning In The Age Of AI",
-      "score": 16,
+      "podcastName": "Startup Stories - Mixergy",
+      "title": "#2302 Superpowering Claude with 10,000 apps",
+      "score": 32,
       "reasons": [
-        "没有足够可读的 Shownotes、简介、大纲或摘要",
+        "无法确认时长",
         "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
         "中文内容不足"
       ]
     },
     {
-      "podcastName": "Y Combinator Startup Podcast",
-      "title": "Tokenmaxxing: How Top Builders Use AI To Do The Work Of 400 Engineers",
-      "score": 15,
-      "reasons": [
-        "没有足够可读的 Shownotes、简介、大纲或摘要",
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
-        "中文内容不足"
-      ]
-    },
-    {
-      "podcastName": "Y Combinator Startup Podcast",
-      "title": "The $9B Startup That Wants to Create a Billion New Developers",
-      "score": 18,
-      "reasons": [
-        "没有足够可读的 Shownotes、简介、大纲或摘要",
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
-        "中文内容不足"
-      ]
-    },
-    {
-      "podcastName": "Y Combinator Startup Podcast",
-      "title": "How François Chollet Is Building A New Path To AGI",
-      "score": 10,
-      "reasons": [
-        "没有足够可读的 Shownotes、简介、大纲或摘要",
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
-        "中文内容不足"
-      ]
-    },
-    {
-      "podcastName": "Y Combinator Startup Podcast",
-      "title": "Building A Global AI Startup From India",
+      "podcastName": "Startup Stories - Mixergy",
+      "title": "#2299 Zapier is using AI to sell to AI",
       "score": 28,
       "reasons": [
+        "无法确认时长",
         "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
         "中文内容不足"
       ]
     },
     {
-      "podcastName": "Y Combinator Startup Podcast",
-      "title": "How To Avoid AI Design Slop",
+      "podcastName": "Startup Stories - Mixergy",
+      "title": "#2298 This AI generates $689K",
+      "score": 28,
+      "reasons": [
+        "无法确认时长",
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
+        "中文内容不足"
+      ]
+    },
+    {
+      "podcastName": "Startup Stories - Mixergy",
+      "title": "#2294 He Claude Code: Build Me a YouTube Replacement",
+      "score": 28,
+      "reasons": [
+        "无法确认时长",
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
+        "中文内容不足"
+      ]
+    },
+    {
+      "podcastName": "Startup Stories - Mixergy",
+      "title": "#2287 AI made a “no code” founder into a coder",
       "score": 17,
       "reasons": [
-        "没有足够可读的 Shownotes、简介、大纲或摘要",
+        "无法确认时长",
         "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
         "中文内容不足"
       ]
     },
     {
-      "podcastName": "Y Combinator Startup Podcast",
-      "title": "Inside Claude Code With Its Creator Boris Cherny",
-      "score": 15,
-      "reasons": [
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
-        "中文内容不足"
-      ]
-    },
-    {
-      "podcastName": "Y Combinator Startup Podcast",
-      "title": "We're All Addicted To Claude Code",
-      "score": 10,
-      "reasons": [
-        "没有足够可读的 Shownotes、简介、大纲或摘要",
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
-        "中文内容不足"
-      ]
-    },
-    {
-      "podcastName": "Y Combinator Startup Podcast",
-      "title": "Michael Truell: Building Cursor at 23, Taking on GitHub Copilot, and Advice to Engineering Students",
-      "score": 16,
-      "reasons": [
-        "没有足够可读的 Shownotes、简介、大纲或摘要",
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
-        "中文内容不足"
-      ]
-    },
-    {
-      "podcastName": "Y Combinator Startup Podcast",
-      "title": "Replit CEO Amjad Masad: Coding Agents, Autonomy, and the Future of Work",
-      "score": 9,
-      "reasons": [
-        "没有足够可读的 Shownotes、简介、大纲或摘要",
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
-        "中文内容不足"
-      ]
-    },
-    {
-      "podcastName": "Y Combinator Startup Podcast",
-      "title": "Andrew Ng: Building Faster with AI",
-      "score": 13,
-      "reasons": [
-        "没有足够可读的 Shownotes、简介、大纲或摘要",
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
-        "中文内容不足"
-      ]
-    },
-    {
-      "podcastName": "Y Combinator Startup Podcast",
-      "title": "How AI Coding Agents Will Change Your Job",
+      "podcastName": "DERELICT",
+      "title": "Season 2 - DERELICT - E5 - Carved in Mayhem",
       "score": 26,
       "reasons": [
-        "时长少于 20 分钟",
         "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
         "中文内容不足"
       ]
     },
     {
-      "podcastName": "Y Combinator Startup Podcast",
-      "title": "How To Get The Most Out Of Vibe Coding | Startup School",
-      "score": 15,
-      "reasons": [
-        "时长少于 20 分钟",
-        "没有足够可读的 Shownotes、简介、大纲或摘要",
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
-        "中文内容不足"
-      ]
-    },
-    {
-      "podcastName": "New Books Network",
-      "title": "Matthew Del Papa and Andy Taylor, \"Supercanucks: An Anthology of Canadian Small-Town Superheroes\" (Latitude 46, 2026)",
-      "score": 30,
-      "reasons": [
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
-        "中文内容不足",
-        "缺少可验证的单集链接"
-      ]
-    },
-    {
-      "podcastName": "The a16z Show",
-      "title": "Rick Rubin on AI, Creativity, and The Way of Code",
-      "score": 37,
+      "podcastName": "DERELICT",
+      "title": "Season 2 - DERELICT - E4 - All the King's Horses",
+      "score": 26,
       "reasons": [
         "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
         "中文内容不足"
       ]
     },
     {
-      "podcastName": "The a16z Show",
-      "title": "AI Eats the World? A Reality Check with Benedict Evans",
-      "score": 30,
+      "podcastName": "DERELICT",
+      "title": "Season 2 - DERELICT - E3 - Insidious Consequences",
+      "score": 26,
       "reasons": [
         "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
         "中文内容不足"
       ]
     },
     {
-      "podcastName": "The a16z Show",
-      "title": "Building Search for AI Agents with Exa CEO Will Bryk",
-      "score": 33,
+      "podcastName": "DERELICT",
+      "title": "Season 2 - DERELICT - E2 - By Any Means",
+      "score": 26,
       "reasons": [
         "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
         "中文内容不足"
       ]
     },
     {
-      "podcastName": "The a16z Show",
-      "title": "AI Agents and the Fight for Customer Data",
-      "score": 33,
-      "reasons": [
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
-        "中文内容不足"
-      ]
-    },
-    {
-      "podcastName": "The a16z Show",
-      "title": "Why $1B Exits are Dead",
+      "podcastName": "monos estocásticos",
+      "title": "ChatGPT vuelve a ser mejor que Claude gracias a la potencia de cómputo de los WC japoneses",
       "score": 29,
       "reasons": [
         "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
@@ -4965,64 +5155,89 @@
       ]
     },
     {
-      "podcastName": "The a16z Show",
-      "title": "Marc Andreessen on AI, California, and the Future of America | Joe Rogan",
-      "score": 33,
+      "podcastName": "monos estocásticos",
+      "title": "ChatGPT 5.4 tiene PROHIBIDO decir te amo: prefiere minar criptomonedas mientras estás en el gimnasio",
+      "score": 28,
       "reasons": [
         "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
         "中文内容不足"
       ]
     },
     {
-      "podcastName": "The a16z Show",
-      "title": "Martin Shkreli on AI, Pharma, and What Actually Matters",
-      "score": 36,
+      "podcastName": "monos estocásticos",
+      "title": "Con ustedes, el primer modelo de IA de OpenAI que fue clave en su propia creación",
+      "score": 28,
       "reasons": [
         "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
         "中文内容不足"
       ]
     },
     {
-      "podcastName": "The a16z Show",
-      "title": "Rethinking Git for the Age of Coding Agents with GitHub Cofounder Scott Chacon",
+      "podcastName": "monos estocásticos",
+      "title": "Solo hay una cosa mejor que Claude Code: ChatGPT hasta arriba de alucinógenos",
+      "score": 27,
+      "reasons": [
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
+        "中文内容不足"
+      ]
+    },
+    {
+      "podcastName": "monos estocásticos",
+      "title": "Gemini 3 Pro es una IA increíble: \"monos estocásticos tenía razón\"",
+      "score": 27,
+      "reasons": [
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
+        "中文内容不足"
+      ]
+    },
+    {
+      "podcastName": "monos estocásticos",
+      "title": "Sam Altman no puede dormir por las noches. \"Debe 300.000 millones de dólares\"",
+      "score": 27,
+      "reasons": [
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
+        "中文内容不足"
+      ]
+    },
+    {
+      "podcastName": "monos estocásticos",
+      "title": "La IA de Google que se mejora a sí misma ha descubierto la receta perfecta para hacer un serranito",
+      "score": 26,
+      "reasons": [
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
+        "中文内容不足"
+      ]
+    },
+    {
+      "podcastName": "monos estocásticos",
+      "title": "La IA de Google vuelve a molar (a menos que seas feo, podcaster o escritora de novelas eróticas)",
+      "score": 37,
+      "reasons": [
+        "中文内容不足"
+      ]
+    },
+    {
+      "podcastName": "Dirty Minutes Left",
+      "title": "DML489 Tomb Raider IV",
+      "score": 28,
+      "reasons": [
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
+        "中文内容不足"
+      ]
+    },
+    {
+      "podcastName": "Dirty Minutes Left",
+      "title": "DML487 Virtual Boy",
       "score": 40,
       "reasons": [
         "中文内容不足"
       ]
     },
     {
-      "podcastName": "The a16z Show",
-      "title": "Replit's CEO on Vibe Coding, Wealth Building, and What Most People Get Wrong About AI",
-      "score": 36,
+      "podcastName": "Dirty Minutes Left",
+      "title": "DML485 Tomb Raider 2",
+      "score": 40,
       "reasons": [
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
-        "中文内容不足"
-      ]
-    },
-    {
-      "podcastName": "The a16z Show",
-      "title": "The Agent Era: Building Software Beyond Chat with Box CEO Aaron Levie",
-      "score": 29,
-      "reasons": [
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
-        "中文内容不足"
-      ]
-    },
-    {
-      "podcastName": "The a16z Show",
-      "title": "Peter Yang on Small Teams, Coding Agents, and Why Human Ambition Has No Ceiling",
-      "score": 28,
-      "reasons": [
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
-        "中文内容不足"
-      ]
-    },
-    {
-      "podcastName": "The a16z Show",
-      "title": "Marc Andreessen on AI Winters and Agent Breakthroughs",
-      "score": 28,
-      "reasons": [
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
         "中文内容不足"
       ]
     },
@@ -5096,163 +5311,6 @@
       ]
     },
     {
-      "podcastName": "DERELICT",
-      "title": "Season 2 - DERELICT - E5 - Carved in Mayhem",
-      "score": 26,
-      "reasons": [
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
-        "中文内容不足"
-      ]
-    },
-    {
-      "podcastName": "DERELICT",
-      "title": "Season 2 - DERELICT - E4 - All the King's Horses",
-      "score": 26,
-      "reasons": [
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
-        "中文内容不足"
-      ]
-    },
-    {
-      "podcastName": "DERELICT",
-      "title": "Season 2 - DERELICT - E3 - Insidious Consequences",
-      "score": 26,
-      "reasons": [
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
-        "中文内容不足"
-      ]
-    },
-    {
-      "podcastName": "DERELICT",
-      "title": "Season 2 - DERELICT - E2 - By Any Means",
-      "score": 26,
-      "reasons": [
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
-        "中文内容不足"
-      ]
-    },
-    {
-      "podcastName": "Startup Stories - Mixergy",
-      "title": "#2302 Superpowering Claude with 10,000 apps",
-      "score": 32,
-      "reasons": [
-        "无法确认时长",
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
-        "中文内容不足"
-      ]
-    },
-    {
-      "podcastName": "Startup Stories - Mixergy",
-      "title": "#2299 Zapier is using AI to sell to AI",
-      "score": 28,
-      "reasons": [
-        "无法确认时长",
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
-        "中文内容不足"
-      ]
-    },
-    {
-      "podcastName": "Startup Stories - Mixergy",
-      "title": "#2298 This AI generates $689K",
-      "score": 28,
-      "reasons": [
-        "无法确认时长",
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
-        "中文内容不足"
-      ]
-    },
-    {
-      "podcastName": "Startup Stories - Mixergy",
-      "title": "#2294 He Claude Code: Build Me a YouTube Replacement",
-      "score": 28,
-      "reasons": [
-        "无法确认时长",
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
-        "中文内容不足"
-      ]
-    },
-    {
-      "podcastName": "Startup Stories - Mixergy",
-      "title": "#2287 AI made a “no code” founder into a coder",
-      "score": 17,
-      "reasons": [
-        "无法确认时长",
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
-        "中文内容不足"
-      ]
-    },
-    {
-      "podcastName": "monos estocásticos",
-      "title": "ChatGPT vuelve a ser mejor que Claude gracias a la potencia de cómputo de los WC japoneses",
-      "score": 29,
-      "reasons": [
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
-        "中文内容不足"
-      ]
-    },
-    {
-      "podcastName": "monos estocásticos",
-      "title": "ChatGPT 5.4 tiene PROHIBIDO decir te amo: prefiere minar criptomonedas mientras estás en el gimnasio",
-      "score": 28,
-      "reasons": [
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
-        "中文内容不足"
-      ]
-    },
-    {
-      "podcastName": "monos estocásticos",
-      "title": "Con ustedes, el primer modelo de IA de OpenAI que fue clave en su propia creación",
-      "score": 28,
-      "reasons": [
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
-        "中文内容不足"
-      ]
-    },
-    {
-      "podcastName": "monos estocásticos",
-      "title": "Solo hay una cosa mejor que Claude Code: ChatGPT hasta arriba de alucinógenos",
-      "score": 28,
-      "reasons": [
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
-        "中文内容不足"
-      ]
-    },
-    {
-      "podcastName": "monos estocásticos",
-      "title": "Gemini 3 Pro es una IA increíble: \"monos estocásticos tenía razón\"",
-      "score": 27,
-      "reasons": [
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
-        "中文内容不足"
-      ]
-    },
-    {
-      "podcastName": "monos estocásticos",
-      "title": "Sam Altman no puede dormir por las noches. \"Debe 300.000 millones de dólares\"",
-      "score": 27,
-      "reasons": [
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
-        "中文内容不足"
-      ]
-    },
-    {
-      "podcastName": "monos estocásticos",
-      "title": "La IA de Google que se mejora a sí misma ha descubierto la receta perfecta para hacer un serranito",
-      "score": 26,
-      "reasons": [
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
-        "中文内容不足"
-      ]
-    },
-    {
-      "podcastName": "monos estocásticos",
-      "title": "La IA de Google vuelve a molar (a menos que seas feo, podcaster o escritora de novelas eróticas)",
-      "score": 37,
-      "reasons": [
-        "中文内容不足"
-      ]
-    },
-    {
       "podcastName": "Apple Coding Daily",
       "title": "Vibe Coding: la mayor estafa del desarrollo que ha roto el App Store",
       "score": 35,
@@ -5297,41 +5355,6 @@
       "reasons": [
         "时长少于 20 分钟",
         "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
-        "中文内容不足"
-      ]
-    },
-    {
-      "podcastName": "The Investor's Podcast (We Study Billionaires) - The Investor’s Podcast Network",
-      "title": "TECH015: OpenClaw and Self-Sovereign AI w/ Alex Gladstein and Justin Moon (Tech Podcast)",
-      "score": 35,
-      "reasons": [
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
-        "中文内容不足",
-        "缺少可验证的单集链接"
-      ]
-    },
-    {
-      "podcastName": "Dirty Minutes Left",
-      "title": "DML489 Tomb Raider IV",
-      "score": 28,
-      "reasons": [
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
-        "中文内容不足"
-      ]
-    },
-    {
-      "podcastName": "Dirty Minutes Left",
-      "title": "DML487 Virtual Boy",
-      "score": 40,
-      "reasons": [
-        "中文内容不足"
-      ]
-    },
-    {
-      "podcastName": "Dirty Minutes Left",
-      "title": "DML485 Tomb Raider 2",
-      "score": 40,
-      "reasons": [
         "中文内容不足"
       ]
     },
@@ -5414,103 +5437,13 @@
       ]
     },
     {
-      "podcastName": "AI前沿播客",
-      "title": "Codex-maxxing - Jason Liu",
-      "score": 20,
+      "podcastName": "The Investor's Podcast (We Study Billionaires) - The Investor’s Podcast Network",
+      "title": "TECH015: OpenClaw and Self-Sovereign AI w/ Alex Gladstein and Justin Moon (Tech Podcast)",
+      "score": 35,
       "reasons": [
-        "时长少于 20 分钟",
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
-      ]
-    },
-    {
-      "podcastName": "AI前沿播客",
-      "title": "没有编程经验的他，用Claude Code六周独立开发了一款iOS App",
-      "score": 12,
-      "reasons": [
-        "时长少于 20 分钟",
-        "没有足够可读的 Shownotes、简介、大纲或摘要",
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
-      ]
-    },
-    {
-      "podcastName": "AI前沿播客",
-      "title": "MCP：让Agent连接到生产系统",
-      "score": 26,
-      "reasons": [
-        "时长少于 20 分钟",
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
-      ]
-    },
-    {
-      "podcastName": "AI前沿播客",
-      "title": "用17年经验训练AI：Claude Code实践",
-      "score": 23,
-      "reasons": [
-        "时长少于 20 分钟",
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
-      ]
-    },
-    {
-      "podcastName": "AI前沿播客",
-      "title": "Claude Code 质量回退事件深度解读",
-      "score": 8,
-      "reasons": [
-        "时长少于 20 分钟",
-        "没有足够可读的 Shownotes、简介、大纲或摘要",
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
-      ]
-    },
-    {
-      "podcastName": "AI前沿播客",
-      "title": "Anthropic 增长神话：从营销已死到“分发工程师”的架构重构",
-      "score": 47,
-      "reasons": [
-        "时长少于 20 分钟"
-      ]
-    },
-    {
-      "podcastName": "AI前沿播客",
-      "title": "Claude Code 会话管理：100万上下文窗口的高效使用指南",
-      "score": 19,
-      "reasons": [
-        "时长少于 20 分钟",
-        "没有足够可读的 Shownotes、简介、大纲或摘要",
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
-      ]
-    },
-    {
-      "podcastName": "AI前沿播客",
-      "title": "Codex for (almost) everything",
-      "score": 16,
-      "reasons": [
-        "时长少于 20 分钟",
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
-      ]
-    },
-    {
-      "podcastName": "AI前沿播客",
-      "title": "Anthropic技能创建器四大创新解析",
-      "score": 16,
-      "reasons": [
-        "时长少于 20 分钟",
-        "没有足够可读的 Shownotes、简介、大纲或摘要",
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容"
-      ]
-    },
-    {
-      "podcastName": "AI前沿播客",
-      "title": "OpenAI Codex智能体开发百万行代码",
-      "score": 38,
-      "reasons": [
-        "时长少于 20 分钟"
-      ]
-    },
-    {
-      "podcastName": "AI前沿播客",
-      "title": "AI技术双爆：开发者工具战与情绪机制揭秘",
-      "score": 29,
-      "reasons": [
-        "时长少于 20 分钟"
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
+        "中文内容不足",
+        "缺少可验证的单集链接"
       ]
     },
     {
@@ -5828,52 +5761,6 @@
       ]
     },
     {
-      "podcastName": "TargetPriority40k",
-      "title": "Episode 7.01 - Teams und Theater",
-      "score": 26,
-      "reasons": [
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
-        "中文内容不足"
-      ]
-    },
-    {
-      "podcastName": "TargetPriority40k",
-      "title": "Searchlight - Episode 6 - Harlequins Codex Review feat. Kings of the Hill & Donautrolle",
-      "score": 16,
-      "reasons": [
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
-        "中文内容不足"
-      ]
-    },
-    {
-      "podcastName": "TargetPriority40k",
-      "title": "Searchlight - Episode 5 - Adeptus Custodes Codex Review feat. Kings of the Hill & Blackhydra Wargaming",
-      "score": 26,
-      "reasons": [
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
-        "中文内容不足"
-      ]
-    },
-    {
-      "podcastName": "TargetPriority40k",
-      "title": "Searchlight - Episode 4 - Adeptus Mechanicus feat. Kings of the Hill und Spitzkligger pt. 2",
-      "score": 16,
-      "reasons": [
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
-        "中文内容不足"
-      ]
-    },
-    {
-      "podcastName": "TargetPriority40k",
-      "title": "Episode 2.13 - HAO Review mit dem Champion und die erste Codex-Welle",
-      "score": 16,
-      "reasons": [
-        "无法确认时长",
-        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
-        "中文内容不足"
-      ]
-    },
-    {
       "podcastName": "Look Out, Sir! Warhammer Podcast",
       "title": "225. Wormlords and Webways - Warhammer Book Club - Eldar and Tamurkhan",
       "score": 27,
@@ -6144,6 +6031,52 @@
       ]
     },
     {
+      "podcastName": "TargetPriority40k",
+      "title": "Episode 7.01 - Teams und Theater",
+      "score": 26,
+      "reasons": [
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
+        "中文内容不足"
+      ]
+    },
+    {
+      "podcastName": "TargetPriority40k",
+      "title": "Searchlight - Episode 6 - Harlequins Codex Review feat. Kings of the Hill & Donautrolle",
+      "score": 16,
+      "reasons": [
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
+        "中文内容不足"
+      ]
+    },
+    {
+      "podcastName": "TargetPriority40k",
+      "title": "Searchlight - Episode 5 - Adeptus Custodes Codex Review feat. Kings of the Hill & Blackhydra Wargaming",
+      "score": 26,
+      "reasons": [
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
+        "中文内容不足"
+      ]
+    },
+    {
+      "podcastName": "TargetPriority40k",
+      "title": "Searchlight - Episode 4 - Adeptus Mechanicus feat. Kings of the Hill und Spitzkligger pt. 2",
+      "score": 16,
+      "reasons": [
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
+        "中文内容不足"
+      ]
+    },
+    {
+      "podcastName": "TargetPriority40k",
+      "title": "Episode 2.13 - HAO Review mit dem Champion und die erste Codex-Welle",
+      "score": 16,
+      "reasons": [
+        "无法确认时长",
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
+        "中文内容不足"
+      ]
+    },
+    {
       "podcastName": "The Digital Marketing Podcast",
       "title": "Gamification for Digital Marketing",
       "score": 21,
@@ -6170,6 +6103,38 @@
       "score": 16,
       "reasons": [
         "没有足够可读的 Shownotes、简介、大纲或摘要",
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
+        "中文内容不足",
+        "缺少可验证的单集链接"
+      ]
+    },
+    {
+      "podcastName": "siglvision",
+      "title": "Auftritt auf der Codex",
+      "score": 17,
+      "reasons": [
+        "时长少于 20 分钟",
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
+        "中文内容不足",
+        "缺少可验证的单集链接"
+      ]
+    },
+    {
+      "podcastName": "siglvision",
+      "title": "Vibe Coding",
+      "score": 41,
+      "reasons": [
+        "时长少于 20 分钟",
+        "中文内容不足",
+        "缺少可验证的单集链接"
+      ]
+    },
+    {
+      "podcastName": "siglvision",
+      "title": "Schönes beginnt",
+      "score": 31,
+      "reasons": [
+        "时长少于 20 分钟",
         "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
         "中文内容不足",
         "缺少可验证的单集链接"
@@ -6225,32 +6190,81 @@
       ]
     },
     {
-      "podcastName": "siglvision",
-      "title": "Auftritt auf der Codex",
-      "score": 17,
+      "podcastName": "Thoughtworks Technology Podcast",
+      "title": "What is spec-driven development?",
+      "score": 33,
       "reasons": [
-        "时长少于 20 分钟",
         "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
         "中文内容不足",
         "缺少可验证的单集链接"
       ]
     },
     {
-      "podcastName": "siglvision",
-      "title": "Vibe Coding",
-      "score": 41,
+      "podcastName": "Thoughtworks Technology Podcast",
+      "title": "Key themes in Technology Radar Vol.34",
+      "score": 19,
       "reasons": [
-        "时长少于 20 分钟",
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
         "中文内容不足",
         "缺少可验证的单集链接"
       ]
     },
     {
-      "podcastName": "siglvision",
-      "title": "Schönes beginnt",
-      "score": 31,
+      "podcastName": "Thoughtworks Technology Podcast",
+      "title": "We still need to talk about vibe coding: Reflections on 2025's word of the year",
+      "score": 34,
       "reasons": [
-        "时长少于 20 分钟",
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
+        "中文内容不足",
+        "缺少可验证的单集链接"
+      ]
+    },
+    {
+      "podcastName": "Thoughtworks Technology Podcast",
+      "title": "How developers can get the most from new AI coding workflows",
+      "score": 21,
+      "reasons": [
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
+        "中文内容不足",
+        "缺少可验证的单集链接"
+      ]
+    },
+    {
+      "podcastName": "Thoughtworks Technology Podcast",
+      "title": "Themes from Technology Radar Vol.33",
+      "score": 21,
+      "reasons": [
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
+        "中文内容不足",
+        "缺少可验证的单集链接"
+      ]
+    },
+    {
+      "podcastName": "Thoughtworks Technology Podcast",
+      "title": "Caring about documentation in the LLM era (w/ Heidi Waterhouse)",
+      "score": 34,
+      "reasons": [
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
+        "中文内容不足",
+        "缺少可验证的单集链接"
+      ]
+    },
+    {
+      "podcastName": "Thoughtworks Technology Podcast",
+      "title": "MCP and SRE: Why the future of IT operations is agent-driven",
+      "score": 16,
+      "reasons": [
+        "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
+        "中文内容不足",
+        "缺少可验证的单集链接"
+      ]
+    },
+    {
+      "podcastName": "Thoughtworks Technology Podcast",
+      "title": "We need to talk about vibe coding",
+      "score": 15,
+      "reasons": [
+        "没有足够可读的 Shownotes、简介、大纲或摘要",
         "正文证据中没有明确且实质性的 Codex / AI Coding 实操内容",
         "中文内容不足",
         "缺少可验证的单集链接"
@@ -6396,44 +6410,16 @@
       "链接不可访问",
       "总分低于 75"
     ],
-    "sourceFailures": [],
+    "sourceFailures": [
+      "RSS 解析失败 (浪说播客, https://proxy.wavpub.com/langshuo.xml): fetch failed"
+    ],
     "candidateCount": 713,
     "candidateTarget": 100,
     "candidateTargetMet": true,
-    "hardGatePassed": 73,
+    "hardGatePassed": 67,
     "geminiReviewed": 10,
     "geminiSucceeded": 8,
     "dedupeDecisions": [
-      {
-        "feedbackId": "podcast:1fa53f7c",
-        "title": "#606.Codex 负责人：品味与判断力为何成为你最值钱的资产",
-        "category": "podcast",
-        "decision": "allow_unanswered_repeat",
-        "reason": "already_pushed_without_feedback",
-        "allowed": true,
-        "duplicateStatus": "repeat",
-        "firstPushedDate": "2026-07-03",
-        "lastPushedDate": "2026-07-03",
-        "feedbackType": null,
-        "hasFeedback": false,
-        "scoreDelta": -10,
-        "annotation": "⚠️ 重复推送：这条内容曾于 2026-07-03 推送过；目前没有收到任何反馈，因此本次允许重复出现。请反馈“已读不错 / 已读不行 / 重复了”，后续系统将据此处理。"
-      },
-      {
-        "feedbackId": "podcast:a37ac12e",
-        "title": "#576.Claude Code：工程师如何放大生产力，AI 重塑团队分工的通才时代",
-        "category": "podcast",
-        "decision": "allow_new",
-        "reason": "never_pushed",
-        "allowed": true,
-        "duplicateStatus": "new",
-        "firstPushedDate": null,
-        "lastPushedDate": null,
-        "feedbackType": null,
-        "hasFeedback": false,
-        "scoreDelta": 0,
-        "annotation": ""
-      },
       {
         "feedbackId": "podcast:46202b88",
         "title": "#544. HTML 是新的 Markdown：用AI生成动态 Spec",
@@ -6463,8 +6449,23 @@
         "hasFeedback": false,
         "scoreDelta": -10,
         "annotation": "⚠️ 重复推送：这条内容曾于 2026-07-05 推送过；目前没有收到任何反馈，因此本次允许重复出现。请反馈“已读不错 / 已读不行 / 重复了”，后续系统将据此处理。"
+      },
+      {
+        "feedbackId": "podcast:5bcc5999",
+        "title": "#594.Fiona Fung：AI 时代工程师如何不掉队，代码不再稀缺后的团队重构",
+        "category": "podcast",
+        "decision": "allow_unanswered_repeat",
+        "reason": "already_pushed_without_feedback",
+        "allowed": true,
+        "duplicateStatus": "repeat",
+        "firstPushedDate": "2026-07-05",
+        "lastPushedDate": "2026-07-05",
+        "feedbackType": null,
+        "hasFeedback": false,
+        "scoreDelta": -10,
+        "annotation": "⚠️ 重复推送：这条内容曾于 2026-07-05 推送过；目前没有收到任何反馈，因此本次允许重复出现。请反馈“已读不错 / 已读不行 / 重复了”，后续系统将据此处理。"
       }
     ]
   },
-  "generatedAt": "2026-07-06T23:42:19.556Z"
+  "generatedAt": "2026-07-07T23:34:03.516Z"
 }

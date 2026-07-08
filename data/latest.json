@@ -1,6 +1,6 @@
 {
-  "date": "2026-07-07",
-  "summary": "今天最值得精读的项目是 **DDC_Skills_for_AI_Agents_in_Construction**（推荐分 87）。1. 完美契合 Vibe Coding 和 Skills 概念，展示了如何通过结构化的 Markdown 文件指导 AI 助手。\n2. 包含大量 Office 自动化（Excel, DOCX, PPTX）的实际用例，可直接提取用于课程制作或副业项目。\n3. 提供了将复杂业务拆解为 AI Agent 可执行技能的优秀范式。。对办公自动化有直接价值。建议用 30-45 分钟只读学习，不要安装运行，先理解核心机制和可迁移经验。",
+  "date": "2026-07-08",
+  "summary": "今天最值得精读的项目是 **lark-coding-agent-bridge**（推荐分 94）。高度契合你的核心关注点：1. 原生支持 Codex CLI 和 Claude Code；2. 完美命中你历史偏好的「测试飞书自动反馈/群反馈」场景；3. TypeScript 编写，适合作为 Agent 接入企业 IM 的参考实现或副业项目灵感。。可以接触新鲜有趣的技术和项目组织方式。建议用 30-45 分钟只读学习，不要安装运行，先理解核心机制和可迁移经验。",
   "activeProfile": "默认综合模式",
   "activeFocusAreas": [
     "Office 文档自动化",
@@ -27,9 +27,9 @@
     "complete": true,
     "candidateTarget": 300,
     "candidateTargetMet": true,
-    "hardGatePassed": 43,
+    "hardGatePassed": 41,
     "geminiReviewed": 10,
-    "geminiSucceeded": 10,
+    "geminiSucceeded": 6,
     "dedupeDecisions": [
       {
         "feedbackId": "github:zarazhangrui/lark-coding-agent-bridge",
@@ -40,26 +40,41 @@
         "allowed": true,
         "duplicateStatus": "repeat",
         "firstPushedDate": "2026-07-05",
-        "lastPushedDate": "2026-07-05",
+        "lastPushedDate": "2026-07-07",
         "feedbackType": null,
         "hasFeedback": false,
         "scoreDelta": -10,
         "annotation": "⚠️ 重复推送：这条内容曾于 2026-07-05 推送过；目前没有收到任何反馈，因此本次允许重复出现。请反馈“已读不错 / 已读不行 / 重复了”，后续系统将据此处理。"
       },
       {
-        "feedbackId": "github:bagidea/bagidea-office",
-        "title": "bagidea-office",
+        "feedbackId": "github:eugeniughelbur/obsidian-second-brain",
+        "title": "obsidian-second-brain",
         "category": "github",
         "decision": "allow_unanswered_repeat",
         "reason": "already_pushed_without_feedback",
         "allowed": true,
         "duplicateStatus": "repeat",
-        "firstPushedDate": "2026-07-03",
-        "lastPushedDate": "2026-07-03",
+        "firstPushedDate": "2026-07-04",
+        "lastPushedDate": "2026-07-04",
         "feedbackType": null,
         "hasFeedback": false,
         "scoreDelta": -10,
-        "annotation": "⚠️ 重复推送：这条内容曾于 2026-07-03 推送过；目前没有收到任何反馈，因此本次允许重复出现。请反馈“已读不错 / 已读不行 / 重复了”，后续系统将据此处理。"
+        "annotation": "⚠️ 重复推送：这条内容曾于 2026-07-04 推送过；目前没有收到任何反馈，因此本次允许重复出现。请反馈“已读不错 / 已读不行 / 重复了”，后续系统将据此处理。"
+      },
+      {
+        "feedbackId": "github:datadrivenconstruction/ddc_skills_for_ai_agents_in_construction",
+        "title": "DDC_Skills_for_AI_Agents_in_Construction",
+        "category": "github",
+        "decision": "allow_unanswered_repeat",
+        "reason": "already_pushed_without_feedback",
+        "allowed": true,
+        "duplicateStatus": "repeat",
+        "firstPushedDate": "2026-07-07",
+        "lastPushedDate": "2026-07-07",
+        "feedbackType": null,
+        "hasFeedback": false,
+        "scoreDelta": -10,
+        "annotation": "⚠️ 重复推送：这条内容曾于 2026-07-07 推送过；目前没有收到任何反馈，因此本次允许重复出现。请反馈“已读不错 / 已读不行 / 重复了”，后续系统将据此处理。"
       },
       {
         "feedbackId": "github:narumiruna/pi-extensions",
@@ -92,36 +107,6 @@
         "annotation": "⚠️ 重复推送：这条内容曾于 2026-07-06 推送过；目前没有收到任何反馈，因此本次允许重复出现。请反馈“已读不错 / 已读不行 / 重复了”，后续系统将据此处理。"
       },
       {
-        "feedbackId": "github:dyan-dev/loopi",
-        "title": "loopi",
-        "category": "github",
-        "decision": "allow_unanswered_repeat",
-        "reason": "already_pushed_without_feedback",
-        "allowed": true,
-        "duplicateStatus": "repeat",
-        "firstPushedDate": "2026-07-06",
-        "lastPushedDate": "2026-07-06",
-        "feedbackType": null,
-        "hasFeedback": false,
-        "scoreDelta": -10,
-        "annotation": "⚠️ 重复推送：这条内容曾于 2026-07-06 推送过；目前没有收到任何反馈，因此本次允许重复出现。请反馈“已读不错 / 已读不行 / 重复了”，后续系统将据此处理。"
-      },
-      {
-        "feedbackId": "github:datadrivenconstruction/ddc_skills_for_ai_agents_in_construction",
-        "title": "DDC_Skills_for_AI_Agents_in_Construction",
-        "category": "github",
-        "decision": "allow_new",
-        "reason": "never_pushed",
-        "allowed": true,
-        "duplicateStatus": "new",
-        "firstPushedDate": null,
-        "lastPushedDate": null,
-        "feedbackType": null,
-        "hasFeedback": false,
-        "scoreDelta": 0,
-        "annotation": ""
-      },
-      {
         "feedbackId": "github:nicedreamzapp/claude-code-local",
         "title": "claude-code-local",
         "category": "github",
@@ -137,32 +122,32 @@
         "annotation": "⚠️ 重复推送：这条内容曾于 2026-07-04 推送过；目前没有收到任何反馈，因此本次允许重复出现。请反馈“已读不错 / 已读不行 / 重复了”，后续系统将据此处理。"
       }
     ],
-    "candidateCount": 320,
-    "qualifiedCount": 7
+    "candidateCount": 318,
+    "qualifiedCount": 6
   },
   "topPick": {
-    "name": "DDC_Skills_for_AI_Agents_in_Construction",
-    "fullName": "datadrivenconstruction/DDC_Skills_for_AI_Agents_in_Construction",
-    "url": "https://github.com/datadrivenconstruction/DDC_Skills_for_AI_Agents_in_Construction",
-    "description": "221 AI skills for construction: BIM analysis, cost estimation, scheduling, document control, and automation with Claude Code",
-    "author": "datadrivenconstruction",
-    "language": "Python",
-    "stars": 229,
-    "forks": 57,
+    "name": "lark-coding-agent-bridge",
+    "fullName": "zarazhangrui/lark-coding-agent-bridge",
+    "url": "https://github.com/zarazhangrui/lark-coding-agent-bridge",
+    "description": "Bot that bridges Feishu/Lark messenger with a local Claude Code or Codex CLI. Streaming cards, per-chat sessions, multiple workspaces",
+    "author": "zarazhangrui",
+    "language": "TypeScript",
+    "stars": 1748,
+    "forks": 272,
     "license": "MIT",
-    "updatedAt": "2026-02-14",
+    "updatedAt": "2026-07-07",
     "archived": false,
-    "openIssues": 2,
-    "recommendScore": 87,
-    "rawRecommendScore": 67,
+    "openIssues": 142,
+    "recommendScore": 94,
+    "rawRecommendScore": 73,
     "scores": {
-      "vibeCodingLearning": 18,
-      "officeAutomation": 7,
-      "monetizationPotential": 6,
-      "codexFriendly": 8,
-      "beginnerFriendly": 8,
-      "localFirst": 5,
-      "activity": 4,
+      "vibeCodingLearning": 19,
+      "officeAutomation": 3,
+      "monetizationPotential": 5,
+      "codexFriendly": 12,
+      "beginnerFriendly": 9,
+      "localFirst": 7,
+      "activity": 5,
       "license": 5
     },
     "scoreBasis": {
@@ -170,43 +155,43 @@
         {
           "key": "vibeCodingLearning",
           "label": "Vibe Coding 学习价值",
-          "score": 18,
+          "score": 19,
           "max": 20
         },
         {
           "key": "officeAutomation",
           "label": "办公自动化价值",
-          "score": 7,
+          "score": 3,
           "max": 20
         },
         {
           "key": "monetizationPotential",
           "label": "个人变现潜力",
-          "score": 6,
+          "score": 5,
           "max": 15
         },
         {
           "key": "codexFriendly",
           "label": "Codex 改造友好度",
-          "score": 8,
+          "score": 12,
           "max": 15
         },
         {
           "key": "beginnerFriendly",
           "label": "新手学习友好度",
-          "score": 8,
+          "score": 9,
           "max": 10
         },
         {
           "key": "localFirst",
           "label": "本地/免费优先",
-          "score": 5,
+          "score": 7,
           "max": 10
         },
         {
           "key": "activity",
           "label": "近期活跃度",
-          "score": 4,
+          "score": 5,
           "max": 5
         },
         {
@@ -218,95 +203,97 @@
       ],
       "penalties": [],
       "bonuses": [
-        "命中白名单 1 个，加 2 分",
-        "优先语言 Python，加 5 分"
+        "命中白名单 2 个，加 4 分",
+        "优先语言 TypeScript，加 5 分"
       ]
     },
-    "vibeCodingValue": "1. 完美契合 Vibe Coding 和 Skills 概念，展示了如何通过结构化的 Markdown 文件指导 AI 助手。\n2. 包含大量 Office 自动化（Excel, DOCX, PPTX）的实际用例，可直接提取用于课程制作或副业项目。\n3. 提供了将复杂业务拆解为 AI Agent 可执行技能的优秀范式。",
-    "officeAutomationValue": "高 - 涉及 document 相关功能",
-    "monetizationPotential": "低中 - 有一定变现潜力，需要加工",
-    "codexFriendly": "可以将这些 SKILL.md 的结构和 Prompt 逻辑提取出来，转化为 Codex 的自定义技能或 MCP 工具，特别是其中涉及文档生成和数据处理的部分。",
+    "vibeCodingValue": "高度契合你的核心关注点：1. 原生支持 Codex CLI 和 Claude Code；2. 完美命中你历史偏好的「测试飞书自动反馈/群反馈」场景；3. TypeScript 编写，适合作为 Agent 接入企业 IM 的参考实现或副业项目灵感。",
+    "officeAutomationValue": "低 - 与办公自动化关系不大，但有通用学习价值",
+    "monetizationPotential": "低 - 暂不适合直接变现，可学习技术",
+    "codexFriendly": "项目原生支持 Codex CLI（通过 `--agent codex` 启动），并处理了权限模式映射（如 danger-full-access、workspace-write），可直接用于 Codex 的飞书端交互改造与测试。",
     "riskPoints": "未发现明显风险",
-    "matchedArea": "Office 文档自动化",
+    "matchedArea": "个人效率工具",
     "penalties": [],
     "bonuses": [
-      "命中白名单 1 个，加 2 分",
-      "优先语言 Python，加 5 分"
+      "命中白名单 2 个，加 4 分",
+      "优先语言 TypeScript，加 5 分"
     ],
     "qualityGate": {
       "passed": true,
       "relevanceSignals": [
+        "codex",
         "claude code"
       ],
       "failures": []
     },
-    "ruleScore": 84,
+    "ruleScore": 87,
     "semanticReview": {
       "shouldRecommend": true,
-      "score": 87,
-      "type": "其他",
-      "oneLineConclusion": "包含 221 个专为 Claude Code 等 AI 编程助手设计的 SKILL.md 技能库，涵盖 Excel/Word/PPT 等文档自动化处理，是 Vibe Coding 的绝佳参考案例。",
-      "whatHappened": "开源项目 DDC_Skills_for_AI_Agents_in_Construction 整理了 221 个结构化的 AI 技能（SKILL.md），指导 Claude Code、Cursor 等 AI 助手完成特定任务，包括 ETL 管道、数据分析以及 PDF/Excel/DOCX/PPTX 文档的自动生成。",
-      "consumerUseCase": "用户可以通过将特定的 SKILL.md 喂给 AI 编程助手，让其自动编写 Python 脚本来处理 Excel 数据、生成 Word/PPT 报告或进行数据清洗，无需从零手写代码。",
-      "valueForRafael": "1. 完美契合 Vibe Coding 和 Skills 概念，展示了如何通过结构化的 Markdown 文件指导 AI 助手。\n2. 包含大量 Office 自动化（Excel, DOCX, PPTX）的实际用例，可直接提取用于课程制作或副业项目。\n3. 提供了将复杂业务拆解为 AI Agent 可执行技能的优秀范式。",
-      "codexIntegrationPotential": "可以将这些 SKILL.md 的结构和 Prompt 逻辑提取出来，转化为 Codex 的自定义技能或 MCP 工具，特别是其中涉及文档生成和数据处理的部分。",
-      "actionSuggestion": "克隆该仓库，重点研究 `4_DDC_Curated` 目录下的文档生成（PDF, Excel, DOCX, PPTX）技能，提取其 Prompt 结构和 Python 脚本模板，用于丰富自己的 Office 自动化课程或 Codex 技能库。",
+      "score": 94,
+      "type": "Agent 工具",
+      "oneLineConclusion": "将本地 Claude Code 或 Codex CLI 接入飞书的桥接工具，完美契合飞书自动反馈与 Vibe Coding 测试需求。",
+      "whatHappened": "开源项目 lark-coding-agent-bridge 提供了一个轻量级 Bot，通过终端扫码绑定飞书个人应用，即可在飞书单聊或群聊中直接调用本地的 Claude Code 或 Codex CLI，支持流式卡片、多工作区切换和 COT 思考过程展示。",
+      "consumerUseCase": "开发者可以通过飞书随时随地向本地运行的 AI 编程助手下达指令，查看代码修改进度、执行终端命令，甚至发送图片和文件给 Agent 处理，实现移动端或协同办公场景下的 Vibe Coding。",
+      "valueForRafael": "高度契合你的核心关注点：1. 原生支持 Codex CLI 和 Claude Code；2. 完美命中你历史偏好的「测试飞书自动反馈/群反馈」场景；3. TypeScript 编写，适合作为 Agent 接入企业 IM 的参考实现或副业项目灵感。",
+      "codexIntegrationPotential": "项目原生支持 Codex CLI（通过 `--agent codex` 启动），并处理了权限模式映射（如 danger-full-access、workspace-write），可直接用于 Codex 的飞书端交互改造与测试。",
+      "actionSuggestion": "运行 `npm i -g lark-channel-bridge` 安装，使用 `lark-channel-bridge run` 扫码绑定飞书测试应用，在飞书中发送 `/help` 或直接对话，测试 Codex 在飞书群聊中的自动反馈效果。",
       "reasons": [
-        "命中核心关注点：Vibe Coding, Skills, Agent, Office 自动化 (Excel/Word/PPT)。",
-        "创新的交互模式：通过独立的 SKILL.md 文件为 AI 助手提供上下文和指令，是 Vibe Coding 的前沿实践。",
-        "实用性强：虽然背景是建筑业，但其底层逻辑（ETL、文档生成、数据清洗）具有极高的通用性。"
+        "原生支持 Codex CLI 和 Claude Code，直接命中 Codex 与 Agent 关注点",
+        "完美契合用户历史偏好的飞书自动反馈、飞书群自动反馈测试场景",
+        "支持流式卡片、多工作区、COT 过程展示，产品完成度高，交互体验好",
+        "1700+ Stars，文档详尽，提供完整的后台服务管理命令，开箱即用"
       ],
       "risksOrMissingInfo": [
-        "领域特定性较强（建筑业/BIM），部分技能（如 IFC/Revit 解析）对通用办公场景无用，需要自行筛选。",
-        "依赖 Python 环境和特定的第三方库（如 pandas, openpyxl, pdfplumber）。"
+        "依赖本地 Node.js (>=20.12.0) 环境及已登录的 Claude/Codex CLI",
+        "飞书个人应用的权限配置可能需要根据所在企业的安全策略进行调整"
       ],
       "evidenceRequired": true,
       "dimensions": {
-        "rafaelMatch": 23,
-        "consumerUsability": 15,
-        "ecosystemRelevance": 19,
-        "actionableValue": 13,
-        "sourceReliability": 8,
-        "freshness": 9
+        "rafaelMatch": 25,
+        "consumerUsability": 18,
+        "ecosystemRelevance": 20,
+        "actionableValue": 14,
+        "sourceReliability": 9,
+        "freshness": 8
       }
     },
     "reviewProvider": "vertex",
-    "feedbackId": "github:datadrivenconstruction/ddc_skills_for_ai_agents_in_construction",
+    "feedbackId": "github:zarazhangrui/lark-coding-agent-bridge",
     "category": "github",
-    "decision": "allow_new",
-    "reason": "never_pushed",
+    "decision": "allow_unanswered_repeat",
+    "reason": "already_pushed_without_feedback",
     "allowed": true,
-    "duplicateStatus": "new",
-    "firstPushedDate": null,
-    "lastPushedDate": null,
+    "duplicateStatus": "repeat",
+    "firstPushedDate": "2026-07-05",
+    "lastPushedDate": "2026-07-07",
     "feedbackType": null,
     "hasFeedback": false,
-    "scoreDelta": 0,
-    "annotation": "",
-    "preferenceScoreDelta": 0
+    "scoreDelta": -10,
+    "annotation": "⚠️ 重复推送：这条内容曾于 2026-07-05 推送过；目前没有收到任何反馈，因此本次允许重复出现。请反馈“已读不错 / 已读不行 / 重复了”，后续系统将据此处理。",
+    "preferenceScoreDelta": -10
   },
   "selectedProjects": [
     {
-      "name": "lark-coding-agent-bridge",
-      "fullName": "zarazhangrui/lark-coding-agent-bridge",
-      "url": "https://github.com/zarazhangrui/lark-coding-agent-bridge",
-      "description": "Bot that bridges Feishu/Lark messenger with a local Claude Code or Codex CLI. Streaming cards, per-chat sessions, multiple workspaces",
-      "author": "zarazhangrui",
-      "language": "TypeScript",
-      "stars": 1723,
-      "forks": 269,
+      "name": "obsidian-second-brain",
+      "fullName": "eugeniughelbur/obsidian-second-brain",
+      "url": "https://github.com/eugeniughelbur/obsidian-second-brain",
+      "description": "Cross-CLI skill for Obsidian: turn your vault into a living AI-first second brain across Claude Code, Codex, Gemini, OpenCode, Hermes, and Pi. 44 commands - self-rewriting notes, local+hybrid semantic search, key-less web research, /obsidian-architect codebase docs, and scheduled agents that maintain the vault while you sleep.",
+      "author": "eugeniughelbur",
+      "language": "Python",
+      "stars": 3025,
+      "forks": 368,
       "license": "MIT",
       "updatedAt": "2026-07-07",
       "archived": false,
-      "openIssues": 141,
-      "recommendScore": 96,
-      "rawRecommendScore": 73,
+      "openIssues": 0,
+      "recommendScore": 93,
+      "rawRecommendScore": 69,
       "scores": {
         "vibeCodingLearning": 19,
         "officeAutomation": 3,
         "monetizationPotential": 5,
-        "codexFriendly": 12,
-        "beginnerFriendly": 9,
+        "codexFriendly": 9,
+        "beginnerFriendly": 8,
         "localFirst": 7,
         "activity": 5,
         "license": 5
@@ -334,13 +321,13 @@
           {
             "key": "codexFriendly",
             "label": "Codex 改造友好度",
-            "score": 12,
+            "score": 9,
             "max": 15
           },
           {
             "key": "beginnerFriendly",
             "label": "新手学习友好度",
-            "score": 9,
+            "score": 8,
             "max": 10
           },
           {
@@ -365,19 +352,19 @@
         "penalties": [],
         "bonuses": [
           "命中白名单 2 个，加 4 分",
-          "优先语言 TypeScript，加 5 分"
+          "优先语言 Python，加 5 分"
         ]
       },
-      "vibeCodingValue": "高度契合你的核心关注点（Codex、Agent、Vibe Coding），且完美命中你历史反馈中明确喜欢的『测试飞书自动反馈/飞书群自动反馈』场景。可直接用于搭建个人的飞书编码助手，或作为副业项目的提效工具。",
+      "vibeCodingValue": "完美契合 Codex、Vibe Coding 和 Agent 关注点。该项目展示了如何为 Codex/Claude Code 编写复杂的本地 Skill，其 44 个指令的设计模式和定时 Agent 机制非常适合作为 Vibe Coding 的学习案例，甚至可以转化为课程制作的绝佳素材。",
       "officeAutomationValue": "低 - 与办公自动化关系不大，但有通用学习价值",
       "monetizationPotential": "低 - 暂不适合直接变现，可学习技术",
-      "codexFriendly": "原生支持 Codex CLI 和 Claude Code，提供完整的权限控制（full/workspace/read-only）和会话隔离，非常适合作为 Codex 的飞书端交互入口进行二次改造或直接使用。",
+      "codexFriendly": "项目本身就是为 Codex CLI 和 Claude Code 设计的 Skill，直接提供了开箱即用的集成方案，其源码（Python）可作为开发自定义 Codex 插件/Skill 的优秀参考模板。",
       "riskPoints": "未发现明显风险",
       "matchedArea": "个人效率工具",
       "penalties": [],
       "bonuses": [
         "命中白名单 2 个，加 4 分",
-        "优先语言 TypeScript，加 5 分"
+        "优先语言 Python，加 5 分"
       ],
       "qualityGate": {
         "passed": true,
@@ -387,62 +374,62 @@
         ],
         "failures": []
       },
-      "ruleScore": 87,
+      "ruleScore": 85,
       "semanticReview": {
         "shouldRecommend": true,
-        "score": 96,
-        "type": "Agent 工具",
-        "oneLineConclusion": "将本地 Claude Code 或 Codex CLI 接入飞书的桥接工具，支持流式卡片和多工作区，完美契合飞书自动反馈测试需求。",
-        "whatHappened": "开源项目 lark-coding-agent-bridge 提供了轻量级 Bot，通过终端扫码即可将飞书/Lark 与本地的 Claude Code 或 Codex CLI 连接，支持在飞书群或私聊中直接进行 Vibe Coding。",
-        "consumerUseCase": "开发者可以通过飞书随时随地向本地运行的 Claude Code 或 Codex 发送指令，查看流式代码生成过程、管理多项目工作区，甚至发送图片/文件给 Agent 处理。",
-        "valueForRafael": "高度契合你的核心关注点（Codex、Agent、Vibe Coding），且完美命中你历史反馈中明确喜欢的『测试飞书自动反馈/飞书群自动反馈』场景。可直接用于搭建个人的飞书编码助手，或作为副业项目的提效工具。",
-        "codexIntegrationPotential": "原生支持 Codex CLI 和 Claude Code，提供完整的权限控制（full/workspace/read-only）和会话隔离，非常适合作为 Codex 的飞书端交互入口进行二次改造或直接使用。",
-        "actionSuggestion": "运行 `npm i -g lark-channel-bridge` 安装，使用 `lark-channel-bridge run` 扫码绑定飞书 PersonalAgent，测试在飞书中直接调用本地 Codex/Claude Code 进行项目开发。",
+        "score": 93,
+        "type": "其他",
+        "oneLineConclusion": "一款专为 Codex 和 Claude Code 设计的 Obsidian 跨平台 Skill，通过 44 个指令和自动化 Agent 让知识库实现自我重写与进化。",
+        "whatHappened": "开源项目 obsidian-second-brain 获得了 3000+ Stars，提供了一套适用于 Codex、Claude Code 等 CLI 的 Obsidian 技能库，包含 44 个命令，支持代码库文档化（/obsidian-architect）、自动调和矛盾、定时 Agent 维护等高级功能。",
+        "consumerUseCase": "用户可以在终端中使用 Codex 或 Claude Code，通过 `/obsidian-save`、`/obsidian-architect` 等指令，自动将会议记录、代码库结构、网页研究等内容结构化并更新到 Obsidian 知识库中，无需手动整理。",
+        "valueForRafael": "完美契合 Codex、Vibe Coding 和 Agent 关注点。该项目展示了如何为 Codex/Claude Code 编写复杂的本地 Skill，其 44 个指令的设计模式和定时 Agent 机制非常适合作为 Vibe Coding 的学习案例，甚至可以转化为课程制作的绝佳素材。",
+        "codexIntegrationPotential": "项目本身就是为 Codex CLI 和 Claude Code 设计的 Skill，直接提供了开箱即用的集成方案，其源码（Python）可作为开发自定义 Codex 插件/Skill 的优秀参考模板。",
+        "actionSuggestion": "克隆该项目源码，重点研究其指令定义（如 `/obsidian-architect`）和 Agent 调度逻辑；尝试在本地 Codex 环境中安装并运行，评估其作为 Vibe Coding 课程实战案例的潜力。",
         "reasons": [
-          "原生支持 Codex CLI 和 Claude Code 接入",
-          "完美契合历史反馈中对『飞书自动反馈』的偏好",
-          "提供流式卡片、COT 过程消息、多工作区切换等高级功能",
-          "TypeScript 开发，1700+ Stars，文档详实，开箱即用"
+          "高度匹配 Codex 和 Skill 标签，专为 AI CLI 设计",
+          "包含 44 个实用指令和 4 个定时 Agent，自动化程度高",
+          "3000+ Stars，文档详实，具备极高的 Vibe Coding 学习和复用价值"
         ],
         "risksOrMissingInfo": [
-          "依赖本地 Node.js 环境及已登录的 Claude Code / Codex CLI",
-          "需确保飞书企业/个人环境允许创建 PersonalAgent 应用"
+          "依赖多个外部 API（如 Perplexity、Grok、YouTube API），可能产生额外成本",
+          "需要一定的终端和 Python 环境配置基础",
+          "README 中提到的 2026 年可能是笔误，需确认实际版本更新时间"
         ],
         "evidenceRequired": true,
         "dimensions": {
           "rafaelMatch": 25,
-          "consumerUsability": 18,
+          "consumerUsability": 16,
           "ecosystemRelevance": 20,
-          "actionableValue": 15,
-          "sourceReliability": 10,
-          "freshness": 8
+          "actionableValue": 14,
+          "sourceReliability": 9,
+          "freshness": 9
         }
       },
       "reviewProvider": "vertex",
-      "feedbackId": "github:zarazhangrui/lark-coding-agent-bridge",
+      "feedbackId": "github:eugeniughelbur/obsidian-second-brain",
       "category": "github",
       "decision": "allow_unanswered_repeat",
       "reason": "already_pushed_without_feedback",
       "allowed": true,
       "duplicateStatus": "repeat",
-      "firstPushedDate": "2026-07-05",
-      "lastPushedDate": "2026-07-05",
+      "firstPushedDate": "2026-07-04",
+      "lastPushedDate": "2026-07-04",
       "feedbackType": null,
       "hasFeedback": false,
       "scoreDelta": -10,
-      "annotation": "⚠️ 重复推送：这条内容曾于 2026-07-05 推送过；目前没有收到任何反馈，因此本次允许重复出现。请反馈“已读不错 / 已读不行 / 重复了”，后续系统将据此处理。",
+      "annotation": "⚠️ 重复推送：这条内容曾于 2026-07-04 推送过；目前没有收到任何反馈，因此本次允许重复出现。请反馈“已读不错 / 已读不行 / 重复了”，后续系统将据此处理。",
       "preferenceScoreDelta": -10
     }
   ],
   "watchProjects": [],
   "notRecommendedProjects": [],
-  "codexPrompt": "请帮我只读分析以下 GitHub 项目，不要运行、不要安装、不要 clone、不要改代码。请分析项目结构、核心机制、可学习点、可迁移点、变现启发点。每个新名词先用小白能懂的话解释。最后沉淀成 Markdown 文件。\n\n项目地址：https://github.com/datadrivenconstruction/DDC_Skills_for_AI_Agents_in_Construction\n项目名：DDC_Skills_for_AI_Agents_in_Construction\n日期：2026-07-07\n\n分析要求：\n1. 用一句话解释它是什么\n2. 为什么值得我今天读\n3. 今天只读哪些文件（30-45 分钟）\n4. 仓库结构拆解\n5. 可迁移经验\n6. 个人变现判断\n7. 沉淀成 Markdown 模板\n\n安全要求：\n- 不运行任何代码\n- 不安装任何依赖\n- 不 clone 陌生项目\n- 不执行第三方脚本\n- 只做只读分析",
-  "markdownTemplate": "# 2026-07-07 Vibe Coding GitHub 学习沉淀\n\n## 项目基本信息\n- 项目名：DDC_Skills_for_AI_Agents_in_Construction\n- GitHub 链接：https://github.com/datadrivenconstruction/DDC_Skills_for_AI_Agents_in_Construction\n- 作者：datadrivenconstruction\n- 语言：Python\n- Star：229\n- License：MIT\n\n## 为什么选它\n\n## 它属于哪类机会\n- [ ] 办公自动化\n- [ ] 变现工具\n- [ ] 新鲜有趣\n- [ ] 学习技术\n- [ ] Codex 改造\n\n## 我读了哪些文件\n\n## 我学到的 3 个机制\n1. \n2. \n3. \n\n## 我没懂的地方\n\n## 可迁移到我的 Vibe Coding 实践的点\n\n## 可能的变现方式\n\n## 是否值得让 Codex 深挖\n\n## 我的主观评分（1-10）",
+  "codexPrompt": "请帮我只读分析以下 GitHub 项目，不要运行、不要安装、不要 clone、不要改代码。请分析项目结构、核心机制、可学习点、可迁移点、变现启发点。每个新名词先用小白能懂的话解释。最后沉淀成 Markdown 文件。\n\n项目地址：https://github.com/zarazhangrui/lark-coding-agent-bridge\n项目名：lark-coding-agent-bridge\n日期：2026-07-08\n\n分析要求：\n1. 用一句话解释它是什么\n2. 为什么值得我今天读\n3. 今天只读哪些文件（30-45 分钟）\n4. 仓库结构拆解\n5. 可迁移经验\n6. 个人变现判断\n7. 沉淀成 Markdown 模板\n\n安全要求：\n- 不运行任何代码\n- 不安装任何依赖\n- 不 clone 陌生项目\n- 不执行第三方脚本\n- 只做只读分析",
+  "markdownTemplate": "# 2026-07-08 Vibe Coding GitHub 学习沉淀\n\n## 项目基本信息\n- 项目名：lark-coding-agent-bridge\n- GitHub 链接：https://github.com/zarazhangrui/lark-coding-agent-bridge\n- 作者：zarazhangrui\n- 语言：TypeScript\n- Star：1748\n- License：MIT\n\n## 为什么选它\n\n## 它属于哪类机会\n- [ ] 办公自动化\n- [ ] 变现工具\n- [ ] 新鲜有趣\n- [ ] 学习技术\n- [ ] Codex 改造\n\n## 我读了哪些文件\n\n## 我学到的 3 个机制\n1. \n2. \n3. \n\n## 我没懂的地方\n\n## 可迁移到我的 Vibe Coding 实践的点\n\n## 可能的变现方式\n\n## 是否值得让 Codex 深挖\n\n## 我的主观评分（1-10）",
   "tomorrowDirections": [
     "办公自动化：继续深挖 Word/Excel/PDF 生成库，关注模板填充和批量处理",
     "变现工具：关注可包装成模板服务或 SaaS 的小工具",
     "Codex 改造：寻找结构更清晰、更适合拆解的入门项目"
   ],
   "configSource": "config/focus.json",
-  "updatedAt": "2026-07-07T23:30:28.688Z"
+  "updatedAt": "2026-07-08T23:38:11.597Z"
 }

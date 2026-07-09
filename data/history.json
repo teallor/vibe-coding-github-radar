@@ -155,7 +155,33 @@
         "个人效率工具"
       ],
       "summary": "今天最值得精读的项目是 **lark-coding-agent-bridge**（推荐分 94）。高度契合你的核心关注点：1. 原生支持 Codex CLI 和 Claude Code；2. 完美命中你历史偏好的「测试飞书自动反馈/群反馈」场景；3. TypeScript 编写，适合作为 Agent 接入企业 IM 的参考实现或副业项目灵感。。可以接触新鲜有趣的技术和项目组织方式。建议用 30-45 分钟只读学习，不要安装运行，先理解核心机制和可迁移经验。"
+    },
+    {
+      "date": "2026-07-09",
+      "topPick": {
+        "name": "skillpack",
+        "fullName": "CreminiAI/skillpack",
+        "url": "https://github.com/CreminiAI/skillpack",
+        "recommendScore": 90
+      },
+      "selectedProjects": [
+        {
+          "name": "lark-coding-agent-bridge",
+          "fullName": "zarazhangrui/lark-coding-agent-bridge",
+          "url": "https://github.com/zarazhangrui/lark-coding-agent-bridge",
+          "recommendScore": 96
+        }
+      ],
+      "profileName": "默认综合模式",
+      "focusAreas": [
+        "Office 文档自动化",
+        "个人 Vibe Coding 变现",
+        "Codex 可改造项目",
+        "新鲜有趣项目",
+        "个人效率工具"
+      ],
+      "summary": "今天最值得精读的项目是 **skillpack**（推荐分 90）。高度契合 Agent、Skills 和 Office 自动化（PPT生成）方向。可以研究其如何将零散的 Skills 组装成 Agent，并探索将其用于副业项目或课程制作（如教人如何快速部署本地企业级 Agent）。。可以接触新鲜有趣的技术和项目组织方式。建议用 30-45 分钟只读学习，不要安装运行，先理解核心机制和可迁移经验。"
     }
   ],
-  "updatedAt": "2026-07-08T23:38:11.598Z"
+  "updatedAt": "2026-07-09T23:45:33.943Z"
 }

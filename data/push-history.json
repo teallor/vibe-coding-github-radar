@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-08T23:44:51.111Z",
+  "updatedAt": "2026-07-09T23:52:14.258Z",
   "items": [
     {
       "feedbackId": "github:bagidea/bagidea-office",
@@ -43,8 +43,8 @@
       "durationSeconds": 3627,
       "shownotes": "",
       "firstPushedDate": "2026-07-03",
-      "lastPushedDate": "2026-07-06",
-      "pushCount": 2,
+      "lastPushedDate": "2026-07-09",
+      "pushCount": 3,
       "migrated": true,
       "lastDecision": "allow_unanswered_repeat",
       "feedbackType": null
@@ -203,8 +203,8 @@
       "durationSeconds": null,
       "shownotes": "Bot that bridges Feishu/Lark messenger with a local Claude Code or Codex CLI. Streaming cards, per-chat sessions, multiple workspaces",
       "firstPushedDate": "2026-07-05",
-      "lastPushedDate": "2026-07-08",
-      "pushCount": 3,
+      "lastPushedDate": "2026-07-09",
+      "pushCount": 4,
       "lastDecision": "allow_unanswered_repeat",
       "feedbackType": null
     },
@@ -347,9 +347,9 @@
       "durationSeconds": 1771,
       "shownotes": "",
       "firstPushedDate": "2026-07-06",
-      "lastPushedDate": "2026-07-06",
-      "pushCount": 1,
-      "lastDecision": "allow_new",
+      "lastPushedDate": "2026-07-09",
+      "pushCount": 2,
+      "lastDecision": "allow_unanswered_repeat",
       "feedbackType": null
     },
     {
@@ -443,7 +443,39 @@
       "durationSeconds": null,
       "shownotes": "",
       "firstPushedDate": "2026-07-08",
-      "lastPushedDate": "2026-07-08",
+      "lastPushedDate": "2026-07-09",
+      "pushCount": 2,
+      "lastDecision": "allow_unanswered_repeat",
+      "feedbackType": null
+    },
+    {
+      "feedbackId": "github:creminiai/skillpack",
+      "category": "github",
+      "title": "skillpack",
+      "url": "https://github.com/CreminiAI/skillpack",
+      "podcastName": null,
+      "episodeTitle": null,
+      "publishedAt": null,
+      "durationSeconds": null,
+      "shownotes": "Pack and deploy local AI agents for your team in minutes",
+      "firstPushedDate": "2026-07-09",
+      "lastPushedDate": "2026-07-09",
+      "pushCount": 1,
+      "lastDecision": "allow_new",
+      "feedbackType": null
+    },
+    {
+      "feedbackId": "aiapp:7cb0ed23",
+      "category": "aiapp",
+      "title": "NDDev-it-com/rldyour-antigravity-cli",
+      "url": "https://github.com/NDDev-it-com/rldyour-antigravity-cli",
+      "podcastName": null,
+      "episodeTitle": null,
+      "publishedAt": "2026-07-09T23:29:31Z",
+      "durationSeconds": null,
+      "shownotes": "",
+      "firstPushedDate": "2026-07-09",
+      "lastPushedDate": "2026-07-09",
       "pushCount": 1,
       "lastDecision": "allow_new",
       "feedbackType": null
@@ -689,6 +721,38 @@
       "scoreDelta": 0,
       "annotation": "",
       "date": "2026-07-08"
+    },
+    {
+      "feedbackId": "aiapp:7cb0ed23",
+      "title": "NDDev-it-com/rldyour-antigravity-cli",
+      "category": "aiapp",
+      "decision": "allow_new",
+      "reason": "never_pushed",
+      "allowed": true,
+      "duplicateStatus": "new",
+      "firstPushedDate": null,
+      "lastPushedDate": null,
+      "feedbackType": null,
+      "hasFeedback": false,
+      "scoreDelta": 0,
+      "annotation": "",
+      "date": "2026-07-09"
+    },
+    {
+      "feedbackId": "aiapp:5197af1e",
+      "title": "GitHub Mobile: Fix merge conflicts with Copilot cloud agent",
+      "category": "aiapp",
+      "decision": "allow_unanswered_repeat",
+      "reason": "already_pushed_without_feedback",
+      "allowed": true,
+      "duplicateStatus": "repeat",
+      "firstPushedDate": "2026-07-08",
+      "lastPushedDate": "2026-07-08",
+      "feedbackType": null,
+      "hasFeedback": false,
+      "scoreDelta": -10,
+      "annotation": "⚠️ 重复推送：这条内容曾于 2026-07-08 推送过；目前没有收到任何反馈，因此本次允许重复出现。请反馈“已读不错 / 已读不行 / 重复了”，后续系统将据此处理。",
+      "date": "2026-07-09"
     }
   ],
   "migration": {

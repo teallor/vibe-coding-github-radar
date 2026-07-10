@@ -1,11 +1,8 @@
 name: Daily GitHub Scout
 
 on:
-  schedule:
-    # Target Feishu send time: Asia/Shanghai 06:45.
-    # Start earlier at Asia/Shanghai 06:20 to generate content before send.
-    # Asia/Shanghai 06:20 = UTC 22:20 previous day.
-    - cron: "20 22 * * *"
+  # Scheduled runs are intentionally paused. Re-add the schedule block only
+  # when this project should resume generating reports and sending Feishu.
   workflow_dispatch:
     inputs:
       wait_until_target:
